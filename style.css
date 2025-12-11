@@ -1,0 +1,226 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+body {
+            margin: 0;
+            padding: 0;
+            font-family: 'SF Pro Display', sans-serif;;
+            background-color: black;
+            color: #fff;
+        }
+
+.sidebar {
+	width: 240px;
+	float: left;
+	padding: 20px;
+	position: fixed;
+}
+
+#bottom-menu {
+	display: none;
+	margin: 0;
+	width: 0;
+}
+.content {
+	margin-left: 260px;
+	padding: 20px;
+}
+.menu-item {
+	padding-right: 13px;
+	padding-left: 13px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+	background-color: #1D1D1D;
+	border-radius: 9px;
+	display: block;
+	font-weight: 200;
+	
+}
+.sidebar a {
+	color: white;
+	text-decoration: none;
+}
+
+.sidebar p {
+	margin: 0;
+	padding: 0;
+}
+	
+.menu-item:hover {
+	background-color: #323232;
+	cursor: pointer;
+	
+}
+.task-container {
+	background-color: #1D1D1D;
+	padding: 20px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+.task-title {
+	font-size: 21px;
+	margin-bottom: 10px;
+}
+.math-formula {
+	text-align: center;
+
+	margin: 10px 0;
+}
+
+#text-task {
+	font-size: 18px;
+}
+.solution-btn {
+	background-color: #666;
+	padding: 5px 10px;
+	border-radius: 5px;
+	display: inline-block;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+#logo {
+	text-align: center;
+	padding: 15px;
+	font-size: 30px;
+	background: none;
+}
+
+.kroshki {
+	color: gray;
+} 
+
+.kroshki a {
+	color: gray;
+	text-decoration: none;
+}
+
+.zadachnik button {
+	padding: 13px;
+	margin-bottom: 15px;
+	background-color: #1D1D1D;
+	border-radius: 5px;
+	border: none;
+	display: block;
+	width: 100%;
+}
+
+.zadachnik a {
+	color: white;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+
+.zadachnik button:hover {
+	box-shadow: 1px 6px 8px 0px rgba(255, 255, 255, 0.2);
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+
+#image {
+	margin-right: 15px;
+}
+
+.details__title {
+	 background-color: white;
+	 border-radius: 30px;
+	 padding: 10px;
+	 width: 14%;
+	 text-align: center;
+	 color: black;
+}
+
+.details__title:hover {
+	background-color: #aaaaaa;
+	transition: 0.3s;
+	cursor: pointer;
+}
+	
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+	
+	.sidebar {
+		display:none;
+		width:0%;
+	}
+	.content {
+	margin-left: 0px;
+	padding: 20px;
+	margin-right: 0px;
+	width: 100%;
+	}
+	@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  
+	#bottom-menu {
+		 -webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+		background-color: rgba(29, 29, 29, 0.2);
+
+	  }
+  
+	#bottom-menu {
+		position: fixed;
+		display: inline;
+		bottom: 0;
+		width: 92%;
+		padding: 5px;
+		text-align: center;
+
+
+
+		margin: 3%;
+		border-radius: 17px;
+		}
+	
+
+	#bottom-menu button {
+		border: none;
+		margin-left: 3%;
+		margin-right: 3%;
+		margin-top: 4px;
+		background: none;
+		margin-bottom: 4px;
+	}
+	
+	.task-container {
+	background-color: #1D1D1D;
+	padding: 20px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	width: 91%;
+	margin-right: 0px;
+	}
+	.task-title {
+	font-size: 21px;
+	margin-bottom: 10px;
+}
+	.math-formula {
+	text-align: center;
+	font-size: 17px;
+	margin: 10px 0;
+	width: 70%;
+}
+	.details__title {
+	 background-color: white;
+	 border-radius: 30px;
+	 padding: 10px;
+	 width: 40%;
+	 text-align: center;
+	 color: black;
+	 margin-right: 15px;
+}
+	.sidebar1 a {
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+	.sidebar1 p {
+	margin: 0;
+	padding: 0;
+}
+	
+	
+}
