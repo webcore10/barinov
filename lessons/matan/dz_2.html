@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link href="../../test1.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARINOV</title>
+	<link rel="shortcut icon" href="../../image/logo.svg" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="stylesheet" href="../assets/css/site.css">
+	<link rel="stylesheet" href="../assets/css/pygments.css">
+	<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&amp;display=swap" rel="stylesheet" media="all">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<script src="../../nav-merge.js" defer></script>
+	<style>
+		.dz-note {
+			color: gray;
+			font-size: 14px;
+			margin-bottom: 8px;
+		}
+
+		.tabs {
+			margin-top: 15px;
+		}
+
+		.tab-input {
+			display: none;
+		}
+
+		.tab-bar {
+			margin-bottom: 20px;
+		}
+
+		.tab-label {
+			display: inline-block;
+			padding: 10px 18px;
+			margin-right: 8px;
+			margin-bottom: 10px;
+			background-color: #EEF0F4;
+			border: 1px solid #E1E4EC;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: 15px;
+			transition: 0.2s;
+			user-select: none;
+		}
+
+		.tab-label:hover {
+			background-color: #E2E5F7;
+		}
+
+		.tab-input:checked + .tab-label {
+			background-color: #5B62F5;
+			color: white;
+			font-weight: 600;
+		}
+
+		.tab-panel {
+			display: none;
+		}
+
+		#tab1:checked ~ .tab-panels #panel1,
+		#tab2:checked ~ .tab-panels #panel2,
+		#tab3:checked ~ .tab-panels #panel3,
+		#tab4:checked ~ .tab-panels #panel4,
+		#tab5:checked ~ .tab-panels #panel5 {
+			display: block;
+		}
+
+		@media only screen and (max-device-width: 530px) {
+			.tab-label {
+				padding: 9px 14px;
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+<body>
+<button type="button" class="ios-back-btn" aria-label="Назад" onclick="history.back()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="ios-navbar"><span class="ios-navbar-title"></span></div>
+<div class="left-menu">
+  <a href="../../home.html" class="logo"><img src="../../image/logo1.svg" alt="Logo"></a>
+  <div class="nav-list">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../lit.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="15.2" width="15" height="4" rx="1"/><rect x="5.5" y="10.6" width="13" height="4" rx="1"/><rect x="6.5" y="6" width="11" height="4" rx="1"/></svg>Литература</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+    <a href="../../net.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="4.7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 6.7v3.1"/><path d="M10.3 13.4l-3.7 2.1"/><path d="M13.7 13.4l3.7 2.1"/></svg>Сети</a>
+  </div>
+</div>
+
+<div class="main">
+
+<nav class="breadcrumbs">
+  <a href="../../home.html">Главная</a><span class="crumb-sep">/</span>
+  <a href="../../vid.html">Видеоуроки</a><span class="crumb-sep">/</span>
+  <a href="../../matan.html">Курс по матану для 1-го семестра</a><span class="crumb-sep">/</span>
+  <span class="crumb-current">Домашнее задание №2</span>
+</nav>
+<h1>Домашнее задание к вебинару №2</h1>
+
+<div class="tabs">
+	<input type="radio" name="dz-tab" id="tab1" class="tab-input" checked>
+	<input type="radio" name="dz-tab" id="tab2" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab3" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab4" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab5" class="tab-input">
+
+	<div class="tab-bar">
+		<label for="tab1" class="tab-label">Задание 1</label>
+		<label for="tab2" class="tab-label">Задание 2</label>
+		<label for="tab3" class="tab-label">Задание 3</label>
+		<label for="tab4" class="tab-label">Задание 4</label>
+		<label for="tab5" class="tab-label">Задание 5</label>
+	</div>
+
+	<div class="tab-panels">
+
+		<div class="tab-panel" id="panel1">
+			<h2>Задание 1. Действия с комплексными числами в алгебраической форме</h2>
+			<p class="dz-note">Примечание: алгебраическая форма \( z=a+bi \)</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите \( \dfrac{5+3i}{-7+2i} \) и представьте в алгебраической форме</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \frac{5+3i}{-7+2i}=\frac{(5+3i)(-7-2i)}{(-7+2i)(-7-2i)}=\frac{-35-21i-10i-6i^2}{49+4} \]
+						\[ =\frac{-35-31i+6}{53}=\frac{-29-31i}{53} \]
+						<p><b>Ответ:</b> \( -\frac{29}{53}-\frac{31}{53}i \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите \( \dfrac{(5+i)(7-6i)}{3+i} \) и представьте в алгебраической форме</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ (5+i)(7-6i)=35+7i-30i-6i^2=41-23i \]
+						\[ \frac{41-23i}{3+i}=\frac{(41-23i)(3-i)}{(3+i)(3-i)}=\frac{123-41i-69i+23i^2}{9+1}=\frac{100-110i}{10}=10-11i \]
+						<p><b>Ответ:</b> \( 10-11i \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите \( \dfrac{1-i}{1+i}+\dfrac{-8+3i}{2+9i} \) и представьте в алгебраической форме</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \frac{1-i}{1+i}=\frac{(1-i)(1-i)}{(1+i)(1-i)}=\frac{1-2i+i^2}{1^2+1^2}=\frac{-2i}{2}=-i \]
+						\[ \frac{-8+3i}{2+9i}=\frac{(-8+3i)(2-9i)}{(2+9i)(2-9i)}=\frac{-16+6i+72i-27i^2}{2^2+9^2}=\frac{11+78i}{85} \]
+						\[ -i+\frac{11+78i}{85}=\frac{-85i+11+78i}{85}=\frac{11-7i}{85} \]
+						<p><b>Ответ:</b> \( \frac{11}{85}-\frac{7}{85}i \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите \( \overline{(2+3i)(9-i)} \) и представьте в алгебраической форме</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ (2+3i)(9-i)=2\cdot9+3i\cdot9+2\cdot(-i)+3i\cdot(-i)=18+27i-2i-3i^2 \]
+						\[ =18+25i+3=21+25i \]
+						\[ \overline{(2+3i)(9-i)}=\overline{21+25i}=21-25i \]
+						<p><b>Ответ:</b> \( 21-25i \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите \( \overline{9-3i}-\overline{9+3i} \) и представьте в алгебраической форме</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \overline{9-3i}-\overline{9+3i}=(9+3i)-(9-3i)=9-9+3i+3i=6i \]
+						<p><b>Ответ:</b> \( 6i \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 6</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите \( \overline{\left(\dfrac{-1+6i}{8-7i}\right)} \) и представьте в алгебраической форме</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \frac{-1+6i}{8-7i}=\frac{(-1+6i)(8+7i)}{(8-7i)(8+7i)}=\frac{-8-7i+48i+42i^2}{8^2+7^2}=\frac{-50+41i}{113} \]
+						\[ \overline{\left(\frac{-1+6i}{8-7i}\right)}=\overline{-\frac{50}{113}+\frac{41}{113}i}=-\frac{50}{113}-\frac{41}{113}i \]
+						<p><b>Ответ:</b> \( -\frac{50}{113}-\frac{41}{113}i \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 7</b></div>
+				<div id="text-task"><div class="math-formula">Пусть \( z_1=1-i,\ z_2=-4-i \). Вычислите \( \dfrac{z_1}{z_2}-\dfrac{z_2}{z_1} \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \frac{z_1}{z_2}-\frac{z_2}{z_1}=\frac{z_1^2-z_2^2}{z_2z_1}=\frac{(1-i)^2-(-4-i)^2}{(-4-i)(1-i)} \]
+						\[ =\frac{1-2i+i^2-(16+8i+i^2)}{-4+4i-i+i^2}=\frac{1-2i-1-16-8i+1}{-5+3i}=\frac{-15-10i}{-5+3i} \]
+						\[ =\frac{(-15-10i)(-5-3i)}{(-5+3i)(-5-3i)}=\frac{75+45i+50i+30i^2}{5^2+3^2}=\frac{45+95i}{34} \]
+						<p><b>Ответ:</b> \( \frac{45}{34}+\frac{95}{34}i \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 8</b></div>
+				<div id="text-task"><div class="math-formula">Найдите мнимую часть \( z \), если \( z=(2-i)^3(2+11i) \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ (2-i)^3=2^3-3\cdot2^2\cdot i+3\cdot2\cdot i^2-i^3=8-12i-6+i=2-11i \]
+						\[ z=(2-11i)(2+11i)=2^2+11^2=4+121=125 \]
+						<p>Полученное число 125 — действительное, мнимой части нет.</p>
+						<p><b>Ответ:</b> \( 0 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 9</b></div>
+				<div id="text-task"><div class="math-formula">Пусть \( z_1=\sqrt5-i,\ z_2=\sqrt5-2i \). Найдите разность \( z_2-z_1 \) и частное \( \dfrac{z_2}{z_1} \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ z_2-z_1=(\sqrt5-2i)-(\sqrt5-i)=\sqrt5-\sqrt5-2i+i=-i \]
+						\[ \frac{z_2}{z_1}=\frac{\sqrt5-2i}{\sqrt5-i}=\frac{(\sqrt5-2i)(\sqrt5+i)}{(\sqrt5-i)(\sqrt5+i)}=\frac{(\sqrt5)^2+i\sqrt5-2i\sqrt5-2i^2}{(\sqrt5)^2+1}=\frac{7-i\sqrt5}{6} \]
+						<p><b>Ответ:</b> \( z_2-z_1=-i,\quad \dfrac{z_2}{z_1}=\dfrac{7}{6}-\dfrac{\sqrt5}{6}i \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel2">
+			<h2>Задание 2. Тригонометрическая форма комплексного числа</h2>
+			<p class="dz-note">Примечание: тригонометрическая форма \( z=|z|(\cos\varphi+i\sin\varphi) \)</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ 1+\sqrt3i \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ |z|=\sqrt{1^2+(\sqrt3)^2}=\sqrt{1+3}=2 \]
+						<p>Число находится в I четверти.</p>
+						\[ \varphi=\arctan\frac{\sqrt3}{1}=\frac{\pi}{3} \]
+						\[ 1+\sqrt3i=2\left(\cos\frac{\pi}{3}+i\sin\frac{\pi}{3}\right) \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ \frac{7}{\sqrt2}+\frac{7}{\sqrt2}i \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ |z|=\sqrt{\left(\frac{7}{\sqrt2}\right)^2+\left(\frac{7}{\sqrt2}\right)^2}=\sqrt{\frac{49}{2}+\frac{49}{2}}=\sqrt{49}=7 \]
+						<p>Число находится в I четверти.</p>
+						\[ \varphi=\arctan\frac{7/\sqrt2}{7/\sqrt2}=\arctan1=\frac{\pi}{4} \]
+						\[ \frac{7}{\sqrt2}+\frac{7}{\sqrt2}i=7\left(\cos\frac{\pi}{4}+i\sin\frac{\pi}{4}\right) \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ -\frac34-\frac{3\sqrt3}{4}i \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ |z|=\sqrt{\left(-\frac34\right)^2+\left(-\frac{3\sqrt3}{4}\right)^2}=\sqrt{\frac9{16}+\frac{27}{16}}=\sqrt{\frac{36}{16}}=\frac64=\frac32 \]
+						<p>Число находится в III четверти.</p>
+						\[ \varphi=\arctan\frac{3\sqrt3/4}{3/4}+\pi=\arctan\sqrt3+\pi=\frac{\pi}{3}+\pi=\frac{4\pi}{3} \]
+						\[ -\frac34-\frac{3\sqrt3}{4}i=1{,}5\left(\cos\frac{4\pi}{3}+i\sin\frac{4\pi}{3}\right) \]
+						<p>Так как \( \cos\frac{4\pi}{3}=\cos\left(-\frac{2\pi}{3}\right) \) и \( \sin\frac{4\pi}{3}=\sin\left(-\frac{2\pi}{3}\right) \), ответ \( 1{,}5\left(\cos\left(-\frac{2\pi}{3}\right)+i\sin\left(-\frac{2\pi}{3}\right)\right) \) тоже является верным.</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">\[ -2 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ |-2|=2,\qquad \varphi=\arctan0+\pi=\pi \]
+						\[ -2=2(\cos\pi+i\sin\pi) \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5</b></div>
+				<div id="text-task"><div class="math-formula">\[ 2i \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ |2i|=2 \]
+						<p>На ноль делить нельзя, но из соображений тригонометрии \( \varphi=\dfrac{\pi}{2} \).</p>
+						\[ 2i=2\left(\cos\frac{\pi}{2}+i\sin\frac{\pi}{2}\right) \]
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel3">
+			<h2>Задание 3. Возведение в степень по формуле Муавра</h2>
+			<p class="dz-note">Формула Муавра: \( (\cos x+i\sin x)^n=\cos nx+i\sin nx \)</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ \left(2\left(\cos\frac{\pi}{3}+i\sin\frac{\pi}{3}\right)\right)^3 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ =2^3\left(\cos\frac{\pi}{3}+i\sin\frac{\pi}{3}\right)^3=8\left(\cos\left(3\cdot\frac{\pi}{3}\right)+i\sin\left(3\cdot\frac{\pi}{3}\right)\right) \]
+						\[ =8(\cos\pi+i\sin\pi)=8(-1+i\cdot0)=-8 \]
+						<p><b>Ответ:</b> \( -8 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ \left(\cos\frac{\pi}{4}+i\sin\frac{\pi}{4}\right)^8 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ =\cos\left(8\cdot\frac{\pi}{4}\right)+i\sin\left(8\cdot\frac{\pi}{4}\right)=\cos2\pi+i\sin2\pi=1+i\cdot0=1 \]
+						<p><b>Ответ:</b> \( 1 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ \left(3\left(\cos\frac{-2\pi}{3}+i\sin\frac{-2\pi}{3}\right)\right)^6 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ =3^6\left(\cos\left(6\cdot\frac{-2\pi}{3}\right)+i\sin\left(6\cdot\frac{-2\pi}{3}\right)\right)=729(\cos(-4\pi)+i\sin(-4\pi)) \]
+						\[ =729(1+i\cdot0)=729 \]
+						<p><b>Ответ:</b> \( 729 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">\[ \left(10\left(\cos\frac{\pi}{4}+i\sin\frac{\pi}{4}\right)\right)^2 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ =100\left(\cos\left(2\cdot\frac{\pi}{4}\right)+i\sin\left(2\cdot\frac{\pi}{4}\right)\right)=100\left(\cos\frac{\pi}{2}+i\sin\frac{\pi}{2}\right)=100(0+i\cdot1)=100i \]
+						<p><b>Ответ:</b> \( 100i \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5</b></div>
+				<div id="text-task"><div class="math-formula">\[ (1+i)^{1000} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Запишем \( 1+i \) в тригонометрической форме:</p>
+						\[ |1+i|=\sqrt{1^2+1^2}=\sqrt2,\qquad \varphi=\arctan\frac11=\frac{\pi}{4} \]
+						\[ 1+i=\sqrt2\left(\cos\frac{\pi}{4}+i\sin\frac{\pi}{4}\right) \]
+						<p>Возведём в 1000-ю степень по формуле Муавра:</p>
+						\[ (1+i)^{1000}=(\sqrt2)^{1000}\left(\cos\left(1000\cdot\frac{\pi}{4}\right)+i\sin\left(1000\cdot\frac{\pi}{4}\right)\right) \]
+						\[ =2^{500}(\cos250\pi+i\sin250\pi)=2^{500}(1+i\cdot0)=2^{500} \]
+						<p>Альтернативный, более элегантный способ:</p>
+						\[ (1+i)^{1000}=\left((1+i)^2\right)^{500}=(1+2i+i^2)^{500}=(2i)^{500}=2^{500}\cdot i^{500}=2^{500}\cdot(i^4)^{125}=2^{500} \]
+						<p><b>Ответ:</b> \( 2^{500} \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 6</b></div>
+				<div id="text-task"><div class="math-formula">\[ (\sqrt3+i)^{30} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Запишем \( \sqrt3+i \) в тригонометрической форме:</p>
+						\[ |\sqrt3+i|=\sqrt{(\sqrt3)^2+1^2}=\sqrt{3+1}=2,\qquad \varphi=\arctan\frac{1}{\sqrt3}=\frac{\pi}{6} \]
+						\[ \sqrt3+i=2\left(\cos\frac{\pi}{6}+i\sin\frac{\pi}{6}\right) \]
+						<p>Возведём в 30-ю степень:</p>
+						\[ (\sqrt3+i)^{30}=2^{30}\left(\cos\left(30\cdot\frac{\pi}{6}\right)+i\sin\left(30\cdot\frac{\pi}{6}\right)\right)=2^{30}(\cos5\pi+i\sin5\pi) \]
+						\[ =2^{30}(-1+i\cdot0)=-2^{30} \]
+						<p><b>Ответ:</b> \( -2^{30} \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 7*</b></div>
+				<div id="text-task"><div class="math-formula">\[ \left(1+\frac{\sqrt3}{2}+\frac{i}{2}\right)^{24} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Используем \( e^{2i\pi}=1 \), тождество \( e^{-i\varphi}+e^{i\varphi}=2\cos\varphi \) и формулу понижения степени \( \cos^2x=\frac12+\frac12\cos2x \).</p>
+						<p>Заметим, что \( \dfrac{\sqrt3}{2}+\dfrac{i}{2}=e^{i\pi/6} \), тогда:</p>
+						\[ \left(1+\frac{\sqrt3}{2}+\frac{i}{2}\right)^{24}=\left(1+e^{i\pi/6}\right)^{24}=\left(e^{i\pi/12}\left(e^{-i\pi/12}+e^{i\pi/12}\right)\right)^{24} \]
+						\[ =e^{i(\pi/12)\cdot24}\left(e^{-i\pi/12}+e^{i\pi/12}\right)^{24}=e^{2i\pi}\cdot\left(2\cos\frac{\pi}{12}\right)^{24}=\left(4\cos^2\frac{\pi}{12}\right)^{12} \]
+						\[ =\left(2+2\cos\frac{\pi}{6}\right)^{12}=(2+\sqrt3)^{12} \]
+						<p><b>Ответ:</b> \( (2+\sqrt3)^{12} \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 8*</b></div>
+				<div id="text-task"><div class="math-formula">\[ (2-\sqrt3+i)^{12} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Аналогично предыдущему пункту:</p>
+						\[ 2-\sqrt3+i=2\left(1-\frac{\sqrt3}{2}+\frac{i}{2}\right),\qquad 1-\frac{\sqrt3}{2}+\frac{i}{2}=1+e^{i5\pi/6} \]
+						\[ (2-\sqrt3+i)^{12}=2^{12}\left(1+e^{i5\pi/6}\right)^{12}=2^{12}\left(e^{i5\pi/12}\left(e^{-i5\pi/12}+e^{i5\pi/12}\right)\right)^{12} \]
+						\[ =2^{12}\left(2e^{i5\pi/12}\cos\frac{5\pi}{12}\right)^{12}=2^{12}\cdot2^{12}e^{i5\pi}\cos^{12}\frac{5\pi}{12}=-2^{24}\cos^{12}\frac{5\pi}{12} \]
+						\[ =-2^{24}\left(\cos^2\frac{5\pi}{12}\right)^6=-2^{24}\left(\frac{1+\cos\frac{5\pi}{6}}{2}\right)^6=-2^{24}\left(\frac{2-\sqrt3}{4}\right)^6=-2^{12}(2-\sqrt3)^6 \]
+						<p><b>Ответ:</b> \( -2^{12}(2-\sqrt3)^6 \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel4">
+			<h2>Задание 4. Показательная форма (формула Эйлера)</h2>
+			<p class="dz-note">Показательная форма: \( z=|z|\cdot e^{ix} \), формула Эйлера: \( e^{ix}=\cos x+i\sin x \)</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ 2\left(\cos\frac{\pi}{2}+i\sin\frac{\pi}{2}\right) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>По формуле Эйлера:</p>
+						\[ 2\left(\cos\frac{\pi}{2}+i\sin\frac{\pi}{2}\right)=2\cdot e^{i\pi/2} \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ -5\left(\cos\frac{-\pi}{3}+i\sin\frac{-\pi}{3}\right) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>По формуле Эйлера:</p>
+						\[ -5\left(\cos\frac{-\pi}{3}+i\sin\frac{-\pi}{3}\right)=-5\cdot e^{-i\pi/3} \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ -\frac14+\frac{\sqrt3}{4}i \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Запишем в тригонометрической форме:</p>
+						\[ |z|=\sqrt{\left(-\frac14\right)^2+\left(\frac{\sqrt3}{4}\right)^2}=\sqrt{\frac{1}{16}+\frac{3}{16}}=\frac12 \]
+						\[ \varphi=\arctan(-\sqrt3)+\pi=\frac{2\pi}{3} \]
+						\[ -\frac14+\frac{\sqrt3}{4}i=\frac12\left(\cos\frac{2\pi}{3}+i\sin\frac{2\pi}{3}\right)=\frac12\cdot e^{i2\pi/3} \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">\[ -\frac{\sqrt2}{6}+\frac{\sqrt2}{6}i \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Запишем в тригонометрической форме:</p>
+						\[ |z|=\sqrt{\left(-\frac{\sqrt2}{6}\right)^2+\left(\frac{\sqrt2}{6}\right)^2}=\sqrt{\frac{2}{36}+\frac{2}{36}}=\frac13 \]
+						\[ \varphi=\arctan(-1)+\pi=\frac{3\pi}{4} \]
+						\[ -\frac{\sqrt2}{6}+\frac{\sqrt2}{6}i=\frac13\left(\cos\frac{3\pi}{4}+i\sin\frac{3\pi}{4}\right)=\frac13\cdot e^{i3\pi/4} \]
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel5">
+			<h2>Задание 5. Множества точек на комплексной плоскости</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ |z-1|<1 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Условие \( |z|<1 \) задаёт круг с центром в начале координат и радиусом 1. Условие \( |z-1|<1 \) — тот же круг, сдвинутый на 1 по действительной оси.</p>
+						<p>Алгебраически: пусть \( z=x+iy \). Тогда \( |x+iy-1|<1 \), то есть \( \sqrt{(x-1)^2+y^2}<1 \). После возведения в квадрат: \( (x-1)^2+y^2<1 \).</p>
+						<p><b>Ответ:</b> круг с центром в точке \( (1;0) \) и радиусом 1.</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2*</b></div>
+				<div id="text-task"><div class="math-formula">\[ |z-i|+|z+i|=4 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Пусть \( z=x+iy \). Тогда:</p>
+						\[ |x+i(y-1)|+|x+i(y+1)|=4 \]
+						\[ \sqrt{x^2+(y-1)^2}+\sqrt{x^2+(y+1)^2}=4 \]
+						<p>Это геометрическое место точек, сумма расстояний от которых до двух фиксированных точек (фокусов) \( (0;1) \) и \( (0;-1) \) постоянна и равна 4 — эллипс.</p>
+						<p>Для точки на конце большей полуоси: \( 2b=4\Rightarrow b=2 \). Расстояние от центра до фокуса \( c=1 \). Так как \( c^2=b^2-a^2 \):</p>
+						\[ a=\sqrt{b^2-c^2}=\sqrt{4-1}=\sqrt3 \]
+						<p><b>Ответ:</b> эллипс \( \dfrac{x^2}{3}+\dfrac{y^2}{4}=1 \).</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3*</b></div>
+				<div id="text-task"><div class="math-formula">\[ |z-2|-|z+2|<2 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Пусть \( z=x+iy \). Тогда:</p>
+						\[ |(x-2)+iy|-|(x+2)+iy|<2 \]
+						\[ \sqrt{(x-2)^2+y^2}-\sqrt{(x+2)^2+y^2}<2 \]
+						<p>Это геометрическое место точек, разность расстояний от которых до фокусов \( (2;0) \) и \( (-2;0) \) меньше 2 — область справа от левой ветви гиперболы.</p>
+						<p>Здесь \( c=2 \), \( 2a=c\Rightarrow a=1 \). Так как \( c^2=a^2+b^2 \):</p>
+						\[ b=\sqrt{c^2-a^2}=\sqrt{4-1}=\sqrt3 \]
+						<p><b>Ответ:</b> область справа от левой ветви гиперболы \( x^2-\dfrac{y^2}{3}=1 \).</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">\[ 1\le|z-1|\le3 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Разобьём на два условия:</p>
+						\[ 1\le|z-1|\le3 \iff \begin{cases}|z-1|\ge1\\|z-1|\le3\end{cases} \]
+						<p>\( |z-1|\ge1 \) — точки вне круга с центром \( (1;0) \) и радиусом 1 (см. п.1). \( |z-1|\le3 \) — точки внутри круга с центром \( (1;0) \) и радиусом 3, то есть \( (x-1)^2+y^2\le9 \).</p>
+						<p>Пересечение этих множеств — кольцо между двумя окружностями.</p>
+						<p><b>Ответ:</b> кольцо, ограниченное окружностями радиусов 1 и 3 с общим центром в точке \( (1;0) \).</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+</div>
+
+
+<nav class="ios-tabbar" aria-label="Основная навигация">
+  <div class="ios-tabbar-inner">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+  </div>
+</nav>
+</body>
+</html>

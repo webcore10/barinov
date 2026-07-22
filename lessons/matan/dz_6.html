@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link href="../../test1.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARINOV</title>
+	<link rel="shortcut icon" href="../../image/logo.svg" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="stylesheet" href="../assets/css/site.css">
+	<link rel="stylesheet" href="../assets/css/pygments.css">
+	<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&amp;display=swap" rel="stylesheet" media="all">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<script src="../../nav-merge.js" defer></script>
+	<style>
+		.dz-note {
+			color: gray;
+			font-size: 14px;
+			margin-bottom: 8px;
+		}
+
+		.tabs {
+			margin-top: 15px;
+		}
+
+		.tab-input {
+			display: none;
+		}
+
+		.tab-bar {
+			margin-bottom: 20px;
+		}
+
+		.tab-label {
+			display: inline-block;
+			padding: 10px 18px;
+			margin-right: 8px;
+			margin-bottom: 10px;
+			background-color: #EEF0F4;
+			border: 1px solid #E1E4EC;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: 15px;
+			transition: 0.2s;
+			user-select: none;
+		}
+
+		.tab-label:hover {
+			background-color: #E2E5F7;
+		}
+
+		.tab-input:checked + .tab-label {
+			background-color: #5B62F5;
+			color: white;
+			font-weight: 600;
+		}
+
+		.tab-panel {
+			display: none;
+		}
+
+		#tab1:checked ~ .tab-panels #panel1,
+		#tab2:checked ~ .tab-panels #panel2,
+		#tab3:checked ~ .tab-panels #panel3,
+		#tab4:checked ~ .tab-panels #panel4,
+		#tab5:checked ~ .tab-panels #panel5,
+		#tab6:checked ~ .tab-panels #panel6,
+		#tab7:checked ~ .tab-panels #panel7 {
+			display: block;
+		}
+
+		@media only screen and (max-device-width: 530px) {
+			.tab-label {
+				padding: 9px 14px;
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+<body>
+<button type="button" class="ios-back-btn" aria-label="Назад" onclick="history.back()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="ios-navbar"><span class="ios-navbar-title"></span></div>
+<div class="left-menu">
+  <a href="../../home.html" class="logo"><img src="../../image/logo1.svg" alt="Logo"></a>
+  <div class="nav-list">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../lit.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="15.2" width="15" height="4" rx="1"/><rect x="5.5" y="10.6" width="13" height="4" rx="1"/><rect x="6.5" y="6" width="11" height="4" rx="1"/></svg>Литература</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+    <a href="../../net.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="4.7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 6.7v3.1"/><path d="M10.3 13.4l-3.7 2.1"/><path d="M13.7 13.4l3.7 2.1"/></svg>Сети</a>
+  </div>
+</div>
+
+<div class="main">
+
+<nav class="breadcrumbs">
+  <a href="../../home.html">Главная</a><span class="crumb-sep">/</span>
+  <a href="../../vid.html">Видеоуроки</a><span class="crumb-sep">/</span>
+  <a href="../../matan.html">Курс по матану для 1-го семестра</a><span class="crumb-sep">/</span>
+  <span class="crumb-current">Домашнее задание №6</span>
+</nav>
+<h1>Домашнее задание к вебинару №6</h1>
+
+<div class="tabs">
+	<input type="radio" name="dz-tab" id="tab1" class="tab-input" checked>
+	<input type="radio" name="dz-tab" id="tab2" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab3" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab4" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab5" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab6" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab7" class="tab-input">
+
+	<div class="tab-bar">
+		<label for="tab1" class="tab-label">Задание 1</label>
+		<label for="tab2" class="tab-label">Задание 2</label>
+		<label for="tab3" class="tab-label">Задание 3</label>
+		<label for="tab4" class="tab-label">Задание 4</label>
+		<label for="tab5" class="tab-label">Задание 5</label>
+		<label for="tab6" class="tab-label">Задание 6</label>
+		<label for="tab7" class="tab-label">Задание 7</label>
+	</div>
+
+	<div class="tab-panels">
+
+		<div class="tab-panel" id="panel1">
+			<h2>Задание 1. Частичные пределы последовательностей</h2>
+			<p class="dz-note">Найдите все частичные пределы у последовательностей.</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n = \frac{(-1)^n}{n+1} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Разобьём последовательность на подпоследовательности по чётности \( n \):</p>
+						\[ x_{2k} = \frac{(-1)^{2k}}{2k+1} = \frac{1}{2k+1} \to 0 \]
+						\[ x_{2k-1} = \frac{(-1)^{2k-1}}{2k} = -\frac{1}{2k} \to 0 \]
+						<p>Эти две подпоследовательности содержат все члены исходной последовательности, значит любая сходящаяся подпоследовательность сходится к тому же пределу.</p>
+						<p><b>Ответ:</b> единственный частичный предел \( 0 \) (последовательность сходится к \( 0 \))</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n = \sin\frac{\pi n}{4} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Значение \( \sin\dfrac{\pi n}{4} \) зависит только от остатка \( n \) при делении на 8:</p>
+						\[ n\equiv0,4\ (\mathrm{mod}\ 8):\ \sin\frac{\pi n}{4}=0 \]
+						\[ n\equiv1,3\ (\mathrm{mod}\ 8):\ \sin\frac{\pi n}{4}=\frac{1}{\sqrt2} \]
+						\[ n\equiv2\ (\mathrm{mod}\ 8):\ \sin\frac{\pi n}{4}=1 \]
+						\[ n\equiv5,7\ (\mathrm{mod}\ 8):\ \sin\frac{\pi n}{4}=-\frac{1}{\sqrt2} \]
+						\[ n\equiv6\ (\mathrm{mod}\ 8):\ \sin\frac{\pi n}{4}=-1 \]
+						<p>Каждому классу вычетов соответствует постоянная подпоследовательность; вместе они покрывают все члены исходной последовательности.</p>
+						<p><b>Ответ:</b> \( \left\{0,\ \dfrac{1}{\sqrt2},\ 1,\ -\dfrac{1}{\sqrt2},\ -1\right\} \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n = n\cos\frac{\pi n}{2} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>\( \cos\dfrac{\pi n}{2}=0 \) при нечётных \( n \), \( =1 \) при \( n\equiv0\ (\mathrm{mod}\ 4) \), \( =-1 \) при \( n\equiv2\ (\mathrm{mod}\ 4) \). Значит:</p>
+						\[ x_{2k+1} = 0 \to 0 \]
+						\[ x_{4k} = 4k \to +\infty \]
+						\[ x_{4k+2} = -(4k+2) \to -\infty \]
+						<p>Эти подпоследовательности покрывают все члены исходной последовательности.</p>
+						<p><b>Ответ:</b> \( \{0,\ +\infty,\ -\infty\} \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n = 3^{(-1)^n n} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ x_{2k} = 3^{(-1)^{2k}\cdot2k} = 3^{2k} \to +\infty \]
+						\[ x_{2k-1} = 3^{(-1)^{2k-1}(2k-1)} = 3^{-(2k-1)} \to 0 \]
+						<p>Эти две подпоследовательности покрывают все члены исходной последовательности.</p>
+						<p><b>Ответ:</b> \( \{0,\ +\infty\} \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n = 3\left(1-\frac1n\right)+2(-1)^n \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ x_{2k} = 3\left(1-\frac{1}{2k}\right)+2 = 5-\frac{3}{2k} \to 5 \]
+						\[ x_{2k-1} = 3\left(1-\frac{1}{2k-1}\right)-2 = 1-\frac{3}{2k-1} \to 1 \]
+						<p>Эти подпоследовательности покрывают все члены исходной последовательности.</p>
+						<p><b>Ответ:</b> \( \{1,\ 5\} \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 6**</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n = \left\{1,\ \frac12,\ 1+\frac12,\ \frac13,\ 1+\frac13,\ \frac12+\frac13,\ \frac14,\ \dots,\ \frac1n,\ 1+\frac1n,\ \frac12+\frac1n,\ \dots,\ \frac{1}{n-1}+\frac1n,\ \dots \right\} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Сгруппируем члены последовательности в подпоследовательности вида \( \dfrac1k+\dfrac1n \) при фиксированном \( k \) и \( n\to\infty \):</p>
+						\[ a_n = 1+\frac1n \to 1,\qquad b_n=\frac12+\frac1n\to\frac12,\qquad c_n=\frac13+\frac1n\to\frac13,\ \ \dots,\ \ q_n=\frac1k+\frac1n\to\frac1k,\ \ \dots,\qquad z_n=\frac1n\to0 \]
+						<p>Эти подпоследовательности покрывают все члены исходной последовательности.</p>
+						<p><b>Ответ:</b> \( \left\{\dfrac1k,\ k\in\mathbb N\right\}\cup\{0\} \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel2">
+			<h2>Задание 2. Верхний и нижний пределы последовательностей</h2>
+			<p class="dz-note">Найдите \( \overline{\lim\limits_{n\to\infty}}x_n \) (верхний предел) и \( \underline{\lim\limits_{n\to\infty}}x_n \) (нижний предел) — наибольший и наименьший из частичных пределов.</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n = \cos\frac{\pi n}{3} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ x_{6k}=\cos2\pi k=1 \]
+						\[ x_{6k\pm1}=\cos\left(\pm\frac{\pi}{3}+2\pi k\right)=\frac12 \]
+						\[ x_{6k\pm2}=\cos\left(\pm\frac{2\pi}{3}+2\pi k\right)=-\frac12 \]
+						\[ x_{6k+3}=\cos(\pi+2\pi k)=-1 \]
+						<p>Наибольший частичный предел равен 1, наименьший равен \( -1 \).</p>
+						<p><b>Ответ:</b> \( \overline{\lim}\,x_n=1,\quad \underline{\lim}\,x_n=-1 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n = (-1)^n\frac{2n+1}{n} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ x_{2k} = (-1)^{2k}\frac{4k+1}{2k} = 2+\frac{1}{2k} \to 2 \]
+						\[ x_{2k-1} = (-1)^{2k-1}\frac{4k-1}{2k-1} = -\left(2+\frac{1}{2k-1}\right) \to -2 \]
+						<p><b>Ответ:</b> \( \overline{\lim}\,x_n=2,\quad \underline{\lim}\,x_n=-2 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n = (-1)^{n+1}\left(3+\frac{2}{n+1}\right) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ x_{2k} = (-1)^{2k+1}\left(3+\frac{2}{2k+1}\right) = -\left(3+\frac{2}{2k+1}\right) \to -3 \]
+						\[ x_{2k-1} = (-1)^{2k}\left(3+\frac{2}{2k}\right) = 3+\frac1k \to 3 \]
+						<p><b>Ответ:</b> \( \overline{\lim}\,x_n=3,\quad \underline{\lim}\,x_n=-3 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n = \frac{n^2}{1+n^2}\cos\frac{2\pi n}{3} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ x_{3k} = \frac{9k^2}{1+9k^2}\cos2\pi k = \frac{9k^2}{1+9k^2} \to 1 \]
+						\[ x_{3k\pm1} = \frac{(3k\pm1)^2}{1+(3k\pm1)^2}\cos\left(\pm\frac{2\pi}{3}+2\pi k\right) = -\frac12\cdot\frac{(3k\pm1)^2}{1+(3k\pm1)^2} \to -\frac12 \]
+						<p><b>Ответ:</b> \( \overline{\lim}\,x_n=1,\quad \underline{\lim}\,x_n=-\dfrac12 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n = \frac{n}{n+1}\sin^2\frac{\pi n}{4} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ x_{4k} = \frac{4k}{4k+1}\sin^2\pi k = 0 \to 0 \]
+						\[ x_{2k+1} = \frac{2k+1}{2k+2}\sin^2\left(\pm\frac\pi4+\pi k\right) = \frac12\cdot\frac{2k+1}{2k+2} \to \frac12 \]
+						\[ x_{4k+2} = \frac{4k+2}{4k+3}\sin^2\left(\pm\frac\pi2+2\pi k\right) = \frac{4k+2}{4k+3} \to 1 \]
+						<p><b>Ответ:</b> \( \overline{\lim}\,x_n=1,\quad \underline{\lim}\,x_n=0 \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel3">
+			<h2>Задание 3. Последовательность с заданным множеством частичных пределов</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b> Приведите пример последовательности \( a_n \), множеством частичных пределов которой является множество \( \{1,\ 2,\ 3,\ 4,\ 5\} \)</div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Рассмотрим последовательность</p>
+						\[ x_n = \{1,\ 2,\ 3,\ 4,\ 5,\ 1,\ 2,\ 3,\ 4,\ 5,\ \dots\} \]
+						<p>то есть периодическую с периодом 5. В ней выделяются пять постоянных подпоследовательностей:</p>
+						\[ a_n=\{1,1,1,\dots\}\to1,\quad b_n=\{2,2,2,\dots\}\to2,\quad c_n=\{3,3,3,\dots\}\to3,\quad d_n=\{4,4,4,\dots\}\to4,\quad e_n=\{5,5,5,\dots\}\to5 \]
+						<p>Они покрывают всю исходную последовательность, поэтому любая сходящаяся подпоследовательность сходится к одному из чисел \( 1,2,3,4,5 \) — эта последовательность является искомой.</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel4">
+			<h2>Задание 4*. Последовательность с частичными пределами — все натуральные числа</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b> Приведите пример последовательности \( a_n \), множеством частичных пределов которой является всё множество натуральных чисел</div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Рассмотрим последовательность</p>
+						\[ x_n = \{1,\ 1,2,\ 1,2,3,\ 1,2,3,4,\ 1,2,3,4,5,\ \dots\} \]
+						<p>то есть блоки возрастающей длины из чисел \( 1,\dots,k \). Для каждого \( k\in\mathbb N \) в ней есть постоянная подпоследовательность \( \{k,k,k,\dots\}\to k \):</p>
+						\[ a_n=\{1,1,1,\dots\}\to1,\quad b_n=\{2,2,2,\dots\}\to2,\quad c_n=\{3,3,3,\dots\}\to3,\quad d_n=\{4,4,4,\dots\}\to4,\quad e_n=\{5,5,5,\dots\}\to5,\ \dots \]
+						<p>Вместе они покрывают всю исходную последовательность. Значит, любая сходящаяся подпоследовательность сходится к какому-то натуральному числу, и множеством частичных пределов является \( \mathbb N \).</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel5">
+			<h2>Задание 5**. Последовательность с частичными пределами — все действительные числа</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b> Приведите пример последовательности \( a_n \), множеством частичных пределов которой является всё множество действительных чисел</div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Любое действительное число можно представить в виде десятичной дроби \( a=\overline{a_1,a_2a_3a_4\dots},\ a_i\in\mathbb Z \) (для рациональных чисел рано или поздно возникает период, для иррациональных — нет).</p>
+						<p>Рассмотрим последовательность \( \mathbb Q \) — последовательность, перенумеровывающую все рациональные числа. Для произвольного \( a\in\mathbb R \) построим подпоследовательность его рациональных приближений:</p>
+						\[ x_1=a_1,\qquad x_2=\overline{a_1,a_2},\qquad x_3=\overline{a_1,a_2a_3},\qquad x_4=\overline{a_1,a_2a_3a_4},\ \ \dots \]
+						<p>где \( x_i\in\mathbb Q \) и \( x_i\to a \) (можно и бесконечным числом других способов, но этот самый очевидный).</p>
+						<p>Таким способом любое действительное число получается как предел некоторой подпоследовательности рациональных чисел. Значит, множеством частичных пределов последовательности \( \mathbb Q \) является \( \mathbb R \), поэтому \( \mathbb Q \) — искомая последовательность.</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel6">
+			<h2>Задание 6. Критерий Коши: доказательство сходимости</h2>
+			<p class="dz-note">Определение фундаментальности: \( \forall\varepsilon>0\ \exists N:\ \forall n,m\ge N \Rightarrow |x_n-x_m|<\varepsilon \). По критерию Коши последовательность сходится тогда и только тогда, когда она фундаментальна.</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n = \frac{\cos1!}{1\cdot2}+\frac{\cos2!}{2\cdot3}+\cdots+\frac{\cos n!}{n(n+1)} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Без ограничения общности пусть \( n>m \). Тогда</p>
+						\[ |x_n-x_m| = \left|\frac{\cos(m+1)!}{(m+1)(m+2)}+\cdots+\frac{\cos n!}{n(n+1)}\right| \le \frac{1}{(m+1)(m+2)}+\cdots+\frac{1}{n(n+1)} \]
+						<p>(так как \( \cos\alpha\le1 \)). Пользуясь телескопией \( \dfrac1{k(k+1)}=\dfrac1k-\dfrac1{k+1} \):</p>
+						\[ = \frac{1}{m+1}-\frac{1}{n+1} < \frac{1}{m+1} < \varepsilon \iff m>\frac1\varepsilon-1 \]
+						<p>Положим \( N=\left[\dfrac1\varepsilon\right]+33 \). Тогда при \( n>m\ge N \) выполняется \( |x_n-x_m|<\varepsilon \), то есть \( x_n \) фундаментальна \( \Rightarrow \) по критерию Коши она сходится.</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n = 1+\frac{1}{2!}+\cdots+\frac{1}{n!} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Пусть \( n>m \). Тогда</p>
+						\[ |x_n-x_m| = \frac{1}{(m+1)!}+\cdots+\frac{1}{n!} \le \frac{1}{(m+1)!}\left(1+\frac{1}{m+2}+\frac{1}{(m+2)(m+3)}+\cdots\right) \]
+						<p>Так как \( \dfrac1{ab}<\dfrac1{a^2} \) при \( a\lt b \):</p>
+						\[ \le \frac{1}{(m+1)!}\left(1+\frac12+\frac14+\cdots+\frac1{2^{n-m+1}}\right) \le \frac{2}{(m+1)!} \le \frac{2}{m+1} < \varepsilon \iff m>\frac2\varepsilon-1 \]
+						<p>(сумма геометрической прогрессии \( 1+\frac12+\frac14+\cdots<2 \)). Положим \( N=\left[\dfrac2\varepsilon\right]+42 \). Последовательность фундаментальна \( \Rightarrow \) по критерию Коши сходится.</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n = 0{,}\underbrace{77\ldots7}_{n} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Перепишем последовательность в удобном виде — это геометрическая прогрессия с \( b_1=0{,}7,\ q=0{,}1 \):</p>
+						\[ x_n = 7\cdot10^{-1}+7\cdot10^{-2}+\cdots+7\cdot10^{-n} = \frac{0{,}7\left(1-0{,}1^{\,n}\right)}{1-0{,}1} = \frac79\cdot\frac{10^n-1}{10^n} \]
+						<p>Пусть \( n>m \). Умножая вторую дробь на \( 10^{n-m} \):</p>
+						\[ |x_n-x_m| = \frac79\left|\frac{10^n-1}{10^n}-\frac{10^m-1}{10^m}\right| = \frac79\cdot\frac{10^{n-m}-1}{10^n} < \frac{1}{10^m}-\frac{1}{10^n} < \frac{2}{10^m} < \varepsilon \iff m>\lg\frac2\varepsilon \]
+						<p>Положим \( N=\left[\lg\dfrac2\varepsilon\right]+13 \). Последовательность фундаментальна \( \Rightarrow \) по критерию Коши сходится.</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n = \frac{1+4n^2}{2+2n^2} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Перепишем: \( x_n = 2-\dfrac{3}{2+2n^2} \). Пусть \( n>m \), тогда по неравенству треугольника:</p>
+						\[ |x_n-x_m| = \left|2-\frac{3}{2+2n^2}-2+\frac{3}{2+2m^2}\right| \le \frac{3}{2+2n^2}+\frac{3}{2+2m^2} \le \frac{2}{n^2}+\frac{2}{m^2} \le \frac{4}{m^2} < \varepsilon \iff m>\frac{2}{\sqrt\varepsilon} \]
+						<p>Положим \( N=\left[\dfrac{2}{\sqrt\varepsilon}\right]+77 \). Последовательность фундаментальна \( \Rightarrow \) по критерию Коши сходится.</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5*</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n = 1+\frac{1}{2^3}+\frac{1}{3^3}+\cdots+\frac{1}{n^3} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Пусть \( n>m \). Так как \( \dfrac1{k^3}<\dfrac1{(k-2)(k-1)k} \):</p>
+						\[ |x_n-x_m| = \frac{1}{(m+1)^3}+\cdots+\frac{1}{n^3} < \frac{1}{(m-1)m(m+1)}+\cdots+\frac{1}{(n-2)(n-1)n} \]
+						<p>Пользуясь телескопией \( \dfrac{1}{(k-1)k(k+1)}=\dfrac12\left(\dfrac{1}{(k-1)k}-\dfrac{1}{k(k+1)}\right) \):</p>
+						\[ = \frac12\left(\frac{1}{m-1}-\frac1m-\frac{1}{n-1}+\frac1n\right) < \frac{2}{m-1} < \varepsilon \iff m>\frac2\varepsilon+1 \]
+						<p>Положим \( N=\left[\dfrac2\varepsilon\right]+69 \). Последовательность фундаментальна \( \Rightarrow \) по критерию Коши сходится.</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel7">
+			<h2>Задание 7. Критерий Коши: доказательство расходимости</h2>
+			<p class="dz-note">Отрицание фундаментальности: \( \exists\varepsilon>0:\ \forall N\ \exists n,m>N:\ |x_n-x_m|\ge\varepsilon \). Если найдётся такое \( \varepsilon \), последовательность не фундаментальна и, по критерию Коши, расходится.</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n = 0{,}2^{(-1)^n n} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Пусть \( \varepsilon=1,\ n=2k+1,\ m=2k \):</p>
+						\[ |x_n-x_m| = \left|0{,}2^{-(2k+1)}-0{,}2^{\,2k}\right| = \left|5^{2k+1}-\frac{1}{5^{2k}}\right| \ge 5^2\cdot5-\frac1{5^2} = 125-\frac1{25} > 1=\varepsilon \]
+						<p><b>Вывод:</b> последовательность не фундаментальна, значит расходится.</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n = \frac{n\cos\pi n - 1}{2n} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Так как \( \cos\pi n=(-1)^n \), перепишем: \( x_n = \dfrac{(-1)^n}{2}-\dfrac{1}{2n} \). Пусть \( \varepsilon=0{,}1,\ n=m-1 \):</p>
+						\[ |x_m - x_{m-1}| = \left|\frac{(-1)^m}{2}-\frac{1}{2m}-\frac{(-1)^{m-1}}{2}+\frac{1}{2(m-1)}\right| = \left|(-1)^m+\frac{1}{2m-2}-\frac{1}{2m}\right| \ge 1-\frac{1}{2\cdot2\cdot3} = \frac{11}{12} > \frac{1}{10}=\varepsilon \]
+						<p><b>Вывод:</b> последовательность не фундаментальна, значит расходится.</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n = (-1)^n\left(1+\frac1n\right)^n \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Пусть \( \varepsilon=1,\ m=n+1 \):</p>
+						\[ \left|(-1)^n\left(1+\frac1n\right)^n-(-1)^{n+1}\left(1+\frac1{n+1}\right)^{n+1}\right| = \left(1+\frac1n\right)^n+\left(1+\frac1{n+1}\right)^{n+1} \]
+						<p>По неравенству Бернулли \( (1+x)^k\ge1+kx \):</p>
+						\[ \ge \left(1+\frac{n}{n}\right)+\left(1+\frac{n+1}{n+1}\right) = 4 > 1 = \varepsilon \]
+						<p><b>Вывод:</b> последовательность не фундаментальна, значит расходится.</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n = \frac{1}{2^2}+\frac{2}{3^2}+\cdots+\frac{n}{(n+1)^2} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Пусть \( \varepsilon=0{,}1,\ m=2n \):</p>
+						\[ |x_m-x_n| = \frac{n+1}{(n+2)^2}+\cdots+\frac{2n}{(2n+1)^2} \ge \frac{n(n+1)}{(2n+1)^2} = \frac14-\frac{1}{4(2n+1)^2} \ge \frac14-\frac1{36} = \frac29 > \frac{1}{10}=\varepsilon \]
+						<p><b>Вывод:</b> последовательность не фундаментальна, значит расходится.</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n = 1+\frac{1}{\sqrt2}+\cdots+\frac{1}{\sqrt n} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Пусть \( \varepsilon=\dfrac12,\ n=4m \):</p>
+						\[ |x_{4m}-x_m| = \frac{1}{\sqrt{m+1}}+\cdots+\frac{1}{\sqrt{4m}} \ge \frac{1}{2\sqrt m}+\cdots+\frac{1}{2\sqrt m} = \frac{3m}{2\sqrt m} = \frac32\sqrt m \ge \frac32 > \frac12=\varepsilon \]
+						<p><b>Вывод:</b> последовательность не фундаментальна, значит расходится.</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+</div>
+
+
+<nav class="ios-tabbar" aria-label="Основная навигация">
+  <div class="ios-tabbar-inner">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+  </div>
+</nav>
+</body>
+</html>

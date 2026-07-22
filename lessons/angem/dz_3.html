@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link href="../../test1.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARINOV</title>
+	<link rel="shortcut icon" href="../../image/logo.svg" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="stylesheet" href="../assets/css/site.css">
+	<link rel="stylesheet" href="../assets/css/pygments.css">
+	<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&amp;display=swap" rel="stylesheet" media="all">
+	<link href="shrek.ttf" rel="stylesheet" media="all">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<script src="../../nav-merge.js" defer></script>
+	<style>
+		.dz-header {
+			color: gray;
+			font-size: 14px;
+			margin-bottom: 4px;
+		}
+
+		.tabs {
+			margin-top: 15px;
+		}
+
+		.tab-input {
+			display: none;
+		}
+
+		.tab-bar {
+			margin-bottom: 20px;
+		}
+
+		.tab-label {
+			display: inline-block;
+			padding: 10px 18px;
+			margin-right: 8px;
+			margin-bottom: 10px;
+			background-color: #EEF0F4;
+			border: 1px solid #E1E4EC;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: 15px;
+			transition: 0.2s;
+			user-select: none;
+		}
+
+		.tab-label:hover {
+			background-color: #E2E5F7;
+		}
+
+		.tab-input:checked + .tab-label {
+			background-color: #5B62F5;
+			color: white;
+			font-weight: 600;
+		}
+
+		.tab-panel {
+			display: none;
+		}
+
+		#tab1:checked ~ .tab-panels #panel1,
+		#tab2:checked ~ .tab-panels #panel2,
+		#tab3:checked ~ .tab-panels #panel3,
+		#tab4:checked ~ .tab-panels #panel4,
+		#tab5:checked ~ .tab-panels #panel5,
+		#tab6:checked ~ .tab-panels #panel6,
+		#tab7:checked ~ .tab-panels #panel7,
+		#tab8:checked ~ .tab-panels #panel8,
+		#tab9:checked ~ .tab-panels #panel9,
+		#tab10:checked ~ .tab-panels #panel10,
+		#tab11:checked ~ .tab-panels #panel11,
+		#tab12:checked ~ .tab-panels #panel12,
+		#tab13:checked ~ .tab-panels #panel13,
+		#tab14:checked ~ .tab-panels #panel14,
+		#tab15:checked ~ .tab-panels #panel15,
+		#tab16:checked ~ .tab-panels #panel16,
+		#tab17:checked ~ .tab-panels #panel17,
+		#tab18:checked ~ .tab-panels #panel18 {
+			display: block;
+		}
+
+		@media only screen and (max-device-width: 530px) {
+			.tab-label {
+				padding: 9px 14px;
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+<body>
+<button type="button" class="ios-back-btn" aria-label="Назад" onclick="history.back()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="ios-navbar"><span class="ios-navbar-title"></span></div>
+<div class="left-menu">
+  <a href="../../home.html" class="logo"><img src="../../image/logo1.svg" alt="Logo"></a>
+  <div class="nav-list">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../lit.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="15.2" width="15" height="4" rx="1"/><rect x="5.5" y="10.6" width="13" height="4" rx="1"/><rect x="6.5" y="6" width="11" height="4" rx="1"/></svg>Литература</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+    <a href="../../net.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="4.7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 6.7v3.1"/><path d="M10.3 13.4l-3.7 2.1"/><path d="M13.7 13.4l3.7 2.1"/></svg>Сети</a>
+  </div>
+</div>
+
+<div class="main">
+
+<nav class="breadcrumbs">
+  <a href="../../home.html">Главная</a><span class="crumb-sep">/</span>
+  <a href="../../vid.html">Видеоуроки</a><span class="crumb-sep">/</span>
+  <a href="../../angem.html">Аналитическая геометрия от Профиматики</a><span class="crumb-sep">/</span>
+  <span class="crumb-current">Домашнее задание</span>
+</nav>
+
+	<div class="tabs">
+		<input type="radio" name="dz-tab" id="tab1" class="tab-input" checked>
+		<input type="radio" name="dz-tab" id="tab2" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab3" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab4" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab5" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab6" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab7" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab8" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab9" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab10" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab11" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab12" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab13" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab14" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab15" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab16" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab17" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab18" class="tab-input">
+
+		<div class="tab-bar">
+			<label for="tab1" class="tab-label">Задание 1</label>
+			<label for="tab2" class="tab-label">Задание 2</label>
+			<label for="tab3" class="tab-label">Задание 3</label>
+			<label for="tab4" class="tab-label">Задание 4</label>
+			<label for="tab5" class="tab-label">Задание 5</label>
+			<label for="tab6" class="tab-label">Задание 6</label>
+			<label for="tab7" class="tab-label">Задание 7</label>
+			<label for="tab8" class="tab-label">Задание 8</label>
+			<label for="tab9" class="tab-label">Задание 9</label>
+			<label for="tab10" class="tab-label">Задание 10</label>
+			<label for="tab11" class="tab-label">Задание 11</label>
+			<label for="tab12" class="tab-label">Задание 12</label>
+			<label for="tab13" class="tab-label">Задание 13</label>
+			<label for="tab14" class="tab-label">Задание 14</label>
+			<label for="tab15" class="tab-label">Задание 15</label>
+			<label for="tab16" class="tab-label">Задание 16</label>
+			<label for="tab17" class="tab-label">Задание 17</label>
+			<label for="tab18" class="tab-label">Задание 18</label>
+		</div>
+
+		<div class="tab-panels">
+
+			<!-- Задание 1. Линейные комбинации векторов -->
+			<div class="tab-panel" id="panel1">
+				<h2>Задание 1. Линейные комбинации векторов</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Даны четыре вектора \(\vec a(3,0,-2), \vec b(1,2,-5), \vec c(-1,1,1), \vec d(8,4,1)\). Найти координаты векторов \(-5\vec a+\vec b-6\vec c+\vec d\), \(3\vec a-\vec b-\vec c-\vec d\).</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Вычисляем покоординатно. Для вектора \(-5\vec a+\vec b-6\vec c+\vec d\):</p>
+							<p>\(x=-5\cdot3+1-6\cdot(-1)+8=-15+1+6+8=0\);</p>
+							<p>\(y=-5\cdot0+2-6\cdot1+4=0+2-6+4=0\);</p>
+							<p>\(z=-5\cdot(-2)+(-5)-6\cdot1+1=10-5-6+1=0\).</p>
+							<p>Итог: \((0,0,0)\).</p>
+							<p>Для вектора \(3\vec a-\vec b-\vec c-\vec d\):</p>
+							<p>\(x=3\cdot3-1-(-1)-8=9-1+1-8=1\);</p>
+							<p>\(y=3\cdot0-2-1-4=0-2-1-4=-7\);</p>
+							<p>\(z=3\cdot(-2)-(-5)-1-1=-6+5-1-1=-3\).</p>
+							<p>Итог: \((1,-7,-3)\).</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 2. Разложение вектора в сумму, равную нулю -->
+			<div class="tab-panel" id="panel2">
+				<h2>Задание 2. Разложение вектора в сумму, равную нулю</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Даны четыре вектора \(\vec a(4,1,-1), \vec b(3,-1,0), \vec c(-1,1,1), \vec d(-1,3,4)\). Найти числа \(\alpha,\beta,\gamma\) такие, что \(\alpha\vec a+\beta\vec b+\gamma\vec c+\vec d=\vec 0\).</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Записывая уравнение \(\alpha\vec a+\beta\vec b+\gamma\vec c+\vec d=\vec 0\) покоординатно, получаем систему:</p>
+							<p>\[
+							\begin{cases} 4\alpha+3\beta-\gamma-1=0 \\ \alpha-\beta+\gamma+3=0 \\ -\alpha+\gamma+4=0 \end{cases}
+							\]</p>
+							<p>Из третьего уравнения \(\gamma=\alpha-4\). Подставляя во второе: \(\alpha-\beta+(\alpha-4)+3=0\), откуда \(2\alpha-\beta-1=0\), то есть \(\beta=2\alpha-1\). Подставляя оба выражения в первое уравнение:</p>
+							<p>\[
+							4\alpha+3(2\alpha-1)-(\alpha-4)-1=0 \;\Rightarrow\; 4\alpha+6\alpha-3-\alpha+4-1=0 \;\Rightarrow\; 9\alpha=0 \;\Rightarrow\; \alpha=0.
+							\]</p>
+							<p>Тогда \(\beta=2\cdot0-1=-1\), \(\gamma=0-4=-4\). Проверка подстановкой в исходное уравнение подтверждает: все координаты обнуляются.</p>
+							<p>Ответ: \(\alpha=0,\ \beta=-1,\ \gamma=-4\).</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 3. Базис пространства и координаты векторов в базисе -->
+			<div class="tab-panel" id="panel3">
+				<h2>Задание 3. Базис пространства и координаты векторов в базисе</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Проверить, что векторы \(\vec a(4,1,-1), \vec b(1,2,-5), \vec c(-1,1,1)\) образуют базис в пространстве. Найти координаты векторов \(\vec l(4,4,-5), \vec m(2,4,-10), \vec n(0,3,-4)\) в этом базисе.</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Составляем определитель из координат векторов (строки — координаты \(\vec a,\vec b,\vec c\)):</p>
+							<p>\[
+							\det\begin{pmatrix} 4 & 1 & -1 \\ 1 & 2 & -5 \\ -1 & 1 & 1 \end{pmatrix}=4(2\cdot1-(-5)\cdot1)-1(1\cdot1-(-5)\cdot(-1))+(-1)(1\cdot1-2\cdot(-1))=4\cdot7-1\cdot(-4)-1\cdot3=28+4-3=29\ne0.
+							\]</p>
+							<p>Определитель отличен от нуля, значит векторы линейно независимы и образуют базис в \(\mathbb{R}^3\).</p>
+							<p>Раскладываем каждый вектор по базису, решая систему \(x\vec a+y\vec b+z\vec c=\) искомый вектор, то есть</p>
+							<p>\[
+							\begin{cases} 4x+y-z=v_1 \\ x+2y+z=v_2 \\ -x-5y+z=v_3 \end{cases}
+							\]</p>
+							<p>Для \(\vec l=(4,4,-5)\): решением системы является \(x=y=z=1\). Проверка: \(4\cdot1+1\cdot1-1\cdot1=4\), \(1+2\cdot1+1=4\), \(-1-5+1=-5\) — совпадает. Итак, \(\vec l=(1,1,1)\) в этом базисе.</p>
+							<p>Для \(\vec m=(2,4,-10)\): решением является \(x=0,y=2,z=0\). Проверка: \(0+2-0=2\), \(0+4+0=4\), \(0-10+0=-10\) — совпадает. Итак, \(\vec m=(0,2,0)\).</p>
+							<p>Для \(\vec n=(0,3,-4)\): решением является \(x=0,y=1,z=1\). Проверка: \(0+1-1=0\), \(0+2+1=3\), \(0-5+1=-4\) — совпадает. Итак, \(\vec n=(0,1,1)\).</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 4. Медианы треугольника в координатах базиса -->
+			<div class="tab-panel" id="panel4">
+				<h2>Задание 4. Медианы треугольника в координатах базиса</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>В треугольнике \(ABC\) точка \(M\) — середина отрезка \(AB\), точка \(O\) — точка пересечения медиан. Принимая за базисные векторы \(\vec{AB}\) и \(\vec{AC}\), найти координаты векторов \(\vec{AM}, \vec{AO}, \vec{MO}\).</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Так как \(M\) — середина \(AB\), то \(\vec{AM}=\frac12\vec{AB}\), то есть координаты \(\left(\frac12,0\right)\) в базисе \(\{\vec{AB},\vec{AC}\}\).</p>
+							<p>Точка пересечения медиан делит каждую медиану в отношении 2:1, считая от вершины, и известно, что для неё справедлива формула \(\vec{AO}=\frac13(\vec{AB}+\vec{AC})\) (среднее арифметическое радиус-векторов вершин относительно \(A\)). Значит координаты \(\vec{AO}\) равны \(\left(\frac13,\frac13\right)\).</p>
+							<p>Тогда:</p>
+							<p>\[
+							\vec{MO}=\vec{AO}-\vec{AM}=\frac13(\vec{AB}+\vec{AC})-\frac12\vec{AB}=\left(\frac13-\frac12\right)\vec{AB}+\frac13\vec{AC}=-\frac16\vec{AB}+\frac13\vec{AC}.
+							\]</p>
+							<p>Координаты \(\vec{MO}\) равны \(\left(-\frac16,\frac13\right)\).</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 5. Векторы в трапеции с соотношением оснований 3:2 -->
+			<div class="tab-panel" id="panel5">
+				<h2>Задание 5. Векторы в трапеции с соотношением оснований 3:2</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>В трапеции \(ABCD\) длины оснований \(AD\) и \(BC\) относятся как 3:2. Принимая за базисные векторы \(\vec{AC}\) и \(\vec{BD}\), найти координаты векторов \(\vec{AB}, \vec{BC}, \vec{CD}, \vec{DA}\).</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Пусть \(AD=3k, BC=2k\). Так как \(AD\parallel BC\), то \(\vec{AD}=\frac32\vec{BC}\).</p>
+							<p>По правилу многоугольника для трапеции \(\vec{AB}+\vec{BC}+\vec{CD}=\vec{AD}=\frac32\vec{BC}\), откуда</p>
+							<p>\[
+							\vec{AB}+\vec{CD}=\frac12\vec{BC}. \quad (*)
+							\]</p>
+							<p>С другой стороны, диагонали выражаются как \(\vec{AC}=\vec{AB}+\vec{BC}\) и \(\vec{BD}=\vec{BC}+\vec{CD}\). Складывая эти два равенства:</p>
+							<p>\[
+							\vec{AC}+\vec{BD}=\vec{AB}+\vec{CD}+2\vec{BC}=\frac12\vec{BC}+2\vec{BC}=\frac52\vec{BC},
+							\]</p>
+							<p>откуда \(\vec{BC}=\frac25(\vec{AC}+\vec{BD})\). Тогда из \(\vec{AC}=\vec{AB}+\vec{BC}\) находим</p>
+							<p>\[
+							\vec{AB}=\vec{AC}-\vec{BC}=\vec{AC}-\frac25(\vec{AC}+\vec{BD})=\frac35\vec{AC}-\frac25\vec{BD},
+							\]</p>
+							<p>а из \(\vec{BD}=\vec{BC}+\vec{CD}\) находим</p>
+							<p>\[
+							\vec{CD}=\vec{BD}-\vec{BC}=\vec{BD}-\frac25(\vec{AC}+\vec{BD})=-\frac25\vec{AC}+\frac35\vec{BD}.
+							\]</p>
+							<p>Наконец, \(\vec{DA}=-\vec{AD}=-\frac32\vec{BC}=-\frac32\cdot\frac25(\vec{AC}+\vec{BD})=-\frac35\vec{AC}-\frac35\vec{BD}\).</p>
+							<p>Итоговые координаты в базисе \(\{\vec{AC},\vec{BD}\}\):</p>
+							<p>\(\vec{AB}=\left(\frac35,-\frac25\right)\), \(\vec{BC}=\left(\frac25,\frac25\right)\), \(\vec{CD}=\left(-\frac25,\frac35\right)\), \(\vec{DA}=\left(-\frac35,-\frac35\right)\).</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 6. Диагонали и боковые стороны трапеции с соотношением 3:1 -->
+			<div class="tab-panel" id="panel6">
+				<h2>Задание 6. Диагонали и боковые стороны трапеции с соотношением 3:1</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>В трапеции \(ABCD\) длины оснований \(AD\) и \(BC\) относятся как 3:1. \(O\) — точка пересечения диагоналей, \(S\) — точка пересечения продолжений боковых сторон. Принимая за базисные векторы \(\vec{AD}\) и \(\vec{AB}\), найти координаты векторов \(\vec{AC}, \vec{AO}, \vec{AS}\).</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Пусть \(AD=3k, BC=k\), тогда \(\vec{BC}=\frac13\vec{AD}\).</p>
+							<p>\[
+							\vec{AC}=\vec{AB}+\vec{BC}=\vec{AB}+\frac13\vec{AD}.
+							\]</p>
+							<p>Координаты \(\vec{AC}\) в базисе \(\{\vec{AD},\vec{AB}\}\): \(\left(\frac13,1\right)\).</p>
+							<p>Диагонали трапеции точкой пересечения делятся в отношении длин оснований, то есть \(AO:OC=AD:BC=3:1\), значит \(\vec{AO}=\frac34\vec{AC}\):</p>
+							<p>\[
+							\vec{AO}=\frac34\left(\vec{AB}+\frac13\vec{AD}\right)=\frac14\vec{AD}+\frac34\vec{AB}.
+							\]</p>
+							<p>Координаты \(\vec{AO}\): \(\left(\frac14,\frac34\right)\).</p>
+							<p>Точка \(S\) — пересечение продолжений боковых сторон \(AB\) и \(DC\). Треугольники \(SAD\) и \(SBC\) подобны (\(AD\parallel BC\)) с коэффициентом подобия \(AD:BC=3\), причём вершина \(S\) — общая, а \(B,C\) лежат на отрезках \(SA,SD\) соответственно. Из подобия \(SB:SA=1:3\), откуда \(AB:SA=2:3\), то есть \(SA=\frac32AB\) и, с учётом направления (\(S\) лежит на продолжении \(BA\) за точку \(A\)):</p>
+							<p>\[
+							\vec{AS}=-\frac32\vec{AB}.
+							\]</p>
+							<p>Координаты \(\vec{AS}\): \(\left(0,-\frac32\right)\) (знак определяется тем, что точка \(S\) расположена по другую сторону от \(A\), чем точка \(B\)).</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 7. Правильный шестиугольник -->
+			<div class="tab-panel" id="panel7">
+				<h2>Задание 7. Правильный шестиугольник</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Дан правильный шестиугольник \(ABCDEF\). Принять за базисные векторы \(\vec{AB}\) и \(\vec{AF}\), найти в этом базисе координаты векторов \(\vec{BC},\vec{CD},\vec{DE},\vec{EF},\vec{BD},\vec{CF},\vec{CE}\).</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>В правильном шестиугольнике каждая сторона повёрнута относительно соседней на \(60^\circ\), а противоположные стороны параллельны, равны по длине и направлены противоположно. Используя эти свойства и разложение диагоналей через стороны, последовательно находим:</p>
+							<p>\(\vec{BC}=\vec{AF}+\vec{AB}\) — координаты \((1,1)\);</p>
+							<p>\(\vec{CD}=\vec{AF}\) — координаты \((0,1)\);</p>
+							<p>\(\vec{DE}=-\vec{AB}\) — координаты \((-1,0)\);</p>
+							<p>\(\vec{EF}=-\vec{BC}=-\vec{AF}-\vec{AB}\) — координаты \((-1,-1)\);</p>
+							<p>\(\vec{BD}=\vec{BC}+\vec{CD}=(\vec{AF}+\vec{AB})+\vec{AF}=\vec{AB}+2\vec{AF}\) — координаты \((1,2)\);</p>
+							<p>\(\vec{CF}=-2\vec{AB}\) — координаты \((-2,0)\);</p>
+							<p>\(\vec{CE}=\vec{CD}+\vec{DE}=\vec{AF}-\vec{AB}\) — координаты \((-1,1)\).</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 8. Точка пересечения чевиан в треугольнике -->
+			<div class="tab-panel" id="panel8">
+				<h2>Задание 8. Точка пересечения чевиан в треугольнике</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>В треугольнике \(ABC\) точка \(M\) — середина стороны \(AC\), точки \(K\) и \(L\) на сторонах \(AB\) и \(BC\) расположены так, что \(|AK|:|KB|=3:5\), а \(|BL|:|LC|=2:3\). Найти координаты вектора \(\vec{BM}\) в базисе \(\vec{AL},\vec{CK}\).</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Обозначим \(\vec{AB}=\vec a, \vec{AC}=\vec c\). Тогда:</p>
+							<p>\[
+							\vec{AL}=\vec{AB}+\vec{BL}=\vec a+\frac25\vec{BC}=\vec a+\frac25(\vec c-\vec a)=\frac35\vec a+\frac25\vec c;
+							\]</p>
+							<p>\[
+							\vec{CK}=\vec{CA}+\vec{AK}=-\vec c+\frac38\vec a=\frac38\vec a-\vec c;
+							\]</p>
+							<p>\[
+							\vec{BM}=\vec{BA}+\vec{AM}=-\vec a+\frac12\vec c.
+							\]</p>
+							<p>Раскладываем \(\vec{BM}=x\vec{AL}+y\vec{CK}\), то есть \(-\vec a+\frac12\vec c=x\left(\frac35\vec a+\frac25\vec c\right)+y\left(\frac38\vec a-\vec c\right)\). Приравнивая коэффициенты при \(\vec a\) и \(\vec c\) (векторы \(\vec a,\vec c\) линейно независимы), получаем систему:</p>
+							<p>\[
+							\begin{cases} \frac35x+\frac38y=-1 \\ \frac25x-y=\frac12 \end{cases}
+							\]</p>
+							<p>Из второго уравнения \(y=\frac25x-\frac12\). Подставляя в первое:</p>
+							<p>\[
+							\frac35x+\frac38\left(\frac25x-\frac12\right)=-1 \;\Rightarrow\; \frac35x+\frac{3}{20}x-\frac{3}{16}=-1 \;\Rightarrow\; \frac{39}{60}x=-1+\frac{3}{16}=-\frac{13}{16},
+							\]</p>
+							<p>откуда \(x=-\frac{13}{16}\cdot\frac{60}{39}=-\frac{13}{12}\). Тогда \(y=\frac25\left(-\frac{13}{12}\right)-\frac12=-\frac{13}{30}-\frac{15}{30}=-\frac{28}{30}=-\frac{14}{15}\).</p>
+							<p>Ответ: \(\vec{BM}=\left(-\frac{13}{12},-\frac{14}{15}\right)\).</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 9. Треугольники ABC и KLM с общим центроидом -->
+			<div class="tab-panel" id="panel9">
+				<h2>Задание 9. Треугольники ABC и KLM с общим центроидом</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Точка \(K\) лежит на продолжении стороны \(AB\) треугольника \(ABC\) за точку \(B\), точка \(L\) — на продолжении стороны \(BC\) за точку \(C\), точка \(M\) — на продолжении стороны \(CA\) за точку \(A\), причём \(|AB|:|BK|=|BC|:|CL|=|CA|:|AM|\). Доказать, что точки пересечения медиан треугольников \(ABC\) и \(KLM\) совпадают.</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Пусть общее отношение равно \(1:k\) (то есть \(|BK|=k\cdot|AB|\) и т.д.). Зафиксируем радиус-векторы вершин \(A,B,C\) относительно произвольного полюса. Точка пересечения медиан треугольника \(ABC\):</p>
+							<p>\[
+							G=\frac{A+B+C}{3}.
+							\]</p>
+							<p>Так как \(K\) лежит на продолжении \(AB\) за \(B\) с условием \(\vec{AK}=(1+k)\vec{AB}\), то \(K=A+(1+k)(B-A)=(1+k)B-kA\). Аналогично, \(L=(1+k)C-kB\) и \(M=(1+k)A-kC\).</p>
+							<p>Точка пересечения медиан треугольника \(KLM\):</p>
+							<p>\[
+							G'=\frac{K+L+M}{3}=\frac{\big[(1+k)B-kA\big]+\big[(1+k)C-kB\big]+\big[(1+k)A-kC\big]}{3}.
+							\]</p>
+							<p>Группируя слагаемые при \(A,B,C\): коэффициент при \(A\) равен \((1+k)-k=1\), аналогично при \(B\) и при \(C\). Значит:</p>
+							<p>\[
+							G'=\frac{A+B+C}{3}=G.
+							\]</p>
+							<p>Таким образом, \(G'=G\), то есть точки пересечения медиан треугольников \(ABC\) и \(KLM\) совпадают, что и требовалось доказать.</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 10. Точка пересечения прямых в параллелограмме -->
+			<div class="tab-panel" id="panel10">
+				<h2>Задание 10. Точка пересечения прямых в параллелограмме</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Вершина \(D\) параллелограмма \(ABCD\) соединена с точкой \(K\) на стороне \(BC\), такой что \(|BK|:|KC|=2:3\). Вершина \(B\) соединена с точкой \(L\) на стороне \(CD\), такой что \(|CL|:|LD|=5:3\). В каком отношении точка \(M\) пересечения прямых \(DK\) и \(BL\) делит отрезки \(DK\) и \(BL\)?</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Вводим координаты вершин параллелограмма: \(A=(0,0), B=(1,0), C=(1,1), D=(0,1)\).</p>
+							<p>Точка \(K\) делит \(BC\) в отношении \(BK:KC=2:3\), то есть \(K=B+\frac25(C-B)=\left(1,\frac25\right)\).</p>
+							<p>Точка \(L\) делит \(CD\) в отношении \(CL:LD=5:8\), то есть \(L=C+\frac58(D-C)=\left(\frac38,1\right)\).</p>
+							<p>Параметризуем прямую \(DK\): \(P(t)=D+t(K-D)=\left(t,\ 1-\frac{3t}{5}\right)\), \(t\in[0,1]\).</p>
+							<p>Параметризуем прямую \(BL\): \(Q(s)=B+s(L-B)=\left(1-\frac{5s}{8},\ s\right)\), \(s\in[0,1]\).</p>
+							<p>Приравнивая \(P(t)=Q(s)\), получаем систему:</p>
+							<p>\[
+							\begin{cases} t=1-\dfrac{5s}{8} \\ 1-\dfrac{3t}{5}=s \end{cases}
+							\]</p>
+							<p>Подставляя первое во второе: \(1-\frac35\left(1-\frac{5s}{8}\right)=s \;\Rightarrow\; 1-\frac35+\frac{3s}{8}=s \;\Rightarrow\; \frac25=\frac{5s}{8} \;\Rightarrow\; s=\frac{16}{25}\).</p>
+							<p>Тогда \(t=1-\frac{5}{8}\cdot\frac{16}{25}=1-\frac25=\frac35\).</p>
+							<p>Отсюда \(DM:MK=t:(1-t)=\frac35:\frac25=3:2\) (считая от \(D\)), а \(BM:ML=s:(1-s)=\frac{16}{25}:\frac{9}{25}=16:9\) (считая от \(B\)).</p>
+							<p>Ответ: точка \(M\) делит отрезок \(DK\) в отношении 3:2, считая от \(D\), а отрезок \(BL\) — в отношении 16:9, считая от \(B\).</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 11. Медианы граней тетраэдра -->
+			<div class="tab-panel" id="panel11">
+				<h2>Задание 11. Медианы граней тетраэдра</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1*</b></div>
+					<div id="text-task">
+						<p>Доказать, что четыре отрезка, соединяющие вершины тетраэдра с точками пересечения медиан противоположных граней, пересекаются в одной точке и делятся в этой точке в отношении 3:1, считая от вершины.</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Введём координаты вершин тетраэдра: \(A=(0,0,0), B=(1,0,0), C=(0,1,0), D=(0,0,1)\).</p>
+							<p>Точки пересечения медиан граней, противоположных каждой вершине:</p>
+							<p>\[
+							M_A=\frac{B+C+D}{3}, \quad M_B=\frac{A+C+D}{3}, \quad M_C=\frac{A+B+D}{3}, \quad M_D=\frac{A+B+C}{3}.
+							\]</p>
+							<p>Точка, делящая отрезок \(AM_A\) в отношении 3:1, считая от вершины \(A\) (то есть на расстоянии \(\frac34\) пути от \(A\) до \(M_A\)):</p>
+							<p>\[
+							P=A+\frac34(M_A-A)=\frac34M_A=\frac34\cdot\frac{B+C+D}{3}=\frac{B+C+D}{4}=\left(\frac14,\frac14,\frac14\right).
+							\]</p>
+							<p>Аналогично, точка, делящая \(BM_B\) в отношении 3:1 от \(B\):</p>
+							<p>\[
+							P'=B+\frac34(M_B-B)=\frac14B+\frac34M_B=\frac14B+\frac{A+C+D}{4}=\frac{A+B+C+D}{4}=\left(\frac14,\frac14,\frac14\right).
+							\]</p>
+							<p>Аналогичные вычисления для отрезков \(CM_C\) и \(DM_D\) также дают точку \(\left(\frac14,\frac14,\frac14\right)\). Значит, все четыре отрезка проходят через одну и ту же точку — центроид тетраэдра \(\frac{A+B+C+D}{4}\) — и делятся ею в отношении 3:1, считая от вершины, что и требовалось доказать.</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 12. Средние линии скрещивающихся рёбер тетраэдра -->
+			<div class="tab-panel" id="panel12">
+				<h2>Задание 12. Средние линии скрещивающихся рёбер тетраэдра</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1*</b></div>
+					<div id="text-task">
+						<p>Доказать, что три отрезка, соединяющие середины скрещивающихся рёбер тетраэдра, пересекаются в одной точке и делятся в этой точке пополам.</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Используем те же координаты вершин тетраэдра: \(A=(0,0,0), B=(1,0,0), C=(0,1,0), D=(0,0,1)\). Тетраэдр имеет три пары скрещивающихся (непересекающихся и непараллельных) рёбер: \(AB\) и \(CD\); \(AC\) и \(BD\); \(AD\) и \(BC\).</p>
+							<p>Найдём середины рёбер каждой пары:</p>
+							<p>\[
+							M=\text{сер.}(AB)=\left(\frac12,0,0\right), \quad N=\text{сер.}(CD)=\left(0,\frac12,\frac12\right);
+							\]</p>
+							<p>\[
+							P=\text{сер.}(AC)=\left(0,\frac12,0\right), \quad Q=\text{сер.}(BD)=\left(\frac12,0,\frac12\right);
+							\]</p>
+							<p>\[
+							R=\text{сер.}(AD)=\left(0,0,\frac12\right), \quad S=\text{сер.}(BC)=\left(\frac12,\frac12,0\right).
+							\]</p>
+							<p>Найдём середины отрезков \(MN, PQ, RS\):</p>
+							<p>\[
+							\text{сер.}(MN)=\frac{1}{2}\left[\left(\frac12,0,0\right)+\left(0,\frac12,\frac12\right)\right]=\left(\frac14,\frac14,\frac14\right);
+							\]</p>
+							<p>\[
+							\text{сер.}(PQ)=\frac{1}{2}\left[\left(0,\frac12,0\right)+\left(\frac12,0,\frac12\right)\right]=\left(\frac14,\frac14,\frac14\right);
+							\]</p>
+							<p>\[
+							\text{сер.}(RS)=\frac{1}{2}\left[\left(0,0,\frac12\right)+\left(\frac12,\frac12,0\right)\right]=\left(\frac14,\frac14,\frac14\right).
+							\]</p>
+							<p>Все три середины совпадают и равны \(\left(\frac14,\frac14,\frac14\right)\) (центроид тетраэдра). Значит, отрезки \(MN, PQ, RS\) пересекаются в одной точке и делятся ею пополам, что и требовалось доказать.</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 13. Линейная зависимость систем векторов -->
+			<div class="tab-panel" id="panel13">
+				<h2>Задание 13. Линейная зависимость систем векторов</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Выяснить, являются ли следующие системы векторов линейно зависимыми:</p>
+						<p>1) \(\vec{x}_1=(-3,1,5),\ \vec{x}_2=(6,-2,15)\);</p>
+						<p>2) \(\vec{x}_1=(4,-12,28),\ \vec{x}_2=(-7,21,-49)\);</p>
+						<p>3) \(\vec{x}_1=(1,2,3,0),\ \vec{x}_2=(2,4,6,1)\);</p>
+						<p>4) \(\vec{x}_1=(1,3,4,2,7,8),\ \vec{x}_2=(2,6,8,6,21,24)\);</p>
+						<p>5) \(\vec{x}_1=(1,2,3),\ \vec{x}_2=(2,5,7),\ \vec{x}_3=(3,7,10)\);</p>
+						<p>6) \(\vec{x}_1=(1,2,3),\ \vec{x}_2=(2,5,7),\ \vec{x}_3=(3,7,10+\varepsilon)\).</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Два вектора линейно зависимы тогда и только тогда, когда их координаты пропорциональны (один является числовым кратным другого).</p>
+							<p>1) Проверяем отношения соответствующих координат: \(\frac{6}{-3}=-2\), \(\frac{-2}{1}=-2\), \(\frac{15}{5}=3\). Первые два отношения совпадают, но третье (\(3\)) отличается от \(-2\) — пропорциональности нет, значит векторы линейно независимы.</p>
+							<p>2) Отношения: \(\frac{-7}{4}=-1{,}75\), \(\frac{21}{-12}=-1{,}75\), \(\frac{-49}{28}=-1{,}75\). Все три отношения равны \(-\frac74\), значит \(\vec x_2=-\frac74\vec x_1\) — векторы линейно зависимы.</p>
+							<p>3) Первые три координаты пропорциональны с коэффициентом 2: \(\frac21=\frac42=\frac63=2\). Но четвёртые координаты равны 0 и 1, и \(\frac{1}{0}\) не определено (0 не пропорционален ненулевому числу с тем же коэффициентом) — пропорциональности всех координат нет, значит векторы линейно независимы.</p>
+							<p>4) Координаты с 1 по 3 пропорциональны с коэффициентом 2 (\(1\to2, 3\to6, 4\to8\)), а координаты с 4 по 6 пропорциональны с коэффициентом 3 (\(2\to6, 7\to21, 8\to24\)). Коэффициенты пропорциональности разные (2 и 3), значит единого коэффициента для всех координат нет — векторы линейно независимы.</p>
+							<p>5) Составляем определитель матрицы, строки которой — координаты векторов:</p>
+							<p>\[
+							\begin{vmatrix} 1 & 2 & 3 \\ 2 & 5 & 7 \\ 3 & 7 & 10 \end{vmatrix}=1(5\cdot10-7\cdot7)-2(2\cdot10-7\cdot3)+3(2\cdot7-5\cdot3)=1\cdot1-2\cdot(-1)+3\cdot(-1)=1+2-3=0.
+							\]</p>
+							<p>Определитель равен нулю, значит система векторов линейно зависима.</p>
+							<p>6) Вычисляем тот же определитель с заменой \(10\) на \(10+\varepsilon\):</p>
+							<p>\[
+							\begin{vmatrix} 1 & 2 & 3 \\ 2 & 5 & 7 \\ 3 & 7 & 10+\varepsilon \end{vmatrix}=1(5(10+\varepsilon)-49)-2(2(10+\varepsilon)-21)+3(14-15)=(1+5\varepsilon)-2(-1+2\varepsilon)-3=\varepsilon.
+							\]</p>
+							<p>Определитель равен \(\varepsilon\). При \(\varepsilon\ne0\) он не равен нулю, и векторы линейно независимы; при \(\varepsilon=0\) определитель обращается в нуль (это случай пункта 5), и векторы линейно зависимы.</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 14. Линейная зависимость системы с нулевым вектором -->
+			<div class="tab-panel" id="panel14">
+				<h2>Задание 14. Линейная зависимость системы с нулевым вектором</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Доказать, что система векторов, содержащая нулевой вектор, линейно зависима.</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Пусть система векторов \(\vec v_1,\vec v_2,\dots,\vec v_k\) содержит нулевой вектор; без ограничения общности пусть \(\vec v_1=\vec 0\).</p>
+							<p>Рассмотрим коэффициенты \(\alpha_1=1,\ \alpha_2=0,\ \dots,\ \alpha_k=0\). Тогда:</p>
+							<p>\[
+							\alpha_1\vec v_1+\alpha_2\vec v_2+\dots+\alpha_k\vec v_k=1\cdot\vec 0+0\cdot\vec v_2+\dots+0\cdot\vec v_k=\vec 0.
+							\]</p>
+							<p>Мы получили линейную комбинацию, равную нулевому вектору, причём не все коэффициенты равны нулю (\(\alpha_1=1\ne0\)). По определению это означает, что система векторов линейно зависима, что и требовалось доказать.</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 15. Линейная зависимость при пропорциональности векторов -->
+			<div class="tab-panel" id="panel15">
+				<h2>Задание 15. Линейная зависимость при пропорциональности векторов</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Доказать, что система векторов, два вектора которой различаются скалярным множителем, линейно зависима.</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Пусть среди векторов системы \(\vec v_1,\vec v_2,\dots,\vec v_k\) найдутся два, например \(\vec v_1\) и \(\vec v_2\), такие что \(\vec v_2=\lambda\vec v_1\) для некоторого числа \(\lambda\).</p>
+							<p>Рассмотрим коэффициенты \(\alpha_1=\lambda,\ \alpha_2=-1,\ \alpha_3=\dots=\alpha_k=0\) (не все они равны нулю, так как \(\alpha_2=-1\ne0\)). Тогда:</p>
+							<p>\[
+							\alpha_1\vec v_1+\alpha_2\vec v_2+\dots=\lambda\vec v_1-\vec v_2=\lambda\vec v_1-\lambda\vec v_1=\vec 0.
+							\]</p>
+							<p>Получена нетривиальная линейная комбинация векторов системы, равная нулевому вектору. Значит, по определению система векторов линейно зависима, что и требовалось доказать.</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 16. Линейная зависимость трёх векторов -->
+			<div class="tab-panel" id="panel16">
+				<h2>Задание 16. Линейная зависимость трёх векторов</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1*</b></div>
+					<div id="text-task">
+						<p>Доказать, что если три вектора \(\vec a_1,\vec a_2,\vec a_3\) линейно зависимы и вектор \(\vec a_3\) не выражается линейно через \(\vec a_1,\vec a_2\), то векторы \(\vec a_1,\vec a_2\) различаются лишь числовым множителем.</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Так как векторы \(\vec a_1,\vec a_2,\vec a_3\) линейно зависимы, существуют числа \(\alpha_1,\alpha_2,\alpha_3\), не все равные нулю, такие что:</p>
+							<p>\[
+							\alpha_1\vec a_1+\alpha_2\vec a_2+\alpha_3\vec a_3=\vec 0.
+							\]</p>
+							<p>Предположим, что \(\alpha_3\ne0\). Тогда из равенства можно выразить:</p>
+							<p>\[
+							\vec a_3=-\frac{\alpha_1}{\alpha_3}\vec a_1-\frac{\alpha_2}{\alpha_3}\vec a_2,
+							\]</p>
+							<p>то есть \(\vec a_3\) выражается линейно через \(\vec a_1,\vec a_2\). Это противоречит условию задачи. Следовательно, \(\alpha_3=0\).</p>
+							<p>Тогда равенство принимает вид \(\alpha_1\vec a_1+\alpha_2\vec a_2=\vec 0\), причём хотя бы один из коэффициентов \(\alpha_1,\alpha_2\) не равен нулю (так как не все три коэффициента были равны нулю, а \(\alpha_3=0\)). По определению это означает, что векторы \(\vec a_1,\vec a_2\) линейно зависимы, то есть один из них является числовым кратным другого — векторы \(\vec a_1,\vec a_2\) различаются лишь числовым множителем, что и требовалось доказать.</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 17. Линейная зависимость линейных комбинаций -->
+			<div class="tab-panel" id="panel17">
+				<h2>Задание 17. Линейная зависимость линейных комбинаций</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1*</b></div>
+					<div id="text-task">
+						<p>Доказать, что для любых трёх векторов \(\vec a,\vec b,\vec c\) и любых чисел \(\alpha,\beta,\gamma\) векторы \(\alpha\vec a-\beta\vec b,\ \beta\vec b-\gamma\vec c,\ \gamma\vec c-\alpha\vec a\) линейно зависимы.</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Обозначим данные три вектора \(\vec u_1=\alpha\vec a-\beta\vec b\), \(\vec u_2=\beta\vec b-\gamma\vec c\), \(\vec u_3=\gamma\vec c-\alpha\vec a\). Возьмём коэффициенты \(\lambda_1=\lambda_2=\lambda_3=1\) (все они равны 1, то есть не все равны нулю) и рассмотрим их линейную комбинацию:</p>
+							<p>\[
+							1\cdot\vec u_1+1\cdot\vec u_2+1\cdot\vec u_3=(\alpha\vec a-\beta\vec b)+(\beta\vec b-\gamma\vec c)+(\gamma\vec c-\alpha\vec a).
+							\]</p>
+							<p>Раскрывая скобки и приводя подобные слагаемые:</p>
+							<p>\[
+							=\alpha\vec a-\beta\vec b+\beta\vec b-\gamma\vec c+\gamma\vec c-\alpha\vec a=(\alpha\vec a-\alpha\vec a)+(-\beta\vec b+\beta\vec b)+(-\gamma\vec c+\gamma\vec c)=\vec 0.
+							\]</p>
+							<p>Получена линейная комбинация векторов \(\vec u_1,\vec u_2,\vec u_3\) с коэффициентами, не все из которых равны нулю (все они равны 1), равная нулевому вектору. Значит, по определению векторы \(\vec u_1,\vec u_2,\vec u_3\) линейно зависимы для любых \(\vec a,\vec b,\vec c\) и любых чисел \(\alpha,\beta,\gamma\), что и требовалось доказать.</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 18. Линейная независимость линейных комбинаций базиса -->
+			<div class="tab-panel" id="panel18">
+				<h2>Задание 18. Линейная независимость линейных комбинаций базиса</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Пусть \(\vec x,\vec y,\vec z\) — линейно независимая система. Будут ли линейно независимы:</p>
+						<p>а) \(\vec x,\ \vec x+\vec y,\ \vec x+\vec y+\vec z\);</p>
+						<p>б) \(\vec x+\vec y,\ \vec y+\vec z,\ \vec z+\vec x\);</p>
+						<p>в) \(\vec x-\vec y,\ \vec y-\vec z,\ \vec z-\vec x\)?</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p><b>а)</b> Рассмотрим равенство \(\alpha\vec x+\beta(\vec x+\vec y)+\gamma(\vec x+\vec y+\vec z)=\vec 0\). Группируя по \(\vec x,\vec y,\vec z\):</p>
+							<p>\[
+							(\alpha+\beta+\gamma)\vec x+(\beta+\gamma)\vec y+\gamma\vec z=\vec 0.
+							\]</p>
+							<p>Так как \(\vec x,\vec y,\vec z\) линейно независимы, все коэффициенты равны нулю:</p>
+							<p>\[
+							\begin{cases}\alpha+\beta+\gamma=0\\ \beta+\gamma=0\\ \gamma=0\end{cases}
+							\]</p>
+							<p>Из третьего уравнения \(\gamma=0\), из второго \(\beta=0\), из первого \(\alpha=0\). Единственное решение — тривиальное, значит система <b>линейно независима</b>.</p>
+							<p><b>б)</b> Рассмотрим равенство \(\alpha(\vec x+\vec y)+\beta(\vec y+\vec z)+\gamma(\vec z+\vec x)=\vec 0\). Группируя:</p>
+							<p>\[
+							(\alpha+\gamma)\vec x+(\alpha+\beta)\vec y+(\beta+\gamma)\vec z=\vec 0 \;\Rightarrow\; \begin{cases}\alpha+\gamma=0\\ \alpha+\beta=0\\ \beta+\gamma=0\end{cases}
+							\]</p>
+							<p>Складывая все три уравнения: \(2(\alpha+\beta+\gamma)=0\), то есть \(\alpha+\beta+\gamma=0\). Вычитая из этого равенства по одному из уравнений системы, последовательно получаем \(\alpha=0,\beta=0,\gamma=0\). Единственное решение — тривиальное, значит система <b>линейно независима</b>.</p>
+							<p><b>в)</b> Рассмотрим равенство \(\alpha(\vec x-\vec y)+\beta(\vec y-\vec z)+\gamma(\vec z-\vec x)=\vec 0\). Группируя:</p>
+							<p>\[
+							(\alpha-\gamma)\vec x+(-\alpha+\beta)\vec y+(-\beta+\gamma)\vec z=\vec 0 \;\Rightarrow\; \begin{cases}\alpha-\gamma=0\\ -\alpha+\beta=0\\ -\beta+\gamma=0\end{cases}
+							\]</p>
+							<p>Из этих уравнений \(\alpha=\gamma\), \(\beta=\alpha\), значит \(\alpha=\beta=\gamma\) — любое общее значение является решением, например \(\alpha=\beta=\gamma=1\). Это нетривиальное решение: действительно,</p>
+							<p>\[
+							(\vec x-\vec y)+(\vec y-\vec z)+(\vec z-\vec x)=\vec x-\vec y+\vec y-\vec z+\vec z-\vec x=\vec 0
+							\]</p>
+							<p>тождественно, независимо от того, что такое \(\vec x,\vec y,\vec z\). Значит, система <b>линейно зависима</b>.</p>
+							<p>Ответ: а) линейно независима; б) линейно независима; в) линейно зависима.</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	</br></br></br>
+</div>
+
+
+
+
+<nav class="ios-tabbar" aria-label="Основная навигация">
+  <div class="ios-tabbar-inner">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+  </div>
+</nav>
+</body>
+</html>

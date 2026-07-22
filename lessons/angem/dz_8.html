@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link href="../../test1.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARINOV</title>
+	<link rel="shortcut icon" href="../../image/logo.svg" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="stylesheet" href="../assets/css/site.css">
+	<link rel="stylesheet" href="../assets/css/pygments.css">
+	<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&amp;display=swap" rel="stylesheet" media="all">
+	<link href="shrek.ttf" rel="stylesheet" media="all">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<script src="../../nav-merge.js" defer></script>
+	<style>
+		.dz-header {
+			color: gray;
+			font-size: 14px;
+			margin-bottom: 4px;
+		}
+
+		.tabs {
+			margin-top: 15px;
+		}
+
+		.tab-input {
+			display: none;
+		}
+
+		.tab-bar {
+			margin-bottom: 20px;
+		}
+
+		.tab-label {
+			display: inline-block;
+			padding: 10px 18px;
+			margin-right: 8px;
+			margin-bottom: 10px;
+			background-color: #EEF0F4;
+			border: 1px solid #E1E4EC;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: 15px;
+			transition: 0.2s;
+			user-select: none;
+		}
+
+		.tab-label:hover {
+			background-color: #E2E5F7;
+		}
+
+		.tab-input:checked + .tab-label {
+			background-color: #5B62F5;
+			color: white;
+			font-weight: 600;
+		}
+
+		.tab-panel {
+			display: none;
+		}
+
+		#tab1:checked ~ .tab-panels #panel1,
+		#tab2:checked ~ .tab-panels #panel2,
+		#tab3:checked ~ .tab-panels #panel3,
+		#tab4:checked ~ .tab-panels #panel4,
+		#tab5:checked ~ .tab-panels #panel5,
+		#tab6:checked ~ .tab-panels #panel6,
+		#tab7:checked ~ .tab-panels #panel7,
+		#tab8:checked ~ .tab-panels #panel8,
+		#tab9:checked ~ .tab-panels #panel9,
+		#tab10:checked ~ .tab-panels #panel10,
+		#tab11:checked ~ .tab-panels #panel11,
+		#tab12:checked ~ .tab-panels #panel12,
+		#tab13:checked ~ .tab-panels #panel13,
+		#tab14:checked ~ .tab-panels #panel14,
+		#tab15:checked ~ .tab-panels #panel15,
+		#tab16:checked ~ .tab-panels #panel16,
+		#tab17:checked ~ .tab-panels #panel17,
+		#tab18:checked ~ .tab-panels #panel18,
+		#tab19:checked ~ .tab-panels #panel19 {
+			display: block;
+		}
+
+		@media only screen and (max-device-width: 530px) {
+			.tab-label {
+				padding: 9px 14px;
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+<body>
+<button type="button" class="ios-back-btn" aria-label="Назад" onclick="history.back()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="ios-navbar"><span class="ios-navbar-title"></span></div>
+<div class="left-menu">
+  <a href="../../home.html" class="logo"><img src="../../image/logo1.svg" alt="Logo"></a>
+  <div class="nav-list">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../lit.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="15.2" width="15" height="4" rx="1"/><rect x="5.5" y="10.6" width="13" height="4" rx="1"/><rect x="6.5" y="6" width="11" height="4" rx="1"/></svg>Литература</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+    <a href="../../net.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="4.7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 6.7v3.1"/><path d="M10.3 13.4l-3.7 2.1"/><path d="M13.7 13.4l3.7 2.1"/></svg>Сети</a>
+  </div>
+</div>
+
+<div class="main">
+
+<nav class="breadcrumbs">
+  <a href="../../home.html">Главная</a><span class="crumb-sep">/</span>
+  <a href="../../vid.html">Видеоуроки</a><span class="crumb-sep">/</span>
+  <a href="../../angem.html">Аналитическая геометрия от Профиматики</a><span class="crumb-sep">/</span>
+  <span class="crumb-current">Домашнее задание</span>
+</nav>
+
+	<div class="tabs">
+		<input type="radio" name="dz-tab" id="tab1" class="tab-input" checked>
+		<input type="radio" name="dz-tab" id="tab2" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab3" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab4" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab5" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab6" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab7" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab8" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab9" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab10" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab11" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab12" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab13" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab14" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab15" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab16" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab17" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab18" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab19" class="tab-input">
+
+		<div class="tab-bar">
+			<label for="tab1" class="tab-label">Задание 1</label>
+			<label for="tab2" class="tab-label">Задание 2</label>
+			<label for="tab3" class="tab-label">Задание 3</label>
+			<label for="tab4" class="tab-label">Задание 4</label>
+			<label for="tab5" class="tab-label">Задание 5</label>
+			<label for="tab6" class="tab-label">Задание 6</label>
+			<label for="tab7" class="tab-label">Задание 7</label>
+			<label for="tab8" class="tab-label">Задание 8</label>
+			<label for="tab9" class="tab-label">Задание 9</label>
+			<label for="tab10" class="tab-label">Задание 10</label>
+			<label for="tab11" class="tab-label">Задание 11</label>
+			<label for="tab12" class="tab-label">Задание 12</label>
+			<label for="tab13" class="tab-label">Задание 13</label>
+			<label for="tab14" class="tab-label">Задание 14</label>
+			<label for="tab15" class="tab-label">Задание 15</label>
+			<label for="tab16" class="tab-label">Задание 16</label>
+			<label for="tab17" class="tab-label">Задание 17</label>
+			<label for="tab18" class="tab-label">Задание 18</label>
+			<label for="tab19" class="tab-label">Задание 19</label>
+		</div>
+
+		<div class="tab-panels">
+
+			<!-- Задание 1 -->
+			<div class="tab-panel" id="panel1">
+				<h2>Задание 1. Параметры эллипса по общему уравнению</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Найти длины полуосей, эксцентриситет, координаты фокусов, составить уравнения директрис эллипса: \(9x^2+25y^2=225\).</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Разделив на 225, получаем каноническое уравнение \(\dfrac{x^2}{25}+\dfrac{y^2}{9}=1\), откуда \(a=5,b=3\). Фокусное расстояние \(c=\sqrt{a^2-b^2}=\sqrt{16}=4\), эксцентриситет \(\varepsilon=\dfrac{c}{a}=0.8\).</p>
+							<p>Фокусы: \(F_1(-4,0),F_2(4,0)\). Директрисы: \(x=\pm\dfrac{a}{\varepsilon}=\pm\dfrac{25}{4}\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 2 -->
+			<div class="tab-panel" id="panel2">
+				<h2>Задание 2. Составление канонического уравнения эллипса по условиям</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Расстояние между вершинами, лежащими на большой оси, равно 16, а расстояние между фокусами равно 10.</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(2a=16\Rightarrow a=8\), \(2c=10\Rightarrow c=5\), \(b^2=a^2-c^2=64-25=39\). Уравнение: \(\dfrac{x^2}{64}+\dfrac{y^2}{39}=1\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>Хорда, соединяющая две вершины эллипса, имеет длину 5 и наклонена к его большой оси под углом \(\arcsin\dfrac35\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Хорда соединяет вершины \((a,0)\) и \((0,b)\), поэтому \(\sqrt{a^2+b^2}=5\) и \(\tan\alpha=\dfrac{b}{a}=\dfrac34\Rightarrow b=\dfrac34a\). Подставляя: \(a^2+\dfrac{9}{16}a^2=25\Rightarrow a^2=16\Rightarrow a=4,\ b=3\). Уравнение: \(\dfrac{x^2}{16}+\dfrac{y^2}{9}=1\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task"><p>Фокусами эллипса являются точки \((\pm1,0)\), а точка \(\left(\sqrt3,\dfrac{\sqrt3}{2}\right)\) принадлежит эллипсу.</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(c=1\), \(b^2=a^2-1\). Подставляя точку в уравнение \(\dfrac{3}{a^2}+\dfrac{3/4}{a^2-1}=1\) и приводя к общему знаменателю, получаем биквадратное уравнение \(4a^4-19a^2+12=0\), откуда \(a^2=4\) (второй корень \(a^2=3/4 \lt c^2\) не подходит). Тогда \(b^2=3\). Уравнение: \(\dfrac{x^2}{4}+\dfrac{y^2}{3}=1\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 4</b></div>
+					<div id="text-task"><p>Фокусами эллипса являются точки \((\pm2,0)\), а директрисами являются прямые \(x=\pm18\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(c=2\), \(\dfrac{a}{\varepsilon}=18\Rightarrow\dfrac{a^2}{c}=18\Rightarrow a^2=36\Rightarrow a=6\), \(b^2=a^2-c^2=32\). Уравнение: \(\dfrac{x^2}{36}+\dfrac{y^2}{32}=1\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 3 -->
+			<div class="tab-panel" id="panel3">
+				<h2>Задание 3. Вычисление эксцентриситета эллипса из геометрических условий</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Расстояние между фокусами равно среднему арифметическому длин осей.</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(2c=a+b\). Возведя в квадрат и используя \(c^2=a^2-b^2\), получаем \(3a^2-5b^2-2ab=0\); деля на \(a^2\) и обозначая \(k=b/a\): \(5k^2+2k-3=0\Rightarrow k=\dfrac35\) (положительный корень). Эксцентриситет \(\varepsilon=\sqrt{1-k^2}=\sqrt{1-9/25}=\dfrac45\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>Отрезок между фокусом и дальней вершиной большой оси делится вторым фокусом в отношении 2:1.</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Точка деления отрезка \(F_1(-c,0)\)–\(A(a,0)\) в отношении 2:1 имеет координату \(\dfrac{-c+2a}{3}\), которая должна равняться \(c\) (координате \(F_2\)): \(-c+2a=3c\Rightarrow a=2c\). Эксцентриситет \(\varepsilon=\dfrac{c}{a}=\dfrac12\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task"><p>Расстояние от фокуса до дальней вершины большой оси в 1,5 раза больше расстояния до вершины малой оси.</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(a+c=1.5\sqrt{c^2+b^2}\); учитывая \(b^2=a^2-c^2\), правая часть равна \(1.5a\). Тогда \(a+c=1.5a\Rightarrow c=0.5a\Rightarrow\varepsilon=\dfrac12\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 4</b></div>
+					<div id="text-task"><p>Отрезок между фокусами виден из конца малой оси под прямым углом.</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Из \(\vec{BF_1}\perp\vec{BF_2}\) (где \(B(0,b)\)) следует \((\vec{BF_1},\vec{BF_2})=-c^2+b^2=0\Rightarrow b^2=c^2\). С учётом \(b^2=a^2-c^2\): \(a^2=2c^2\Rightarrow\varepsilon=\dfrac{c}{a}=\dfrac{1}{\sqrt2}\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 4 -->
+			<div class="tab-panel" id="panel4">
+				<h2>Задание 4. Взаимно перпендикулярные радиусы эллипса</h2>
+				<p>Пусть \(O\) — центр эллипса, \(a,b\) — его полуоси, а \(A\) и \(B\) — такие точки эллипса, что прямые \(OA\) и \(OB\) взаимно перпендикулярны.</p>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Доказать, что величина \(\dfrac{1}{|OA|^2}+\dfrac{1}{|OB|^2}\) постоянна для всех возможных пар точек \(A\) и \(B\).</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Запишем точки в полярных координатах: \(A=(r_1\cos\varphi,r_1\sin\varphi)\), \(B=(-r_2\sin\varphi,r_2\cos\varphi)\) (перпендикулярный радиус). Подставляя в уравнение эллипса для каждой точки, получаем \(\dfrac{1}{r_1^2}=\dfrac{\cos^2\varphi}{a^2}+\dfrac{\sin^2\varphi}{b^2}\) и \(\dfrac{1}{r_2^2}=\dfrac{\sin^2\varphi}{a^2}+\dfrac{\cos^2\varphi}{b^2}\).</p>
+							<p>Складывая: \(\dfrac{1}{r_1^2}+\dfrac{1}{r_2^2}=\dfrac{\cos^2\varphi+\sin^2\varphi}{a^2}+\dfrac{\sin^2\varphi+\cos^2\varphi}{b^2}=\dfrac{1}{a^2}+\dfrac{1}{b^2}\) — величина, не зависящая от \(\varphi\), то есть постоянная для любой пары точек.</p>
+						</div>
+					</details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>Найти наибольшее и наименьшее значения длины отрезка \(AB\).</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Из тех же координат \(AB^2=r_1^2+r_2^2\). Исследуя эту величину при условии связи \(\dfrac1{r_1^2}+\dfrac1{r_2^2}=\dfrac1{a^2}+\dfrac1{b^2}\) (методами анализа функции одной переменной), минимум достигается при \(r_1^2=r_2^2\) и равен \(AB^2_{min}=\dfrac{4a^2b^2}{a^2+b^2}\), а максимум достигается при \(\varphi=0\) или \(\varphi=\dfrac{\pi}{2}\) (когда \(A\),\(B\) совпадают с вершинами осей) и равен \(AB^2_{max}=a^2+b^2\).</p>
+							<p>Ответ: наименьшая длина \(AB=\dfrac{2ab}{\sqrt{a^2+b^2}}\); наибольшая длина \(AB=\sqrt{a^2+b^2}\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 5 -->
+			<div class="tab-panel" id="panel5">
+				<h2>Задание 5. Параметры гиперболы по каноническому уравнению</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Найти полуоси, эксцентриситет, координаты фокусов, составить уравнения директрис и асимптот гиперболы: \(\dfrac{x^2}{16}-\dfrac{y^2}{9}=1\).</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>\(a=4,b=3\). Фокусное расстояние \(c=\sqrt{a^2+b^2}=5\), эксцентриситет \(\varepsilon=\dfrac{c}{a}=1.25\).</p>
+							<p>Фокусы: \(F_1(-5,0),F_2(5,0)\). Директрисы: \(x=\pm\dfrac{a}{\varepsilon}=\pm\dfrac{16}{5}\). Асимптоты: \(y=\pm\dfrac{b}{a}x=\pm\dfrac34x\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 6 -->
+			<div class="tab-panel" id="panel6">
+				<h2>Задание 6. Составление канонического уравнения гиперболы по условиям</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Расстояние между вершинами равно 10, а расстояние между фокусами равно 12.</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(a=5,c=6\Rightarrow b^2=c^2-a^2=11\). Уравнение: \(\dfrac{x^2}{25}-\dfrac{y^2}{11}=1\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>Длина вещественной оси равна 1, а точка \((1,3)\) принадлежит гиперболе.</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(a=\dfrac12\). Подставляя точку в \(\dfrac{1}{1/4}-\dfrac{9}{b^2}=1\Rightarrow4-\dfrac{9}{b^2}=1\Rightarrow b^2=3\). Уравнение: \(\dfrac{x^2}{1/4}-\dfrac{y^2}{3}=1\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task"><p>Директрисами гиперболы являются прямые \(x=\pm\sqrt{5/6}\), и точка \((-9,4)\) принадлежит гиперболе.</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Из \(\dfrac{a}{\varepsilon}=\sqrt{5/6}\) и \(\varepsilon=\dfrac{c}{a}\) с \(c^2=a^2+b^2\), а также подстановки точки \((-9,4)\) в уравнение \(\dfrac{81}{a^2}-\dfrac{16}{b^2}=1\), после исключения переменных (обозначая \(t=a^2\)) получаем кубическое-по-подстановке уравнение \(6t^2-491t+485=0\), с корнями \(t=1\) или \(t=485/6\); проверка условия директрис оставляет \(t=1\), т.е. \(a^2=1\).</p>
+							<p>Тогда \(b^2=a^4\cdot\dfrac65-a^2=\dfrac65-1=\dfrac15\). Уравнение: \(\dfrac{x^2}{1}-\dfrac{y^2}{1/5}=1\).</p>
+						</div>
+					</details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 4</b></div>
+					<div id="text-task"><p>Эксцентриситет гиперболы равен \(\dfrac75\), а расстояние от вершины до ближайшего фокуса равно 2.</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(\varepsilon=\dfrac{c}{a}=\dfrac75\Rightarrow c=\dfrac75a\). Условие \(c-a=2\Rightarrow\dfrac25a=2\Rightarrow a=5\), тогда \(c=7\), \(b^2=c^2-a^2=24\). Уравнение: \(\dfrac{x^2}{25}-\dfrac{y^2}{24}=1\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 5</b></div>
+					<div id="text-task"><p>Точка \((-1,3)\) принадлежит гиперболе, а асимптотами являются прямые \(y=\pm2x\).</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Проверка на гиперболу с горизонтальной осью (\(b=2a\)) даёт противоречие (отрицательное левая часть при подстановке), значит ось вертикальна: уравнение вида \(\dfrac{y^2}{a^2}-\dfrac{x^2}{b^2}=1\) с асимптотами \(y=\pm\dfrac{a}{b}x=\pm2x\Rightarrow a=2b\).</p>
+							<p>Подставляя точку: \(\dfrac{9}{4b^2}-\dfrac{1}{b^2}=1\Rightarrow\dfrac{5}{4b^2}=1\Rightarrow b^2=\dfrac54\), тогда \(a^2=4b^2=5\). Уравнение: \(\dfrac{y^2}{5}-\dfrac{x^2}{5/4}=1\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 7 -->
+			<div class="tab-panel" id="panel7">
+				<h2>Задание 7. Площадь параллелограмма на асимптотах гиперболы</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Доказать, что для данной гиперболы площадь параллелограмма, одна из вершин которого лежит на гиперболе, а две стороны лежат на асимптотах, постоянна, и выразить её через полуоси \(a,b\) гиперболы.</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Пусть точка \(M(x_0,y_0)\) на гиперболе \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\). Проведя через \(M\) прямые, параллельные асимптотам \(y=\pm\dfrac{b}{a}x\), находим точки их пересечения с асимптотами \(A\) и \(B\), а затем векторы \(\vec{MA}\) и \(\vec{MB}\).</p>
+							<p>Вычисляя площадь параллелограмма как модуль соответствующего определителя \(2\times2\) и упрощая с использованием уравнения гиперболы \(\dfrac{x_0^2}{a^2}-\dfrac{y_0^2}{b^2}=1\), получаем, что площадь не зависит от выбора точки \(M\) и равна \(S=\dfrac{ab}{2}\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 8 -->
+			<div class="tab-panel" id="panel8">
+				<h2>Задание 8. Окружность через вершины гиперболы и точки пересечения директрис с асимптотами</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Доказать, что вершины гиперболы и четыре точки пересечения её директрис с асимптотами лежат на одной окружности.</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Вершины: \(A(a,0),A'(-a,0)\). Директрисы \(x=\pm\dfrac{a^2}{c}\), асимптоты \(y=\pm\dfrac{b}{a}x\). Точки пересечения директрис с асимптотами: \(B\left(\dfrac{a^2}{c},\dfrac{ab}{c}\right)\), \(C\left(\dfrac{a^2}{c},-\dfrac{ab}{c}\right)\), \(D\left(-\dfrac{a^2}{c},-\dfrac{ab}{c}\right)\), \(E\left(-\dfrac{a^2}{c},\dfrac{ab}{c}\right)\).</p>
+							<p>Проверяя, что все шесть точек удовлетворяют уравнению \(x^2+y^2=a^2\) (для \(B\): \(\left(\dfrac{a^2}{c}\right)^2+\left(\dfrac{ab}{c}\right)^2=\dfrac{a^2(a^2+b^2)}{c^2}=\dfrac{a^2c^2}{c^2}=a^2\), и аналогично для остальных), заключаем, что все точки лежат на окружности \(x^2+y^2=a^2\) с центром в начале координат.</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 9 -->
+			<div class="tab-panel" id="panel9">
+				<h2>Задание 9. Фокус и директриса параболы</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Найти координаты фокуса и составить уравнение директрисы параболы \(y^2=6x\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Сравнивая с \(y^2=2px\): \(2p=6\Rightarrow p=3\). Фокус: \(F\left(\dfrac32,0\right)\). Директриса: \(x=-\dfrac32\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 10 -->
+			<div class="tab-panel" id="panel10">
+				<h2>Задание 10. Составление канонического уравнения параболы</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Точка \((5,-5)\) принадлежит параболе \(y^2=2px\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\((-5)^2=2p\cdot5\Rightarrow25=10p\Rightarrow p=2.5\). Уравнение: \(y^2=5x\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>Расстояние от фокуса до директрисы равно 12.</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Расстояние от фокуса до директрисы для параболы \(y^2=2px\) равно \(p\), значит \(p=12\). Уравнение: \(y^2=24x\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 11 -->
+			<div class="tab-panel" id="panel11">
+				<h2>Задание 11. Хорда параболы, делящаяся точкой пополам</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Через точку \(A(5,3)\) провести хорду параболы \(y^2=6x\), делящуюся в этой точке пополам.</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Пусть концы хорды \(B(x_1,y_1),C(x_2,y_2)\) на параболе: \(y_1^2=6x_1,y_2^2=6x_2\). Условие середины: \(x_1+x_2=10,\ y_1+y_2=6\). Вычитая уравнения параболы: \((y_1-y_2)(y_1+y_2)=6(x_1-x_2)\Rightarrow6(y_1-y_2)=6(x_1-x_2)\Rightarrow\) угловой коэффициент хорды \(k=\dfrac{y_1-y_2}{x_1-x_2}=1\).</p>
+							<p>Уравнение хорды через \(A(5,3)\) с \(k=1\): \(y=x-2\). Проверка подстановкой в параболу даёт \(x^2-10x+4=0\) с корнями \(x=5\pm\sqrt{21}\), середина которых действительно равна \((5,3)\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 12 -->
+			<div class="tab-panel" id="panel12">
+				<h2>Задание 12. Точка на параболе с заданными условиями</h2>
+				<p>На параболе \(y^2=10x\) найти точку \(M\) такую, что:</p>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Прямая, проходящая через точку \(M\) и фокус параболы, образует с осью \(Ox\) угол \(60°\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(p=5\), фокус \(F\left(\dfrac52,0\right)\). Прямая через \(F\) с угловым коэффициентом \(\tan60°=\sqrt3\): \(y=\sqrt3\left(x-\dfrac52\right)\). Подставляя в уравнение параболы и решая квадратное уравнение \(12x^2-100x+75=0\), находим два значения \(x=\dfrac{15}{2}\) или \(x=\dfrac56\), и с учётом симметрии параболы относительно оси \(Ox\) получаем четыре точки: \(M_{1,2}\left(\dfrac{15}{2},\pm5\sqrt3\right)\), \(M_{3,4}\left(\dfrac56,\pm\dfrac{5\sqrt3}{3}\right)\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>Площадь треугольника с вершинами в точке \(M\), фокусе параболы и точке пересечения оси параболы с директрисой равна 5.</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(F\left(\dfrac52,0\right)\), точка пересечения оси с директрисой \(A\left(-\dfrac52,0\right)\). Площадь треугольника \(MFA\) выражается как \(\dfrac52|y|\) (через определитель векторов \(\vec{FM},\vec{FA}\)). Из \(\dfrac52|y|=5\Rightarrow|y|=2\), и из уравнения параболы \(x=\dfrac{y^2}{10}=\dfrac25\). Ответ: \(M_1\left(\dfrac25,2\right),\ M_2\left(\dfrac25,-2\right)\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task"><p>Расстояние от точки \(M\) до вершины параболы равно расстоянию от \(M\) до фокуса.</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Приравнивая \(\sqrt{x^2+y^2}=\sqrt{(x-5/2)^2+y^2}\) и возводя в квадрат, получаем (после сокращения \(y^2\)) \(5x=\dfrac{25}{4}\Rightarrow x=\dfrac54\). Из уравнения параболы \(y^2=10\cdot\dfrac54=\dfrac{25}{2}\Rightarrow y=\pm\dfrac{5\sqrt2}{2}\). Ответ: \(M_1\left(\dfrac54,\dfrac{5\sqrt2}{2}\right),\ M_2\left(\dfrac54,-\dfrac{5\sqrt2}{2}\right)\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 13 -->
+			<div class="tab-panel" id="panel13">
+				<h2>Задание 13. Наибольшая окружность внутри параболы</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Найти наибольший радиус окружности, лежащей внутри параболы \(y^2=2px\) и касающейся этой параболы в её вершине.</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Окружность с центром \((R,0)\) и радиусом \(R\) касается параболы в вершине. Подставляя \(y^2=2px\) в уравнение окружности \((x-R)^2+y^2=R^2\), получаем \(x^2+2x(p-R)=0\) с корнями \(x=0\) и \(x=2(R-p)\).</p>
+							<p>Чтобы окружность лежала внутри параболы и касалась её только в вершине, второй корень должен быть неположительным: \(R\le p\). При \(R=p\) второй корень обращается в 0 (единственное касание), при \(R \gt p\) окружность пересекала бы параболу в двух точках.</p>
+							<p>Ответ: наибольший радиус \(R=p\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 14 -->
+			<div class="tab-panel" id="panel14">
+				<h2>Задание 14. Уравнение касательной в заданной точке кривой</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>\(\dfrac{x^2}{12}+\dfrac{y^2}{4}=1\) в точке \((3,1)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Касательная к эллипсу \(\dfrac{xx_0}{a^2}+\dfrac{yy_0}{b^2}=1\): \(\dfrac{3x}{12}+\dfrac{y}{4}=1\Rightarrow x+y=4\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>\(\dfrac{x^2}{9}-\dfrac{y^2}{12}=1\) в точке \((-3,0)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Касательная к гиперболе \(\dfrac{xx_0}{a^2}-\dfrac{yy_0}{b^2}=1\): \(\dfrac{-3x}{9}=1\Rightarrow x=-3\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task"><p>\(y^2=6x\) в точке \(\left(\dfrac32,3\right)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Касательная к параболе \(y^2=2px\): \(yy_0=p(x+x_0)\). При \(p=3,x_0=\dfrac32,y_0=3\): \(3y=3\left(x+\dfrac32\right)\Rightarrow y=x+\dfrac32\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 15 -->
+			<div class="tab-panel" id="panel15">
+				<h2>Задание 15. Касательные к эллипсу под заданным углом к прямой</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Составить уравнения касательных к эллипсу \(\dfrac{x^2}{9}+\dfrac{y^2}{4}=1\), образующих угол \(45°\) с прямой \(x+3y+3=0\).</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Угловой коэффициент данной прямой \(k_1=-\dfrac13\). Из условия \(\tan45°=\left|\dfrac{k-k_1}{1+kk_1}\right|=1\), решая оба знака, получаем \(k=\dfrac12\) или \(k=-2\).</p>
+							<p>Уравнение касательной к эллипсу с угловым коэффициентом \(k\): \(y=kx\pm\sqrt{a^2k^2+b^2}\), с \(a^2=9,b^2=4\). Для \(k=\dfrac12\): \(\sqrt{9\cdot\frac14+4}=\dfrac52\); для \(k=-2\): \(\sqrt{9\cdot4+4}=2\sqrt{10}\).</p>
+							<p>Ответ: \(y=\dfrac12x+\dfrac52\), \(y=\dfrac12x-\dfrac52\), \(y=-2x+2\sqrt{10}\), \(y=-2x-2\sqrt{10}\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 16 -->
+			<div class="tab-panel" id="panel16">
+				<h2>Задание 16. Касательные к гиперболе, параллельные прямой</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Составить уравнения касательных к гиперболе \(\dfrac{x^2}{16}-\dfrac{y^2}{9}=1\), параллельных прямой \(x-2y+1=0\).</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Угловой коэффициент прямой \(k=\dfrac12\). Для гиперболы \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\) касательные с угловым коэффициентом \(k\) существуют тогда и только тогда, когда \(a^2k^2-b^2 \gt 0\). Здесь \(a^2=16,b^2=9\): \(16\cdot\dfrac14-9=4-9=-5 \lt 0\).</p>
+							<p>Условие не выполняется — касательных с таким угловым коэффициентом не существует.</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 17 -->
+			<div class="tab-panel" id="panel17">
+				<h2>Задание 17. Касательная к параболе, перпендикулярная прямой</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Составить уравнение касательной к параболе \(y^2=10x\), перпендикулярной прямой \(2x+y-4=0\).</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Угловой коэффициент данной прямой \(k_1=-2\), значит угловой коэффициент искомой касательной \(k=\dfrac12\) (из \(k\cdot k_1=-1\)).</p>
+							<p>Для параболы \(y^2=2px\) уравнение касательной с угловым коэффициентом \(k\): \(y=kx+\dfrac{p}{2k}\). При \(p=5,k=\dfrac12\): \(y=\dfrac12x+\dfrac{5}{1}=\dfrac12x+5\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 18 -->
+			<div class="tab-panel" id="panel18">
+				<h2>Задание 18. Общие касательные к двум эллипсам</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Составить уравнения общих касательных к двум кривым второго порядка: \(\dfrac{x^2}{20}+\dfrac{y^2}{5}=1\) и \(\dfrac{x^2}{80}+\dfrac{4y^2}{5}=1\).</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Второе уравнение перепишем как \(\dfrac{x^2}{80}+\dfrac{y^2}{5/4}=1\). Касательные с угловым коэффициентом \(k\) к первому эллипсу: \(y=kx\pm\sqrt{20k^2+5}\); ко второму: \(y=kx\pm\sqrt{80k^2+5/4}\).</p>
+							<p>Для общей касательной свободные члены должны совпадать: \(20k^2+5=80k^2+\dfrac54\), откуда \(240k^2=15\Rightarrow k^2=\dfrac{1}{16}\Rightarrow k=\pm\dfrac14\).</p>
+							<p>При \(k=\pm\dfrac14\): \(\sqrt{20\cdot\frac{1}{16}+5}=\sqrt{\frac{25}{4}}=\dfrac52\). Ответ: \(y=\dfrac14x+\dfrac52\), \(y=\dfrac14x-\dfrac52\), \(y=-\dfrac14x+\dfrac52\), \(y=-\dfrac14x-\dfrac52\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 19 -->
+			<div class="tab-panel" id="panel19">
+				<h2>Задание 19. Касательные к кривой второго порядка из внешней точки</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Составить уравнения касательных к кривой \(5x^2+6xy+5y^2-16x-16y-16=0\), проходящих через точку \((3,3)\).</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Дискриминант \(B^2-AC=9-25=-16 \lt 0\) — кривая является эллипсом. Точки касания найдём через уравнение поляры точки \((3,3)\) относительно кривой: подставляя \((x_1,y_1)=(3,3)\) в формулу поляры \(5x_1x+3(x_1y+xy_1)+5y_1y-8(x+x_1)-8(y+y_1)-16=0\), после упрощения получаем уравнение поляры \(x+y-4=0\).</p>
+							<p>Решая систему уравнения кривой с уравнением поляры (\(y=4-x\)), получаем \(4x^2-16x=0\Rightarrow x=0\) или \(x=4\), соответственно точки касания \((0,4)\) и \((4,0)\).</p>
+							<p>Составляя уравнения прямых через точку \((3,3)\) и каждую точку касания: через \((3,3)\) и \((0,4)\): \(k=-\dfrac13\), уравнение \(y=-\dfrac13x+4\); через \((3,3)\) и \((4,0)\): \(k=-3\), уравнение \(y=-3x+12\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	</br></br></br>
+</div>
+
+
+
+
+
+<nav class="ios-tabbar" aria-label="Основная навигация">
+  <div class="ios-tabbar-inner">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+  </div>
+</nav>
+</body>
+</html>

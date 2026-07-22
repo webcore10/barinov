@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link href="../../test1.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARINOV</title>
+	<link rel="shortcut icon" href="../../image/logo.svg" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="stylesheet" href="../assets/css/site.css">
+	<link rel="stylesheet" href="../assets/css/pygments.css">
+	<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&amp;display=swap" rel="stylesheet" media="all">
+	<link href="shrek.ttf" rel="stylesheet" media="all">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<script src="../../nav-merge.js" defer></script>
+	<style>
+		.dz-header {
+			color: gray;
+			font-size: 14px;
+			margin-bottom: 4px;
+		}
+
+		.tabs {
+			margin-top: 15px;
+		}
+
+		.tab-input {
+			display: none;
+		}
+
+		.tab-bar {
+			margin-bottom: 20px;
+		}
+
+		.tab-label {
+			display: inline-block;
+			padding: 10px 18px;
+			margin-right: 8px;
+			margin-bottom: 10px;
+			background-color: #EEF0F4;
+			border: 1px solid #E1E4EC;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: 15px;
+			transition: 0.2s;
+			user-select: none;
+		}
+
+		.tab-label:hover {
+			background-color: #E2E5F7;
+		}
+
+		.tab-input:checked + .tab-label {
+			background-color: #5B62F5;
+			color: white;
+			font-weight: 600;
+		}
+
+		.tab-panel {
+			display: none;
+		}
+
+		#tab1:checked ~ .tab-panels #panel1,
+		#tab2:checked ~ .tab-panels #panel2,
+		#tab3:checked ~ .tab-panels #panel3,
+		#tab4:checked ~ .tab-panels #panel4 {
+			display: block;
+		}
+
+		@media only screen and (max-device-width: 530px) {
+			.tab-label {
+				padding: 9px 14px;
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+<body>
+<button type="button" class="ios-back-btn" aria-label="Назад" onclick="history.back()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="ios-navbar"><span class="ios-navbar-title"></span></div>
+<div class="left-menu">
+  <a href="../../home.html" class="logo"><img src="../../image/logo1.svg" alt="Logo"></a>
+  <div class="nav-list">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../lit.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="15.2" width="15" height="4" rx="1"/><rect x="5.5" y="10.6" width="13" height="4" rx="1"/><rect x="6.5" y="6" width="11" height="4" rx="1"/></svg>Литература</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+    <a href="../../net.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="4.7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 6.7v3.1"/><path d="M10.3 13.4l-3.7 2.1"/><path d="M13.7 13.4l3.7 2.1"/></svg>Сети</a>
+  </div>
+</div>
+
+<div class="main">
+
+<nav class="breadcrumbs">
+  <a href="../../home.html">Главная</a><span class="crumb-sep">/</span>
+  <a href="../../vid.html">Видеоуроки</a><span class="crumb-sep">/</span>
+  <a href="../../linal.html">Линейная алгебра от Профиматики</a><span class="crumb-sep">/</span>
+  <span class="crumb-current">Домашнее задание</span>
+</nav>
+
+	<div class="tabs">
+		<input type="radio" name="dz-tab" id="tab1" class="tab-input" checked>
+		<input type="radio" name="dz-tab" id="tab2" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab3" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab4" class="tab-input">
+
+		<div class="tab-bar">
+			<label for="tab1" class="tab-label">Задание 1</label>
+			<label for="tab2" class="tab-label">Задание 2</label>
+			<label for="tab3" class="tab-label">Задание 3</label>
+			<label for="tab4" class="tab-label">Задание 4</label>
+		</div>
+
+		<div class="tab-panels">
+
+			<!-- Задание 1. Транспонирование матриц -->
+			<div class="tab-panel" id="panel1">
+				<h2>Задание 1. Транспонирование матриц</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Транспонируйте матрицу:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} 4 & -7 & 2 & -6 \\ -4 & 7 & 3 & 5 \\ -1 & 7 & -1 & -1 \end{pmatrix}^{\top}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>
+								\[
+								\begin{pmatrix} 4 & -4 & -1 \\ -7 & 7 & 7 \\ 2 & 3 & -1 \\ -6 & 5 & -1 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 2. Сложение матриц и простейшие матричные уравнения -->
+			<div class="tab-panel" id="panel2">
+				<h2>Задание 2. Сложение матриц и простейшие матричные уравнения</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Произведите действия с матрицами:</p>
+						<div class="math-formula" id="k">
+							\[
+							-7\begin{pmatrix} -2 & 3 \\ 2 & 9 \\ 7 & -6 \end{pmatrix} - 8\begin{pmatrix} 4 & 5 & -3 \\ -2 & -8 & 6 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Действия выполнить невозможно, поскольку матрицы имеют разные размеры</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task">
+						<p>Произведите действия с матрицами:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} -3 & 7 & 3 \\ -4 & -7 & -1 \\ 6 & 8 & -3 \\ -3 & 6 & 8 \end{pmatrix} + 4\begin{pmatrix} -3 & 6 & 8 \\ -2 & 8 & 1 \\ -2 & 1 & 4 \\ -2 & 2 & -3 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>
+								\[
+								\begin{pmatrix} -15 & 31 & 35 \\ -12 & 25 & 3 \\ -2 & 12 & 13 \\ -11 & 14 & -4 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task">
+						<p>Произведите действия с матрицами:</p>
+						<div class="math-formula" id="k">
+							\[
+							7\begin{pmatrix} 8 & -7 & 8 \\ -9 & -1 & -8 \end{pmatrix} + 3\begin{pmatrix} 8 & -1 \\ 3 & 1 \\ 4 & 6 \end{pmatrix}^{\top}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>
+								\[
+								\begin{pmatrix} 80 & -40 & 68 \\ -66 & -4 & -38 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 4</b></div>
+					<div id="text-task">
+						<p>Решите матричное уравнение:</p>
+						<div class="math-formula" id="k">
+							\[
+							3\begin{pmatrix} 3 & -4 \\ 5 & -9 \\ -4 & 3 \end{pmatrix} + \frac{1}{2}X = 2\begin{pmatrix} 4 & 4 \\ -3 & 5 \\ 4 & 8 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>
+								\[
+								X = \begin{pmatrix} -2 & 40 \\ -42 & 74 \\ 40 & 14 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 5*</b></div>
+					<div id="text-task">
+						<p>Решите матричную систему уравнений:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{cases} -8X + Y = \begin{pmatrix} -58 & -40 \\ 52 & -5 \end{pmatrix} \\[4pt] 3X + 2Y = \begin{pmatrix} 36 & -4 \\ -10 & -10 \end{pmatrix} \end{cases}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>
+								\[
+								X = \begin{pmatrix} 8 & 4 \\ -6 & 0 \end{pmatrix}, \quad Y = \begin{pmatrix} 6 & -8 \\ 4 & -5 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 3. Умножение матриц -->
+			<div class="tab-panel" id="panel3">
+				<h2>Задание 3. Умножение матриц</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Вычислите произведение:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} 2 & 1 & 2 \\ 3 & -2 & 2 \end{pmatrix} \cdot \begin{pmatrix} -5 & 2 \\ -6 & -5 \\ -1 & -3 \\ -3 & 1 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Для данных матриц произведение не определено.</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task">
+						<p>Вычислите произведение:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} -9 \\ 5 \\ -3 \end{pmatrix} \cdot \begin{pmatrix} 1 & -6 & 4 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>
+								\[
+								\begin{pmatrix} -9 & 54 & -36 \\ 5 & -30 & 20 \\ -3 & 18 & -12 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task">
+						<p>Вычислите произведение:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} 0 & 5 & -4 \end{pmatrix} \cdot \begin{pmatrix} -2 \\ 0 \\ 3 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>\( (-12) \)</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 4</b></div>
+					<div id="text-task">
+						<p>Вычислите \(A \cdot B^{\top} - 2C\), если</p>
+						<div class="math-formula" id="k">
+							\[
+							A = \begin{pmatrix} 2 & -4 \\ -2 & 3 \end{pmatrix}, \quad B = \begin{pmatrix} 2 & 1 \\ -4 & 5 \end{pmatrix}, \quad C = \begin{pmatrix} 3 & -2 \\ 5 & 2 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>
+								\[
+								\begin{pmatrix} 0 & -28 \\ -1 & 23 \end{pmatrix} + \begin{pmatrix} -6 & 4 \\ -10 & -4 \end{pmatrix} = \begin{pmatrix} -6 & -24 \\ -11 & 19 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 5</b></div>
+					<div id="text-task">
+						<p>Вычислите \(3BA - AB\), если</p>
+						<div class="math-formula" id="k">
+							\[
+							A = \begin{pmatrix} -3 & 2 \\ 1 & -1 \end{pmatrix}, \quad B = \begin{pmatrix} 9 & -3 \\ 9 & -5 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>
+								\[
+								3\begin{pmatrix} -30 & 21 \\ -32 & 23 \end{pmatrix} - \begin{pmatrix} -9 & -1 \\ 0 & 2 \end{pmatrix} = \begin{pmatrix} -81 & 64 \\ -96 & 67 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 6</b></div>
+					<div id="text-task">
+						<p>Вычислите произведение:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} 4 & -1 & 4 \\ 0 & 5 & -2 \\ -3 & -5 & -5 \end{pmatrix} \cdot \begin{pmatrix} 3 \\ -1 \\ -2 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>
+								\[
+								\begin{pmatrix} 5 \\ -1 \\ 6 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 7</b></div>
+					<div id="text-task">
+						<p>Вычислите произведение:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} 1 & 4 & 1 \end{pmatrix} \cdot \begin{pmatrix} -1 & 1 & -1 \\ -3 & -3 & 3 \\ 1 & 1 & 2 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>
+								\[
+								\begin{pmatrix} -12 & -10 & 13 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 8</b></div>
+					<div id="text-task">
+						<p>Вычислите произведение:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} 4 & 0 \\ 3 & -4 \\ -4 & 4 \end{pmatrix} \cdot \begin{pmatrix} 1 & -2 & -1 \\ 2 & 1 & 2 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>
+								\[
+								\begin{pmatrix} 4 & -8 & -4 \\ -5 & -10 & -11 \\ 4 & 12 & 12 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 9</b></div>
+					<div id="text-task">
+						<p>Вычислите произведение:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} 1 & -2 & 1 \\ -2 & -1 & 3 \end{pmatrix} \cdot \begin{pmatrix} 2 & 1 \\ 3 & 2 \\ 0 & -2 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>
+								\[
+								\begin{pmatrix} -4 & -5 \\ -7 & -10 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 10</b></div>
+					<div id="text-task">
+						<p>Вычислите произведение:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} -1 & 5 & -3 \\ -3 & -6 & 0 \\ -1 & 1 & 4 \end{pmatrix} \cdot \begin{pmatrix} 1 & -3 & 1 \\ 1 & 3 & -1 \\ -3 & -2 & 1 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>
+								\[
+								\begin{pmatrix} 13 & 24 & -9 \\ -9 & -9 & 3 \\ -12 & -2 & 2 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 11</b></div>
+					<div id="text-task">
+						<p>Вычислите \(P(A)\), если \(P(x) = -4x^2 - 4x - 2\) и</p>
+						<div class="math-formula" id="k">
+							\[
+							A = \begin{pmatrix} 0 & -3 & 1 \\ -2 & 4 & -1 \\ 4 & -4 & 0 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>
+								\[
+								-4\begin{pmatrix} 10 & -16 & 3 \\ -12 & 26 & -6 \\ 8 & -28 & 8 \end{pmatrix} + \begin{pmatrix} 0 & 12 & -4 \\ 8 & -16 & 4 \\ -16 & 16 & 0 \end{pmatrix} + \begin{pmatrix} -2 & 0 & 0 \\ 0 & -2 & 0 \\ 0 & 0 & -2 \end{pmatrix} = \begin{pmatrix} -42 & 76 & -16 \\ 56 & -122 & 28 \\ -48 & 128 & -34 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 4. Степени матриц -->
+			<div class="tab-panel" id="panel4">
+				<h2>Задание 4. Степени матриц</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Вычислите \(A^3\), если</p>
+						<div class="math-formula" id="k">
+							\[
+							A = \begin{pmatrix} 4 & -7 \\ 0 & 5 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>
+								\[
+								\begin{pmatrix} 64 & -427 \\ 0 & 125 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task">
+						<p>Вычислите \(A^{57}\), если</p>
+						<div class="math-formula" id="k">
+							\[
+							A = \begin{pmatrix} -1 & -1 \\ 0 & -1 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>
+								\[
+								\begin{pmatrix} -1 & -57 \\ 0 & -1 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task">
+						<p>Вычислите \(A^{11}\), если</p>
+						<div class="math-formula" id="k">
+							\[
+							A = \begin{pmatrix} -2 & 2 \\ 2 & 2 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>
+								\[
+								\begin{pmatrix} -65536 & 65536 \\ 65536 & 65536 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 4</b></div>
+					<div id="text-task">
+						<p>Вычислите \(A^3\), если</p>
+						<div class="math-formula" id="k">
+							\[
+							A = \begin{pmatrix} -3 & -2 \\ 1 & -1 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>
+								\[
+								\begin{pmatrix} -13 & -22 \\ 11 & 9 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 5*</b></div>
+					<div id="text-task">
+						<p>Вычислите \(A^{54}\), если</p>
+						<div class="math-formula" id="k">
+							\[
+							A = \begin{pmatrix} -\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} \\ -\frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>
+								\[
+								\begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 6*</b></div>
+					<div id="text-task">
+						<p>Вычислите \(A^{106}\), если</p>
+						<div class="math-formula" id="k">
+							\[
+							A = \begin{pmatrix} \frac{1}{2} & \frac{\sqrt{3}}{2} \\ -\frac{\sqrt{3}}{2} & \frac{1}{2} \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>
+								\[
+								\begin{pmatrix} -\frac{1}{2} & -\frac{\sqrt{3}}{2} \\ \frac{\sqrt{3}}{2} & -\frac{1}{2} \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	</br></br></br>
+</div>
+
+
+
+
+
+
+<nav class="ios-tabbar" aria-label="Основная навигация">
+  <div class="ios-tabbar-inner">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+  </div>
+</nav>
+</body>
+</html>

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link href="../../test1.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARINOV</title>
+	<link rel="shortcut icon" href="../../image/logo.svg" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="stylesheet" href="../assets/css/site.css">
+	<link rel="stylesheet" href="../assets/css/pygments.css">
+	<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&amp;display=swap" rel="stylesheet" media="all">
+	<link href="shrek.ttf" rel="stylesheet" media="all">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<script src="../../nav-merge.js" defer></script>
+	<style>
+		.dz-header {
+			color: gray;
+			font-size: 14px;
+			margin-bottom: 4px;
+		}
+
+		.tabs {
+			margin-top: 15px;
+		}
+
+		.tab-input {
+			display: none;
+		}
+
+		.tab-bar {
+			margin-bottom: 20px;
+		}
+
+		.tab-label {
+			display: inline-block;
+			padding: 10px 18px;
+			margin-right: 8px;
+			margin-bottom: 10px;
+			background-color: #EEF0F4;
+			border: 1px solid #E1E4EC;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: 15px;
+			transition: 0.2s;
+			user-select: none;
+		}
+
+		.tab-label:hover {
+			background-color: #E2E5F7;
+		}
+
+		.tab-input:checked + .tab-label {
+			background-color: #5B62F5;
+			color: white;
+			font-weight: 600;
+		}
+
+		.tab-panel {
+			display: none;
+		}
+
+		#tab1:checked ~ .tab-panels #panel1,
+		#tab2:checked ~ .tab-panels #panel2,
+		#tab3:checked ~ .tab-panels #panel3,
+		#tab4:checked ~ .tab-panels #panel4,
+		#tab5:checked ~ .tab-panels #panel5,
+		#tab6:checked ~ .tab-panels #panel6,
+		#tab7:checked ~ .tab-panels #panel7,
+		#tab8:checked ~ .tab-panels #panel8,
+		#tab9:checked ~ .tab-panels #panel9,
+		#tab10:checked ~ .tab-panels #panel10,
+		#tab11:checked ~ .tab-panels #panel11,
+		#tab12:checked ~ .tab-panels #panel12,
+		#tab13:checked ~ .tab-panels #panel13,
+		#tab14:checked ~ .tab-panels #panel14,
+		#tab15:checked ~ .tab-panels #panel15,
+		#tab16:checked ~ .tab-panels #panel16,
+		#tab17:checked ~ .tab-panels #panel17,
+		#tab18:checked ~ .tab-panels #panel18 {
+			display: block;
+		}
+
+		@media only screen and (max-device-width: 530px) {
+			.tab-label {
+				padding: 9px 14px;
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+<body>
+<button type="button" class="ios-back-btn" aria-label="Назад" onclick="history.back()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="ios-navbar"><span class="ios-navbar-title"></span></div>
+<div class="left-menu">
+  <a href="../../home.html" class="logo"><img src="../../image/logo1.svg" alt="Logo"></a>
+  <div class="nav-list">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../lit.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="15.2" width="15" height="4" rx="1"/><rect x="5.5" y="10.6" width="13" height="4" rx="1"/><rect x="6.5" y="6" width="11" height="4" rx="1"/></svg>Литература</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+    <a href="../../net.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="4.7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 6.7v3.1"/><path d="M10.3 13.4l-3.7 2.1"/><path d="M13.7 13.4l3.7 2.1"/></svg>Сети</a>
+  </div>
+</div>
+
+<div class="main">
+
+<nav class="breadcrumbs">
+  <a href="../../home.html">Главная</a><span class="crumb-sep">/</span>
+  <a href="../../vid.html">Видеоуроки</a><span class="crumb-sep">/</span>
+  <a href="../../angem.html">Аналитическая геометрия от Профиматики</a><span class="crumb-sep">/</span>
+  <span class="crumb-current">Домашнее задание</span>
+</nav>
+
+	<div class="tabs">
+		<input type="radio" name="dz-tab" id="tab1" class="tab-input" checked>
+		<input type="radio" name="dz-tab" id="tab2" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab3" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab4" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab5" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab6" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab7" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab8" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab9" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab10" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab11" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab12" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab13" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab14" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab15" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab16" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab17" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab18" class="tab-input">
+
+		<div class="tab-bar">
+			<label for="tab1" class="tab-label">Задание 1</label>
+			<label for="tab2" class="tab-label">Задание 2</label>
+			<label for="tab3" class="tab-label">Задание 3</label>
+			<label for="tab4" class="tab-label">Задание 4</label>
+			<label for="tab5" class="tab-label">Задание 5</label>
+			<label for="tab6" class="tab-label">Задание 6</label>
+			<label for="tab7" class="tab-label">Задание 7</label>
+			<label for="tab8" class="tab-label">Задание 8</label>
+			<label for="tab9" class="tab-label">Задание 9</label>
+			<label for="tab10" class="tab-label">Задание 10</label>
+			<label for="tab11" class="tab-label">Задание 11</label>
+			<label for="tab12" class="tab-label">Задание 12</label>
+			<label for="tab13" class="tab-label">Задание 13</label>
+			<label for="tab14" class="tab-label">Задание 14</label>
+			<label for="tab15" class="tab-label">Задание 15</label>
+			<label for="tab16" class="tab-label">Задание 16</label>
+			<label for="tab17" class="tab-label">Задание 17</label>
+			<label for="tab18" class="tab-label">Задание 18</label>
+		</div>
+
+		<div class="tab-panels">
+
+			<!-- Задание 1 -->
+			<div class="tab-panel" id="panel1">
+				<h2>Задание 1. Формы уравнения прямой на плоскости</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Записать уравнение прямой \(x=2+3t,\ y=3+2t\) в виде \(Ax+By+C=0\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Исключая параметр \(t=\dfrac{x-2}{3}=\dfrac{y-3}{2}\), приводим к общему виду: \(2(x-2)=3(y-3)\Rightarrow2x-3y+5=0\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>Записать уравнение прямой \(3x-4y+4=0\) в параметрической и канонической формах.</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Нормальный вектор \(\vec n=(3,-4)\), направляющий вектор \(\vec s=(4,3)\). Точка на прямой: при \(x_0=0\) получаем \(y_0=1\), т.е. \(M_0(0,1)\). Параметрическая форма: \(x=4t,\ y=1+3t\). Каноническая форма: \(\dfrac{x}{4}=\dfrac{y-1}{3}\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task"><p>Найти угловой коэффициент прямой \(x=2+3t,\ y=3+2t\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Из Задачи 1 общее уравнение \(2x-3y+5=0\Rightarrow y=\dfrac23x+\dfrac53\). Угловой коэффициент \(k=\dfrac23\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 2 -->
+			<div class="tab-panel" id="panel2">
+				<h2>Задание 2. Прямая через точку, параллельная данной</h2>
+				<p>Составить уравнение прямой, проходящей через точку \(A(-3,4)\) и параллельной прямой:</p>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>\(x-2y+5=0\)</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Нормальный вектор \(\vec n=(1,-2)\) сохраняется (параллельные прямые имеют коллинеарные нормали). Уравнение: \(1(x+3)-2(y-4)=0\Rightarrow x-2y+11=0\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>\(\dfrac{x-1}{2}=\dfrac{y+2}{3}\)</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Направляющий вектор \(\vec s=(2,3)\) сохраняется. Уравнение: \(\dfrac{x+3}{2}=\dfrac{y-4}{3}\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task"><p>\(x=3+t,\ y=4-7t\)</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Направляющий вектор \(\vec s=(1,-7)\) сохраняется. Уравнение: \(\dfrac{x+3}{1}=\dfrac{y-4}{-7}\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 3 -->
+			<div class="tab-panel" id="panel3">
+				<h2>Задание 3. Прямая через две точки</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Составить уравнение прямой, проходящей через точки \(A(-3,1)\) и \(B(1,2)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Направляющий вектор \(\vec{AB}=(4,1)\). Уравнение \(\dfrac{x+3}{4}=\dfrac{y-1}{1}\Rightarrow x-4y+7=0\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>Составить уравнение прямой, проходящей через точки \(A(0,2)\) и \(B(-1,0)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Направляющий вектор \(\vec{AB}=(-1,-2)\). Уравнение: \(2x-y+2=0\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task"><p>Составить уравнение прямой, проходящей через точки \(A(2,1)\) и \(B(2,-5)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Точки имеют равную абсциссу \(x=2\), значит прямая вертикальна: \(x=2\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 4</b></div>
+					<div id="text-task"><p>Составить уравнение прямой, проходящей через точки \(A(1,-3)\) и \(B(3,-3)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Точки имеют равную ординату \(y=-3\), значит прямая горизонтальна: \(y=-3\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 4 -->
+			<div class="tab-panel" id="panel4">
+				<h2>Задание 4. Прямая через точку, перпендикулярная данной</h2>
+				<p>Составить уравнение прямой, проходящей через точку \(A(-3,4)\) и перпендикулярной прямой:</p>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>\(x-2y+5=0\)</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Нормаль данной прямой \((1,-2)\) становится направляющим вектором искомой: \(\dfrac{x+3}{1}=\dfrac{y-4}{-2}\Rightarrow2x+y+2=0\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>\(\dfrac{x-1}{2}=\dfrac{y+2}{3}\)</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Направляющий вектор данной прямой \((2,3)\) становится нормалью искомой: \(2(x+3)+3(y-4)=0\Rightarrow2x+3y-6=0\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task"><p>\(x=3+t,\ y=4-7t\)</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Направляющий вектор \((1,-7)\) становится нормалью искомой: \(1(x+3)-7(y-4)=0\Rightarrow x-7y+31=0\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 5 -->
+			<div class="tab-panel" id="panel5">
+				<h2>Задание 5. Уравнения сторон квадрата по вершине и центру</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Точка \(A(3,-2)\) является вершиной квадрата, а точка \(M(1,1)\) — точкой пересечения его диагоналей. Составить уравнения сторон квадрата.</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Так как \(M\) — центр квадрата, вершина, противоположная \(A\), равна \(C=2M-A=(-1,4)\). Повернув вектор \(\vec{MA}=(-2,3)\) (или соответствующую половину диагонали) на \(90°\) и отложив от \(M\), находим остальные вершины: \(B(-2,-1)\), \(D(4,3)\).</p>
+							<p>Составляя уравнения прямых через пары соседних вершин, получаем стороны квадрата: \(AB:\ x+5y+7=0\); \(BC:\ 5x-y+9=0\); \(CD:\ x+5y-19=0\); \(DA:\ 5x-y-17=0\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 6 -->
+			<div class="tab-panel" id="panel6">
+				<h2>Задание 6. Точка на прямой, равноудалённая от двух точек</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>На прямой \(5x-4y-2=0\) найти точку, равноудалённую от точек \(A(1,0)\) и \(B(-2,1)\).</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Множество точек, равноудалённых от \(A\) и \(B\), — серединный перпендикуляр к отрезку \(AB\). Середина отрезка: \(M_0\left(-\dfrac12,\dfrac12\right)\), вектор \(\vec{AB}=(-3,1)\) служит нормалью серединного перпендикуляра. Уравнение серединного перпендикуляра: \(-3\left(x+\dfrac12\right)+\left(y-\dfrac12\right)=0\Rightarrow y=3x+2\).</p>
+							<p>Решая систему с уравнением заданной прямой \(5x-4y-2=0\), получаем \(x=-\dfrac{10}{7}, y=-\dfrac{16}{7}\). Ответ: \(M\left(-\dfrac{10}{7},-\dfrac{16}{7}\right)\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 7 -->
+			<div class="tab-panel" id="panel7">
+				<h2>Задание 7. Расстояние от точки до прямой</h2>
+				<p>Найти расстояние от точки \(A(1,-2)\) до прямой, заданной уравнением:</p>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>\(2x-3y+5=0\)</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>По формуле \(\rho=\dfrac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}=\dfrac{|2+6+5|}{\sqrt{13}}=\dfrac{13}{\sqrt{13}}=\sqrt{13}\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>\(4x-3y-10=0\)</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(\rho=\dfrac{|4+6-10|}{\sqrt{16+9}}=\dfrac{0}{5}=0\) — точка лежит на данной прямой (проверка подстановкой подтверждает: \(4-3(-2)-10=0\)).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 8 -->
+			<div class="tab-panel" id="panel8">
+				<h2>Задание 8. Биссектрисы треугольника</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Составить уравнения биссектрис внутренних углов треугольника, стороны которого заданы уравнениями \(3y=4x,\ 4y=3x,\ 5x+12y=10\).</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Приводя стороны к виду \(l_1:4x-3y=0,\ l_2:3x-4y=0,\ l_3:5x+12y-10=0\) и находя вершины как попарные пересечения: \(A\left(\dfrac57,\dfrac{15}{28}\right)=l_2\cap l_3\), \(B\left(\dfrac{10}{21},\dfrac{40}{63}\right)=l_1\cap l_3\), \(C(0,0)=l_1\cap l_2\).</p>
+							<p>Для каждой вершины биссектриса строится как сумма (для внутреннего угла) единичных направляющих векторов прилежащих сторон. Итоговые уравнения биссектрис: при вершине \(C\): \(x-y=0\); при вершине \(A\): \(7x-56y+25=0\); при вершине \(B\): \(77x+21y-50=0\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 9 -->
+			<div class="tab-panel" id="panel9">
+				<h2>Задание 9. Прямая как пересечение плоскостей — параметрическая и каноническая форма</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Записать уравнения прямой \(x-y+2z+4=0,\ -2x+y+z+3=0\) в параметрической и канонической форме.</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Направляющий вектор прямой — векторное произведение нормалей плоскостей: \(\vec n_1=(1,-1,2),\vec n_2=(-2,1,1)\), \(\vec s=[\vec n_1,\vec n_2]=(-3,-5,-1)\), или равносильно \((3,5,1)\). Точка на прямой (при \(z=0\)): решая систему \(x-y+4=0,\ -2x+y+3=0\), находим \(M_0(7,11,0)\).</p>
+							<p>Параметрическая форма: \(x=7+3t,\ y=11+5t,\ z=t\). Каноническая форма: \(\dfrac{x-7}{3}=\dfrac{y-11}{5}=\dfrac{z}{1}\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 10 -->
+			<div class="tab-panel" id="panel10">
+				<h2>Задание 10. Прямая в пространстве через точку, параллельная данной</h2>
+				<p>Составить уравнения прямой, проходящей через точку \(A(1,3,1)\) и параллельной прямой:</p>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>\(x+y-z+2=0,\ 2x+3y+z=0\)</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Направляющий вектор данной прямой: \([\vec n_1,\vec n_2]=[(1,1,-1),(2,3,1)]=(4,-3,1)\). Уравнения искомой прямой через \(A(1,3,1)\): параметрическая \(x=1+4t,\ y=3-3t,\ z=1+t\); каноническая \(\dfrac{x-1}{4}=\dfrac{y-3}{-3}=\dfrac{z-1}{1}\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>\(\dfrac{x+1}{3}=\dfrac{y-2}{4}=\dfrac{z+2}{21}\)</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Направляющий вектор \((3,4,21)\) сохраняется. Уравнения через \(A(1,3,1)\): параметрическая \(x=1+3t,\ y=3+4t,\ z=1+21t\); каноническая \(\dfrac{x-1}{3}=\dfrac{y-3}{4}=\dfrac{z-1}{21}\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 11 -->
+			<div class="tab-panel" id="panel11">
+				<h2>Задание 11. Прямая в пространстве через две точки</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Составить уравнения прямой, проходящей через точки \(A(1,3,-1)\) и \(B(4,2,1)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Направляющий вектор \(\vec{AB}=(3,-1,2)\). Каноническая форма: \(\dfrac{x-1}{3}=\dfrac{y-3}{-1}=\dfrac{z+1}{2}\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>Составить уравнения прямой, проходящей через точки \(A(3,2,5)\) и \(B(4,1,5)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Направляющий вектор \(\vec{AB}=(1,-1,0)\) — третья компонента равна нулю, значит прямая лежит в плоскости \(z=5\). Каноническая форма: \(\dfrac{x-3}{1}=\dfrac{y-2}{-1},\ z=5\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 12 -->
+			<div class="tab-panel" id="panel12">
+				<h2>Задание 12. Плоскость через три точки</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Составить уравнение плоскости, проходящей через три точки: \(A(2,1,3),B(-1,2,5),C(3,0,1)\).</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Используя определитель через векторы \(\vec{AB}=(-3,1,2)\), \(\vec{AC}=(1,-1,-2)\): \(\begin{vmatrix}x-2&y-1&z-3\\-3&1&2\\1&-1&-2\end{vmatrix}=0\). Раскрывая, получаем \(0\cdot(x-2)-4(y-1)+2(z-3)=0\Rightarrow2y-z+1=0\).</p>
+							<p>Проверка подстановкой всех трёх точек подтверждает верность уравнения.</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 13 -->
+			<div class="tab-panel" id="panel13">
+				<h2>Задание 13. Плоскость через точку и прямую</h2>
+				<p>Составить уравнение плоскости, проходящей через точку \(A(-1,1,2)\) и прямую, заданную уравнениями:</p>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>\(x=1+5t,\ y=-1+t,\ z=2t\)</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Берём две точки прямой: \(M_1(1,-1,0)\) (при \(t=0\)) и \(M_2(6,0,2)\) (при \(t=1\)). Составляя определитель через точки \(A,M_1,M_2\) и раскрывая, получаем уравнение плоскости: \(x+7y-6z+6=0\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>\(x+5y-7z+1=0,\ 3x-y+2z+3=0\)</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Находим две точки прямой (пересечения плоскостей) при \(z=0\) и \(z=1\): \(M_1(-1,0,0)\), \(M_2\left(-\dfrac{19}{16},\dfrac{23}{16},1\right)\). Составляя определитель через \(A,M_1,M_2\) и раскрывая (после умножения на общий знаменатель), получаем уравнение плоскости: \(10x+2y-z+10=0\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 14 -->
+			<div class="tab-panel" id="panel14">
+				<h2>Задание 14. Пересечение двух прямых и плоскость через них</h2>
+				<p>Доказать, что две данные прямые пересекаются, и составить уравнение содержащей их плоскости:</p>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>\(\dfrac{x+1}{-2}=\dfrac{y-2}{1}=\dfrac{z-5}{4}\) и \(\dfrac{x+5}{2}=\dfrac{y+8}{3}=\dfrac{z-4}{-1}\)</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Точки и направляющие: \(M_1(-1,2,5),\vec s_1(-2,1,4)\); \(M_2(-5,-8,4),\vec s_2(2,3,-1)\). Смешанное произведение \((\vec s_1,\vec s_2,\vec{M_1M_2})=0\), значит прямые компланарны (лежат в одной плоскости). Решая систему параметрических уравнений на пересечение, находим точку пересечения \(P(1,1,1)\) (при \(t=-1\), \(u=3\)).</p>
+							<p>Нормаль плоскости \(\vec n=[\vec s_1,\vec s_2]=(-13,6,-8)\). Уравнение плоскости через \(P(1,1,1)\): \(13x-6y+8z-15=0\).</p>
+						</div>
+					</details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>\(x=1+3t,\ y=-1+4t,\ z=2+5t\) и \(x=1-t,\ y=-1+2t,\ z=2+4t\)</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Обе прямые проходят через одну и ту же точку \(M_1=M_2=(1,-1,2)\) при \(t=0\) (значит пересекаются в этой точке), а направляющие векторы \((3,4,5)\) и \((-1,2,4)\) не коллинеарны.</p>
+							<p>Нормаль плоскости \(\vec n=[(3,4,5),(-1,2,4)]=(6,-17,10)\). Уравнение плоскости через точку \(P(1,-1,2)\): \(6x-17y+10z-43=0\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 15 -->
+			<div class="tab-panel" id="panel15">
+				<h2>Задание 15. Плоскость через точку, перпендикулярная прямой</h2>
+				<p>Составить уравнение плоскости, проходящей через точку \(A(1,3,1)\) и перпендикулярной прямой:</p>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>\(x+y-z+2=0,\ 2x+3y+z-1=0\)</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Направляющий вектор прямой \([\vec n_1,\vec n_2]=[(1,1,-1),(2,3,1)]=(4,-3,1)\) становится нормалью искомой плоскости. Уравнение: \(4(x-1)-3(y-3)+1(z-1)=0\Rightarrow4x-3y+z+4=0\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>\(\dfrac{x+1}{3}=\dfrac{y-2}{4}=\dfrac{z+2}{21}\)</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Направляющий вектор прямой \((3,4,21)\) становится нормалью плоскости. Уравнение: \(3(x-1)+4(y-3)+21(z-1)=0\Rightarrow3x+4y+21z-36=0\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 16 -->
+			<div class="tab-panel" id="panel16">
+				<h2>Задание 16. Расстояние от точки до плоскости</h2>
+				<p>Найти расстояние от точки \(A(3,1,-1)\) до плоскости:</p>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>\(x-y-5z+2=0\)</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(\rho=\dfrac{|3-1+5+2|}{\sqrt{1+1+25}}=\dfrac{9}{\sqrt{27}}=\dfrac{9}{3\sqrt3}=\sqrt3\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>\(x-2y+2z-2=0\)</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(\rho=\dfrac{|3-2-2-2|}{\sqrt{1+4+4}}=\dfrac{3}{3}=1\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 17 -->
+			<div class="tab-panel" id="panel17">
+				<h2>Задание 17. Тетраэдр: высоты, расстояния, углы</h2>
+				<p>Точки \(A(-1,-3,1),B(5,3,8),C(-1,-3,5),D(2,1,-4)\) являются вершинами тетраэдра.</p>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Найти длину высоты тетраэдра, опущенной из вершины \(D\) на грань \(ABC\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Плоскость \(ABC\) (векторы \(\vec{AB}=(6,6,7),\vec{AC}=(0,0,4)\)) имеет нормаль \((1,-1,0)\) и уравнение \(x-y-2=0\). Расстояние от \(D(2,1,-4)\): \(\rho=\dfrac{|2-1-2|}{\sqrt2}=\dfrac{1}{\sqrt2}=\dfrac{\sqrt2}{2}\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>Найти длину высоты грани \(ABC\), опущенной из вершины \(C\) на ребро \(AB\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(AB=\sqrt{36+36+49}=11\). Площадь треугольника \(S_{ABC}=\dfrac12|[\vec{AB},\vec{AC}]|=\dfrac12\sqrt{576+576}=12\sqrt2\). Высота \(h_C=\dfrac{2S_{ABC}}{AB}=\dfrac{24\sqrt2}{11}\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task"><p>Найти расстояние между скрещивающимися рёбрами \(AD\) и \(BC\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(\vec{AD}=(3,4,-5),\vec{BC}=(-6,-6,-3)\). Смешанное произведение \((\vec{AD},\vec{BC},\vec{AB})=24\), \(|[\vec{AD},\vec{BC}]|=\sqrt{1764+1521+36}=3\sqrt{369}\). Расстояние: \(\rho=\dfrac{24}{3\sqrt{369}}=\dfrac{8}{\sqrt{369}}\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 4</b></div>
+					<div id="text-task"><p>Найти угол между скрещивающимися рёбрами \(AD\) и \(BC\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\((\vec{AD},\vec{BC})=-27\), \(|\vec{AD}|=5\sqrt2,|\vec{BC}|=9\). \(\cos\varphi=\dfrac{27}{5\sqrt2\cdot9}=\dfrac{3\sqrt2}{10}\). Угол: \(\varphi=\arccos\dfrac{3\sqrt2}{10}\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 5</b></div>
+					<div id="text-task"><p>Найти угол между ребром \(AD\) и гранью \(ABC\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Нормаль грани \(ABC\): \(\vec n=(1,-1,0)\). \(\sin\psi=\dfrac{|(\vec{AD},\vec n)|}{|\vec{AD}||\vec n|}=\dfrac{|3-4|}{\sqrt{50}\cdot\sqrt2}=\dfrac{1}{10}\). Угол: \(\psi=\arcsin\dfrac{1}{10}\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 18 -->
+			<div class="tab-panel" id="panel18">
+				<h2>Задание 18. Куб: расстояния и общий перпендикуляр</h2>
+				<p>Длина ребра куба \(ABCDA_1B_1C_1D_1\) равна 1. Введём координаты \(A(0,0,0),B(1,0,0),C(1,1,0),D(0,1,0),A_1(0,0,1),B_1(1,0,1),C_1(1,1,1),D_1(0,1,1)\).</p>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Найти расстояние от вершины \(A\) до плоскости \(B_1CD_1\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Плоскость \(B_1CD_1\) имеет уравнение \(x+y+z-2=0\) (нормаль \([\vec{B_1C},\vec{B_1D_1}]=(1,1,1)\)). Расстояние от \(A(0,0,0)\): \(\rho=\dfrac{2}{\sqrt3}=\dfrac{2\sqrt3}{3}\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>Найти расстояние между диагональю куба \(AC_1\) и скрещивающейся с ней диагональю боковой грани \(CD_1\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(\vec s_1=\vec{AC_1}=(1,1,1)\), \(\vec s_2=\vec{CD_1}=(-1,0,1)\), \(\vec{AC}=(1,1,0)\). Смешанное произведение \((\vec s_1,\vec s_2,\vec{AC})=-1\), \(|[\vec s_1,\vec s_2]|=\sqrt{1+4+1}=\sqrt6\). Расстояние: \(\rho=\dfrac{1}{\sqrt6}\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task"><p>Найти отношения, в которых точки пересечения общего перпендикуляра к прямым \(AC_1\) и \(CD_1\) с этими прямыми делят отрезки \(AC_1\) и \(CD_1\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Параметризуя точки \(M(t,t,t)\) на \(AC_1\) и \(N(1-u,1,u)\) на \(CD_1\) и решая условия перпендикулярности вектора \(\vec{MN}\) обеим прямым, получаем \(t=\dfrac23,\ u=\dfrac12\). Отсюда отношение на \(AC_1\): \(AM:MC_1=2:1\); отношение на \(CD_1\): \(CN:ND_1=1:1\).</p></div></details>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	</br></br></br>
+</div>
+
+
+
+
+
+<nav class="ios-tabbar" aria-label="Основная навигация">
+  <div class="ios-tabbar-inner">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+  </div>
+</nav>
+</body>
+</html>

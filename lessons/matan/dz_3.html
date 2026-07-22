@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link href="../../test1.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARINOV</title>
+	<link rel="shortcut icon" href="../../image/logo.svg" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="stylesheet" href="../assets/css/site.css">
+	<link rel="stylesheet" href="../assets/css/pygments.css">
+	<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&amp;display=swap" rel="stylesheet" media="all">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<script src="../../nav-merge.js" defer></script>
+	<style>
+		.dz-note {
+			color: gray;
+			font-size: 14px;
+			margin-bottom: 8px;
+		}
+
+		.tabs {
+			margin-top: 15px;
+		}
+
+		.tab-input {
+			display: none;
+		}
+
+		.tab-bar {
+			margin-bottom: 20px;
+		}
+
+		.tab-label {
+			display: inline-block;
+			padding: 10px 18px;
+			margin-right: 8px;
+			margin-bottom: 10px;
+			background-color: #EEF0F4;
+			border: 1px solid #E1E4EC;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: 15px;
+			transition: 0.2s;
+			user-select: none;
+		}
+
+		.tab-label:hover {
+			background-color: #E2E5F7;
+		}
+
+		.tab-input:checked + .tab-label {
+			background-color: #5B62F5;
+			color: white;
+			font-weight: 600;
+		}
+
+		.tab-panel {
+			display: none;
+		}
+
+		#tab1:checked ~ .tab-panels #panel1,
+		#tab2:checked ~ .tab-panels #panel2,
+		#tab3:checked ~ .tab-panels #panel3,
+		#tab4:checked ~ .tab-panels #panel4 {
+			display: block;
+		}
+
+		.table-scroll {
+			overflow-x: auto;
+			margin: 10px 0 16px;
+		}
+
+		.dz-table {
+			border-collapse: collapse;
+			min-width: 480px;
+		}
+
+		.dz-table th,
+		.dz-table td {
+			border: 1px solid #E1E4EC;
+			padding: 6px 12px;
+			text-align: center;
+			font-size: 14px;
+			white-space: nowrap;
+		}
+
+		.dz-table th {
+			background-color: #EEF0F4;
+			font-weight: 600;
+		}
+
+		@media only screen and (max-device-width: 530px) {
+			.tab-label {
+				padding: 9px 14px;
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+<body>
+<button type="button" class="ios-back-btn" aria-label="Назад" onclick="history.back()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="ios-navbar"><span class="ios-navbar-title"></span></div>
+<div class="left-menu">
+  <a href="../../home.html" class="logo"><img src="../../image/logo1.svg" alt="Logo"></a>
+  <div class="nav-list">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../lit.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="15.2" width="15" height="4" rx="1"/><rect x="5.5" y="10.6" width="13" height="4" rx="1"/><rect x="6.5" y="6" width="11" height="4" rx="1"/></svg>Литература</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+    <a href="../../net.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="4.7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 6.7v3.1"/><path d="M10.3 13.4l-3.7 2.1"/><path d="M13.7 13.4l3.7 2.1"/></svg>Сети</a>
+  </div>
+</div>
+
+<div class="main">
+
+<nav class="breadcrumbs">
+  <a href="../../home.html">Главная</a><span class="crumb-sep">/</span>
+  <a href="../../vid.html">Видеоуроки</a><span class="crumb-sep">/</span>
+  <a href="../../matan.html">Курс по матану для 1-го семестра</a><span class="crumb-sep">/</span>
+  <span class="crumb-current">Домашнее задание №3</span>
+</nav>
+<h1>Домашнее задание к вебинару №3</h1>
+
+<div class="tabs">
+	<input type="radio" name="dz-tab" id="tab1" class="tab-input" checked>
+	<input type="radio" name="dz-tab" id="tab2" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab3" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab4" class="tab-input">
+
+	<div class="tab-bar">
+		<label for="tab1" class="tab-label">Задание 1</label>
+		<label for="tab2" class="tab-label">Задание 2</label>
+		<label for="tab3" class="tab-label">Задание 3</label>
+		<label for="tab4" class="tab-label">Задание 4</label>
+	</div>
+
+	<div class="tab-panels">
+
+		<div class="tab-panel" id="panel1">
+			<h2>Задание 1. Корни и степени комплексных чисел</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Извлеките корень: \( \sqrt[4]{1} \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ 1 = e^{2\pi ki} \]
+						\[ \sqrt[4]{1} = e^{2\pi ki/4} = e^{\pi ki/2} \]
+						<p>Найдём для каждого \( k \) соответствующий корень:</p>
+						<p>\( k=0:\ e^{0\cdot\pi i/2}=1 \)&nbsp;&nbsp;&nbsp; \( k=1:\ e^{1\cdot\pi i/2}=i \)&nbsp;&nbsp;&nbsp; \( k=2:\ e^{2\cdot\pi i/2}=-1 \)&nbsp;&nbsp;&nbsp; \( k=3:\ e^{3\cdot\pi i/2}=-i \)</p>
+						<p><b>Ответ:</b> \( 1,\ i,\ -1,\ -i \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">Извлеките корень: \( \sqrt[3]{i} \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ i = e^{i\left(\frac{\pi}{2}+2\pi k\right)} \]
+						\[ \sqrt[3]{i} = e^{i\left(\frac{\pi}{6}+\frac{2\pi k}{3}\right)} \]
+						<p>\( k=0:\ e^{i\pi/6}=\dfrac{\sqrt3}{2}+\dfrac12 i \)&nbsp;&nbsp;&nbsp; \( k=1:\ e^{i5\pi/6}=-\dfrac{\sqrt3}{2}+\dfrac12 i \)&nbsp;&nbsp;&nbsp; \( k=2:\ e^{i3\pi/2}=-i \)</p>
+						<p><b>Ответ:</b> \( \dfrac{\sqrt3}{2}+\dfrac12 i,\ \ -\dfrac{\sqrt3}{2}+\dfrac12 i,\ \ -i \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">Извлеките корень: \( \sqrt[3]{1-\sqrt3\,i} \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Модуль и аргумент подкоренного числа: \( z=2e^{-i\pi/3} \)</p>
+						\[ \sqrt[3]{z} = \sqrt[3]{2}\,e^{-i\pi/9+2\pi ki/3} \]
+						<p>\( k=0:\ \sqrt[3]{2}e^{-i\pi/9} \)&nbsp;&nbsp;&nbsp; \( k=1:\ \sqrt[3]{2}e^{i5\pi/9} \)&nbsp;&nbsp;&nbsp; \( k=2:\ \sqrt[3]{2}e^{-i7\pi/9} \)</p>
+						<p><b>Ответ:</b> \( \sqrt[3]{2}\left(\cos\dfrac{\pi}{9}-i\sin\dfrac{\pi}{9}\right),\ \ \sqrt[3]{2}\left(\cos\dfrac{7\pi}{9}-i\sin\dfrac{7\pi}{9}\right),\ \ \sqrt[3]{2}\left(\cos\dfrac{13\pi}{9}-i\sin\dfrac{13\pi}{9}\right) \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">Извлеките корень: \( \sqrt[6]{-64} \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ -64 = 64\,e^{i(\pi+2\pi k)} \]
+						\[ \sqrt[6]{-64} = 2\,e^{i\left(\frac{\pi}{6}+\frac{\pi k}{3}\right)},\qquad k=0,1,2,3,4,5 \]
+						<p>\( k=0:\ 2e^{i\pi/6}=\sqrt3+i \)&nbsp;&nbsp;&nbsp; \( k=1:\ 2e^{i\pi/2}=2i \)&nbsp;&nbsp;&nbsp; \( k=2:\ 2e^{i5\pi/6}=-\sqrt3+i \)</p>
+						<p>\( k=3:\ 2e^{i7\pi/6}=-\sqrt3-i \)&nbsp;&nbsp;&nbsp; \( k=4:\ 2e^{i3\pi/2}=-2i \)&nbsp;&nbsp;&nbsp; \( k=5:\ 2e^{i11\pi/6}=\sqrt3-i \)</p>
+						<p><b>Ответ:</b> \( \sqrt3+i,\ 2i,\ -\sqrt3+i,\ -\sqrt3-i,\ -2i,\ \sqrt3-i \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5</b></div>
+				<div id="text-task"><div class="math-formula">Извлеките корень: \( \sqrt[3]{-8i} \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ -8i = 8\,e^{i(3\pi/2+2\pi k)} \]
+						\[ \sqrt[3]{-8i} = 2\,e^{i\left(\frac{\pi}{2}+\frac{2\pi k}{3}\right)} \]
+						<p>\( k=0:\ 2i \)&nbsp;&nbsp;&nbsp; \( k=1:\ 2e^{i7\pi/6}=-\sqrt3-i \)&nbsp;&nbsp;&nbsp; \( k=2:\ 2e^{i11\pi/6}=\sqrt3-i \)</p>
+						<p><b>Ответ:</b> \( 2i,\ -\sqrt3-i,\ \sqrt3-i \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 6</b></div>
+				<div id="text-task"><div class="math-formula">Извлеките корень: \( \sqrt[3]{\dfrac{7}{\sqrt2}+\dfrac{7}{\sqrt2}i} \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>\( z=7e^{i\pi/4} \)</p>
+						\[ \sqrt[3]{z} = \sqrt[3]{7}\,e^{i\pi/12+2\pi ki/3} \]
+						<p>\( k=0:\ \sqrt[3]{7}e^{i\pi/12} \)&nbsp;&nbsp;&nbsp; \( k=1:\ \sqrt[3]{7}e^{i3\pi/4} \)&nbsp;&nbsp;&nbsp; \( k=2:\ \sqrt[3]{7}e^{i17\pi/12} \)</p>
+						<p><b>Ответ:</b> \( \sqrt[3]{7}\left(\cos\dfrac{\pi}{12}+i\sin\dfrac{\pi}{12}\right),\ \ \sqrt[3]{7}\left(\cos\dfrac{9\pi}{12}+i\sin\dfrac{9\pi}{12}\right),\ \ \sqrt[3]{7}\left(\cos\dfrac{17\pi}{12}+i\sin\dfrac{17\pi}{12}\right) \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 7</b></div>
+				<div id="text-task"><div class="math-formula">Извлеките корень: \( \sqrt{-\dfrac34-\dfrac{3\sqrt3}{4}i} \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>\( z=\dfrac32 e^{-i2\pi/3} \)</p>
+						\[ \sqrt{z} = \sqrt{\dfrac32}\,e^{-i\pi/3+\pi ki} \]
+						<p>\( k=0:\ \sqrt{\tfrac32}e^{-i\pi/3}=\dfrac{\sqrt6}{4}\left(1-\sqrt3i\right)=\dfrac{\sqrt6}{4}-\dfrac{3\sqrt2}{4}i \)</p>
+						<p>\( k=1:\ \sqrt{\tfrac32}e^{i2\pi/3}=\dfrac{\sqrt6}{4}\left(-1+\sqrt3i\right)=-\dfrac{\sqrt6}{4}+\dfrac{3\sqrt2}{4}i \)</p>
+						<p><b>Ответ:</b> \( -\dfrac{\sqrt6}{4}+\dfrac{3\sqrt2}{4}i,\ \ \dfrac{\sqrt6}{4}-\dfrac{3\sqrt2}{4}i \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 8*</b></div>
+				<div id="text-task"><div class="math-formula">Возведите в степень: \( i^i \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Представим \( i \) в экспоненциальной форме:</p>
+						\[ i = e^{i\left(\frac{\pi}{2}+2\pi k\right)},\qquad k\in\mathbb{Z} \]
+						<p>Тогда:</p>
+						\[ i^i = \left(e^{i\left(\frac{\pi}{2}+2\pi k\right)}\right)^i = e^{i\cdot i\left(\frac{\pi}{2}+2\pi k\right)} = e^{-\left(\frac{\pi}{2}+2\pi k\right)} \]
+						<p>Главное значение (при \( k=0 \)): \( i^i = e^{-\pi/2} \)</p>
+						<p><b>Общее решение:</b> \( i^i = e^{-\pi/2-2\pi k},\quad k\in\mathbb{Z} \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 9*</b></div>
+				<div id="text-task"><div class="math-formula">Возведите в степень: \( (-1)^i \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Представим \( -1 \) в экспоненциальной форме:</p>
+						\[ -1 = e^{i(\pi+2\pi k)},\qquad k\in\mathbb{Z} \]
+						<p>Тогда:</p>
+						\[ (-1)^i = \left(e^{i(\pi+2\pi k)}\right)^i = e^{i\cdot i(\pi+2\pi k)} = e^{-(\pi+2\pi k)} \]
+						<p>Главное значение (при \( k=0 \)): \( (-1)^i = e^{-\pi} \)</p>
+						<p><b>Общее решение:</b> \( (-1)^i = e^{-\pi-2\pi k},\quad k\in\mathbb{Z} \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel2">
+			<h2>Задание 2. Комплексные корни уравнений</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ z^4=81 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ 81 = 81e^{i\cdot0} \Rightarrow z_k = 81^{1/4}e^{i\cdot\frac{2\pi k}{4}} = 3e^{i\pi k/2},\quad k=0,1,2,3 \]
+						<p><b>Ответ:</b> \( z=3,\ 3i,\ -3,\ -3i \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ z^3=8i \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ 8i = 8e^{i\pi/2} \Rightarrow z_k = 8^{1/3}e^{i\left(\frac{\pi}{6}+\frac{2\pi k}{3}\right)},\quad k=0,1,2 \]
+						<p><b>Ответ:</b> \( z=\sqrt3+i,\ -\sqrt3+i,\ -2i \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ z^5=1+\sqrt3i \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ 1+\sqrt3i = 2e^{i\pi/3} \Rightarrow z_k = 2^{1/5}e^{i\frac{\pi/3+2\pi k}{5}},\quad k=0,1,2,3,4 \]
+						<p>\( z_0=2^{1/5}e^{i\pi/15} \)&nbsp;&nbsp;&nbsp; \( z_1=2^{1/5}e^{i7\pi/15} \)&nbsp;&nbsp;&nbsp; \( z_2=2^{1/5}e^{i13\pi/15} \)</p>
+						<p>\( z_3=2^{1/5}e^{i19\pi/15} \)&nbsp;&nbsp;&nbsp; \( z_4=2^{1/5}e^{i5\pi/3} \) (или \( e^{-i\pi/3} \))</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">\[ (1+3i)z^2+(2-24i)z-19+33i=0 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ a=1+3i,\quad b=2-24i,\quad c=-19+33i \]
+						\[ D = b^2-4ac = (2-24i)^2-4(1+3i)(-19+33i) = -100 \]
+						\[ \sqrt{D} = \pm10i \]
+						\[ z = \frac{-(2-24i)\pm10i}{2(1+3i)} \]
+						\[ z_1 = \frac{-2+34i}{2+6i} = 5+2i,\qquad z_2 = \frac{-2+14i}{2+6i} = 2+i \]
+						<p><b>Ответ:</b> \( z=5+2i,\ 2+i \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel3">
+			<h2>Задание 3. Предел последовательности по определению</h2>
+			<p class="dz-note">Последовательность \( \{x_n\} \) сходится к числу \( a \), если для любого положительного \( \varepsilon \) найдётся номер \( N \), начиная с которого все \( x_n \) при \( n>N \) удовлетворяют \( x_n\in[a-\varepsilon;\,a+\varepsilon] \). Пользуясь этим определением, найдите предел каждой последовательности и подходящее \( N(\varepsilon) \).</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n=\frac{1}{n} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Интуитивно понятно, что предел равен 0, докажем это. Для любого положительного \( \varepsilon \) нужно подобрать номер \( N \) так, чтобы для всех \( n>N \) выполнялось \( x_n<\varepsilon \), т.е. \( \dfrac1n<\varepsilon \).</p>
+						<p>Так как \( \dfrac1n>\dfrac{1}{n+1} \), последовательность строго убывает, и все её элементы положительны. Значит, достаточно найти номер \( N \), для которого \( x_N=\dfrac1N<\varepsilon \) — тогда и для всех \( n>N \) неравенство тоже будет выполняться.</p>
+						\[ \frac1N<\varepsilon \Rightarrow N>\frac1\varepsilon \]
+						<p>Можно взять, например, \( N=\left[\dfrac1\varepsilon\right]+1 \).</p>
+						<div class="table-scroll">
+							<table class="dz-table">
+								<tr><th>\( \varepsilon \)</th><td>0.1</td><td>0.01</td><td>0.001</td><td>0.0001</td><td>...</td></tr>
+								<tr><th>\( N \)</th><td>11</td><td>101</td><td>1001</td><td>10001</td><td></td></tr>
+								<tr><th>\( x_N \)</th><td>≈0.09</td><td>≈0.009</td><td>≈0.0009</td><td>≈0.00009</td><td></td></tr>
+							</table>
+						</div>
+						<p><b>Ответ:</b> \( x_n\to0 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n=\frac{n}{n+1} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Докажем, что предел равен 1. Так как \( \dfrac{n}{n+1}<\dfrac{n+1}{n+2} \), последовательность строго возрастает, и все её элементы положительны. Подберём \( N \), чтобы \( 1-\dfrac{N}{N+1}<\varepsilon \):</p>
+						\[ \frac{N}{N+1}>1-\varepsilon \Rightarrow N>(1-\varepsilon)(N+1) \Rightarrow N>N-\varepsilon N+1-\varepsilon \Rightarrow \varepsilon N>1-\varepsilon \Rightarrow N>\frac{1-\varepsilon}{\varepsilon} \]
+						<p>Возьмём, например, \( N=\left[\dfrac{1-\varepsilon}{\varepsilon}\right]+1 \).</p>
+						<div class="table-scroll">
+							<table class="dz-table">
+								<tr><th>\( \varepsilon \)</th><td>0.4</td><td>0.05</td><td>0.03</td><td>0.02</td><td>...</td></tr>
+								<tr><th>\( N \)</th><td>2</td><td>20</td><td>33</td><td>50</td><td></td></tr>
+								<tr><th>\( x_N \)</th><td>0,(6)</td><td>≈0.95238</td><td>≈0.97058</td><td>≈0.98039</td><td></td></tr>
+							</table>
+						</div>
+						<p><b>Ответ:</b> \( x_n\to1 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n=\frac{2n}{n^3+1} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Сначала докажем, что \( \dfrac{2}{n^2}\to0 \): эта последовательность строго убывает, все элементы положительны, и \( \dfrac{2}{N^2}<\varepsilon \Rightarrow N>\sqrt{\dfrac2\varepsilon} \), т.е. можно взять \( N=\left[\sqrt{\dfrac2\varepsilon}\right]+1 \).</p>
+						<p>Так как \( \dfrac{1}{n^3+1}<\dfrac{1}{n^3} \), то \( \dfrac{2n}{n^3+1}<\dfrac{2n}{n^3}=\dfrac{2}{n^2} \). Обе последовательности положительны, значит \( \left|\dfrac{2n}{n^3+1}\right|<\left|\dfrac{2n}{n^3}\right| \).</p>
+						<p>Так как \( \dfrac{2n}{n^3}\to0 \), то для любого \( \varepsilon>0 \) существует \( N=\left[\sqrt{\dfrac2\varepsilon}\right]+1 \) такой, что для всех \( n>N \) выполняется \( \left|\dfrac{2n}{n^3+1}\right|<\left|\dfrac{2n}{n^3}\right|<\varepsilon \). Значит, \( \dfrac{2n}{n^3+1}\to0 \).</p>
+						<div class="table-scroll">
+							<table class="dz-table">
+								<tr><th>\( \varepsilon \)</th><td>0.1</td><td>0.01</td><td>0.001</td><td>0.0001</td><td>...</td></tr>
+								<tr><th>\( N \)</th><td>5</td><td>15</td><td>45</td><td>142</td><td></td></tr>
+								<tr><th>\( x_N \)</th><td>≈0.07936</td><td>≈0.00888</td><td>≈0.00098</td><td>≈0.00009</td><td></td></tr>
+							</table>
+						</div>
+						<p><b>Ответ:</b> \( x_n\to0 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4*</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n=\frac{1}{n!} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Так как \( \dfrac{1}{n!}<\dfrac1n \) для всех \( n>2 \), и обе последовательности положительны, то \( \left|\dfrac{1}{n!}\right|<\left|\dfrac1n\right| \).</p>
+						<p>В пункте 1 уже доказано, что \( \dfrac1n\to0 \) и для любого \( \varepsilon>0 \) подходит \( N=\left[\dfrac1\varepsilon\right]+1 \), при котором \( n>N \Rightarrow x_n<\varepsilon \). Значит, для того же \( N \) выполняется \( \left|\dfrac{1}{n!}\right|<\left|\dfrac1n\right|<\varepsilon \) — то есть \( \dfrac{1}{n!} \) тоже сходится к 0.</p>
+						<div class="table-scroll">
+							<table class="dz-table">
+								<tr><th>\( \varepsilon \)</th><td>0.1</td><td>0.01</td><td>0.001</td><td>0.0001</td><td>...</td></tr>
+								<tr><th>\( N \)</th><td>11</td><td>101</td><td>1001</td><td>10001</td><td></td></tr>
+								<tr><th>\( x_N \)</th><td>≈2,5·10⁻⁸</td><td>...</td><td>...</td><td>...</td><td></td></tr>
+							</table>
+						</div>
+						<p><b>Ответ:</b> \( x_n\to0 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n=\left(\frac13\right)^n \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Предел равен 0. Так как \( \dfrac{1}{3^n}>\dfrac{1}{3^{n+1}} \), последовательность строго убывает и все элементы положительны. Достаточно найти \( N \), для которого \( x_N=\dfrac{1}{3^N}<\varepsilon \):</p>
+						\[ \frac{1}{3^N}<\varepsilon \Rightarrow \ln\frac{1}{3^N}<\ln\varepsilon \Rightarrow -N\ln3<\ln\varepsilon \Rightarrow N>-\frac{\ln\varepsilon}{\ln3} \]
+						<p>Можно взять, например, \( N=\left[-\dfrac{\ln\varepsilon}{\ln3}\right]+1 \).</p>
+						<div class="table-scroll">
+							<table class="dz-table">
+								<tr><th>\( \varepsilon \)</th><td>0.2</td><td>0.04</td><td>0.003</td><td>0.0005</td><td>...</td></tr>
+								<tr><th>\( N \)</th><td>2</td><td>3</td><td>6</td><td>7</td><td></td></tr>
+								<tr><th>\( x_N \)</th><td>≈0.1</td><td>≈0.037</td><td>≈0.0013</td><td>≈0.00045</td><td></td></tr>
+							</table>
+						</div>
+						<p><b>Ответ:</b> \( x_n\to0 \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel4">
+			<h2>Задание 4. Бесконечно большие последовательности</h2>
+			<p class="dz-note">Последовательность \( \{x_n\} \) называется бесконечно большой, если для любого положительного числа \( A \) найдётся номер \( N \), начиная с которого все \( x_n \) при \( n>N \) удовлетворяют неравенству \( x_n>A \). Докажите, что \( x_n\to\infty \) при \( n\to\infty \).</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n=n \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Для любого \( A>0 \) найдётся номер \( N=[A]+1 \) такой, что для всех \( n>N \) выполняется \( x_n=n>A \). Таким образом, \( x_n=n\to\infty \).</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n=2^n \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Последовательность \( 2^n \) растёт быстрее любой линейной функции. Нужно подобрать \( N \), чтобы \( 2^N>A \Rightarrow N>\log_2 A \). Для любого \( A>0 \) найдётся номер \( N=[\log_2A]+1 \) такой, что для всех \( n>N \) выполняется \( 2^n>A \).</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n=e^n \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Аналогично, \( e^n \) растёт экспоненциально. Нужно подобрать \( N \), чтобы \( e^N>A \Rightarrow N>\ln A \). Для любого \( A>0 \) найдётся номер \( N=[\ln A]+1 \) такой, что для всех \( n>N \) выполняется \( e^n>A \).</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4*</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_n=\frac{n!}{2^n} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Начиная с \( n=2 \), последовательность \( \{x_n\} \) возрастает. Оценим \( x_n \) снизу для \( n\ge4 \):</p>
+						\[ n! = 1\cdot2\cdot3\cdot4\cdots n \ge 1\cdot2\cdot3\cdot3\cdot3\cdots3 = 6\cdot3^{n-3} \]
+						<p>Тогда:</p>
+						\[ x_n=\frac{n!}{2^n}\ge\frac{6\cdot3^{n-3}}{2^n}=6\cdot\left(\frac32\right)^{n-3}\cdot\frac18=\frac34\cdot\left(\frac32\right)^{n-3} \]
+						<p>Для любого \( A>0 \) потребуем:</p>
+						\[ \frac34\cdot\left(\frac32\right)^{N-3}>A \Rightarrow \left(\frac32\right)^{N-3}>\frac43A \]
+						<p>Логарифмируем:</p>
+						\[ (N-3)\ln\frac32>\ln\left(\frac43A\right) \Rightarrow N-3>\frac{\ln\left(\frac43A\right)}{\ln\frac32} \Rightarrow N>\frac{\ln\left(\frac43A\right)}{\ln\frac32}+3 \]
+						<p>Таким образом, можно взять:</p>
+						\[ N=\left[\frac{\ln\left(\frac43A\right)}{\ln\frac32}\right]+4 \]
+						<p>Тогда для всех \( n>N \) выполняется \( x_n>A \), то есть \( \dfrac{n!}{2^n}\to\infty \).</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+</div>
+
+
+<nav class="ios-tabbar" aria-label="Основная навигация">
+  <div class="ios-tabbar-inner">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+  </div>
+</nav>
+</body>
+</html>

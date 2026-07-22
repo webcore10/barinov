@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link href="../../test1.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARINOV</title>
+	<link rel="shortcut icon" href="../../image/logo.svg" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&amp;display=swap" rel="stylesheet" media="all">
+	<script src="../../nav-merge.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</head>
+<body>
+<button type="button" class="ios-back-btn" aria-label="Назад" onclick="history.back()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="ios-navbar"><span class="ios-navbar-title"></span></div>
+<div class="left-menu">
+  <a href="../../home.html" class="logo"><img src="../../image/logo1.svg" alt="Logo"></a>
+  <div class="nav-list">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../lit.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="15.2" width="15" height="4" rx="1"/><rect x="5.5" y="10.6" width="13" height="4" rx="1"/><rect x="6.5" y="6" width="11" height="4" rx="1"/></svg>Литература</a>
+    <a href="../../vid.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+    <a href="../../net.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="4.7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 6.7v3.1"/><path d="M10.3 13.4l-3.7 2.1"/><path d="M13.7 13.4l3.7 2.1"/></svg>Сети</a>
+  </div>
+</div>
+
+<div class="main">
+	<nav class="breadcrumbs">
+  <a href="../../home.html">Главная</a><span class="crumb-sep">/</span>
+  <a href="../../zadach.html">Задачник</a><span class="crumb-sep">/</span>
+  <span class="crumb-current">Leetcode: Массивы</span>
+</nav>
+	<h1>Leetcode: Массивы</h1>
+
+	<div class="task-container">
+		<div class="task-title"><b>Задача №1</b></div>
+		<div id="text-task">
+			<p>Дан массив чисел и целевая сумма. Нужно найти индексы двух элементов массива, которые в сумме дают целевое значение.</p>
+			<p><b>Пример:</b> для массива [2, 7, 11, 15] и target = 9 ответ — [0, 1], так как nums[0] + nums[1] = 2 + 7 = 9.</p>
+		</div>
+		<details class="details">
+			<summary class="details__title">Посмотреть решение</summary>
+			<div class="details__content">
+					<p class="solution-explanation">Проходим массив один раз слева направо, попутно заполняя хеш-таблицу «значение → индекс» уже просмотренными элементами.</p>
+					<p class="solution-explanation">Для очередного элемента вычисляем, какое число до него не хватает, чтобы получить нужную сумму (target минус текущий элемент), и проверяем, не встречалось ли уже такое число.</p>
+					<p class="solution-explanation">Если встречалось — искомая пара найдена, и мы сразу возвращаем оба индекса. Если нет — просто добавляем текущий элемент в хеш-таблицу и переходим дальше.</p>
+					<pre><code class="python" style="background-color: #F6F8FA; border: 1px solid #D0D7DE; border-radius: 10px;">def two_sum(nums, target):
+    seen = {}
+    for index, value in enumerate(nums):
+        complement = target - value
+        if complement in seen:
+            return [seen[complement], index]
+        seen[value] = index
+    return []</code></pre>
+			</div>
+		</details>
+	</div>
+
+	<div class="task-container">
+		<div class="task-title"><b>Задача №2</b></div>
+		<div id="text-task">
+			<p>Дан массив чисел. Нужно переместить все нули в его конец, сохранив относительный порядок остальных элементов, и сделать это на месте, не создавая новый массив.</p>
+			<p><b>Пример:</b> массив [0, 1, 0, 3, 12] после перемещения нулей должен стать [1, 3, 12, 0, 0].</p>
+		</div>
+		<details class="details">
+			<summary class="details__title">Посмотреть решение</summary>
+			<div class="details__content">
+					<p class="solution-explanation">Идём по массиву и подряд переносим все ненулевые элементы в его начало, отслеживая позицию insert_pos — место, куда нужно записать следующий ненулевой элемент.</p>
+					<p class="solution-explanation">После того как все ненулевые элементы «стянуты» в начало массива, позиция insert_pos указывает ровно на границу, с которой начинается «хвост».</p>
+					<p class="solution-explanation">Остаётся заполнить этот хвост нулями — так исходные нули оказываются в конце, а порядок остальных чисел не изменился.</p>
+					<pre><code class="python" style="background-color: #F6F8FA; border: 1px solid #D0D7DE; border-radius: 10px;">def move_zeroes(nums):
+    insert_pos = 0
+    for value in nums:
+        if value != 0:
+            nums[insert_pos] = value
+            insert_pos += 1
+    for i in range(insert_pos, len(nums)):
+        nums[i] = 0</code></pre>
+			</div>
+		</details>
+	</div>
+
+<br><br>
+</div>
+
+<nav class="ios-tabbar" aria-label="Основная навигация">
+  <div class="ios-tabbar-inner">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../vid.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+  </div>
+</nav>
+</body>
+</html>

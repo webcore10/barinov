@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link href="../../test1.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARINOV</title>
+	<link rel="shortcut icon" href="../../image/logo.svg" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&amp;display=swap" rel="stylesheet" media="all">
+	<script src="../../nav-merge.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</head>
+<body>
+<button type="button" class="ios-back-btn" aria-label="Назад" onclick="history.back()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="ios-navbar"><span class="ios-navbar-title"></span></div>
+<div class="left-menu">
+  <a href="../../home.html" class="logo"><img src="../../image/logo1.svg" alt="Logo"></a>
+  <div class="nav-list">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../lit.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="15.2" width="15" height="4" rx="1"/><rect x="5.5" y="10.6" width="13" height="4" rx="1"/><rect x="6.5" y="6" width="11" height="4" rx="1"/></svg>Литература</a>
+    <a href="../../vid.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+    <a href="../../net.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="4.7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 6.7v3.1"/><path d="M10.3 13.4l-3.7 2.1"/><path d="M13.7 13.4l3.7 2.1"/></svg>Сети</a>
+  </div>
+</div>
+
+<div class="main">
+	<nav class="breadcrumbs">
+  <a href="../../home.html">Главная</a><span class="crumb-sep">/</span>
+  <a href="../../zadach.html">Задачник</a><span class="crumb-sep">/</span>
+  <span class="crumb-current">Leetcode: Матрицы</span>
+</nav>
+	<h1>Leetcode: Матрицы</h1>
+
+	<div class="task-container">
+		<div class="task-title"><b>Задача №1</b></div>
+		<div id="text-task">
+			<p>Дана квадратная матрица n×n. Нужно повернуть её на 90 градусов по часовой стрелке, не используя дополнительную матрицу.</p>
+			<p><b>Пример:</b> матрица [[1,2,3],[4,5,6],[7,8,9]] после поворота на 90° по часовой стрелке становится [[7,4,1],[8,5,2],[9,6,3]].</p>
+		</div>
+		<details class="details">
+			<summary class="details__title">Посмотреть решение</summary>
+			<div class="details__content">
+					<p class="solution-explanation">Поворот квадратной матрицы на 90° по часовой стрелке можно разложить на два более простых шага.</p>
+					<p class="solution-explanation">Сначала транспонируем матрицу — отражаем её относительно главной диагонали, меняя местами элемент (i, j) с элементом (j, i) для всех пар i < j.</p>
+					<p class="solution-explanation">Затем разворачиваем каждую строку получившейся матрицы задом наперёд. Комбинация этих двух простых операций даёт в точности поворот на 90° по часовой стрелке, и всё это можно сделать без создания новой матрицы.</p>
+					<pre><code class="python" style="background-color: #F6F8FA; border: 1px solid #D0D7DE; border-radius: 10px;">def rotate(matrix):
+    n = len(matrix)
+    for i in range(n):
+        for j in range(i + 1, n):
+            matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+    for row in matrix:
+        row.reverse()</code></pre>
+			</div>
+		</details>
+	</div>
+
+	<div class="task-container">
+		<div class="task-title"><b>Задача №2</b></div>
+		<div id="text-task">
+			<p>Дана прямоугольная матрица m×n. Нужно вернуть список её элементов в порядке обхода по спирали — по внешнему кольцу внутрь.</p>
+			<p><b>Пример:</b> для матрицы [[1,2,3],[4,5,6],[7,8,9]] результат обхода по спирали — [1, 2, 3, 6, 9, 8, 7, 4, 5].</p>
+		</div>
+		<details class="details">
+			<summary class="details__title">Посмотреть решение</summary>
+			<div class="details__content">
+					<p class="solution-explanation">Держим четыре границы ещё не пройденной части матрицы: верхнюю и нижнюю строку, левый и правый столбец.</p>
+					<p class="solution-explanation">На каждом «витке» спирали последовательно проходим верхнюю строку слева направо, затем правый столбец сверху вниз, затем (если снизу ещё осталась непройденная строка) нижнюю строку справа налево, и наконец (если слева ещё остался столбец) левый столбец снизу вверх.</p>
+					<p class="solution-explanation">После каждого из четырёх проходов соответствующая граница сдвигается внутрь матрицы на единицу. Цикл продолжается, пока верхняя граница не окажется ниже нижней или левая — правее правой — это и означает, что вся матрица пройдена.</p>
+					<pre><code class="python" style="background-color: #F6F8FA; border: 1px solid #D0D7DE; border-radius: 10px;">def spiral_order(matrix):
+    if not matrix:
+        return []
+    result = []
+    top, bottom = 0, len(matrix) - 1
+    left, right = 0, len(matrix[0]) - 1
+
+    while top &lt;= bottom and left &lt;= right:
+        for col in range(left, right + 1):
+            result.append(matrix[top][col])
+        top += 1
+
+        for row in range(top, bottom + 1):
+            result.append(matrix[row][right])
+        right -= 1
+
+        if top &lt;= bottom:
+            for col in range(right, left - 1, -1):
+                result.append(matrix[bottom][col])
+            bottom -= 1
+
+        if left &lt;= right:
+            for row in range(bottom, top - 1, -1):
+                result.append(matrix[row][left])
+            left += 1
+
+    return result</code></pre>
+			</div>
+		</details>
+	</div>
+
+<br><br>
+</div>
+
+<nav class="ios-tabbar" aria-label="Основная навигация">
+  <div class="ios-tabbar-inner">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../vid.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+  </div>
+</nav>
+</body>
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link href="../../test1.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARINOV</title>
+	<link rel="shortcut icon" href="../../image/logo.svg" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="stylesheet" href="../assets/css/site.css">
+	<link rel="stylesheet" href="../assets/css/pygments.css">
+	<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&amp;display=swap" rel="stylesheet" media="all">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<script src="../../nav-merge.js" defer></script>
+	<style>
+		.dz-note {
+			color: gray;
+			font-size: 14px;
+			margin-bottom: 8px;
+		}
+
+		.tabs {
+			margin-top: 15px;
+		}
+
+		.tab-input {
+			display: none;
+		}
+
+		.tab-bar {
+			margin-bottom: 20px;
+		}
+
+		.tab-label {
+			display: inline-block;
+			padding: 10px 18px;
+			margin-right: 8px;
+			margin-bottom: 10px;
+			background-color: #EEF0F4;
+			border: 1px solid #E1E4EC;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: 15px;
+			transition: 0.2s;
+			user-select: none;
+		}
+
+		.tab-label:hover {
+			background-color: #E2E5F7;
+		}
+
+		.tab-input:checked + .tab-label {
+			background-color: #5B62F5;
+			color: white;
+			font-weight: 600;
+		}
+
+		.tab-panel {
+			display: none;
+		}
+
+		#tab1:checked ~ .tab-panels #panel1,
+		#tab2:checked ~ .tab-panels #panel2 {
+			display: block;
+		}
+
+		@media only screen and (max-device-width: 530px) {
+			.tab-label {
+				padding: 9px 14px;
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+<body>
+<button type="button" class="ios-back-btn" aria-label="Назад" onclick="history.back()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="ios-navbar"><span class="ios-navbar-title"></span></div>
+<div class="left-menu">
+  <a href="../../home.html" class="logo"><img src="../../image/logo1.svg" alt="Logo"></a>
+  <div class="nav-list">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../lit.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="15.2" width="15" height="4" rx="1"/><rect x="5.5" y="10.6" width="13" height="4" rx="1"/><rect x="6.5" y="6" width="11" height="4" rx="1"/></svg>Литература</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+    <a href="../../net.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="4.7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 6.7v3.1"/><path d="M10.3 13.4l-3.7 2.1"/><path d="M13.7 13.4l3.7 2.1"/></svg>Сети</a>
+  </div>
+</div>
+
+<div class="main">
+
+<nav class="breadcrumbs">
+  <a href="../../home.html">Главная</a><span class="crumb-sep">/</span>
+  <a href="../../vid.html">Видеоуроки</a><span class="crumb-sep">/</span>
+  <a href="../../matan.html">Курс по матану для 1-го семестра</a><span class="crumb-sep">/</span>
+  <span class="crumb-current">Домашнее задание №13</span>
+</nav>
+<h1>Домашнее задание к вебинару №13</h1>
+
+<div class="tabs">
+	<input type="radio" name="dz-tab" id="tab1" class="tab-input" checked>
+	<input type="radio" name="dz-tab" id="tab2" class="tab-input">
+
+	<div class="tab-bar">
+		<label for="tab1" class="tab-label">Задание 1</label>
+		<label for="tab2" class="tab-label">Задание 2</label>
+	</div>
+
+	<div class="tab-panels">
+
+		<div class="tab-panel" id="panel1">
+			<h2>Задание 1. Пределы с помощью формулы Маклорена</h2>
+			<p class="dz-note">Формулы Маклорена, используемые в решении:</p>
+			<p class="dz-note">
+				\( e^x = 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+o(x^3) \)&nbsp;&nbsp;
+				\( \ln(1+x) = x-\frac{x^2}{2}+\frac{x^3}{3}+o(x^3) \)&nbsp;&nbsp;
+				\( \sin x = x-\frac{x^3}{6}+o(x^3) \)&nbsp;&nbsp;
+				\( \arcsin x = x+\frac{x^3}{6}+o(x^3) \)<br>
+				\( \arctan x = x-\frac{x^3}{3}+o(x^3) \)&nbsp;&nbsp;
+				\( \cos x = 1-\frac{x^2}{2}+\frac{x^4}{24}+o(x^4) \)&nbsp;&nbsp;
+				\( \tan x = x+\frac{x^3}{3}+o(x^3) \)&nbsp;&nbsp;
+				\( (1+x)^\alpha = 1+\alpha x+\frac{\alpha(\alpha-1)}{2}x^2+\frac{\alpha(\alpha-1)(\alpha-2)}{6}x^3+o(x^3) \)
+			</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{x\to0}\frac{\ln(1+x)-x}{x^2} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Разложим числитель по формуле Маклорена:</p>
+						\[ \ln(1+x)-x=\left(x-\frac{x^2}{2}+\frac{x^3}{3}+o(x^3)\right)-x=-\frac{x^2}{2}+\frac{x^3}{3}+o(x^3) \]
+						\[ \frac{\ln(1+x)-x}{x^2}=\frac{-\frac{x^2}{2}+\frac{x^3}{3}+o(x^3)}{x^2}=-\frac12+\frac{x}{3}+o(x) \]
+						<p><b>Ответ:</b> \( \displaystyle\lim_{x\to0}\left(-\frac12+\frac{x}{3}+o(x)\right)=-\frac12 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{x\to0}\frac{\sqrt{1+x}+\sqrt[3]{1+x}-2\sqrt[4]{1-x}}{x} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Разложим каждое слагаемое:</p>
+						\[ \sqrt{1+x}=1+\frac12x-\frac18x^2+o(x^2) \]
+						\[ \sqrt[3]{1+x}=1+\frac13x-\frac19x^2+o(x^2) \]
+						\[ \sqrt[4]{1-x}=1-\frac14x-\frac{3}{32}x^2+o(x^2) \]
+						<p>Сумма числителя:</p>
+						\[ \left(1+\frac12x\right)+\left(1+\frac13x\right)-2\left(1-\frac14x\right)+o(x)=\left(2+\frac56x\right)-\left(2-\frac12x\right)+o(x)=\frac43x+o(x) \]
+						\[ \frac{\frac43x+o(x)}{x}=\frac43+o(1) \]
+						<p><b>Ответ:</b> \( \displaystyle\lim_{x\to0}\left(\frac43+o(1)\right)=\frac43 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{x\to0}\frac{\arctan x-\arcsin x}{x^2} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Разложим функции:</p>
+						\[ \arctan x=x-\frac{x^3}{3}+o(x^3),\qquad \arcsin x=x+\frac{x^3}{6}+o(x^3) \]
+						\[ \arctan x-\arcsin x=\left(x-\frac{x^3}{3}\right)-\left(x+\frac{x^3}{6}\right)+o(x^3)=-\frac{x^3}{2}+o(x^3) \]
+						\[ \frac{\arctan x-\arcsin x}{x^2}=\frac{-\frac{x^3}{2}+o(x^3)}{x^2}=-\frac{x}{2}+o(x) \]
+						<p><b>Ответ:</b> \( \displaystyle\lim_{x\to0}\left(-\frac{x}{2}+o(x)\right)=0 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{x\to0}\frac{\arctan x-\arcsin x}{\tan x-\sin x} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Из предыдущей задачи: \( \arctan x-\arcsin x=-\dfrac{x^3}{2}+o(x^3) \)</p>
+						<p>Разложим знаменатель:</p>
+						\[ \tan x=x+\frac{x^3}{3}+o(x^3),\qquad \sin x=x-\frac{x^3}{6}+o(x^3) \]
+						\[ \tan x-\sin x=\left(x+\frac{x^3}{3}\right)-\left(x-\frac{x^3}{6}\right)+o(x^3)=\frac{x^3}{2}+o(x^3) \]
+						\[ \frac{\arctan x-\arcsin x}{\tan x-\sin x}=\frac{-\frac{x^3}{2}+o(x^3)}{\frac{x^3}{2}+o(x^3)}=-1+o(1) \]
+						<p><b>Ответ:</b> −1</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{x\to0}\frac{1+x\cos x-\sqrt{1+2x}}{\ln(1+x)-x} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Разложим числитель и знаменатель:</p>
+						\[ \cos x=1-\frac{x^2}{2}+o(x^2)\ \Rightarrow\ x\cos x=x-\frac{x^3}{2}+o(x^3) \]
+						\[ \sqrt{1+2x}=1+x-\frac{x^2}{2}+\frac{x^3}{2}+o(x^3) \]
+						\[ 1+x\cos x-\sqrt{1+2x}=1+\left(x-\frac{x^3}{2}\right)-\left(1+x-\frac{x^2}{2}+\frac{x^3}{2}\right)+o(x^3)=\frac{x^2}{2}-x^3+o(x^3) \]
+						\[ \ln(1+x)-x=-\frac{x^2}{2}+\frac{x^3}{3}+o(x^3) \]
+						\[ \frac{\frac{x^2}{2}-x^3+o(x^3)}{-\frac{x^2}{2}+\frac{x^3}{3}+o(x^3)}=\frac{\frac12-x+o(x)}{-\frac12+\frac{x}{3}+o(x)}=-1+o(1) \]
+						<p><b>Ответ:</b> −1</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 6</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{x\to0}\frac{e^x-\sqrt{1+2x}}{\ln\cos x} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Разложим числитель и знаменатель:</p>
+						\[ e^x=1+x+\frac{x^2}{2}+\frac{x^3}{6}+o(x^3),\qquad \sqrt{1+2x}=1+x-\frac{x^2}{2}+\frac{x^3}{2}+o(x^3) \]
+						\[ e^x-\sqrt{1+2x}=x^2-\frac{x^3}{3}+o(x^3) \]
+						\[ \cos x=1-\frac{x^2}{2}+o(x^2)\ \Rightarrow\ \ln\cos x=-\frac{x^2}{2}+o(x^2) \]
+						\[ \frac{x^2-\frac{x^3}{3}+o(x^3)}{-\frac{x^2}{2}+o(x^2)}=\frac{1-\frac{x}{3}+o(x)}{-\frac12+o(1)}=-2+o(1) \]
+						<p><b>Ответ:</b> −2</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 7</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{x\to0}\frac{3\cos x+\arcsin x-3\sqrt[3]{1+x}}{\ln(1-x^2)} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Разложим числитель:</p>
+						\[ 3\cos x=3-\frac{3x^2}{2}+o(x^2) \]
+						\[ \arcsin x=x+\frac{x^3}{6}+o(x^3) \]
+						\[ 3\sqrt[3]{1+x}=3\left(1+\frac13x-\frac19x^2+\frac{5}{81}x^3+o(x^3)\right)=3+x-\frac13x^2+\frac{5}{27}x^3+o(x^3) \]
+						\[ \left(3-\frac{3x^2}{2}\right)+\left(x+\frac{x^3}{6}\right)-\left(3+x-\frac13x^2+\frac{5}{27}x^3\right)+o(x^3)=-\frac76x^2-\frac{19}{54}x^3+o(x^3) \]
+						<p>Знаменатель: \( \ln(1-x^2)=-x^2+o(x^2) \)</p>
+						\[ \frac{-\frac76x^2-\frac{19}{54}x^3+o(x^3)}{-x^2+o(x^2)}=\frac76+o(1) \]
+						<p><b>Ответ:</b> \( \dfrac76 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 8</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{x\to0}\frac{\sqrt[3]{1-x^2}-x\cot x}{x\sin x} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Разложим слагаемые:</p>
+						\[ \sqrt[3]{1-x^2}=1-\frac13x^2+o(x^2) \]
+						\[ \cot x=\frac{\cos x}{\sin x}=\frac{1-\frac{x^2}{2}+o(x^2)}{x-\frac{x^3}{6}+o(x^3)}=\frac1x-\frac{x}{3}+o(x) \]
+						\[ x\cot x=1-\frac{x^2}{3}+o(x^2) \]
+						<p>Числитель: \( \left(1-\dfrac13x^2\right)-\left(1-\dfrac{x^2}{3}\right)+o(x^2)=o(x^2) \)</p>
+						<p>Знаменатель: \( x\sin x=x\left(x-\dfrac{x^3}{6}+o(x^3)\right)=x^2+o(x^2) \)</p>
+						<p><b>Ответ:</b> предел равен 0</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 9</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{x\to0}\frac{e^x-\sqrt[3]{1+3x+9x^2/2}}{x^3} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Разложим числитель:</p>
+						\[ e^x=1+x+\frac{x^2}{2}+\frac{x^3}{6}+o(x^3) \]
+						\[ \sqrt[3]{1+3x+\frac{9x^2}{2}}=\left(1+3x+\frac{9x^2}{2}\right)^{1/3}=1+\frac13\left(3x+\frac{9x^2}{2}\right)-\frac19\left(3x+\frac{9x^2}{2}\right)^2+\frac{5}{81}\left(3x+\frac{9x^2}{2}\right)^3+o(x^3)= \]
+						\[ =1+x+\frac{3x^2}{2}-\frac19(9x^2+27x^3)+\frac{5}{81}(27x^3)+o(x^3)=1+x+\frac{x^2}{2}-\frac43x^3+o(x^3) \]
+						<p>Числитель:</p>
+						\[ \left(1+x+\frac{x^2}{2}+\frac{x^3}{6}\right)-\left(1+x+\frac{x^2}{2}-\frac43x^3\right)+o(x^3)=\frac32x^3+o(x^3) \]
+						\[ \frac{\frac32x^3+o(x^3)}{x^3}=\frac32+o(1) \]
+						<p><b>Ответ:</b> \( \dfrac32 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 10</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{x\to0}\frac{\ln(1+x^3)-2\sin x+2x\cos x^2}{\arctan x^3} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Разложим числитель:</p>
+						\[ \ln(1+x^3)=x^3+o(x^3) \]
+						\[ \sin x=x-\frac{x^3}{6}+o(x^3) \]
+						\[ \cos x^2=1-\frac{x^4}{2}+o(x^4)\ \Rightarrow\ 2x\cos x^2=2x+o(x^3) \]
+						<p>Числитель:</p>
+						\[ x^3-2\left(x-\frac{x^3}{6}\right)+2x+o(x^3)=x^3-2x+\frac{x^3}{3}+2x+o(x^3)=\frac43x^3+o(x^3) \]
+						<p>Знаменатель: \( \arctan x^3=x^3+o(x^3) \)</p>
+						\[ \frac{\frac43x^3+o(x^3)}{x^3+o(x^3)}=\frac43+o(1) \]
+						<p><b>Ответ:</b> \( \dfrac43 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 11</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{x\to0}\frac{x\sqrt{1+\sin x}-\frac12\ln(1+x^2)-x}{\tan^3 x} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Разложим числитель:</p>
+						\[ \sqrt{1+\sin x}=1+\frac12\sin x-\frac18\sin^2x+o(x^2)=1+\frac12\left(x-\frac{x^3}{6}\right)-\frac18x^2+o(x^3)=1+\frac{x}{2}-\frac{x^2}{8}-\frac{x^3}{12}+o(x^3) \]
+						\[ x\sqrt{1+\sin x}=x+\frac{x^2}{2}-\frac{x^3}{8}+o(x^3) \]
+						\[ \frac12\ln(1+x^2)=\frac12\left(x^2-\frac{x^4}{2}\right)+o(x^3)=\frac{x^2}{2}+o(x^3) \]
+						<p>Числитель:</p>
+						\[ \left(x+\frac{x^2}{2}-\frac{x^3}{8}\right)-\frac{x^2}{2}-x+o(x^3)=-\frac{x^3}{8}+o(x^3) \]
+						<p>Знаменатель: \( \tan^3x=\left(x+\dfrac{x^3}{3}+o(x^3)\right)^3=x^3+o(x^3) \)</p>
+						\[ \frac{-\frac{x^3}{8}+o(x^3)}{x^3+o(x^3)}=-\frac18+o(1) \]
+						<p><b>Ответ:</b> \( -\dfrac18 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 12</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{x\to0}\frac{\sqrt{1+x}\sin x+\ln\cos x-x}{\sqrt[3]{1-x^3}-1} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Разложим числитель:</p>
+						\[ \sqrt{1+x}=1+\frac{x}{2}-\frac{x^2}{8}+o(x^2),\qquad \sin x=x-\frac{x^3}{6}+o(x^3) \]
+						\[ \sqrt{1+x}\sin x=\left(1+\frac{x}{2}-\frac{x^2}{8}\right)\left(x-\frac{x^3}{6}\right)+o(x^3)=x+\frac{x^2}{2}-\frac{7x^3}{24}+o(x^3) \]
+						\[ \cos x=1-\frac{x^2}{2}+o(x^2)\ \Rightarrow\ \ln\cos x=-\frac{x^2}{2}+o(x^2) \]
+						<p>Числитель:</p>
+						\[ \left(x+\frac{x^2}{2}-\frac{7x^3}{24}\right)+\left(-\frac{x^2}{2}\right)-x+o(x^3)=-\frac{7x^3}{24}+o(x^3) \]
+						<p>Знаменатель: \( \sqrt[3]{1-x^3}-1=-\dfrac13x^3+o(x^3) \)</p>
+						\[ \frac{-\frac{7x^3}{24}+o(x^3)}{-\frac13x^3+o(x^3)}=\frac78+o(1) \]
+						<p><b>Ответ:</b> \( \dfrac78 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 13</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{x\to0}\left(\sqrt{1+x}-x\right)^{1/x} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Преобразуем предел:</p>
+						\[ L=\lim_{x\to0}\left(\sqrt{1+x}-x\right)^{1/x}=\exp\left(\lim_{x\to0}\frac{\ln(\sqrt{1+x}-x)}{x}\right) \]
+						<p>Разложим основание:</p>
+						\[ \sqrt{1+x}-x=1+\frac{x}{2}-\frac{x^2}{8}+o(x^2)-x=1-\frac{x}{2}-\frac{x^2}{8}+o(x^2) \]
+						\[ \ln\left(\sqrt{1+x}-x\right)=\ln\left(1-\frac{x}{2}-\frac{x^2}{8}+o(x^2)\right)=-\frac{x}{2}-\frac{x^2}{8}-\frac12\left(-\frac{x}{2}\right)^2+o(x^2)=-\frac{x}{2}-\frac{x^2}{4}+o(x^2) \]
+						\[ \frac{\ln(\sqrt{1+x}-x)}{x}=-\frac12-\frac{x}{4}+o(x) \]
+						\[ \lim_{x\to0}\left(-\frac12-\frac{x}{4}+o(x)\right)=-\frac12 \]
+						<p><b>Ответ:</b> \( L=e^{-1/2}=\dfrac{1}{\sqrt{e}} \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 14</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{x\to0}(\cos x)^{\cot^2 x} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Преобразуем предел:</p>
+						\[ L=\lim_{x\to0}(\cos x)^{\cot^2 x}=\exp\left(\lim_{x\to0}\cot^2 x\cdot\ln(\cos x)\right) \]
+						<p>Разложим:</p>
+						\[ \cos x=1-\frac{x^2}{2}+o(x^2)\ \Rightarrow\ \ln(\cos x)=-\frac{x^2}{2}+o(x^2) \]
+						\[ \cot^2 x=\left(\frac1x-\frac{x}{3}+o(x)\right)^2=\frac{1}{x^2}-\frac23+o(1) \]
+						\[ \cot^2 x\cdot\ln(\cos x)=\left(\frac{1}{x^2}-\frac23+o(1)\right)\left(-\frac{x^2}{2}+o(x^2)\right)=-\frac12+\frac{x^2}{3}+o(1) \]
+						\[ \lim_{x\to0}\left(-\frac12+\frac{x^2}{3}+o(1)\right)=-\frac12 \]
+						<p><b>Ответ:</b> \( L=e^{-1/2}=\dfrac{1}{\sqrt{e}} \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 15</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{x\to0}\left(\sqrt{1+\tan 2x}+\ln(1-x)\right)^{1/x^2} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Преобразуем предел:</p>
+						\[ L=\exp\left(\lim_{x\to0}\frac{\ln\left(\sqrt{1+\tan2x}+\ln(1-x)\right)}{x^2}\right) \]
+						<p>Разложим слагаемые:</p>
+						\[ \tan2x=2x+\frac{8x^3}{3}+o(x^3) \]
+						\[ \sqrt{1+\tan2x}=1+\frac12(2x)-\frac18(2x)^2+o(x^2)=1+x-\frac{x^2}{2}+o(x^2) \]
+						\[ \ln(1-x)=-x-\frac{x^2}{2}-\frac{x^3}{3}+o(x^3) \]
+						<p>Сумма в основании:</p>
+						\[ \left(1+x-\frac{x^2}{2}\right)+\left(-x-\frac{x^2}{2}\right)+o(x^2)=1-x^2+o(x^2) \]
+						\[ \ln\left(1-x^2+o(x^2)\right)=-x^2+o(x^2) \]
+						\[ \frac{-x^2+o(x^2)}{x^2}=-1+o(1) \]
+						<p><b>Ответ:</b> \( L=e^{-1}=\dfrac1e \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 16</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{x\to0}\left(\frac{2\cos x+x}{2\sqrt{1+x}}\right)^{1/x^2} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Преобразуем предел:</p>
+						\[ L=\exp\left(\lim_{x\to0}\frac{1}{x^2}\ln\left(\frac{2\cos x+x}{2\sqrt{1+x}}\right)\right) \]
+						<p>Разложим числитель и знаменатель:</p>
+						\[ 2\cos x+x=2\left(1-\frac{x^2}{2}+o(x^2)\right)+x=2+x-x^2+o(x^2) \]
+						\[ 2\sqrt{1+x}=2\left(1+\frac{x}{2}-\frac{x^2}{8}+o(x^2)\right)=2+x-\frac{x^2}{4}+o(x^2) \]
+						<p>Отношение (числитель и знаменатель совпадают с точностью до \( \tfrac34 x^2 \)):</p>
+						\[ \frac{2+x-x^2+o(x^2)}{2+x-\frac{x^2}{4}+o(x^2)}=1-\frac{\frac34x^2}{2+x-\frac{x^2}{4}+o(x^2)}+o(x^2) \]
+						\[ \ln(\ldots)=-\frac{\frac34x^2}{2+x-\frac{x^2}{4}+o(x^2)}+o(x^2) \]
+						\[ \frac{1}{x^2}\ln(\ldots)=-\frac{\frac34}{2+x-\frac{x^2}{4}+o(x^2)}+o(1)\ \xrightarrow[x\to0]{}\ -\frac{3}{4\cdot2}=-\frac38 \]
+						<p><b>Ответ:</b> \( L=e^{-3/8} \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel2">
+			<h2>Задание 2. Пределы степенно-показательных функций</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{x\to0}\left(\cos(xe^x)-\ln(1-x)-x\right)^{\cot x^3} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Так как</p>
+						\[ \cot x^3=\frac{1}{\tan x^3}=\frac{1}{x^3+o(x^3)},\quad x\to0 \]
+						<p>то функцию \( f(x)=\cos(xe^x)-\ln(1-x)-x \) следует представить формулой Маклорена с \( o(x^3) \). Используя равенства</p>
+						\[ xe^x=x+x^2+o(x^2),\quad \cos t=1-\frac{t^2}{2}+o(t^3),\quad -\ln(1-x)=x+\frac{x^2}{2}+\frac{x^3}{3}+o(x^3) \]
+						<p>получаем:</p>
+						\[ f(x)=\cos(xe^x)+\left(-\ln(1-x)-x\right)=\left(1-\frac{x^2}{2}-x^3+o(x^3)\right)+\left(\frac{x^2}{2}+\frac{x^3}{3}+o(x^3)\right)=1-\frac23x^3+o(x^3) \]
+						\[ (f(x))^{\cot x^3}=\left(1-\frac23x^3+o(x^3)\right)^{1/(x^3+o(x^3))},\quad x\to0 \]
+						<p><b>Ответ:</b> искомый предел равен \( e^{-2/3} \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{x\to0}\left(\frac{2\tan x}{x+\sin x}\right)^{1/(1-\cos x)} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Используя формулы</p>
+						\[ 1-\cos x=\frac{x^2}{2}+o(x^2),\qquad \tan x=x+\frac{x^3}{3}+o(x^3),\qquad \sin x=x-\frac{x^3}{6}+o(x^3) \]
+						<p>получаем:</p>
+						\[ \left(\frac{2\tan x}{x+\sin x}\right)^{1/(1-\cos x)}=\left(\frac{2x+2x^3/3+o(x^3)}{2x-x^3/6+o(x^3)}\right)^{1/(1-\cos x)}=\left(\frac{1+x^2/3+o(x^2)}{1-x^2/12+o(x^2)}\right)^{1/(x^2/2+o(x^2))} \]
+						<p>Откуда следует, что искомый предел равен \( e^{2(1/3-(-1/12))} \), т.е. равен \( e^{5/6} \)</p>
+						<p><b>Ответ:</b> \( e^{5/6} \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{x\to0}\left(\cos(\sin x)+\frac12(\arcsin x)^2\right)^{1/\left(x^2\left(\sqrt{1+2x}-1\right)\right)} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Используя формулы</p>
+						\[ \cos t=1-\frac{t^2}{2}+\frac{t^4}{4!}+o(t^5),\qquad \sin x=x-\frac{x^3}{6}+o(x^4) \]
+						\[ \arcsin x=x+\frac{x^3}{6}+o(x^4),\qquad \sqrt{1+2x}=1+x+o(x) \]
+						<p>получаем:</p>
+						\[ f(x)=\cos(\sin x)+\frac12(\arcsin x)^2=1+\frac38x^4+o(x^4) \]
+						\[ g(x)=\frac{1}{x^2\left(\sqrt{1+2x}-1\right)}=\frac{1}{x^3+o(x^3)} \]
+						<p>Следовательно, искомый предел есть</p>
+						\[ \lim_{x\to0}(f(x))^{g(x)}=\lim_{x\to0}\left(1+\frac38x^4+o(x^4)\right)^{1/(x^3+o(x^3))}=1 \]
+						<p><b>Ответ:</b> 1</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{x\to2}\left(\sqrt{3-x}+\ln(x/2)\right)^{1/\sin^2(x-2)} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Полагая \( x-2=t \), получаем:</p>
+						\[ \lim_{x\to2}\left(\sqrt{3-x}+\ln(x/2)\right)^{1/\sin^2(x-2)}=\lim_{t\to0}\left(\sqrt{1-t}+\ln(1+t/2)\right)^{1/\sin^2 t} \]
+						<p>Так как при \( t\to0 \)</p>
+						\[ \sin^2 t=t^2+o(t^2),\qquad \sqrt{1-t}=1-\frac{t}{2}-\frac{t^2}{8}+o(t^2),\qquad \ln(1+t/2)=\frac{t}{2}-\frac{t^2}{8}+o(t^2) \]
+						<p>то</p>
+						\[ \left(\sqrt{1-t}+\ln(1+t/2)\right)^{1/\sin^2 t}=\left(1-\frac{t^2}{4}+o(t^2)\right)^{1/(t^2+o(t^2))} \]
+						<p>Откуда следует, что искомый предел равен \( e^{-1/4} \)</p>
+						<p><b>Ответ:</b> \( e^{-1/4} \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{x\to0}\left(\frac{1}{\sin x\arctan x}-\frac{1}{\tan x\arcsin x}\right) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Используя формулы</p>
+						\[ \sin x=x-\frac{x^3}{6}+o(x^3),\qquad \arctan x=x-\frac{x^3}{3}+o(x^3) \]
+						\[ \tan x=x+\frac{x^3}{3}+o(x^3),\qquad \arcsin x=x+\frac{x^3}{6}+o(x^3) \]
+						<p>получаем:</p>
+						\[ \frac{1}{\sin x\arctan x}-\frac{1}{\tan x\arcsin x}=\frac{\tan x\arcsin x-\sin x\arctan x}{\sin x\arctan x\tan x\arcsin x}= \]
+						\[ =\frac{\left(x+\frac{x^3}{3}\right)\left(x+\frac{x^3}{6}\right)-\left(x-\frac{x^3}{6}\right)\left(x-\frac{x^3}{3}\right)+o(x^4)}{x^4+o(x^4)}=\frac{x^4+o(x^4)}{x^4+o(x^4)}\to1 \]
+						<p><b>Ответ:</b> 1</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+</div>
+
+
+<nav class="ios-tabbar" aria-label="Основная навигация">
+  <div class="ios-tabbar-inner">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+  </div>
+</nav>
+</body>
+</html>

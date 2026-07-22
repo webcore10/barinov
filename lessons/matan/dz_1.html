@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link href="../../test1.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARINOV</title>
+	<link rel="shortcut icon" href="../../image/logo.svg" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="stylesheet" href="../assets/css/site.css">
+	<link rel="stylesheet" href="../assets/css/pygments.css">
+	<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&amp;display=swap" rel="stylesheet" media="all">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<script src="../../nav-merge.js" defer></script>
+	<style>
+		.dz-note {
+			color: gray;
+			font-size: 14px;
+			margin-bottom: 8px;
+		}
+
+		.tabs {
+			margin-top: 15px;
+		}
+
+		.tab-input {
+			display: none;
+		}
+
+		.tab-bar {
+			margin-bottom: 20px;
+		}
+
+		.tab-label {
+			display: inline-block;
+			padding: 10px 18px;
+			margin-right: 8px;
+			margin-bottom: 10px;
+			background-color: #EEF0F4;
+			border: 1px solid #E1E4EC;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: 15px;
+			transition: 0.2s;
+			user-select: none;
+		}
+
+		.tab-label:hover {
+			background-color: #E2E5F7;
+		}
+
+		.tab-input:checked + .tab-label {
+			background-color: #5B62F5;
+			color: white;
+			font-weight: 600;
+		}
+
+		.tab-panel {
+			display: none;
+		}
+
+		#tab1:checked ~ .tab-panels #panel1,
+		#tab2:checked ~ .tab-panels #panel2,
+		#tab3:checked ~ .tab-panels #panel3,
+		#tab4:checked ~ .tab-panels #panel4,
+		#tab5:checked ~ .tab-panels #panel5,
+		#tab6:checked ~ .tab-panels #panel6,
+		#tab7:checked ~ .tab-panels #panel7,
+		#tab8:checked ~ .tab-panels #panel8,
+		#tab9:checked ~ .tab-panels #panel9,
+		#tab10:checked ~ .tab-panels #panel10 {
+			display: block;
+		}
+
+		@media only screen and (max-device-width: 530px) {
+			.tab-label {
+				padding: 9px 14px;
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+<body>
+<button type="button" class="ios-back-btn" aria-label="Назад" onclick="history.back()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="ios-navbar"><span class="ios-navbar-title"></span></div>
+<div class="left-menu">
+  <a href="../../home.html" class="logo"><img src="../../image/logo1.svg" alt="Logo"></a>
+  <div class="nav-list">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../lit.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="15.2" width="15" height="4" rx="1"/><rect x="5.5" y="10.6" width="13" height="4" rx="1"/><rect x="6.5" y="6" width="11" height="4" rx="1"/></svg>Литература</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+    <a href="../../net.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="4.7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 6.7v3.1"/><path d="M10.3 13.4l-3.7 2.1"/><path d="M13.7 13.4l3.7 2.1"/></svg>Сети</a>
+  </div>
+</div>
+
+<div class="main">
+
+<nav class="breadcrumbs">
+  <a href="../../home.html">Главная</a><span class="crumb-sep">/</span>
+  <a href="../../vid.html">Видеоуроки</a><span class="crumb-sep">/</span>
+  <a href="../../matan.html">Курс по матану для 1-го семестра</a><span class="crumb-sep">/</span>
+  <span class="crumb-current">Домашнее задание №1</span>
+</nav>
+<h1>Домашнее задание к вебинару №1</h1>
+
+<div class="tabs">
+	<input type="radio" name="dz-tab" id="tab1" class="tab-input" checked>
+	<input type="radio" name="dz-tab" id="tab2" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab3" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab4" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab5" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab6" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab7" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab8" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab9" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab10" class="tab-input">
+
+	<div class="tab-bar">
+		<label for="tab1" class="tab-label">Задание 1</label>
+		<label for="tab2" class="tab-label">Задание 2</label>
+		<label for="tab3" class="tab-label">Задание 3</label>
+		<label for="tab4" class="tab-label">Задание 4</label>
+		<label for="tab5" class="tab-label">Задание 5</label>
+		<label for="tab6" class="tab-label">Задание 6</label>
+		<label for="tab7" class="tab-label">Задание 7</label>
+		<label for="tab8" class="tab-label">Задание 8</label>
+		<label for="tab9" class="tab-label">Задание 9</label>
+		<label for="tab10" class="tab-label">Задание 10</label>
+	</div>
+
+	<div class="tab-panels">
+
+		<div class="tab-panel" id="panel1">
+			<h2>Задание 1. Квадратные уравнения с комплексными корнями</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Решите уравнение: \( x^2+4x+5=0 \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ D = 16-20=-4=4i^2 \]
+						\[ x_{1,2}=\frac{-4\pm\sqrt{4i^2}}{2}=\frac{-4\pm2i}{2}=-2\pm i \]
+						<p><b>Ответ:</b> \( -2 \pm i \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">Решите уравнение: \( x^2-2x+10=0 \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ D = 4-40=-36=36i^2 \]
+						\[ x_{1,2}=\frac{2\pm\sqrt{36i^2}}{2}=\frac{2\pm6i}{2}=1\pm3i \]
+						<p><b>Ответ:</b> \( 1 \pm 3i \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">Решите уравнение: \( x^2+9=0 \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ x^2=-9=9i^2 \Rightarrow x=\pm3i \]
+						<p><b>Ответ:</b> \( \pm 3i \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">Решите уравнение: \( x^2+4x+13=0 \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ D = 16-52=-36=36i^2 \]
+						\[ x_{1,2}=\frac{-4\pm6i}{2}=-2\pm3i \]
+						<p>Альтернативно: \( (x^2+4x+4)+9=0 \Rightarrow (x+2)^2=-9 \Rightarrow x=-2\pm3i \)</p>
+						<p><b>Ответ:</b> \( -2 \pm 3i \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel2">
+			<h2>Задание 2. Арифметическая прогрессия</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b> Найти \( a_{10} \), если \( a_1=3,\ d=2 \)</div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ a_{10}=a_1+9d=3+18=21 \]
+						<p><b>Ответ:</b> 21</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b> Найти \( a_{20} \), если \( a_1=-2,\ d=4 \)</div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ a_{20}=a_1+19d=-2+76=74 \]
+						<p><b>Ответ:</b> 74</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b> Найти \( a_{50} \), если \( a_1=-10,\ d=0{,}2 \)</div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ a_{50}=a_1+49d=-10+9{,}8=-0{,}2 \]
+						<p><b>Ответ:</b> −0,2</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b> Найти \( S_{15} \), если \( a_1=1,\ d=4 \)</div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ S_{15}=\frac{a_1+a_{15}}{2}\cdot15=\frac{1+(1+14\cdot4)}{2}\cdot15=435 \]
+						<p><b>Ответ:</b> 435</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5</b> Найти \( S_{10} \), если \( a_8=35,\ d=3 \)</div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ a_1=a_8-7d=35-21=14,\qquad a_{10}=a_8+2d=35+6=41 \]
+						\[ S_{10}=\frac{a_1+a_{10}}{2}\cdot10=\frac{14+41}{2}\cdot10=275 \]
+						<p><b>Ответ:</b> 275</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel3">
+			<h2>Задание 3. Геометрическая прогрессия</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b> Найти \( b_8 \), если \( b_1=2,\ q=3 \)</div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ b_8=b_1\cdot q^7=2\cdot3^7=4374 \]
+						<p><b>Ответ:</b> 4374</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b> Найти \( b_9 \), если \( b_1=8,\ q=0{,}5 \)</div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ b_9=b_1\cdot q^8=8\cdot\left(\tfrac12\right)^8=\frac{8}{256}=\frac{1}{32} \]
+						<p><b>Ответ:</b> \( \frac{1}{32} \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b> Найти \( S_6 \), если \( b_1=2,\ q=0{,}5 \)</div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ S_6=\frac{b_1(1-q^6)}{1-q}=\frac{2\left(1-\tfrac{1}{64}\right)}{0{,}5}=\frac{63}{16} \]
+						<p><b>Ответ:</b> \( \frac{63}{16} \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b> Найти \( S_\infty \), если \( b_1=1,\ q=0{,}2 \)</div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ S_\infty=\frac{b_1}{1-q}=\frac{1}{1-0{,}2}=\frac{5}{4} \]
+						<p><b>Ответ:</b> \( \frac{5}{4} \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5</b> Найти \( S_\infty \), если \( b_1=4,\ q=0{,}25 \)</div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ S_\infty=\frac{b_1}{1-q}=\frac{4}{0{,}75}=\frac{16}{3} \]
+						<p><b>Ответ:</b> \( \frac{16}{3} \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel4">
+			<h2>Задание 4. Раскрытие сумм и рядов</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ \sum_{k=1}^{10}k \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \sum_{k=1}^{10}k = 1+2+3+\cdots+10 = 55 \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ \sum_{i=1}^{6}\frac{i^3}{3^i} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \sum_{i=1}^{6}\frac{i^3}{3^i} = \frac{1}{3}+\frac{8}{9}+\frac{27}{27}+\frac{64}{81}+\frac{125}{243}+\frac{216}{729} \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ \sum_{k=0}^{\infty}\frac{1}{(k+1)!} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \sum_{k=0}^{\infty}\frac{1}{(k+1)!} = 1+\frac12+\frac16+\frac{1}{24}+\frac{1}{120}+\cdots \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">\[ \sum_{k=1}^{\infty}\frac{1}{k^3} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \sum_{k=1}^{\infty}\frac{1}{k^3} = 1+\frac18+\frac{1}{27}+\frac{1}{64}+\frac{1}{125}+\cdots \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5</b></div>
+				<div id="text-task"><div class="math-formula">\[ \sum_{i=1}^{8}\frac{(-1)^{i+1}\cdot i!}{i^{i+1}} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \sum_{i=1}^{8}\frac{(-1)^{i+1}\cdot i!}{i^{i+1}} = 1-\frac14+\frac{2}{27}-\frac{3}{128}+\frac{24}{3125}-\frac{5}{1944}+\frac{720}{823543}-\frac{1260}{419429} \]
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel5">
+			<h2>Задание 5. Компактная запись суммы/ряда</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ 2+4+6+8+\cdots+20 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">\[ 2+4+6+8+\cdots+20 = \sum_{k=1}^{10}2k \]</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ 2^2-4^2+6^2-8^2+10^2 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">\[ 2^2-4^2+6^2-8^2+10^2 = \sum_{n=1}^{5}(-1)^{n+1}(2n)^2 \]</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ 1-\frac{x^3}{3!}+\frac{x^6}{6!}-\frac{x^9}{9!}+\frac{x^{12}}{12!}+\cdots \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">\[ = \sum_{m=0}^{\infty}(-1)^m\frac{x^{3m}}{(3m)!} \]</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">\[ \frac{1^2}{2}-\frac{3^2}{4}+\frac{5^2}{8}-\frac{7^2}{16}+\frac{9^2}{32}-\cdots \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">\[ = \sum_{k=1}^{\infty}(-1)^{k+1}\frac{(2k-1)^2}{2^k} \]</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5</b></div>
+				<div id="text-task"><div class="math-formula">\[ 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\cdots \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">\[ = \sum_{n=0}^{\infty}\frac{x^n}{n!} \]</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 6</b></div>
+				<div id="text-task"><div class="math-formula">\[ x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">\[ = \sum_{n=1}^{\infty}(-1)^{n+1}\frac{x^n}{n} \]</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel6">
+			<h2>Задание 6. Бином Ньютона</h2>
+			<p class="dz-note">Формула: \( (a+b)^n=\sum_{k=0}^{n}C_n^k a^{n-k}b^k,\ C_n^k=\dfrac{n!}{k!(n-k)!} \)</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ (3a-2b)^3 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">\[ (3a-2b)^3 = 27a^3-54a^2b+36ab^2-8b^3 \]</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ (2a+b)^4 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">\[ (2a+b)^4 = 16a^4+32a^3b+24a^2b^2+8ab^3+b^4 \]</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ (a+2b)^5 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">\[ (a+2b)^5 = a^5+10a^4b+40a^3b^2+80a^2b^3+80ab^4+32b^5 \]</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel7">
+			<h2>Задание 7. Выделение полного квадрата</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ x^2+4x+7 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">\[ x^2+4x+7=(x^2+4x+4)+3=(x+2)^2+3 \]</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ x^2-8x+20 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">\[ x^2-8x+20=(x^2-8x+16)+4=(x-4)^2+4 \]</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ 3x^2-12x+15 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">\[ 3x^2-12x+15=3(x^2-4x+5)=3(x-2)^2+3 \]</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">\[ 2x^2-\sqrt{8}x+5 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ 2x^2-\sqrt8x+5=2\left(x^2-\sqrt2x+\tfrac52\right)=2\left(x-\tfrac{\sqrt2}{2}\right)^2+4 \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5</b></div>
+				<div id="text-task"><div class="math-formula">\[ 5x^2-10x+8 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">\[ 5x^2-10x+8=5(x^2-2x+1)+3=5(x-1)^2+3 \]</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel8">
+			<h2>Задание 8. Деление многочлена уголком</h2>
+			<p class="dz-note">Ниже приведён результат деления \( f(x) \) на \( g(x) \) в виде проверочного тождества.</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ f(x)=x^2-8x+15,\quad g(x)=x-3 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ x^2-8x+15=(x-3)(x-5) \]
+						<p><b>Результат:</b> \( x-5 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ f(x)=x^2+4x+4,\quad g(x)=x+2 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ x^2+4x+4=(x+2)(x+2) \]
+						<p><b>Результат:</b> \( x+2 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ f(x)=x^3-15x-28,\quad g(x)=x-4 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ x^3-15x-28=(x-4)(x^2+4x+1)-24 \]
+						<p><b>Результат:</b> \( x^2+4x+1 \) c остатком \( -24 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">\[ f(x)=3x^3+7x^2-50x+72,\quad g(x)=x+6 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ 3x^3+7x^2-50x+72=(x+6)(3x^2-11x+16)-24 \]
+						<p><b>Результат:</b> \( 3x^2-11x+16 \) c остатком \( -24 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5</b></div>
+				<div id="text-task"><div class="math-formula">\[ f(x)=x^3-5x^2+7x-10,\quad g(x)=x^2+3 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ x^3-5x^2+7x-10=(x^2+3)(x-5)+4x+5 \]
+						<p><b>Результат:</b> \( x-5 \) c остатком \( 4x+5 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 6</b></div>
+				<div id="text-task"><div class="math-formula">\[ f(x)=x^4+3x^2+1,\quad g(x)=x^2+1 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ x^4+3x^2+1=(x^2+1)(x^2+2)-1 \]
+						<p><b>Результат:</b> \( x^2+2 \) c остатком \( -1 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 7</b></div>
+				<div id="text-task"><div class="math-formula">\[ f(x)=4x^5-8x^4+15x^3-10x^2+6x-3,\quad g(x)=2x^2+3 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ f(x)=(2x^2+3)\left(2x^3-4x^2+\tfrac92x+1\right)-\tfrac{15}{2}x-6 \]
+						<p><b>Результат:</b> \( 2x^3-4x^2+\frac{9}{2}x+1 \) c остатком \( -\frac{15}{2}x-6 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 8</b></div>
+				<div id="text-task"><div class="math-formula">\[ f(x)=3x^2+7x-6,\quad g(x)=3x-2 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ 3x^2+7x-6=(3x-2)(x+3) \]
+						<p><b>Результат:</b> \( x+3 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 9</b></div>
+				<div id="text-task"><div class="math-formula">\[ f(x)=x^3-2x^2-5x+6,\quad g(x)=x-2 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ x^3-2x^2-5x+6=(x-2)(x^2-5)-4 \]
+						<p><b>Результат:</b> \( x^2-5 \) c остатком \( -4 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 10</b></div>
+				<div id="text-task"><div class="math-formula">\[ f(x)=2x^3+15x^2-7x-30,\quad g(x)=x+5 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ 2x^3+15x^2-7x-30=(x+5)(2x^2+5x-32)+130 \]
+						<p><b>Результат:</b> \( 2x^2+5x-32 \) c остатком \( 130 \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel9">
+			<h2>Задание 9. Разложение многочлена на множители</h2>
+			<p class="dz-note">Угадываем корень, затем делим уголком.</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ f(x)=x^2+5x-14 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Корень: \( x=2 \)</p>
+						\[ x^2+5x-14=(x-2)(x+7) \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ f(x)=x^3+5x^2+8x+4 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Корень: \( x=-1 \)</p>
+						\[ x^3+5x^2+8x+4=(x+1)(x+2)^2 \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ f(x)=x^3+8x^2+5x-14 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Корень: \( x=1 \); после деления остаётся \( x^2+9x+14 \), корни которого угадываются ещё раз.</p>
+						\[ x^3+8x^2+5x-14=(x-1)(x+2)(x+7) \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">\[ f(x)=x^3-5x^2+8x-4 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Корень: \( x=1 \)</p>
+						\[ x^3-5x^2+8x-4=(x-1)(x-2)^2 \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5</b></div>
+				<div id="text-task"><div class="math-formula">\[ f(x)=6x^4-x^3-24x^2+9x+10 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Корень: \( x=1 \), затем в частном \( 6x^3+5x^2-19x-10 \) угадываем корень \( x=-2 \), в оставшемся \( 6x^2-7x-5 \) угадываем корни ещё раз.</p>
+						\[ 6x^4-x^3-24x^2+9x+10=(2x+1)(3x-5)(x-1)(x+2) \]
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel10">
+			<h2>Задание 10. Периодическая дробь в виде обыкновенной</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ a=1{,}(23) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ x=1{,}\overline{23},\quad 100x=123{,}\overline{23} \]
+						\[ 100x-x=122 \Rightarrow 99x=122 \Rightarrow x=\frac{122}{99} \]
+						<p><b>Ответ:</b> \( \frac{122}{99} \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ a=2{,}4(15) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ x=2{,}4\overline{15},\quad 1000x=2415{,}\overline{15},\quad 10x=24{,}\overline{15} \]
+						\[ 990x=2391 \Rightarrow x=\frac{2391}{990}=\frac{797}{330} \]
+						<p><b>Ответ:</b> \( \frac{797}{330} \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ a=4{,}5(27) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ x=4{,}5\overline{27},\quad 1000x=4527{,}\overline{27},\quad 10x=45{,}\overline{27} \]
+						\[ 990x=4482 \Rightarrow x=\frac{4482}{990}=\frac{249}{55} \]
+						<p><b>Ответ:</b> \( \frac{249}{55} \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+</div>
+
+
+<nav class="ios-tabbar" aria-label="Основная навигация">
+  <div class="ios-tabbar-inner">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+  </div>
+</nav>
+</body>
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link href="../../test1.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARINOV</title>
+	<link rel="shortcut icon" href="../../image/logo.svg" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="stylesheet" href="../assets/css/site.css">
+	<link rel="stylesheet" href="../assets/css/pygments.css">
+	<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&amp;display=swap" rel="stylesheet" media="all">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<script src="../../nav-merge.js" defer></script>
+	<style>
+		.dz-note {
+			color: gray;
+			font-size: 14px;
+			margin-bottom: 8px;
+		}
+
+		.tabs {
+			margin-top: 15px;
+		}
+
+		.tab-input {
+			display: none;
+		}
+
+		.tab-bar {
+			margin-bottom: 20px;
+		}
+
+		.tab-label {
+			display: inline-block;
+			padding: 10px 18px;
+			margin-right: 8px;
+			margin-bottom: 10px;
+			background-color: #EEF0F4;
+			border: 1px solid #E1E4EC;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: 15px;
+			transition: 0.2s;
+			user-select: none;
+		}
+
+		.tab-label:hover {
+			background-color: #E2E5F7;
+		}
+
+		.tab-input:checked + .tab-label {
+			background-color: #5B62F5;
+			color: white;
+			font-weight: 600;
+		}
+
+		.tab-panel {
+			display: none;
+		}
+
+		#tab1:checked ~ .tab-panels #panel1,
+		#tab2:checked ~ .tab-panels #panel2,
+		#tab3:checked ~ .tab-panels #panel3,
+		#tab4:checked ~ .tab-panels #panel4,
+		#tab5:checked ~ .tab-panels #panel5,
+		#tab6:checked ~ .tab-panels #panel6,
+		#tab7:checked ~ .tab-panels #panel7,
+		#tab8:checked ~ .tab-panels #panel8,
+		#tab9:checked ~ .tab-panels #panel9,
+		#tab10:checked ~ .tab-panels #panel10 {
+			display: block;
+		}
+
+		@media only screen and (max-device-width: 530px) {
+			.tab-label {
+				padding: 9px 14px;
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+<body>
+<button type="button" class="ios-back-btn" aria-label="Назад" onclick="history.back()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="ios-navbar"><span class="ios-navbar-title"></span></div>
+<div class="left-menu">
+  <a href="../../home.html" class="logo"><img src="../../image/logo1.svg" alt="Logo"></a>
+  <div class="nav-list">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../lit.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="15.2" width="15" height="4" rx="1"/><rect x="5.5" y="10.6" width="13" height="4" rx="1"/><rect x="6.5" y="6" width="11" height="4" rx="1"/></svg>Литература</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+    <a href="../../net.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="4.7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 6.7v3.1"/><path d="M10.3 13.4l-3.7 2.1"/><path d="M13.7 13.4l3.7 2.1"/></svg>Сети</a>
+  </div>
+</div>
+
+<div class="main">
+
+<nav class="breadcrumbs">
+  <a href="../../home.html">Главная</a><span class="crumb-sep">/</span>
+  <a href="../../vid.html">Видеоуроки</a><span class="crumb-sep">/</span>
+  <a href="../../matan.html">Курс по матану для 1-го семестра</a><span class="crumb-sep">/</span>
+  <span class="crumb-current">Домашнее задание №12</span>
+</nav>
+<h1>Домашнее задание к вебинару №12</h1>
+
+<div class="tabs">
+	<input type="radio" name="dz-tab" id="tab1" class="tab-input" checked>
+	<input type="radio" name="dz-tab" id="tab2" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab3" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab4" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab5" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab6" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab7" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab8" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab9" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab10" class="tab-input">
+
+	<div class="tab-bar">
+		<label for="tab1" class="tab-label">Задание 1</label>
+		<label for="tab2" class="tab-label">Задание 2</label>
+		<label for="tab3" class="tab-label">Задание 3</label>
+		<label for="tab4" class="tab-label">Задание 4</label>
+		<label for="tab5" class="tab-label">Задание 5</label>
+		<label for="tab6" class="tab-label">Задание 6</label>
+		<label for="tab7" class="tab-label">Задание 7*</label>
+		<label for="tab8" class="tab-label">Задание 8</label>
+		<label for="tab9" class="tab-label">Задание 9</label>
+		<label for="tab10" class="tab-label">Задание 10*</label>
+	</div>
+
+	<div class="tab-panels">
+
+		<div class="tab-panel" id="panel1">
+			<h2>Задание 1. Теорема Лагранжа: три неравенства</h2>
+			<p class="dz-note">С помощью теоремы Лагранжа докажите следующие неравенства.</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ n(b-a)a^{n-1} < b^n-a^n < n(b-a)b^{n-1}, \quad 0\lt a\lt b,\ n\in\mathbb{N} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Положим \( f(x)=x^n,\ x\in[a,b] \). Эта функция дифференцируема на \( [a,b] \). Тогда по теореме Лагранжа существует \( \xi\in(a,b) \), такой что</p>
+						\[ b^n-a^n = f'(\xi)(b-a) = n\xi^{n-1}(b-a) \]
+						<p>Так как \( a<\xi\lt b \), то</p>
+						\[ a^{n-1} < \xi^{n-1} < b^{n-1} \]
+						<p>Поэтому</p>
+						\[ na^{n-1}(b-a) < b^n-a^n < nb^{n-1}(b-a) \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ e^x > 1+x, \quad x\in\mathbb{R} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Преобразуем неравенство следующим образом (рассмотрим случай \( x>0 \)):</p>
+						\[ e^x-1>x \quad\Longleftrightarrow\quad \frac{e^x-e^0}{x-0}>1 \]
+						<p>Положим \( f(x)=e^x \), \( (a,b)=(0,x) \). Эта функция дифференцируема на \( (0,x) \). Тогда по теореме Лагранжа существует \( \xi\in(0,x) \), такой что</p>
+						\[ \frac{e^x-e^0}{x-0}=e^\xi \]
+						<p>Так как \( \xi>0 \), то \( e^\xi>1 \), поэтому</p>
+						\[ \frac{e^x-1}{x}>1 \quad\Longrightarrow\quad e^x>1+x \]
+						<p>Верно для любого \( x>0 \)<sup>*</sup></p>
+						<p><sup>*</sup> Замечание: для \( x<0 \) неравенство также верно (аналогичное рассуждение на отрезке \( (x,0) \) даёт \( e^\xi<1 \), а домножение на \( x<0 \) меняет знак неравенства на нужный), а при \( x=0 \) неравенство превращается в равенство \( 1=1 \), что не входит в строгое неравенство, но исходное утверждение для \( x=0 \) как раз обращается в равенство \( e^0=1+0 \) — то есть строгое неравенство рассматривается только при \( x\ne0 \).</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ x^\alpha|\ln x| \le \frac{1}{\alpha e}, \quad 0\lt x<1,\ \alpha>0 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Положим \( f(x)=x^\alpha|\ln x| \). Заметим, что</p>
+						\[ \lim_{x\to0}x^\alpha|\ln x|=0 \qquad\text{и}\qquad \lim_{x\to1}x^\alpha|\ln x|=0 \]
+						<p>Тогда построим непрерывное расширение \( f \) в точках 0 и 1, то есть</p>
+						\[ \tilde f(x)=\begin{cases} f(x), & 0\lt x<1 \\ 0, & x\in\{0,1\} \end{cases} \]
+						<p>Так как \( f \) (а значит и \( \tilde f \)) дифференцируема на \( (0,1) \) и \( \tilde f(0)=\tilde f(1)=0 \), то по теореме Ролля существует \( \xi\in(0,1) \), такой что</p>
+						\[ \tilde f'(\xi)=0 \]
+						<p>То есть</p>
+						\[ \alpha\xi^{\alpha-1}|\ln\xi|+\frac{\xi^\alpha}{\xi}\cdot(-1)=\xi^{\alpha-1}(\alpha\ln\xi+1)=0 \]
+						<p>(поскольку на \( (0,1) \) имеем \( \ln\xi<0 \), поэтому \( |\ln\xi|=-\ln\xi \)). Так как \( \xi\in(0,1) \), то \( \xi^{\alpha-1}\ne0 \), значит</p>
+						\[ \alpha\ln\xi+1=0 \quad\Longrightarrow\quad \xi=e^{-\frac{1}{\alpha}} \]
+						<p>Так как \( \xi=e^{-1/\alpha} \) — единственная точка, где производная равна 0, и \( \tilde f(\xi)>\tilde f(0) \), \( \tilde f(\xi)>\tilde f(1) \), то в этой точке \( f \) достигает своего локального максимума на \( (0,1) \), поэтому</p>
+						\[ x^\alpha|\ln x| = f(x) \le f\!\left(e^{-\frac{1}{\alpha}}\right) = \left(e^{-\frac1\alpha}\right)^\alpha\left|\ln e^{-\frac1\alpha}\right| = e^{-1}\cdot\frac1\alpha = \frac{1}{\alpha e} \]
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel2">
+			<h2>Задание 2. Неравенство для степенной функции через теорему Лагранжа</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Применив теорему Лагранжа к функции \( f(x)=\dfrac{1}{x^\alpha} \), докажите, что при любом \( n\in\mathbb{N} \) и \( \alpha>0 \) справедливо неравенство
+					\[ \frac{1}{n^{\alpha+1}} < \frac1\alpha\left(\frac{1}{(n-1)^\alpha}-\frac{1}{n^\alpha}\right) \]
+				</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Перепишем неравенство в следующем виде:</p>
+						\[ \frac{\alpha}{n^{\alpha+1}} < \frac{1}{(n-1)^\alpha}-\frac{1}{n^\alpha} \]
+						<p>Так как при \( x>0 \) функция \( f(x)=\dfrac{1}{x^\alpha} \) дифференцируема, то по теореме Лагранжа (применённой на отрезке \( [n-1,n] \)) существует \( \xi\in(n-1,n) \), такой что</p>
+						\[ \frac{\dfrac{1}{n^\alpha}-\dfrac{1}{(n-1)^\alpha}}{n-(n-1)} = -\frac{\alpha}{\xi^{\alpha+1}} \quad\Longleftrightarrow\quad \frac{1}{(n-1)^\alpha}-\frac{1}{n^\alpha} = \frac{\alpha}{\xi^{\alpha+1}} \]
+						<p>Так как \( \xi\lt n \), то \( \dfrac{1}{\xi}>\dfrac{1}{n} \), поэтому</p>
+						\[ \frac{\alpha}{n^{\alpha+1}} < \frac{\alpha}{\xi^{\alpha+1}} = \frac{1}{(n-1)^\alpha}-\frac{1}{n^\alpha} \]
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel3">
+			<h2>Задание 3. Постоянство функции с нулевой производной</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Функция \( f(x) \) дифференцируема на отрезке \( [a,b] \), причём \( f'(x)=0 \) для всех \( x\in[a,b] \). Докажите, что функция \( f(x) \) постоянна.</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Так как \( f(x) \) дифференцируема на \( [a,b] \), то по теореме Лагранжа для любых \( x,y\in[a,b],\ x\lt y \) существует \( \xi\in(a,b) \), такой что</p>
+						\[ \frac{f(y)-f(x)}{y-x} = f'(\xi) = 0 \]
+						<p>Домножая на \( y-x \):</p>
+						\[ f(y)-f(x)=0 \quad\Longleftrightarrow\quad f(x)=f(y) \]
+						<p>Значит, \( f(x) \) постоянна на всём отрезке \( [a,b] \).</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel4">
+			<h2>Задание 4. Существование точки ξ по теореме Ролля</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Докажите, что если функция \( f(x) \) дифференцируема на отрезке \( [a,b] \), причём \( f(a)=f(b) \), то существует такая точка \( \xi\in(a,b) \), что
+					\[ f(a)-f(\xi)=\frac{\xi f'(\xi)}{2} \]
+				</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Рассмотрим следующую функцию:</p>
+						\[ F(x) = x^2\big(f(a)-f(x)\big) \]
+						<p>Она дифференцируема. Тогда рассмотрим значения функции \( F \) в точках \( a \) и \( b \):</p>
+						\[ F(a) = a^2\big(f(a)-f(a)\big) = 0 \]
+						\[ F(b) = b^2\big(f(b)-f(a)\big) = 0 \]
+						<p>Видно, что \( F(a)=F(b) \). Тогда по теореме Ролля должен существовать \( \xi\in(a,b) \), такой что</p>
+						\[ F'(\xi) = 2\xi\big(f(a)-f(\xi)\big) - \xi^2 f'(\xi) = 0 \]
+						<p>Рассмотрим два случая.</p>
+						<p><b>1) \( \xi\ne0 \).</b> Тогда можно на него разделить и получить</p>
+						\[ 2\big(f(a)-f(\xi)\big) - \xi f'(\xi) = 0 \quad\Longleftrightarrow\quad f(a)-f(\xi) = \frac{\xi f'(\xi)}{2} \]
+						<p>Что и требовалось.</p>
+						<p><b>2) \( \xi=0 \).</b> Тогда \( 0\in[a,b] \), поэтому рассмотрим \( F \) на отрезках \( [a,0] \) и \( [0,b] \). Так как</p>
+						\[ F(a)=F(b)=F(0)=0 \]
+						<p>то по теореме Ролля существуют \( c_1\in(a,0) \), \( c_2\in(0,b) \), такие что</p>
+						\[ F'(c_1)=F'(c_2)=0 \]
+						<p>То есть для \( i\in\{1,2\} \):</p>
+						\[ c_i\Big(2\big(f(a)-f(c_i)\big) - c_i f'(c_i)\Big) = 0 \]
+						<p>Так как \( c_1 \) и \( c_2 \) ненулевые, то для них мы получаем</p>
+						\[ f(a)-f(c_i) = \frac{c_i f'(c_i)}{2} \]
+						<p>Что и требовалось.</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel5">
+			<h2>Задание 5. Обобщённая теорема Коши (I)</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Пусть функция \( f(x) \) непрерывна на отрезке \( [a,b] \) и дифференцируема на интервале \( (a,b) \). Докажите, что существует точка \( \xi\in(a,b) \) такая, что
+					\[ \frac{ab\big(bf(b)-af(a)\big)}{b-a} = \xi^2\big(f(\xi)+\xi f'(\xi)\big) \]
+				</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Перепишем выражение слева следующим образом:</p>
+						\[ \frac{bf(b)-af(a)}{\dfrac{b-a}{ab}} = \frac{bf(b)-af(a)}{\dfrac1a-\dfrac1b} \]
+						<p>Положим \( \varphi(x)=xf(x) \), \( g(x)=\dfrac1x \). Так как обе функции дифференцируемы на \( (a,b) \), то по теореме Коши существует \( \xi\in(a,b) \), такой что</p>
+						\[ \frac{\varphi(b)-\varphi(a)}{g(b)-g(a)} = \frac{\varphi'(\xi)}{g'(\xi)} \]
+						\[ \Longleftrightarrow\quad \frac{bf(b)-af(a)}{\dfrac1b-\dfrac1a} = \frac{f(\xi)+\xi f'(\xi)}{-\dfrac{1}{\xi^2}} \]
+						\[ \Longleftrightarrow\quad \frac{bf(b)-af(a)}{\dfrac{b-a}{ab}} = \frac{f(\xi)+\xi f'(\xi)}{\dfrac{1}{\xi^2}} \]
+						\[ \Longleftrightarrow\quad \frac{ab\big(bf(b)-af(a)\big)}{b-a} = \xi^2\big(f(\xi)+\xi f'(\xi)\big) \]
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel6">
+			<h2>Задание 6. Обобщённая теорема Коши (II)</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Пусть функция \( f(x) \) непрерывна на отрезке \( [a,b] \) и дифференцируема на интервале \( (a,b) \), где \( a>0 \). Докажите, что существует точка \( \xi\in(a,b) \) такая, что
+					\[ \frac{af(b)-bf(a)}{a-b} = f(\xi)-\xi f'(\xi) \]
+				</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Заметим, что</p>
+						\[ \frac{af(b)-bf(a)}{a-b} = \frac{ab\left(\dfrac{f(b)}{b}-\dfrac{f(a)}{a}\right)}{a-b} = \frac{\dfrac{f(b)}{b}-\dfrac{f(a)}{a}}{\dfrac1b-\dfrac1a} \]
+						<p>Положим \( \varphi(x)=\dfrac{f(x)}{x} \), \( g(x)=\dfrac1x \). Так как обе функции дифференцируемы на \( (a,b) \), то по теореме Коши существует \( \xi\in(a,b) \), такой что</p>
+						\[ \frac{\varphi(b)-\varphi(a)}{g(b)-g(a)} = \frac{\varphi'(\xi)}{g'(\xi)} \]
+						\[ \frac{\dfrac{f(b)}{b}-\dfrac{f(a)}{a}}{\dfrac1b-\dfrac1a} = \frac{\dfrac{\xi f'(\xi)-f(\xi)}{\xi^2}}{-\dfrac{1}{\xi^2}} \]
+						\[ \Longleftrightarrow\quad \frac{af(b)-bf(a)}{a-b} = f(\xi)-\xi f'(\xi) \]
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel7">
+			<h2>Задание 7*. Теорема о промежуточном значении</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Непрерывная функция \( f(x) \) такова, что \( f(0)=f(2) \). Докажите, что для некоторого \( x\in[0,2] \) имеет место равенство
+					\[ f(x)=f(x-1) \]
+				</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p><b>Примечание:</b> в этой задаче используется теорема о промежуточном значении, которая гласит, что если функция \( f \) непрерывна на отрезке \( [a,b] \) и \( f(a)<0\lt f(b) \) (или наоборот), то существует точка \( x_0 \), такая что \( f(x_0)=0 \). Здесь приведено её доказательство.</p>
+						<p>Рассмотрим точку \( x_1=\dfrac{a+b}{2} \) — середину отрезка. Если \( f(x_1)=0 \), то искомая точка найдена. Если нет, то выберем \( \Delta_1 \) — ту из половинок отрезка \( [a,b] \), на концах которой \( f \) принимает значения разных знаков. Рассмотрим теперь точку \( x_2 \) — середину отрезка \( \Delta_1 \). Если \( f(x_2)=0 \), то искомая точка найдена. Если нет, то выберем \( \Delta_2 \) — ту из половинок \( \Delta_1 \), на концах которой \( f \) принимает значения разных знаков, и т.д. Если на каком-то \( n \)-м шаге \( f(x_n)=0 \), то искомая точка найдена.</p>
+						<p>В противном случае получим последовательность вложенных отрезков</p>
+						\[ \Delta_1 \supset \Delta_2 \supset \cdots \supset \Delta_n \supset \cdots \]
+						<p>такую, что на концах каждого из отрезков \( \Delta_n \) функция принимает значения разных знаков. Длина \( n \)-го отрезка равна</p>
+						\[ \frac{b-a}{2^n} = (b-a)\left(\frac12\right)^n \to 0 \]
+						<p>По теореме Кантора о вложенных отрезках существует единственная точка \( c \), принадлежащая всем отрезкам \( \Delta_n \). Ясно, что \( c\in[a,b] \).</p>
+						<p>Докажем, что \( f(c)=0 \). Пусть это не так, и, например, \( f(c)>0 \) (если \( c \) — один из концов отрезка, то соответствующий предел односторонний). Тогда</p>
+						\[ \exists\,\varepsilon>0:\ \forall x\in U_\varepsilon(c) \ \Rightarrow\ f(x)>0 \]
+						<p>(в самой точке \( c \) неравенство выполняется автоматически, так как \( f(c)>0 \); если \( c \) — один из концов отрезка, то соответствующая окрестность — односторонняя). Так как найдётся номер \( n_0 \) такой, что при всех \( n\ge n_0 \) длина отрезка \( \Delta_n \) меньше, чем \( \varepsilon \), то при всех \( n\ge n_0 \) отрезок \( \Delta_n \) целиком лежит в \( U_\varepsilon(c) \). Следовательно, для всех \( x\in\Delta_n \) выполняется неравенство \( f(x)>0 \). Это противоречит тому, что на концах \( \Delta_n \) функция принимает значения разных знаков.</p>
+						<p>Значит, \( f(c)=0 \). Ясно также, что \( c\in(a,b) \), так как \( f(a)\ne0 \), \( f(b)\ne0 \).</p>
+						<p><b>А теперь собственно решение.</b> Рассмотрим функцию</p>
+						\[ \varphi(x) = f(x)-f(x-1) \]
+						<p>Тогда</p>
+						\[ \varphi(1) = f(1)-f(0), \qquad \varphi(2) = f(2)-f(1) \]
+						<p>Так как \( f(0)=f(2) \), то</p>
+						\[ f(1)-\varphi(1) = f(0) = f(2) = f(1)+\varphi(2) \quad\Longleftrightarrow\quad \varphi(1) = -\varphi(2) \]
+						<p>Значит, так как \( \varphi \) непрерывна на отрезке \( [1,2] \) и принимает на его концах значения противоположных знаков (либо оба равны нулю), то по теореме о промежуточном значении существует такой \( x_0\in(1,2) \) (или один из концов), что</p>
+						\[ \varphi(x_0)=0 \]
+						<p>То есть</p>
+						\[ f(x_0)-f(x_0-1)=0 \quad\Longleftrightarrow\quad f(x_0)=f(x_0-1) \]
+						<p>Так как \( x_0\in[1,2]\subset[0,2] \), искомая точка найдена.</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel8">
+			<h2>Задание 8. Явный вывод формулы Маклорена</h2>
+			<p class="dz-note">Выведите формулу Маклорена с помощью вывода явной формулы для \( f^{(n)}(0) \) для следующих функций.</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ f(x)=\cos x \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Распишем функцию по явной формуле Маклорена (последовательно чередуются \( \cos0=1 \) и \( \sin0=0 \) с чередованием знака при дифференцировании):</p>
+						\[ \cos x = \frac{\cos0}{0!}-\frac{\sin0}{1!}x-\frac{\cos0}{2!}x^2+\frac{\sin0}{3!}x^3+\frac{\cos0}{4!}x^4+\cdots = 1-\frac{x^2}{2}+\frac{x^4}{4!}+\cdots = \sum_{k=0}^{\infty}\frac{(-1)^k x^{2k}}{(2k)!} \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ f(x)=\ln(1+x) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Распишем функцию по явной формуле Маклорена (используя \( f^{(n)}(x)=\dfrac{(-1)^{n-1}(n-1)!}{(1+x)^n} \), откуда \( f^{(n)}(0)=(-1)^{n-1}(n-1)! \)):</p>
+						\[ \ln(1+x) = \frac{\ln1}{0!}+\frac{1}{1!\cdot1}x-\frac{1}{2!\cdot1}x^2+\frac{2!}{3!\cdot1}x^3-\frac{3!}{4!\cdot1}x^4+\cdots = x-\frac{x^2}{2}+\frac{x^3}{3}-\cdots = \sum_{k=1}^{\infty}\frac{(-1)^{k+1}x^k}{k} \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3*</b></div>
+				<div id="text-task"><div class="math-formula">\[ f(x)=\operatorname{arctg} x \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Распишем функцию по явной формуле Маклорена (нечётные производные в нуле чередуют знак, а все чётные производные в нуле равны 0):</p>
+						\[ \operatorname{arctg} x = \frac{\operatorname{arctg}0}{0!}+\frac{1}{1\cdot1}x-\frac{0}{2!\cdot1}x^2-\frac{2!}{3!\cdot1}x^3+\frac{0}{4!\cdot1}x^4+\frac{4!}{5!\cdot1}x^5+\cdots = x-\frac{x^3}{3}+\frac{x^5}{5}+\cdots = \sum_{k=0}^{\infty}\frac{(-1)^k x^{2k+1}}{2k+1} \]
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel9">
+			<h2>Задание 9. Формула Маклорена до третьей степени</h2>
+			<p class="dz-note">Разложите следующие функции по формуле Маклорена до третьей степени.</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ f(x)=\operatorname{tg} x \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \operatorname{tg} x = \frac{\sin x}{\cos x} = \frac{x-\dfrac{x^3}{6}+o(x^3)}{1-\dfrac{x^2}{2}+o(x^2)} \]
+						<p>Разделим полученную дробь как ряд на ряд (степенное деление, аналог деления многочлена уголком), подбирая частное \( x+\dfrac{x^3}{3}+o(x^3) \) так, чтобы при умножении на знаменатель получался числитель:</p>
+						\[ \left(x+\frac{x^3}{3}\right)\left(1-\frac{x^2}{2}\right) = x-\frac{x^3}{2}+\frac{x^3}{3}+o(x^3) = x-\frac{x^3}{6}+o(x^3) \]
+						<p>что совпадает с числителем &mdash; значит частное подобрано верно. Поэтому</p>
+						\[ \operatorname{tg} x = x+\frac{x^3}{3}+o(x^3) \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ f(x)=\arcsin x \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ f(0)=\arcsin0=0 \]
+						\[ f'(0)=\frac{1}{\sqrt{1-0}}=1 \]
+						\[ f''(0)=\frac{0}{(1-0)^{3/2}}=0 \]
+						\[ f^{(3)}(0)=\frac{1+2\cdot0^2}{(1-0)^{5/2}}=1 \]
+						<p>Тогда</p>
+						\[ \arcsin x = 0+1\cdot\frac{x}{1!}+0\cdot\frac{x^2}{2!}+1\cdot\frac{x^3}{3!}+o(x^3) = x+\frac{x^3}{6}+o(x^3) \]
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel10">
+			<h2>Задание 10*. Формула Маклорена до пятой степени</h2>
+			<p class="dz-note">Разложите функции из прошлого задания до пятой степени.</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ f(x)=\operatorname{tg} x \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \operatorname{tg} x = \frac{\sin x}{\cos x} = \frac{x-\dfrac{x^3}{6}+\dfrac{x^5}{120}+o(x^5)}{1-\dfrac{x^2}{2}+\dfrac{x^4}{24}+o(x^4)} \]
+						<p>Разделим полученную дробь как ряд на ряд, подбирая частное \( x+\dfrac{x^3}{3}+\dfrac{2x^5}{15}+o(x^5) \) так, чтобы при умножении на знаменатель получался числитель:</p>
+						\[ \left(x+\frac{x^3}{3}+\frac{2x^5}{15}\right)\left(1-\frac{x^2}{2}+\frac{x^4}{24}\right) = x-\frac{x^3}{6}+\frac{x^5}{120}+o(x^5) \]
+						<p>что совпадает с числителем &mdash; значит частное подобрано верно. Поэтому</p>
+						\[ \operatorname{tg} x = x+\frac{x^3}{3}+\frac{2x^5}{15}+o(x^5) \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ f(x)=\arcsin x \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ f(0)=\arcsin0=0 \]
+						\[ f'(0)=\frac{1}{\sqrt{1-0}}=1 \]
+						\[ f''(0)=\frac{0}{(1-0)^{3/2}}=0 \]
+						\[ f^{(3)}(0)=\frac{1+2\cdot0^2}{(1-0)^{5/2}}=1 \]
+						\[ f^{(4)}(0)=\frac{0\cdot(9+6\cdot0^2)}{(1-0)^{7/2}}=0 \]
+						\[ f^{(5)}(0)=9 \]
+						<p>Тогда</p>
+						\[ \arcsin x = 0+1\cdot\frac{x}{1!}+0\cdot\frac{x^2}{2!}+1\cdot\frac{x^3}{3!}+0\cdot\frac{x^4}{4!}+9\cdot\frac{x^5}{5!}+o(x^5) = x+\frac{x^3}{6}+\frac{3x^5}{40}+o(x^5) \]
+					</div>
+				</details>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+</div>
+
+
+<nav class="ios-tabbar" aria-label="Основная навигация">
+  <div class="ios-tabbar-inner">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+  </div>
+</nav>
+</body>
+</html>

@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link href="../../test1.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARINOV</title>
+	<link rel="shortcut icon" href="../../image/logo.svg" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="stylesheet" href="../assets/css/site.css">
+	<link rel="stylesheet" href="../assets/css/pygments.css">
+	<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&amp;display=swap" rel="stylesheet" media="all">
+	<link href="shrek.ttf" rel="stylesheet" media="all">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<script src="../../nav-merge.js" defer></script>
+	<style>
+		.dz-header {
+			color: gray;
+			font-size: 14px;
+			margin-bottom: 4px;
+		}
+
+		.tabs {
+			margin-top: 15px;
+		}
+
+		.tab-input {
+			display: none;
+		}
+
+		.tab-bar {
+			margin-bottom: 20px;
+		}
+
+		.tab-label {
+			display: inline-block;
+			padding: 10px 18px;
+			margin-right: 8px;
+			margin-bottom: 10px;
+			background-color: #EEF0F4;
+			border: 1px solid #E1E4EC;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: 15px;
+			transition: 0.2s;
+			user-select: none;
+		}
+
+		.tab-label:hover {
+			background-color: #E2E5F7;
+		}
+
+		.tab-input:checked + .tab-label {
+			background-color: #5B62F5;
+			color: white;
+			font-weight: 600;
+		}
+
+		.tab-panel {
+			display: none;
+		}
+
+		#tab1:checked ~ .tab-panels #panel1,
+		#tab2:checked ~ .tab-panels #panel2,
+		#tab3:checked ~ .tab-panels #panel3,
+		#tab4:checked ~ .tab-panels #panel4,
+		#tab5:checked ~ .tab-panels #panel5,
+		#tab6:checked ~ .tab-panels #panel6,
+		#tab7:checked ~ .tab-panels #panel7 {
+			display: block;
+		}
+
+		@media only screen and (max-device-width: 530px) {
+			.tab-label {
+				padding: 9px 14px;
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+<body>
+<button type="button" class="ios-back-btn" aria-label="Назад" onclick="history.back()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="ios-navbar"><span class="ios-navbar-title"></span></div>
+<div class="left-menu">
+  <a href="../../home.html" class="logo"><img src="../../image/logo1.svg" alt="Logo"></a>
+  <div class="nav-list">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../lit.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="15.2" width="15" height="4" rx="1"/><rect x="5.5" y="10.6" width="13" height="4" rx="1"/><rect x="6.5" y="6" width="11" height="4" rx="1"/></svg>Литература</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+    <a href="../../net.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="4.7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 6.7v3.1"/><path d="M10.3 13.4l-3.7 2.1"/><path d="M13.7 13.4l3.7 2.1"/></svg>Сети</a>
+  </div>
+</div>
+
+<div class="main">
+
+<nav class="breadcrumbs">
+  <a href="../../home.html">Главная</a><span class="crumb-sep">/</span>
+  <a href="../../vid.html">Видеоуроки</a><span class="crumb-sep">/</span>
+  <a href="../../angem.html">Аналитическая геометрия от Профиматики</a><span class="crumb-sep">/</span>
+  <span class="crumb-current">Домашнее задание</span>
+</nav>
+
+	<div class="tabs">
+		<input type="radio" name="dz-tab" id="tab1" class="tab-input" checked>
+		<input type="radio" name="dz-tab" id="tab2" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab3" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab4" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab5" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab6" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab7" class="tab-input">
+
+		<div class="tab-bar">
+			<label for="tab1" class="tab-label">Задание 1</label>
+			<label for="tab2" class="tab-label">Задание 2</label>
+			<label for="tab3" class="tab-label">Задание 3</label>
+			<label for="tab4" class="tab-label">Задание 4**</label>
+			<label for="tab5" class="tab-label">Задание 5*</label>
+			<label for="tab6" class="tab-label">Задание 6</label>
+			<label for="tab7" class="tab-label">Задание 7**</label>
+		</div>
+
+		<div class="tab-panels">
+
+			<!-- Задание 1. Линейные операции над матрицами -->
+			<div class="tab-panel" id="panel1">
+				<h2>Задание 1. Линейные операции над матрицами и матричные уравнения</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Произведите действия с матрицами:</p>
+						<div class="math-formula" id="k">
+							\[
+							-7\begin{pmatrix} -2 & 3 \\ 2 & 9 \\ 7 & -6 \end{pmatrix} - 8\begin{pmatrix} 4 & 5 & -3 \\ -2 & -8 & 6 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Первая матрица имеет размер \(3 \times 2\), вторая — \(2 \times 3\). Операции сложения и вычитания определены только для матриц одинакового размера, поэтому складывать (вычитать) эти матрицы нельзя.</p>
+							<p>Ответ: действия выполнить невозможно, поскольку матрицы имеют разные размеры.</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task">
+						<p>Произведите действия с матрицами:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} -3 & 7 & 3 \\ -4 & -7 & -1 \\ 6 & 8 & -3 \\ -3 & 6 & 8 \end{pmatrix} + 4\begin{pmatrix} -3 & 6 & 8 \\ -2 & 8 & 1 \\ -2 & 1 & 4 \\ -2 & 2 & -3 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Матрицы имеют одинаковый размер \(4 \times 3\), поэтому операции определены. Сначала умножаем вторую матрицу на число 4:</p>
+							<p>
+								\[
+								4\begin{pmatrix} -3 & 6 & 8 \\ -2 & 8 & 1 \\ -2 & 1 & 4 \\ -2 & 2 & -3 \end{pmatrix} = \begin{pmatrix} -12 & 24 & 32 \\ -8 & 32 & 4 \\ -8 & 4 & 16 \\ -8 & 8 & -12 \end{pmatrix}
+								\]
+							</p>
+							<p>Складываем полученную матрицу с первой поэлементно:</p>
+							<p>
+								\[
+								\begin{pmatrix} -3 & 7 & 3 \\ -4 & -7 & -1 \\ 6 & 8 & -3 \\ -3 & 6 & 8 \end{pmatrix} + \begin{pmatrix} -12 & 24 & 32 \\ -8 & 32 & 4 \\ -8 & 4 & 16 \\ -8 & 8 & -12 \end{pmatrix} = \begin{pmatrix} -15 & 31 & 35 \\ -12 & 25 & 3 \\ -2 & 12 & 13 \\ -11 & 14 & -4 \end{pmatrix}
+								\]
+							</p>
+							<p>Ответ: \(\begin{pmatrix} -15 & 31 & 35 \\ -12 & 25 & 3 \\ -2 & 12 & 13 \\ -11 & 14 & -4 \end{pmatrix}\)</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task">
+						<p>Произведите действия с матрицами:</p>
+						<div class="math-formula" id="k">
+							\[
+							7\begin{pmatrix} 8 & -7 & 8 \\ -9 & -1 & -8 \end{pmatrix} + 3\begin{pmatrix} 8 & -1 \\ 3 & 1 \\ 4 & 6 \end{pmatrix}^{\top}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Сначала транспонируем вторую матрицу, чтобы её размер стал согласован с первой (\(2 \times 3\)):</p>
+							<p>
+								\[
+								\begin{pmatrix} 8 & -1 \\ 3 & 1 \\ 4 & 6 \end{pmatrix}^{\top} = \begin{pmatrix} 8 & 3 & 4 \\ -1 & 1 & 6 \end{pmatrix}
+								\]
+							</p>
+							<p>Умножаем обе матрицы на соответствующие скаляры:</p>
+							<p>
+								\[
+								7\begin{pmatrix} 8 & -7 & 8 \\ -9 & -1 & -8 \end{pmatrix} = \begin{pmatrix} 56 & -49 & 56 \\ -63 & -7 & -56 \end{pmatrix}, \quad 3\begin{pmatrix} 8 & 3 & 4 \\ -1 & 1 & 6 \end{pmatrix} = \begin{pmatrix} 24 & 9 & 12 \\ -3 & 3 & 18 \end{pmatrix}
+								\]
+							</p>
+							<p>Складываем результаты:</p>
+							<p>
+								\[
+								\begin{pmatrix} 56 & -49 & 56 \\ -63 & -7 & -56 \end{pmatrix} + \begin{pmatrix} 24 & 9 & 12 \\ -3 & 3 & 18 \end{pmatrix} = \begin{pmatrix} 80 & -40 & 68 \\ -66 & -4 & -38 \end{pmatrix}
+								\]
+							</p>
+							<p>Ответ: \(\begin{pmatrix} 80 & -40 & 68 \\ -66 & -4 & -38 \end{pmatrix}\)</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 4</b></div>
+					<div id="text-task">
+						<p>Решите матричное уравнение:</p>
+						<div class="math-formula" id="k">
+							\[
+							3\begin{pmatrix} 3 & -4 \\ 5 & -9 \\ -4 & 3 \end{pmatrix} + \frac{1}{2}X = 2\begin{pmatrix} 4 & 4 \\ -3 & 5 \\ 4 & 8 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Вычислим обе части уравнения, умножив матрицы на скаляры:</p>
+							<p>
+								\[
+								3\begin{pmatrix} 3 & -4 \\ 5 & -9 \\ -4 & 3 \end{pmatrix} = \begin{pmatrix} 9 & -12 \\ 15 & -27 \\ -12 & 9 \end{pmatrix}, \quad 2\begin{pmatrix} 4 & 4 \\ -3 & 5 \\ 4 & 8 \end{pmatrix} = \begin{pmatrix} 8 & 8 \\ -6 & 10 \\ 8 & 16 \end{pmatrix}
+								\]
+							</p>
+							<p>Переносим известное слагаемое в правую часть:</p>
+							<p>
+								\[
+								\frac{1}{2}X = \begin{pmatrix} 8 & 8 \\ -6 & 10 \\ 8 & 16 \end{pmatrix} - \begin{pmatrix} 9 & -12 \\ 15 & -27 \\ -12 & 9 \end{pmatrix} = \begin{pmatrix} -1 & 20 \\ -21 & 37 \\ 20 & 7 \end{pmatrix}
+								\]
+							</p>
+							<p>Умножаем обе части на 2, чтобы выразить \(X\):</p>
+							<p>
+								\[
+								X = 2\begin{pmatrix} -1 & 20 \\ -21 & 37 \\ 20 & 7 \end{pmatrix} = \begin{pmatrix} -2 & 40 \\ -42 & 74 \\ 40 & 14 \end{pmatrix}
+								\]
+							</p>
+							<p>Ответ: \(X = \begin{pmatrix} -2 & 40 \\ -42 & 74 \\ 40 & 14 \end{pmatrix}\)</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 5*</b></div>
+					<div id="text-task">
+						<p>Решите матричную систему уравнений:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{cases} -8X + Y = \begin{pmatrix} -58 & -40 \\ 52 & -5 \end{pmatrix} \\[4pt] 3X + 2Y = \begin{pmatrix} 36 & -4 \\ -10 & -10 \end{pmatrix} \end{cases}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Обозначим \(M = \begin{pmatrix} -58 & -40 \\ 52 & -5 \end{pmatrix}\), \(N = \begin{pmatrix} 36 & -4 \\ -10 & -10 \end{pmatrix}\). Система имеет вид: (1) \(-8X + Y = M\), (2) \(3X + 2Y = N\).</p>
+							<p>Умножим уравнение (1) на 2, чтобы уравнять коэффициенты при \(Y\):</p>
+							<p>\[ -16X + 2Y = 2M \]</p>
+							<p>Вычтем полученное уравнение из (2), исключая \(Y\):</p>
+							<p>\[ 19X = N - 2M \]</p>
+							<p>Вычисляем правую часть:</p>
+							<p>
+								\[
+								2M = \begin{pmatrix} -116 & -80 \\ 104 & -10 \end{pmatrix}, \quad N - 2M = \begin{pmatrix} 36 & -4 \\ -10 & -10 \end{pmatrix} - \begin{pmatrix} -116 & -80 \\ 104 & -10 \end{pmatrix} = \begin{pmatrix} 152 & 76 \\ -114 & 0 \end{pmatrix}
+								\]
+							</p>
+							<p>Отсюда:</p>
+							<p>
+								\[
+								X = \frac{1}{19}\begin{pmatrix} 152 & 76 \\ -114 & 0 \end{pmatrix} = \begin{pmatrix} 8 & 4 \\ -6 & 0 \end{pmatrix}
+								\]
+							</p>
+							<p>Подставляем найденную \(X\) в уравнение (1), чтобы найти \(Y\):</p>
+							<p>
+								\[
+								Y = M + 8X = \begin{pmatrix} -58 & -40 \\ 52 & -5 \end{pmatrix} + 8\begin{pmatrix} 8 & 4 \\ -6 & 0 \end{pmatrix} = \begin{pmatrix} -58 & -40 \\ 52 & -5 \end{pmatrix} + \begin{pmatrix} 64 & 32 \\ -48 & 0 \end{pmatrix} = \begin{pmatrix} 6 & -8 \\ 4 & -5 \end{pmatrix}
+								\]
+							</p>
+							<p>Ответ: \(X = \begin{pmatrix} 8 & 4 \\ -6 & 0 \end{pmatrix}, \quad Y = \begin{pmatrix} 6 & -8 \\ 4 & -5 \end{pmatrix}\)</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 2. Умножение матриц -->
+			<div class="tab-panel" id="panel2">
+				<h2>Задание 2. Умножение матриц</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Вычислите произведение:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} 2 & 1 & 2 \\ 3 & -2 & 2 \end{pmatrix} \cdot \begin{pmatrix} -5 & 2 \\ -6 & -5 \\ -1 & -3 \\ -3 & 1 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Первая матрица имеет размер \(2 \times 3\), вторая — \(4 \times 2\). Произведение \(AB\) определено только тогда, когда число столбцов \(A\) равно числу строк \(B\); здесь \(3 \ne 4\).</p>
+							<p>Ответ: для данных матриц произведение не определено.</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task">
+						<p>Вычислите произведение:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} -9 \\ 5 \\ -3 \end{pmatrix} \cdot \begin{pmatrix} 1 & -6 & 4 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Первая матрица имеет размер \(3 \times 1\), вторая — \(1 \times 3\), поэтому произведение определено и имеет размер \(3 \times 3\). Каждый элемент результата — произведение соответствующего элемента столбца на соответствующий элемент строки:</p>
+							<p>
+								\[
+								\begin{pmatrix} -9 \\ 5 \\ -3 \end{pmatrix} \cdot \begin{pmatrix} 1 & -6 & 4 \end{pmatrix} = \begin{pmatrix} -9 & 54 & -36 \\ 5 & -30 & 20 \\ -3 & 18 & -12 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task">
+						<p>Вычислите произведение:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} 0 & 5 & -4 \end{pmatrix} \cdot \begin{pmatrix} -2 \\ 0 \\ 3 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Первая матрица \(1 \times 3\), вторая \(3 \times 1\), результат — скаляр (матрица \(1 \times 1\)):</p>
+							<p>\[ 0 \cdot (-2) + 5 \cdot 0 + (-4) \cdot 3 = -12 \]</p>
+							<p>Ответ: \(-12\)</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 4</b></div>
+					<div id="text-task">
+						<p>Вычислите \(A \cdot B^{\top} - 2C\), если</p>
+						<div class="math-formula" id="k">
+							\[
+							A = \begin{pmatrix} 2 & -4 \\ -2 & 3 \end{pmatrix}, \quad B = \begin{pmatrix} 2 & 1 \\ -4 & 5 \end{pmatrix}, \quad C = \begin{pmatrix} 3 & -2 \\ 5 & 2 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Транспонируем \(B\): \(B^{\top} = \begin{pmatrix} 2 & -4 \\ 1 & 5 \end{pmatrix}\). Вычисляем произведение \(A \cdot B^{\top}\) по правилу «строка на столбец»:</p>
+							<p>
+								\[
+								A \cdot B^{\top} = \begin{pmatrix} 2\cdot2+(-4)\cdot1 & 2\cdot(-4)+(-4)\cdot5 \\ (-2)\cdot2+3\cdot1 & (-2)\cdot(-4)+3\cdot5 \end{pmatrix} = \begin{pmatrix} 0 & -28 \\ -1 & 23 \end{pmatrix}
+								\]
+							</p>
+							<p>Вычисляем \(2C = \begin{pmatrix} 6 & -4 \\ 10 & 4 \end{pmatrix}\) и вычитаем:</p>
+							<p>
+								\[
+								\begin{pmatrix} 0 & -28 \\ -1 & 23 \end{pmatrix} - \begin{pmatrix} 6 & -4 \\ 10 & 4 \end{pmatrix} = \begin{pmatrix} -6 & -24 \\ -11 & 19 \end{pmatrix}
+								\]
+							</p>
+							<p>Ответ: \(\begin{pmatrix} -6 & -24 \\ -11 & 19 \end{pmatrix}\)</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 5</b></div>
+					<div id="text-task">
+						<p>Вычислите \(3BA - AB\), если</p>
+						<div class="math-formula" id="k">
+							\[
+							A = \begin{pmatrix} -3 & 2 \\ 1 & -1 \end{pmatrix}, \quad B = \begin{pmatrix} 9 & -3 \\ 9 & -5 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Вычисляем \(BA\) поэлементно:</p>
+							<p>
+								\[
+								BA = \begin{pmatrix} 9\cdot(-3)+(-3)\cdot1 & 9\cdot2+(-3)\cdot(-1) \\ 9\cdot(-3)+(-5)\cdot1 & 9\cdot2+(-5)\cdot(-1) \end{pmatrix} = \begin{pmatrix} -30 & 21 \\ -32 & 23 \end{pmatrix}
+								\]
+							</p>
+							<p>Вычисляем \(AB\):</p>
+							<p>
+								\[
+								AB = \begin{pmatrix} (-3)\cdot9+2\cdot9 & (-3)\cdot(-3)+2\cdot(-5) \\ 1\cdot9+(-1)\cdot9 & 1\cdot(-3)+(-1)\cdot(-5) \end{pmatrix} = \begin{pmatrix} -9 & -1 \\ 0 & 2 \end{pmatrix}
+							\]
+							</p>
+							<p>Заметим, что \(AB \ne BA\) — умножение матриц некоммутативно. Составляем комбинацию:</p>
+							<p>
+								\[
+								3BA - AB = 3\begin{pmatrix} -30 & 21 \\ -32 & 23 \end{pmatrix} - \begin{pmatrix} -9 & -1 \\ 0 & 2 \end{pmatrix} = \begin{pmatrix} -90 & 63 \\ -96 & 69 \end{pmatrix} - \begin{pmatrix} -9 & -1 \\ 0 & 2 \end{pmatrix} = \begin{pmatrix} -81 & 64 \\ -96 & 67 \end{pmatrix}
+								\]
+							</p>
+							<p>Ответ: \(\begin{pmatrix} -81 & 64 \\ -96 & 67 \end{pmatrix}\)</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 6</b></div>
+					<div id="text-task">
+						<p>Вычислите произведение:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} 4 & -1 & 4 \\ 0 & 5 & -2 \\ -3 & -5 & -5 \end{pmatrix} \cdot \begin{pmatrix} 3 \\ -1 \\ -2 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Матрица \(3 \times 3\) умножается на вектор-столбец \(3 \times 1\), результат — вектор-столбец \(3 \times 1\). Каждая координата — скалярное произведение соответствующей строки на столбец:</p>
+							<p>
+								\[
+								\begin{pmatrix} 4\cdot3+(-1)\cdot(-1)+4\cdot(-2) \\ 0\cdot3+5\cdot(-1)+(-2)\cdot(-2) \\ (-3)\cdot3+(-5)\cdot(-1)+(-5)\cdot(-2) \end{pmatrix} = \begin{pmatrix} 5 \\ -1 \\ 6 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 7</b></div>
+					<div id="text-task">
+						<p>Вычислите произведение:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} 1 & 4 & 1 \end{pmatrix} \cdot \begin{pmatrix} -1 & 1 & -1 \\ -3 & -3 & 3 \\ 1 & 1 & 2 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Вектор-строка умножается на матрицу справа — берём линейную комбинацию строк матрицы с коэффициентами из вектора:</p>
+							<p>
+								\[
+								\begin{pmatrix} 1\cdot(-1)+4\cdot(-3)+1\cdot1 & 1\cdot1+4\cdot(-3)+1\cdot1 & 1\cdot(-1)+4\cdot3+1\cdot2 \end{pmatrix} = \begin{pmatrix} -12 & -10 & 13 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 8</b></div>
+					<div id="text-task">
+						<p>Вычислите произведение:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} 4 & 0 \\ 3 & -4 \\ -4 & 4 \end{pmatrix} \cdot \begin{pmatrix} 1 & -2 & -1 \\ 2 & 1 & 2 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Матрица \(3 \times 2\) умножается на матрицу \(2 \times 3\), результат — матрица \(3 \times 3\). Вычисляя поэлементно, получаем:</p>
+							<p>
+								\[
+								\begin{pmatrix} 4 & -8 & -4 \\ -5 & -10 & -11 \\ 4 & 12 & 12 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 9</b></div>
+					<div id="text-task">
+						<p>Вычислите произведение:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} 1 & -2 & 1 \\ -2 & -1 & 3 \end{pmatrix} \cdot \begin{pmatrix} 2 & 1 \\ 3 & 2 \\ 0 & -2 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Матрица \(2 \times 3\) умножается на матрицу \(3 \times 2\), результат — матрица \(2 \times 2\):</p>
+							<p>
+								\[
+								\begin{pmatrix} -4 & -5 \\ -7 & -10 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 10</b></div>
+					<div id="text-task">
+						<p>Вычислите произведение:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} -1 & 5 & -3 \\ -3 & -6 & 0 \\ -1 & 1 & 4 \end{pmatrix} \cdot \begin{pmatrix} 1 & -3 & 1 \\ 1 & 3 & -1 \\ -3 & -2 & 1 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Обе матрицы имеют размер \(3 \times 3\). Вычисляя каждый элемент \(c_{ij}\) как сумму произведений строки \(i\) первой матрицы на столбец \(j\) второй, получаем: \(c_{11}=13, c_{12}=24, c_{13}=-9, c_{21}=-9, c_{22}=-9, c_{23}=3, c_{31}=-12, c_{32}=-2, c_{33}=2\).</p>
+							<p>
+								\[
+								\begin{pmatrix} 13 & 24 & -9 \\ -9 & -9 & 3 \\ -12 & -2 & 2 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 11</b></div>
+					<div id="text-task">
+						<p>Вычислите \(P(A)\), если \(P(x) = -4x^2 - 4x - 2\) и</p>
+						<div class="math-formula" id="k">
+							\[
+							A = \begin{pmatrix} 0 & -3 & 1 \\ -2 & 4 & -1 \\ 4 & -4 & 0 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>По определению \(P(A) = -4A^2 - 4A - 2E\), где \(E\) — единичная матрица. Сначала вычисляем \(A^2 = A \cdot A\) поэлементно:</p>
+							<p>
+								\[
+								A^2 = \begin{pmatrix} 10 & -16 & 3 \\ -12 & 26 & -6 \\ 8 & -28 & 8 \end{pmatrix}
+								\]
+							</p>
+							<p>Умножаем каждое слагаемое на соответствующий скаляр:</p>
+							<p>
+								\[
+								-4A^2 = \begin{pmatrix} -40 & 64 & -12 \\ 48 & -104 & 24 \\ -32 & 112 & -32 \end{pmatrix}, \quad -4A = \begin{pmatrix} 0 & 12 & -4 \\ 8 & -16 & 4 \\ -16 & 16 & 0 \end{pmatrix}, \quad -2E = \begin{pmatrix} -2 & 0 & 0 \\ 0 & -2 & 0 \\ 0 & 0 & -2 \end{pmatrix}
+								\]
+							</p>
+							<p>Складываем все три матрицы:</p>
+							<p>
+								\[
+								\begin{pmatrix} -40 & 64 & -12 \\ 48 & -104 & 24 \\ -32 & 112 & -32 \end{pmatrix} + \begin{pmatrix} 0 & 12 & -4 \\ 8 & -16 & 4 \\ -16 & 16 & 0 \end{pmatrix} + \begin{pmatrix} -2 & 0 & 0 \\ 0 & -2 & 0 \\ 0 & 0 & -2 \end{pmatrix} = \begin{pmatrix} -42 & 76 & -16 \\ 56 & -122 & 28 \\ -48 & 128 & -34 \end{pmatrix}
+								\]
+							</p>
+							<p>Ответ: \(\begin{pmatrix} -42 & 76 & -16 \\ 56 & -122 & 28 \\ -48 & 128 & -34 \end{pmatrix}\)</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 12</b></div>
+					<div id="text-task">
+						<p>Вычислить произведение \(ABC\), где</p>
+						<div class="math-formula" id="k">
+							\[
+							A = \begin{pmatrix} 2002 & 2001 & 2000 \\ 1999 & 1998 & 1997 \\ 1996 & 1995 & 1994 \\ 1993 & 1992 & 1991 \end{pmatrix}, \quad B = \begin{pmatrix} 12 & 6 & -2 \\ 6 & 3 & -1 \\ 18 & 9 & -3 \end{pmatrix}, \quad C = \begin{pmatrix} 1 & 1 \\ -2 & -1 \\ 0 & 3 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Из-за ассоциативности умножения матриц удобно сначала перемножить \(B\) и \(C\) — матрицы меньшего размера. Заметим, что строки матрицы \(B\) пропорциональны: вторая строка равна первой, делённой на 2, третья — первой, умноженной на \(1.5\). Вычисляя \(BC\) поэлементно, получаем нулевую матрицу:</p>
+							<p>
+								\[
+								BC = \begin{pmatrix} 0 & 0 \\ 0 & 0 \\ 0 & 0 \end{pmatrix}
+								\]
+							</p>
+							<p>Тогда \(ABC = A \cdot (BC) = A \cdot O = O\), где \(O\) — нулевая матрица подходящего размера \(4 \times 2\).</p>
+							<p>Ответ: \(ABC = \begin{pmatrix} 0 & 0 \\ 0 & 0 \\ 0 & 0 \\ 0 & 0 \end{pmatrix}\) — нулевая матрица размера \(4 \times 2\).</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 3. Степени матриц -->
+			<div class="tab-panel" id="panel3">
+				<h2>Задание 3. Степени матриц</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Вычислите \(A^3\), если</p>
+						<div class="math-formula" id="k">
+							\[
+							A = \begin{pmatrix} 4 & -7 \\ 0 & 5 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Сначала вычисляем \(A^2 = A \cdot A\):</p>
+							<p>\[ A^2 = \begin{pmatrix} 16 & -63 \\ 0 & 25 \end{pmatrix} \]</p>
+							<p>Затем \(A^3 = A^2 \cdot A\):</p>
+							<p>\[ A^3 = \begin{pmatrix} 16 & -63 \\ 0 & 25 \end{pmatrix} \cdot \begin{pmatrix} 4 & -7 \\ 0 & 5 \end{pmatrix} = \begin{pmatrix} 64 & -427 \\ 0 & 125 \end{pmatrix} \]</p>
+							<p>Ответ: \(\begin{pmatrix} 64 & -427 \\ 0 & 125 \end{pmatrix}\)</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task">
+						<p>Вычислите \(A^{57}\), если</p>
+						<div class="math-formula" id="k">
+							\[
+							A = \begin{pmatrix} -1 & -1 \\ 0 & -1 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Вычислим несколько первых степеней, чтобы уловить закономерность:</p>
+							<p>
+								\[
+								A^2 = \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix}, \quad A^3 = \begin{pmatrix} -1 & -3 \\ 0 & -1 \end{pmatrix}, \quad A^4 = \begin{pmatrix} 1 & 4 \\ 0 & 1 \end{pmatrix}
+								\]
+							</p>
+							<p>Видна закономерность: при чётном \(n\) выполняется \(A^n = \begin{pmatrix} 1 & n \\ 0 & 1 \end{pmatrix}\), а при нечётном \(n\) — \(A^n = \begin{pmatrix} -1 & -n \\ 0 & -1 \end{pmatrix}\). Так как 57 нечётно, получаем:</p>
+							<p>\[ A^{57} = \begin{pmatrix} -1 & -57 \\ 0 & -1 \end{pmatrix} \]</p>
+							<p>Ответ: \(\begin{pmatrix} -1 & -57 \\ 0 & -1 \end{pmatrix}\)</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task">
+						<p>Вычислите \(A^{11}\), если</p>
+						<div class="math-formula" id="k">
+							\[
+							A = \begin{pmatrix} -2 & 2 \\ 2 & 2 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Вычисляем \(A^2\):</p>
+							<p>\[ A^2 = \begin{pmatrix} 8 & 0 \\ 0 & 8 \end{pmatrix} = 8E \]</p>
+							<p>Это упрощает дальнейшие вычисления: \(A^4 = (A^2)^2 = 64E\), \(A^8 = (A^4)^2 = 4096E\). Раскладываем показатель \(11 = 8+2+1\):</p>
+							<p>
+								\[
+								A^{11} = A^8 \cdot A^2 \cdot A = 4096E \cdot 8E \cdot A = 32768\,E \cdot A = 32768\begin{pmatrix} -2 & 2 \\ 2 & 2 \end{pmatrix} = \begin{pmatrix} -65536 & 65536 \\ 65536 & 65536 \end{pmatrix}
+								\]
+							</p>
+							<p>Ответ: \(\begin{pmatrix} -65536 & 65536 \\ 65536 & 65536 \end{pmatrix}\)</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 4</b></div>
+					<div id="text-task">
+						<p>Вычислите \(A^3\), если</p>
+						<div class="math-formula" id="k">
+							\[
+							A = \begin{pmatrix} -3 & -2 \\ 1 & -1 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Вычисляем \(A^2\):</p>
+							<p>\[ A^2 = \begin{pmatrix} 7 & 8 \\ -4 & -1 \end{pmatrix} \]</p>
+							<p>Затем \(A^3 = A^2 \cdot A\):</p>
+							<p>\[ A^3 = \begin{pmatrix} 7 & 8 \\ -4 & -1 \end{pmatrix} \cdot \begin{pmatrix} -3 & -2 \\ 1 & -1 \end{pmatrix} = \begin{pmatrix} -13 & -22 \\ 11 & 9 \end{pmatrix} \]</p>
+							<p>Ответ: \(\begin{pmatrix} -13 & -22 \\ 11 & 9 \end{pmatrix}\)</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 5*</b></div>
+					<div id="text-task">
+						<p>Вычислите \(A^{54}\), если</p>
+						<div class="math-formula" id="k">
+							\[
+							A = \begin{pmatrix} -\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} \\ -\frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Матрица \(A\) — матрица поворота, поэтому её степени периодичны. Вычисляем последовательно:</p>
+							<p>
+								\[
+								A^2 = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}, \quad A^4 = (A^2)^2 = \begin{pmatrix} -1 & 0 \\ 0 & -1 \end{pmatrix} = -E, \quad A^8 = (A^4)^2 = E
+								\]
+							</p>
+							<p>Раскладываем показатель: \(54 = 48 + 6 = 6\cdot8 + 6\). Тогда \(A^{54} = (A^8)^6 \cdot A^6 = E \cdot A^6\). Осталось найти \(A^6 = A^4 \cdot A^2\):</p>
+							<p>
+								\[
+								A^6 = (-E)\cdot A^2 = -A^2 = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}
+								\]
+							</p>
+							<p>Ответ: \(A^{54} = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}\)</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 6*</b></div>
+					<div id="text-task">
+						<p>Вычислите \(A^{106}\), если</p>
+						<div class="math-formula" id="k">
+							\[
+							A = \begin{pmatrix} \frac{1}{2} & \frac{\sqrt{3}}{2} \\ -\frac{\sqrt{3}}{2} & \frac{1}{2} \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Это тоже матрица поворота. Вычисляем последовательные степени:</p>
+							<p>
+								\[
+								A^2 = \begin{pmatrix} -\frac{1}{2} & \frac{\sqrt{3}}{2} \\ -\frac{\sqrt{3}}{2} & -\frac{1}{2} \end{pmatrix}, \quad A^3 = A^2 \cdot A = \begin{pmatrix} -1 & 0 \\ 0 & -1 \end{pmatrix} = -E, \quad A^6 = (A^3)^2 = E
+								\]
+							</p>
+							<p>Раскладываем показатель: \(106 = 102 + 4 = 17\cdot6 + 4\). Тогда \(A^{106} = (A^6)^{17} \cdot A^4 = E \cdot A^4\). Найдём \(A^4 = A^3 \cdot A\):</p>
+							<p>
+								\[
+								A^4 = (-E) \cdot A = -A = \begin{pmatrix} -\frac{1}{2} & -\frac{\sqrt{3}}{2} \\ \frac{\sqrt{3}}{2} & -\frac{1}{2} \end{pmatrix}
+								\]
+							</p>
+							<p>Ответ: \(A^{106} = \begin{pmatrix} -\frac{1}{2} & -\frac{\sqrt{3}}{2} \\ \frac{\sqrt{3}}{2} & -\frac{1}{2} \end{pmatrix}\)</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 4**. Степени матриц n-го порядка -->
+			<div class="tab-panel" id="panel4">
+				<h2>Задание 4**. Вычислить степени квадратных матриц n-го порядка</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Вычислить степень диагональной матрицы:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} \lambda_1 & 0 & ... & 0 \\ 0 & \lambda_2 & ... & 0 \\ ... & ... & ... & ... \\ 0 & 0 & ... & \lambda_n \end{pmatrix}^k = \ ?
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>При перемножении диагональных матриц соответствующие диагональные элементы просто перемножаются, а недиагональные (нулевые) элементы остаются нулями. По индукции при возведении диагональной матрицы в степень \(k\) каждый диагональный элемент возводится в степень \(k\):</p>
+							<p>
+								\[
+								\begin{pmatrix} \lambda_1 & 0 & ... & 0 \\ 0 & \lambda_2 & ... & 0 \\ ... & ... & ... & ... \\ 0 & 0 & ... & \lambda_n \end{pmatrix}^k = \begin{pmatrix} \lambda_1^k & 0 & ... & 0 \\ 0 & \lambda_2^k & ... & 0 \\ ... & ... & ... & ... \\ 0 & 0 & ... & \lambda_n^k \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task">
+						<p>Вычислите:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} 1&1&1&...&1\\0&1&1&...&1\\0&0&1&...&1\\...&...&...&...&...\\0&0&0&...&1 \end{pmatrix}^3
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Данная матрица — верхнетреугольная с единицами на главной диагонали и выше неё. В общем случае для такой матрицы \(A\) элемент в позиции \((i,j)\) матрицы \(A^k\) равен \(\binom{j-i+k-1}{k-1}\) при \(j \ge i\) и равен 0 при \(j \lt i\) (это следует из подсчёта числа путей длины \(k\) по индексам от \(i\) до \(j\)).</p>
+							<p>Для \(k=3\) получаем:</p>
+							<p>
+								\[
+								A^3 = \begin{pmatrix} 1 & 3 & 6 & ... & \frac{n(n+1)}{2} \\ 0 & 1 & 3 & ... & \frac{n(n-1)}{2} \\ ... & ... & ... & ... & ... \\ 0 & 0 & 0 & ... & 1 \end{pmatrix}
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task">
+						<p>Вычислите:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} 0&...&0&\lambda_1\\0&...&\lambda_2&0\\...&...&...&...\\\lambda_n&...&0&0 \end{pmatrix}^k
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Это антидиагональная матрица. При каждом умножении матрицы саму на себя антидиагональ «переходит» в главную диагональ и обратно, поэтому чётность степени \(k\) определяет форму результата:</p>
+							<p>если \(k\) нечётно, то \(A^k\) снова антидиагональна, и на антидиагонали стоят элементы \(\lambda_i^k\);</p>
+							<p>если \(k\) чётно, то \(A^k\) становится диагональной матрицей с элементами \(\lambda_i^k\) на главной диагонали (где \(\lambda_i\) при чётном \(k\) комбинируются попарно симметрично относительно центра).</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 4</b></div>
+					<div id="text-task">
+						<p>Вычислите:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} 0&1&0&...&0&0\\0&0&1&...&0&0\\...&...&...&...&...&...\\0&0&0&...&0&1\\1&0&0&...&0&0 \end{pmatrix}^k
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Данная матрица \(A\) размера \(n \times n\) реализует циклический сдвиг координат вектора: при умножении на вектор-столбец она переставляет координаты по циклу. Отсюда \(A^n = E\).</p>
+							<p>Для произвольного показателя \(k\) разберём три случая:</p>
+							<p>если \(k \lt n\), то \(A^k\) — матрица перестановки, циклически сдвигающая координаты на \(k\) позиций: \(b_{i,\,i+k}=1\) для \(i=\overline{1,n-k}\), \(b_{i,\,i+k-n}=1\) для \(i=\overline{n-k+1,n}\), остальные элементы равны 0;</p>
+							<p>если \(k = n\), то \(A^k = E\) — единичная матрица;</p>
+							<p>если \(k \gt n\), то представим \(k = mn + r\), где \(0 \le r \lt n\); тогда \(A^k = (A^n)^m \cdot A^r = E^m \cdot A^r = A^r\).</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 5*. Характеристическое уравнение матрицы второго порядка -->
+			<div class="tab-panel" id="panel5">
+				<h2>Задание 5*. Характеристическое уравнение матрицы второго порядка</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Доказать, что каждая квадратная матрица второго порядка \(A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}\) удовлетворяет уравнению</p>
+						<div class="math-formula" id="k">
+							\[
+							x^2 - (a+d)x + (ad-bc) = 0
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Речь идёт о равенстве \(A^2 - (a+d)A + (ad-bc)E = O\), где \(A\) подставлена вместо переменной \(x\) в характеристический многочлен. Вычислим \(A^2\):</p>
+							<p>
+								\[
+								A^2 = \begin{pmatrix} a & b \\ c & d \end{pmatrix}\begin{pmatrix} a & b \\ c & d \end{pmatrix} = \begin{pmatrix} a^2+bc & ab+bd \\ ac+cd & bc+d^2 \end{pmatrix}
+								\]
+							</p>
+							<p>Составим левую часть \(A^2 - (a+d)A + (ad-bc)E\) и распишем каждый элемент. Элемент \((1,1)\):</p>
+							<p>\[ a^2+bc - (a+d)a + (ad-bc) = a^2+bc-a^2-ad+ad-bc = 0 \]</p>
+							<p>Элемент \((1,2)\):</p>
+							<p>\[ ab+bd - (a+d)b + 0 = ab+bd-ab-bd = 0 \]</p>
+							<p>Элемент \((2,1)\):</p>
+							<p>\[ ac+cd - (a+d)c + 0 = ac+cd-ac-cd = 0 \]</p>
+							<p>Элемент \((2,2)\):</p>
+							<p>\[ bc+d^2 - (a+d)d + (ad-bc) = bc+d^2-ad-d^2+ad-bc = 0 \]</p>
+							<p>Все элементы равны нулю, следовательно:</p>
+							<p>\[ A^2 - (a+d)A + (ad-bc)E = \begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix} \]</p>
+							<p>что и требовалось доказать.</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 6. Матрицы специального вида -->
+			<div class="tab-panel" id="panel6">
+				<h2>Задание 6. Матрицы специального вида</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Доказать, что если \(A\) и \(B\) — матрицы вида \(\begin{pmatrix} x & y \\ 2y & x \end{pmatrix}\), где \(x, y \in \mathbb{R}\), то</p>
+						<p>а) матрицы \(A+B\) и \(AB\) имеют такой же вид;</p>
+						<p>б) \(AB = BA\).</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Пусть \(A = \begin{pmatrix} x_1 & y_1 \\ 2y_1 & x_1 \end{pmatrix}\), \(B = \begin{pmatrix} x_2 & y_2 \\ 2y_2 & x_2 \end{pmatrix}\), где \(x_1,y_1,x_2,y_2 \in \mathbb{R}\).</p>
+							<p><b>а)</b> Складывая матрицы поэлементно:</p>
+							<p>
+								\[
+								A+B = \begin{pmatrix} x_1+x_2 & y_1+y_2 \\ 2y_1+2y_2 & x_1+x_2 \end{pmatrix} = \begin{pmatrix} x_1+x_2 & y_1+y_2 \\ 2(y_1+y_2) & x_1+x_2 \end{pmatrix}
+								\]
+							</p>
+							<p>Это снова матрица требуемого вида с параметрами \(x = x_1+x_2\), \(y = y_1+y_2\). Теперь вычислим произведение \(AB\):</p>
+							<p>
+								\[
+								AB = \begin{pmatrix} x_1x_2+2y_1y_2 & x_1y_2+y_1x_2 \\ 2y_1x_2+2x_1y_2 & 2y_1y_2+x_1x_2 \end{pmatrix}
+								\]
+							</p>
+							<p>Обозначив \(x = x_1x_2+2y_1y_2\) и \(y = x_1y_2+y_1x_2\), замечаем, что элемент \((2,1)\) равен \(2y_1x_2+2x_1y_2 = 2(x_1y_2+y_1x_2) = 2y\), а элемент \((2,2)\) равен \(2y_1y_2+x_1x_2 = x\). Значит \(AB = \begin{pmatrix} x & y \\ 2y & x \end{pmatrix}\) — тоже матрица требуемого вида.</p>
+							<p><b>б)</b> Вычислим \(BA\) аналогично:</p>
+							<p>
+								\[
+								BA = \begin{pmatrix} x_2x_1+2y_2y_1 & x_2y_1+y_2x_1 \\ 2y_2x_1+2x_2y_1 & 2y_2y_1+x_2x_1 \end{pmatrix}
+								\]
+							</p>
+							<p>Сравнивая с \(AB\), видим, что все четыре элемента совпадают (умножение и сложение вещественных чисел \(x_1,y_1,x_2,y_2\) коммутативны), поэтому \(AB = BA\), что и требовалось доказать.</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 7**. Матрицы и последовательность Фибоначчи -->
+			<div class="tab-panel" id="panel7">
+				<h2>Задание 7**. Матричное представление последовательности Фибоначчи</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Рядом Фибоначчи называется последовательность \(\{x_n\}\), где \(x_0=1, x_1=1, x_n = x_{n-1}+x_{n-2}\) для \(n \ge 2\). Найти матрицу \(A\) такую, что</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{pmatrix} x_n \\ x_{n+1} \end{pmatrix} = A^n \begin{pmatrix} x_0 \\ x_1 \end{pmatrix}, \quad \forall n \in \mathbb{N}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Возьмём матрицу \(A = \begin{pmatrix} 0 & 1 \\ 1 & 1 \end{pmatrix}\) и проверим, что она реализует переход от пары \((x_{n-1}, x_n)\) к паре \((x_n, x_{n+1})\):</p>
+							<p>
+								\[
+								\begin{pmatrix} 0 & 1 \\ 1 & 1 \end{pmatrix}\begin{pmatrix} x_{n-1} \\ x_n \end{pmatrix} = \begin{pmatrix} x_n \\ x_{n-1}+x_n \end{pmatrix} = \begin{pmatrix} x_n \\ x_{n+1} \end{pmatrix}
+								\]
+							</p>
+							<p>что верно по определению рекуррентности Фибоначчи. Следовательно:</p>
+							<p>
+								\[
+								\begin{pmatrix} x_n \\ x_{n+1} \end{pmatrix} = A\begin{pmatrix} x_{n-1} \\ x_n \end{pmatrix} = A^2\begin{pmatrix} x_{n-2} \\ x_{n-1} \end{pmatrix} = ... = A^n\begin{pmatrix} x_0 \\ x_1 \end{pmatrix}
+								\]
+							</p>
+							<p>применяя равенство \(n\) раз подряд, спускаясь от индекса \(n\) до индекса \(0\).</p>
+							<p>Ответ: \(A = \begin{pmatrix} 0 & 1 \\ 1 & 1 \end{pmatrix}\)</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	</br></br></br>
+</div>
+
+<nav class="ios-tabbar" aria-label="Основная навигация">
+  <div class="ios-tabbar-inner">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+  </div>
+</nav>
+</body>
+</html>

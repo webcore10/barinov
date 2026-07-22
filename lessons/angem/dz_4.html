@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link href="../../test1.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARINOV</title>
+	<link rel="shortcut icon" href="../../image/logo.svg" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="stylesheet" href="../assets/css/site.css">
+	<link rel="stylesheet" href="../assets/css/pygments.css">
+	<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&amp;display=swap" rel="stylesheet" media="all">
+	<link href="shrek.ttf" rel="stylesheet" media="all">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<script src="../../nav-merge.js" defer></script>
+	<style>
+		.dz-header {
+			color: gray;
+			font-size: 14px;
+			margin-bottom: 4px;
+		}
+
+		.tabs {
+			margin-top: 15px;
+		}
+
+		.tab-input {
+			display: none;
+		}
+
+		.tab-bar {
+			margin-bottom: 20px;
+		}
+
+		.tab-label {
+			display: inline-block;
+			padding: 10px 18px;
+			margin-right: 8px;
+			margin-bottom: 10px;
+			background-color: #EEF0F4;
+			border: 1px solid #E1E4EC;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: 15px;
+			transition: 0.2s;
+			user-select: none;
+		}
+
+		.tab-label:hover {
+			background-color: #E2E5F7;
+		}
+
+		.tab-input:checked + .tab-label {
+			background-color: #5B62F5;
+			color: white;
+			font-weight: 600;
+		}
+
+		.tab-panel {
+			display: none;
+		}
+
+		#tab1:checked ~ .tab-panels #panel1,
+		#tab2:checked ~ .tab-panels #panel2,
+		#tab3:checked ~ .tab-panels #panel3,
+		#tab4:checked ~ .tab-panels #panel4,
+		#tab5:checked ~ .tab-panels #panel5,
+		#tab6:checked ~ .tab-panels #panel6,
+		#tab7:checked ~ .tab-panels #panel7,
+		#tab8:checked ~ .tab-panels #panel8,
+		#tab9:checked ~ .tab-panels #panel9,
+		#tab10:checked ~ .tab-panels #panel10,
+		#tab11:checked ~ .tab-panels #panel11,
+		#tab12:checked ~ .tab-panels #panel12,
+		#tab13:checked ~ .tab-panels #panel13 {
+			display: block;
+		}
+
+		@media only screen and (max-device-width: 530px) {
+			.tab-label {
+				padding: 9px 14px;
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+<body>
+<button type="button" class="ios-back-btn" aria-label="Назад" onclick="history.back()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="ios-navbar"><span class="ios-navbar-title"></span></div>
+<div class="left-menu">
+  <a href="../../home.html" class="logo"><img src="../../image/logo1.svg" alt="Logo"></a>
+  <div class="nav-list">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../lit.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="15.2" width="15" height="4" rx="1"/><rect x="5.5" y="10.6" width="13" height="4" rx="1"/><rect x="6.5" y="6" width="11" height="4" rx="1"/></svg>Литература</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+    <a href="../../net.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="4.7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 6.7v3.1"/><path d="M10.3 13.4l-3.7 2.1"/><path d="M13.7 13.4l3.7 2.1"/></svg>Сети</a>
+  </div>
+</div>
+
+<div class="main">
+
+<nav class="breadcrumbs">
+  <a href="../../home.html">Главная</a><span class="crumb-sep">/</span>
+  <a href="../../vid.html">Видеоуроки</a><span class="crumb-sep">/</span>
+  <a href="../../angem.html">Аналитическая геометрия от Профиматики</a><span class="crumb-sep">/</span>
+  <span class="crumb-current">Домашнее задание</span>
+</nav>
+
+	<div class="tabs">
+		<input type="radio" name="dz-tab" id="tab1" class="tab-input" checked>
+		<input type="radio" name="dz-tab" id="tab2" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab3" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab4" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab5" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab6" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab7" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab8" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab9" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab10" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab11" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab12" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab13" class="tab-input">
+
+		<div class="tab-bar">
+			<label for="tab1" class="tab-label">Задание 1</label>
+			<label for="tab2" class="tab-label">Задание 2</label>
+			<label for="tab3" class="tab-label">Задание 3</label>
+			<label for="tab4" class="tab-label">Задание 4</label>
+			<label for="tab5" class="tab-label">Задание 5</label>
+			<label for="tab6" class="tab-label">Задание 6</label>
+			<label for="tab7" class="tab-label">Задание 7</label>
+			<label for="tab8" class="tab-label">Задание 8</label>
+			<label for="tab9" class="tab-label">Задание 9</label>
+			<label for="tab10" class="tab-label">Задание 10</label>
+			<label for="tab11" class="tab-label">Задание 11</label>
+			<label for="tab12" class="tab-label">Задание 12</label>
+			<label for="tab13" class="tab-label">Задание 13</label>
+		</div>
+
+		<div class="tab-panels">
+
+			<!-- Задание 1 -->
+			<div class="tab-panel" id="panel1">
+				<h2>Задание 1. Переход между двумя базисами на плоскости</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>На плоскости даны два базиса \(\vec e_1,\vec e_2\) и \(\vec e_1',\vec e_2'\). Векторы второго базиса имеют в первом базисе координаты \((-1,3)\) и \((2,-7)\) соответственно.</p>
+						<p>1) Найти координаты вектора в первом базисе, если известны его координаты \(\alpha_1',\alpha_2'\) во втором базисе.</p>
+						<p>2) Найти координаты вектора во втором базисе, если известны его координаты \(\alpha_1,\alpha_2\) в первом базисе.</p>
+						<p>3) Найти координаты векторов \(\vec e_1,\vec e_2\) во втором базисе.</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Из \(\vec e_1'=-\vec e_1+3\vec e_2,\ \vec e_2'=2\vec e_1-7\vec e_2\) получаем матрицу перехода \(S'=\begin{pmatrix}-1&2\\3&-7\end{pmatrix}\).</p>
+							<p>1) Координаты вектора в первом базисе через координаты во втором связаны формулой \(\begin{pmatrix}x\\y\end{pmatrix}=\begin{pmatrix}-1&2\\3&-7\end{pmatrix}\begin{pmatrix}\alpha_1'\\\alpha_2'\end{pmatrix}\), откуда \(x=-\alpha_1'+2\alpha_2',\ y=3\alpha_1'-7\alpha_2'\).</p>
+							<p>2) Разрешая систему в обратную сторону (методом исключения переменных), получаем формулы перехода в обратную сторону: \(\alpha_1=-7\alpha_1'-2\alpha_2',\ \alpha_2=-3\alpha_1'-\alpha_2'\).</p>
+							<p>3) Выражая \(\vec e_1,\vec e_2\) через \(\vec e_1',\vec e_2'\) (из системы \(\vec e_1'=-\vec e_1+3\vec e_2,\ \vec e_2'=2\vec e_1-7\vec e_2\), домножая первое на 2 и складывая со вторым, затем выражая обратно): \(\vec e_1=-7\vec e_1'-3\vec e_2',\ \vec e_2=-2\vec e_1'-\vec e_2'\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 2 -->
+			<div class="tab-panel" id="panel2">
+				<h2>Задание 2. Переход между двумя системами координат на плоскости</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>На плоскости даны две системы координат \(O,\vec e_1,\vec e_2\) и \(O',\vec e_1',\vec e_2'\). Начало второй системы координат имеет в первой координаты \((-1,3)\), а базисные векторы второй системы имеют в базисе первой координаты \((2,3)\) и \((1,1)\) соответственно.</p>
+						<p>1) Найти координаты точки в первой системе, если известны её координаты \(x',y'\) во второй.</p>
+						<p>2) Найти координаты точки во второй системе, если известны её координаты \(x,y\) в первой.</p>
+						<p>3) Найти координаты точки \(O\) во второй системе и координаты векторов \(\vec e_1,\vec e_2\) в базисе второй системы.</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Матрица перехода базиса (по строкам — координаты \(\vec e_1',\vec e_2'\)): \(S=\begin{pmatrix}2&3\\1&1\end{pmatrix}\).</p>
+							<p>1) \(\begin{pmatrix}x\\y\end{pmatrix}=S\begin{pmatrix}x'\\y'\end{pmatrix}+\begin{pmatrix}-1\\3\end{pmatrix}\), то есть \(x=2x'+y'-1,\ y=3x'+y'+3\).</p>
+							<p>2) Выражая обратно через последовательное исключение переменных: \(x'=-x+y-4,\ y'=3x-2y+9\).</p>
+							<p>3) Записывая как \(\begin{pmatrix}x'\\y'\end{pmatrix}=\begin{pmatrix}-1&1\\3&-2\end{pmatrix}\begin{pmatrix}x\\y\end{pmatrix}+\begin{pmatrix}-4\\9\end{pmatrix}\), точка \(O\) имеет во второй системе координаты \((-4,9)\), и \(\vec e_1=-\vec e_1'+3\vec e_2',\ \vec e_2=\vec e_1'-2\vec e_2'\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 3 -->
+			<div class="tab-panel" id="panel3">
+				<h2>Задание 3. Переход между двумя системами координат в пространстве</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>В пространстве даны две системы координат \(O,\vec e_1,\vec e_2,\vec e_3\) и \(O',\vec e_1',\vec e_2',\vec e_3'\). Начало второй системы координат имеет в первой системе координаты \((1,1,2)\), а базисные векторы второй системы координат имеют в базисе первой системы координаты \((4,2,1),(5,3,2),(3,2,1)\) соответственно.</p>
+						<p>1) Найти координаты точки в первой системе координат, если известны её координаты \(x',y',z'\) во второй системе.</p>
+						<p>2) Найти координаты точки во второй системе, если известны её координаты \(x,y,z\) в первой системе.</p>
+						<p>3) Найти координаты точки \(O\) во второй системе координат и координаты векторов \(\vec e_1,\vec e_2,\vec e_3\) в базисе второй системы.</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Матрица перехода (столбцы — координаты \(\vec e_1',\vec e_2',\vec e_3'\)): \(\begin{pmatrix}4&5&3\\2&3&2\\1&2&1\end{pmatrix}\).</p>
+							<p>1) \(x=4x'+5y'+3z'+1,\ y=2x'+3y'+2z'+1,\ z=x'+2y'+z'+2\).</p>
+							<p>2) Разрешая систему относительно штрихованных переменных методом последовательного исключения: \(x'=x-y-z+2,\ y'=-y+2z-3,\ z'=-x+3y-2z+2\).</p>
+							<p>3) Точка \(O\) имеет во второй системе координаты \((2,-3,2)\), и \(\vec e_1=\vec e_1'-\vec e_3',\ \vec e_2=-\vec e_1'-\vec e_2'+3\vec e_3',\ \vec e_3=-\vec e_1'+2\vec e_2'-2\vec e_3'\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 4 -->
+			<div class="tab-panel" id="panel4">
+				<h2>Задание 4. Полный анализ линейной замены координат</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Координаты \(x,y\) каждой точки плоскости в системе координат \(O,e_1,e_2\) выражаются через координаты \(x',y'\) этой же точки в системе \(O',e_1',e_2'\) формулами \(x=2x'-y'+5,\ y=3x'+y'+2\).</p>
+						<p>1) Выразить координаты \(x',y'\) через координаты \(x,y\).</p>
+						<p>2) Найти координаты начала \(O\) и базисных векторов \(e_1,e_2\) первой системы координат во второй.</p>
+						<p>3) Найти координаты начала \(O'\) и базисных векторов \(e_1',e_2'\) второй системы координат в первой.</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>1) Складывая уравнения (\(x+y=5x'+7\)) и исключая переменные, получаем \(x'=\frac15x+\frac15y-\frac75,\ y'=-\frac35x+\frac25y+\frac{11}{5}\).</p>
+							<p>2) Отсюда точка \(O\) во второй системе имеет координаты \(\left(-\frac75,\frac{11}{5}\right)\), и \(e_1=\frac15e_1'-\frac35e_2',\ e_2=\frac15e_1'+\frac25e_2'\).</p>
+							<p>3) Из исходных формул как из матрицы перехода: точка \(O'\) в первой системе имеет координаты \((5,2)\), и \(e_1'=2e_1+3e_2,\ e_2'=-e_1+e_2\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 5 -->
+			<div class="tab-panel" id="panel5">
+				<h2>Задание 5. Координаты вектора в другом базисе на плоскости</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Найти координаты вектора в базисе \(e_1(2,3),e_2(3,4)\) на плоскости, если известны его координаты \(\alpha_1',\alpha_2'\) в базисе \(e_1'(1,-1),e_2'(2,-3)\).</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Выражая оба базиса через стандартный базис \(\vec i,\vec j\), получаем равенство \(\begin{pmatrix}2&3\\3&4\end{pmatrix}\begin{pmatrix}x\\y\end{pmatrix}=\begin{pmatrix}1&2\\-1&-3\end{pmatrix}\begin{pmatrix}x'\\y'\end{pmatrix}\), где \((x,y)\) — искомые координаты в первом базисе. Решая эту систему методом последовательного исключения переменных, получаем \(\alpha_1=-7\alpha_1'-17\alpha_2',\ \alpha_2=5\alpha_1'+12\alpha_2'\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 6 -->
+			<div class="tab-panel" id="panel6">
+				<h2>Задание 6. Координаты вектора в другом базисе в пространстве</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Найти координаты вектора в базисе \(e_1(1,3,2),e_2(-1,1,0),e_3(2,-1,1)\) в пространстве, если известны его координаты \(\alpha_1',\alpha_2',\alpha_3'\) в базисе \(e_1'(-1,0,2),e_2'(1,1,1),e_3'(4,3,-1)\).</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Составляя равенство матриц перехода через стандартный базис \(\begin{pmatrix}1&-1&2\\3&1&-1\\2&0&1\end{pmatrix}\begin{pmatrix}x\\y\\z\end{pmatrix}=\begin{pmatrix}-1&1&4\\0&1&3\\2&1&-1\end{pmatrix}\begin{pmatrix}x'\\y'\\z'\end{pmatrix}\) и решая систему методом последовательного исключения переменных, получаем: \(\alpha_1=-\frac32\alpha_1'+\frac12\alpha_2'+4\alpha_3',\ \alpha_2=\frac{19}{2}\alpha_1'-\frac12\alpha_2'-18\alpha_3',\ \alpha_3=5\alpha_1'-9\alpha_3'\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 7 -->
+			<div class="tab-panel" id="panel7">
+				<h2>Задание 7. Координаты точки в другой системе координат на плоскости</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Найти координаты точки в системе координат \(O(2,-1),e_1(1,5),e_2(-1,4)\) на плоскости, если известны её координаты \(x',y'\) в системе координат \(O'(3,2),e_1'(1,-1),e_2'(4,2)\).</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Записывая точку через стандартный базис в обеих системах: \(\begin{pmatrix}1&-1\\5&4\end{pmatrix}\begin{pmatrix}x\\y\end{pmatrix}+\begin{pmatrix}2\\-1\end{pmatrix}=\begin{pmatrix}1&4\\-1&2\end{pmatrix}\begin{pmatrix}x'\\y'\end{pmatrix}+\begin{pmatrix}3\\2\end{pmatrix}\), и решая полученную систему относительно \(x,y\) методом последовательного исключения переменных, получаем \(x=\frac13x'+2y'+\frac79,\ y=-\frac23x'-2y'-\frac29\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 8 -->
+			<div class="tab-panel" id="panel8">
+				<h2>Задание 8. Координаты точки в другой системе координат в пространстве</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Найти координаты точки в системе координат \(O(1,3,3),e_1(3,3,1),e_2(3,5,2),e_3(1,2,1)\) в пространстве, если известны её координаты \(x',y',z'\) в системе координат \(O'(-1,0,2),e_1'(1,-2,1),e_2'(4,2,1),e_3'(2,-1,3)\).</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Составляя и решая систему линейных уравнений через последовательное исключение переменных (методом Гаусса), получаем: \(x=4x'+3y'+6z',\ y=-8x'-3y'-13z'-1,\ z=13x'+4y'+23z'+1\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 9 -->
+			<div class="tab-panel" id="panel9">
+				<h2>Задание 9. Трапеция: середина основания и точка пересечения продолжений сторон</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>В трапеции \(ABCD\) длины оснований \(BC\) и \(AD\) относятся как 3:4, точка \(E\) является серединой основания \(AD\), а продолжения боковых сторон пересекаются в точке \(F\). Найти координаты точки плоскости в системе координат \(E,\vec{EB},\vec{EC}\), если известны её координаты \(x',y'\) в системе координат \(F,\vec{FB},\vec{FC}\).</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Вводя обозначения \(\vec{EB}=e_1,\vec{EC}=e_2,\vec{FB}=f_1,\vec{FC}=f_2\), точки \(B(1,0),C(0,1)\) в базисе \(\{e_1,e_2\}\). Из отношения оснований \(BC:AD=3:4\) находим \(A\left(\frac23,-\frac23\right),D\left(-\frac23,\frac23\right)\). По теореме о пропорциональных отрезках находим \(f_1=(-1,-2),f_2=(-2,-1)\), откуда \(\vec{EF}=e_1-f_1=(2,2)\). Для произвольной точки \(P\) с координатами \((x',y')\) во второй системе: \(\vec{EP}=\vec{EF}+x'f_1+y'f_2\), откуда в первой системе координаты точки \(P\) равны \((-x'-2y'+2,\ -2x'-y'+2)\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 10 -->
+			<div class="tab-panel" id="panel10">
+				<h2>Задание 10. Ромб в основании призмы</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>В основании призмы \(ABCDA_1B_1C_1D_1\) лежит ромб с острым углом \(A\), равным \(60°\). Точка \(K\) лежит на продолжении ребра \(AB\) за точку \(B\), причём угол \(ADK\) прямой. Найти координаты точки пространства в системе координат \(A,\vec{AB},\vec{AD},\vec{AA_1}\), если известны её координаты \(x',y',z'\) в системе координат \(K,\vec{KA},\vec{KD},\vec{KC_1}\).</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Так как угол \(ADK\) прямой, то \(DK\parallel BC\Rightarrow\vec{AK}=2\vec{AB}=(2,0,0)\) (по теореме о пропорциональных отрезках). Выразим векторы второго базиса через первые: \(\vec{KA}=-\vec{AK}=(-2,0,0)\); \(\vec{KD}=\vec{AD}-\vec{AK}=(-2,1,0)\); \(\vec{KC_1}=\vec{AD}+\vec{AA_1}-\vec{AB}=(-1,1,1)\). Матрица перехода \(S=\begin{pmatrix}-2&-2&-1\\0&1&1\\0&0&1\end{pmatrix}\), откуда \(x=-2x'-2y'-z'+2,\ y=y'+z',\ z=z'\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 11 -->
+			<div class="tab-panel" id="panel11">
+				<h2>Задание 11. Медианы грани призмы</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>В треугольной призме \(ABCA_1B_1C_1\) точка \(M\) — точка пересечения медиан грани \(A_1B_1C_1\). Найти координаты точки пространства в системе координат \(A,\vec{AB},\vec{AC},\vec{AB_1}\), если известны её координаты \(x',y',z'\) в системе координат \(A_1,\vec{A_1B},\vec{A_1C},\vec{A_1M}\).</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Заметим, что \(\vec{AA_1}=\vec{AB_1}-\vec{AB}=(-1,0,1)\Rightarrow A_1=(-1,0,1)\). Найдём векторы второго базиса через векторы первого: \(\vec{A_1B}=\vec{AB}-\vec{AA_1}=(2,0,-1)\); \(\vec{A_1C}=\vec{AC}-\vec{AA_1}=(1,1,-1)\); \(\vec{A_1M}=\vec{AB_1}-\frac{\vec{AC}-2\vec{AB}}{3}-\vec{AA_1}=\left(\frac13,\frac13,0\right)\). Матрица перехода \(S=\begin{pmatrix}2&1&\frac13\\0&1&\frac13\\-1&-1&0\end{pmatrix}\), откуда \(x=2x'+y'+\frac13z'-1,\ y=y'+\frac13z',\ z=-x'-y'+1\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 12 -->
+			<div class="tab-panel" id="panel12">
+				<h2>Задание 12. Медианы грани тетраэдра</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>В тетраэдре \(ABCD\) точка \(M\) — точка пересечения медиан грани \(BCD\). Найти координаты точки пространства в системе координат \(A,\vec{AB},\vec{AC},\vec{AD}\), если известны её координаты \(x',y',z'\) в системе координат \(M,\vec{MB},\vec{MC},\vec{MA}\).</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Заметим, что \(\vec{AM}=\dfrac{\vec{AB}+\vec{AC}+\vec{AD}}{3}=\left(\frac13,\frac13,\frac13\right)\). Найдём векторы второго базиса: \(\vec{MB}=\vec{AB}-\vec{AM}=\left(\frac23,-\frac13,-\frac13\right)\); \(\vec{MC}=\vec{AC}-\vec{AM}=\left(-\frac13,\frac23,-\frac13\right)\); \(\vec{MA}=-\vec{AM}=\left(-\frac13,-\frac13,-\frac13\right)\). Матрица перехода \(S=\frac13\begin{pmatrix}2&-1&-1\\-1&2&-1\\-1&-1&-1\end{pmatrix}\), откуда \(x=\frac13(2x'-y'-z'+1),\ y=\frac13(-x'+2y'-z'+1),\ z=\frac13(-x'-y'-z'+1)\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 13 -->
+			<div class="tab-panel" id="panel13">
+				<h2>Задание 13. Центр основания правильной шестиугольной пирамиды</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>В правильной шестиугольной пирамиде \(SABCDEF\) с вершиной \(S\) точка \(M\) является центром основания. Найти координаты точки пространства в системе координат \(A,\vec{AB},\vec{AF},\vec{AS}\), если известны её координаты \(x',y',z'\) в системе координат \(S,\vec{SC},\vec{SD},\vec{SM}\).</p>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Заметим, что \(\vec{AM}=\vec{AB}+\vec{AF}=(1,1,0)\Rightarrow M=(1,1,0),\ S=(0,0,1)\). Найдём векторы второго базиса: \(\vec{SC}=-\vec{AS}+2\vec{AB}+\vec{AF}=(2,1,-1)\); \(\vec{SD}=-\vec{AS}+2\vec{AB}+2\vec{AF}=(2,2,-1)\); \(\vec{SM}=-\vec{AS}+\vec{AM}=(1,1,-1)\). Матрица перехода \(S_{матр}=\begin{pmatrix}2&1&1\\2&2&1\\-1&-1&-1\end{pmatrix}\), откуда \(x=2x'+y'+z',\ y=2x'+2y'+z',\ z=-x'-y'-z'+1\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	</br></br></br>
+</div>
+
+
+
+
+
+<nav class="ios-tabbar" aria-label="Основная навигация">
+  <div class="ios-tabbar-inner">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+  </div>
+</nav>
+</body>
+</html>

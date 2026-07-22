@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link href="../../test1.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARINOV</title>
+	<link rel="shortcut icon" href="../../image/logo.svg" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="stylesheet" href="../assets/css/site.css">
+	<link rel="stylesheet" href="../assets/css/pygments.css">
+	<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&amp;display=swap" rel="stylesheet" media="all">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<script src="../../nav-merge.js" defer></script>
+	<style>
+		.dz-note {
+			color: gray;
+			font-size: 14px;
+			margin-bottom: 8px;
+		}
+
+		.tabs {
+			margin-top: 15px;
+		}
+
+		.tab-input {
+			display: none;
+		}
+
+		.tab-bar {
+			margin-bottom: 20px;
+		}
+
+		.tab-label {
+			display: inline-block;
+			padding: 10px 18px;
+			margin-right: 8px;
+			margin-bottom: 10px;
+			background-color: #EEF0F4;
+			border: 1px solid #E1E4EC;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: 15px;
+			transition: 0.2s;
+			user-select: none;
+		}
+
+		.tab-label:hover {
+			background-color: #E2E5F7;
+		}
+
+		.tab-input:checked + .tab-label {
+			background-color: #5B62F5;
+			color: white;
+			font-weight: 600;
+		}
+
+		.tab-panel {
+			display: none;
+		}
+
+		#tab1:checked ~ .tab-panels #panel1,
+		#tab2:checked ~ .tab-panels #panel2,
+		#tab3:checked ~ .tab-panels #panel3,
+		#tab4:checked ~ .tab-panels #panel4,
+		#tab5:checked ~ .tab-panels #panel5,
+		#tab6:checked ~ .tab-panels #panel6,
+		#tab7:checked ~ .tab-panels #panel7 {
+			display: block;
+		}
+
+		@media only screen and (max-device-width: 530px) {
+			.tab-label {
+				padding: 9px 14px;
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+<body>
+<button type="button" class="ios-back-btn" aria-label="Назад" onclick="history.back()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="ios-navbar"><span class="ios-navbar-title"></span></div>
+<div class="left-menu">
+  <a href="../../home.html" class="logo"><img src="../../image/logo1.svg" alt="Logo"></a>
+  <div class="nav-list">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../lit.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="15.2" width="15" height="4" rx="1"/><rect x="5.5" y="10.6" width="13" height="4" rx="1"/><rect x="6.5" y="6" width="11" height="4" rx="1"/></svg>Литература</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+    <a href="../../net.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="4.7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 6.7v3.1"/><path d="M10.3 13.4l-3.7 2.1"/><path d="M13.7 13.4l3.7 2.1"/></svg>Сети</a>
+  </div>
+</div>
+
+<div class="main">
+
+<nav class="breadcrumbs">
+  <a href="../../home.html">Главная</a><span class="crumb-sep">/</span>
+  <a href="../../vid.html">Видеоуроки</a><span class="crumb-sep">/</span>
+  <a href="../../matan.html">Курс по матану для 1-го семестра</a><span class="crumb-sep">/</span>
+  <span class="crumb-current">Домашнее задание №4</span>
+</nav>
+<h1>Домашнее задание к вебинару №4</h1>
+
+<div class="tabs">
+	<input type="radio" name="dz-tab" id="tab1" class="tab-input" checked>
+	<input type="radio" name="dz-tab" id="tab2" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab3" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab4" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab5" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab6" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab7" class="tab-input">
+
+	<div class="tab-bar">
+		<label for="tab1" class="tab-label">Задание 1</label>
+		<label for="tab2" class="tab-label">Задание 2</label>
+		<label for="tab3" class="tab-label">Задание 3</label>
+		<label for="tab4" class="tab-label">Задание 4</label>
+		<label for="tab5" class="tab-label">Задание 5</label>
+		<label for="tab6" class="tab-label">Задание 6</label>
+		<label for="tab7" class="tab-label">Задание 7</label>
+	</div>
+
+	<div class="tab-panels">
+
+		<div class="tab-panel" id="panel1">
+			<h2>Задание 1. Пределы последовательностей</h2>
+			<p class="dz-note">Вычислите указанные пределы.</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to+\infty}\frac{n-1}{n} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{n\to+\infty}\frac{n-1}{n} = \lim_{n\to+\infty}\left(\frac{n}{n}-\frac{1}{n}\right) = \lim_{n\to+\infty}\left(1-\frac{1}{n}\right) = 1-0=1 \]
+						<p>Делим числитель на знаменатель почленно. При \( n\to\infty \) слагаемое \( \frac1n \) стремится к нулю.</p>
+						<p><b>Ответ:</b> 1</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to+\infty}\frac{2n+1}{4n-17} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{n\to+\infty}\frac{2n+1}{4n-17} = \lim_{n\to+\infty}\frac{n\left(2+\frac1n\right)}{n\left(4-\frac{17}{n}\right)} = \lim_{n\to+\infty}\frac{2+\frac1n}{4-\frac{17}{n}} = \frac{2+0}{4-0}=\frac12 \]
+						<p>Выносим \( n \) в числителе и знаменателе, затем сокращаем.</p>
+						<p><b>Ответ:</b> \( \frac12 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to+\infty}\frac{-6n^2+7n-2025}{36n^2+25n+94} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{n\to+\infty}\frac{-6n^2+7n-2025}{36n^2+25n+94} = \lim_{n\to+\infty}\frac{n^2\left(-6+\frac7n-\frac{2025}{n^2}\right)}{n^2\left(36+\frac{25}{n}+\frac{94}{n^2}\right)} = \frac{-6+0-0}{36+0+0}=-\frac16 \]
+						<p>Выносим \( n^2 \) (наивысшую степень) в числителе и знаменателе.</p>
+						<p><b>Ответ:</b> \( -\frac16 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to+\infty}\frac{3n^2+2n+12}{4n^3-12n^2+2} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{n\to+\infty}\frac{3n^2+2n+12}{4n^3-12n^2+2} = \lim_{n\to+\infty}\frac{n^3\left(\frac3n+\frac{2}{n^2}+\frac{12}{n^3}\right)}{n^3\left(4-\frac{12}{n}+\frac{2}{n^3}\right)} = \frac{0+0+0}{4-0+0}=0 \]
+						<p>Выносим \( n^3 \) — наивысшую степень в знаменателе. Все дроби стремятся к нулю.</p>
+						<p><b>Ответ:</b> 0</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to+\infty}\frac{4n-4}{\sqrt{4n^2-5n+8}} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{n\to+\infty}\frac{4n-4}{\sqrt{4n^2-5n+8}} = \lim_{n\to+\infty}\frac{n\left(4-\frac4n\right)}{\sqrt{n^2\left(4-\frac5n+\frac{8}{n^2}\right)}} = \lim_{n\to+\infty}\frac{n(4-0)}{n\sqrt{4-0+0}}=\frac42=2 \]
+						<p>В корне выносим \( n^2 \), затем \( \sqrt{n^2}=n \) (при \( n>0 \)). Сокращаем \( n \).</p>
+						<p><b>Ответ:</b> 2</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 6</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to+\infty}\frac{\sqrt{4n^4+9n^3-10n+1}}{\sqrt[3]{27n^6-n^5+3n^3-12}} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{n\to+\infty}\frac{\sqrt{4n^4+9n^3-10n+1}}{\sqrt[3]{27n^6-n^5+3n^3-12}} = \lim_{n\to+\infty}\frac{\sqrt{4n^4\left(1+\frac{9}{4n}\right)}}{\sqrt[3]{27n^6}} = \lim_{n\to+\infty}\frac{2n^2\sqrt{1+0}}{3n^2}=\frac23 \]
+						<p>В числителе выносим \( 4n^4 \), в знаменателе \( 27n^6 \). Упрощаем корни и сокращаем.</p>
+						<p><b>Ответ:</b> \( \frac23 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 7</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to+\infty}\frac{2n+3}{\sqrt{4n^2-4n+2}-\sqrt{25n^2-n-5}} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Умножим на сопряжённое:</p>
+						\[ \lim_{n\to+\infty}\frac{2n+3}{\sqrt{4n^2-4n+2}-\sqrt{25n^2-n-5}}\cdot\frac{\sqrt{4n^2-4n+2}+\sqrt{25n^2-n-5}}{\sqrt{4n^2-4n+2}+\sqrt{25n^2-n-5}} \]
+						\[ = \lim_{n\to+\infty}\frac{(2n+3)\left(\sqrt{4n^2}+\sqrt{25n^2}\right)}{(4n^2-4n+2)-(25n^2-n-5)} = \lim_{n\to+\infty}\frac{(2n+3)(2n+5n)}{-21n^2-3n+7} = \lim_{n\to+\infty}\frac{14n^2+21n}{-21n^2-3n+7} \]
+						\[ = \lim_{n\to+\infty}\frac{n^2\left(14+\frac{21}{n}\right)}{n^2\left(-21-\frac3n+\frac{7}{n^3}\right)} = \frac{14+0}{-21-0+0}=-\frac23 \]
+						<p>Умножили на сопряжённое, упростили разность квадратов. Вынесли \( n^2 \) и сократили.</p>
+						<p><b>Ответ:</b> \( -\frac23 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 8</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to+\infty}\left(\sqrt{n^2-2n-1}-\sqrt{n^2-7n+3}\right) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Умножим на сопряжённое:</p>
+						\[ \lim_{n\to+\infty}\left(\sqrt{n^2-2n-1}-\sqrt{n^2-7n+3}\right)\cdot\frac{\sqrt{n^2-2n-1}+\sqrt{n^2-7n+3}}{\sqrt{n^2-2n-1}+\sqrt{n^2-7n+3}} \]
+						\[ = \lim_{n\to+\infty}\frac{(n^2-2n-1)-(n^2-7n+3)}{\sqrt{n^2}+\sqrt{n^2}} = \lim_{n\to+\infty}\frac{5n-4}{2n} = \lim_{n\to+\infty}\frac{5-\frac4n}{2}=\frac52 \]
+						<p>После умножения на сопряжённое упрощаем числитель. Выносим \( n \) и сокращаем.</p>
+						<p><b>Ответ:</b> \( \frac52 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 9</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to+\infty}\frac{n!}{(n+1)!-n!} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{n\to+\infty}\frac{n!}{(n+1)!-n!} = \lim_{n\to+\infty}\frac{n!}{n!(n+1)-n!} = \lim_{n\to+\infty}\frac{n!}{n!(n+1-1)} = \lim_{n\to+\infty}\frac1n=0 \]
+						<p>\( (n+1)!=(n+1)\cdot n! \). После сокращения остаётся \( \frac1n \).</p>
+						<p><b>Ответ:</b> 0</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 10</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to+\infty}\frac{7^n-7\cdot3^n+3}{9\cdot5^n-7^n+3^n} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Делим числитель и знаменатель на \( 7^n \):</p>
+						\[ \lim_{n\to+\infty}\frac{7^n-7\cdot3^n+3}{9\cdot5^n-7^n+3^n} = \lim_{n\to+\infty}\frac{1-7\left(\frac37\right)^n+3\left(\frac17\right)^n}{9\left(\frac57\right)^n-1+\left(\frac37\right)^n}=\frac{1-0+0}{0-1+0}=-1 \]
+						<p>Все показательные функции с основанием меньше 1 стремятся к нулю.</p>
+						<p><b>Ответ:</b> −1</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 11</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to+\infty}\frac{1+2+3+\cdots+n}{5n^2+4n-2} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Используем формулу суммы арифметической прогрессии \( 1+2+\cdots+n=\frac{n(n+1)}{2} \):</p>
+						\[ \lim_{n\to+\infty}\frac{1+2+3+\cdots+n}{5n^2+4n-2} = \lim_{n\to+\infty}\frac{\frac{n(n+1)}{2}}{5n^2+4n-2} = \lim_{n\to+\infty}\frac{n^2\left(1+\frac1n\right)}{2n^2\left(5+\frac4n-\frac{2}{n^2}\right)}=\frac{1}{2\cdot5}=\frac{1}{10} \]
+						<p><b>Ответ:</b> \( \frac{1}{10} \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 12</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to+\infty}\left(1+\frac12+\frac14+\cdots+\frac{1}{2^n}\right) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Это сумма бесконечной геометрической прогрессии с \( a_1=1,\ q=\frac12 \):</p>
+						\[ \lim_{n\to+\infty}\left(1+\frac12+\frac14+\cdots+\frac{1}{2^n}\right)=\frac{a_1}{1-q}=\frac{1}{1-\frac12}=2 \]
+						<p><b>Ответ:</b> 2</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 13*</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to+\infty}\frac{1^2+2^2+3^2+\cdots+n^2}{n^3+5n-1} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Используем формулу суммы квадратов \( 1^2+2^2+\cdots+n^2=\dfrac{n(n+1)(2n+1)}{6} \) (доказывается по индукции: база \( n=1,2,3 \) проверяется напрямую, а шаг индукции получается прибавлением \( (n+1)^2 \) к обеим частям и приведением к тому же виду с \( n+1 \)).</p>
+						\[ \lim_{n\to+\infty}\frac{1^2+2^2+\cdots+n^2}{n^3+5n-1} = \lim_{n\to+\infty}\frac{\frac{n(n+1)(2n+1)}{6}}{n^3+5n-1} = \lim_{n\to+\infty}\frac{2n^3\left(1+\frac1n\right)\left(1+\frac{1}{2n}\right)}{6n^3\left(1+\frac{5}{n^2}-\frac{1}{n^3}\right)}=\frac26=\frac13 \]
+						<p><b>Ответ:</b> \( \frac13 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 14</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to+\infty}\frac{a^n-b^n}{a^n+b^n}\quad(a>b>0) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Делим на \( a^n \):</p>
+						\[ \lim_{n\to+\infty}\frac{a^n-b^n}{a^n+b^n} = \lim_{n\to+\infty}\frac{1-\left(\frac ba\right)^n}{1+\left(\frac ba\right)^n}=\frac{1-0}{1+0}=1 \]
+						<p>Так как \( \frac ba<1 \), то \( \left(\frac ba\right)^n\to0 \).</p>
+						<p><b>Ответ:</b> 1 (если \( a>b>0 \))</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 15</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to+\infty}\frac{7^{-n}-7\cdot3^{-n}+3}{9\cdot5^{-n}-7^{-n}+3^{-n}} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Разделим числитель и знаменатель на \( 3^{-n} \):</p>
+						\[ \lim_{n\to+\infty}\frac{7^{-n}-7\cdot3^{-n}+3}{9\cdot5^{-n}-7^{-n}+3^{-n}} = \lim_{n\to+\infty}\frac{(7/3)^{-n}-7+3\cdot3^n}{9(5/3)^{-n}-(7/3)^{-n}+1} \]
+						<p>Поскольку \( 7/3>1,\ 5/3>1 \), то \( (7/3)^{-n}\to0 \) и \( (5/3)^{-n}\to0 \), а \( 3^n\to+\infty \). Таким образом:</p>
+						\[ = \lim_{n\to+\infty}\frac{3\cdot3^n}{1}=+\infty \]
+						<p><b>Ответ:</b> \( +\infty \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 16*</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to+\infty}\left(\frac{1^3+2^3+3^3+\cdots+n^3}{n^3}-\frac n4\right) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Для суммы кубов верно \( 1^3+2^3+\cdots+n^3=\left(\dfrac{n(n+1)}{2}\right)^2 \) (доказывается по индукции аналогично сумме квадратов).</p>
+						\[ \lim_{n\to+\infty}\left(\frac{1^3+2^3+\cdots+n^3}{n^3}-\frac n4\right) = \lim_{n\to+\infty}\left(\frac{n^2(n+1)^2}{4n^3}-\frac n4\right) = \lim_{n\to+\infty}\left(\frac{(n+1)^2}{4n}-\frac n4\right) \]
+						\[ = \lim_{n\to+\infty}\frac{n^2+2n+1-n^2}{4n} = \lim_{n\to+\infty}\frac{2n+1}{4n}=\frac24=\frac12 \]
+						<p><b>Ответ:</b> \( \frac12 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 17**</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to+\infty}\left(\frac{n}{n^2+1}+\frac{n}{n^2+2}+\cdots+\frac{n}{n^2+n}\right) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Обозначим сумму \( S_n \). Заметим, что каждое слагаемое зажато между крайними значениями:</p>
+						\[ \frac{n}{n^2+n}\le\frac{n}{n^2+k}\le\frac{n}{n^2+1},\quad k=1,\ldots,n \]
+						<p>Суммируя \( n \) таких неравенств:</p>
+						\[ n\cdot\frac{n}{n^2+n}\le S_n\le n\cdot\frac{n}{n^2+1}\quad\Longrightarrow\quad \frac{n^2}{n^2+n}\le S_n\le\frac{n^2}{n^2+1} \]
+						<p>Так как</p>
+						\[ \lim_{n\to+\infty}\frac{n^2}{n^2+n}=1,\qquad \lim_{n\to+\infty}\frac{n^2}{n^2+1}=1, \]
+						<p>то по теореме о зажатой последовательности (теорема о двух милиционерах, см. Задание 2):</p>
+						\[ \lim_{n\to+\infty}S_n=1 \]
+						<p><b>Ответ:</b> 1</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel2">
+			<h2>Задание 2(*). Теорема о двух милиционерах</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Пусть \( \displaystyle\lim_{n\to+\infty}x_n=\lim_{n\to+\infty}z_n=a \) и можно найти такой номер \( n_0 \), что при всех \( n\ge n_0 \) выполняется неравенство \( x_n\le y_n\le z_n \). Докажите, что тогда \( \displaystyle\lim_{n\to+\infty}y_n=a \).</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>По определению предела:</p>
+						\[ \forall\varepsilon>0\ \exists n_1:\ \forall n\ge n_1\Rightarrow x_n\in U_\varepsilon(a); \]
+						\[ \forall\varepsilon>0\ \exists n_2:\ \forall n\ge n_2\Rightarrow z_n\in U_\varepsilon(a). \]
+						<p>Возьмём \( n_3=\max(n_1,n_2,n_0) \). Тогда для всех \( n\ge n_3 \) выполняются неравенства:</p>
+						\[ a-\varepsilon < x_n \le y_n \le z_n < a+\varepsilon, \]
+						<p>что означает \( y_n\in U_\varepsilon(a) \).</p>
+						<p>Следовательно, по определению предела:</p>
+						\[ \lim_{n\to\infty}y_n=a.\ \blacksquare \]
+						<p>Примечание: данная теорема называется теоремой о двух милиционерах или теоремой о зажатой последовательности.</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel3">
+			<h2>Задание 3(*). Предел геометрической последовательности \( q^n \)</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Докажите, что если \( |q|<1 \), то справедливо: \( \displaystyle\lim_{n\to\infty}q^n=0 \). Подсказка: вспомните про неравенство Бернулли.</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p><b>1) При \( q=0 \)</b> утверждение очевидно, так как \( 0^n=0 \) для всех \( n\in\mathbb{N} \).</p>
+						<p><b>2) Пусть \( 0\lt q<1 \).</b> Представим \( q \) в виде \( q=\dfrac{1}{1+\alpha},\ \alpha>0 \). Используем неравенство Бернулли (доказываемое по индукции):</p>
+						\[ (1+\alpha)^n\ge1+n\alpha,\quad \alpha>-1,\ n\in\mathbb{N}. \]
+						<p>Тогда получаем оценку:</p>
+						\[ 0\lt q^n=\frac{1}{(1+\alpha)^n}\le\frac{1}{1+n\alpha}<\frac1\alpha\cdot\frac1n=z_n. \]
+						<p>Так как \( \displaystyle\lim_{n\to\infty}\frac1n=0 \), то \( \displaystyle\lim_{n\to\infty}z_n=0 \), и по теореме о сжатой последовательности:</p>
+						\[ \lim_{n\to\infty}q^n=0. \]
+						<p><b>3) Пусть \( -1\lt q<0 \).</b> Рассмотрим \( p=-q \); тогда \( 0\lt p<1 \). По доказанному в пункте 2: \( \displaystyle\lim_{n\to\infty}p^n=0 \).</p>
+						<p>Последовательность \( q^n=(-1)^np^n \) является бесконечно малой, так как \( (-1)^n \) — ограниченная последовательность \( (|(-1)^n|=1) \), а \( p^n \) — бесконечно малая последовательность. По теореме о произведении ограниченной и бесконечно малой последовательностей:</p>
+						\[ \lim_{n\to\infty}q^n=0.\ \blacksquare \]
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel4">
+			<h2>Задание 4. Построение последовательностей с заданным пределом разности</h2>
+			<p class="dz-note">Придумайте такие последовательности \( x_n \) и \( y_n \), чтобы \( \lim_{n\to\infty}x_n=+\infty \) и \( \lim_{n\to\infty}y_n=+\infty \), и при этом выполнялось указанное условие для \( (x_n-y_n) \).</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b> \( \displaystyle\lim_{n\to\infty}(x_n-y_n)=+\infty \)</div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Возьмём \( x_n=n^2,\ y_n=n \). Тогда:</p>
+						\[ \lim_{n\to\infty}(n^2-n)=\lim_{n\to\infty}n(n-1)=+\infty \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b> \( \displaystyle\lim_{n\to\infty}(x_n-y_n)=1 \)</div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Возьмём \( x_n=n+1,\ y_n=n \). Тогда:</p>
+						\[ \lim_{n\to\infty}(n+1-n)=\lim_{n\to\infty}1=1 \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b> \( \displaystyle\lim_{n\to\infty}(x_n-y_n)=-\infty \)</div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Возьмём \( x_n=n,\ y_n=n^2 \). Тогда:</p>
+						\[ \lim_{n\to\infty}(n-n^2)=\lim_{n\to\infty}(-n^2+n)=-\infty \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b> Последовательность \( (x_n-y_n) \) не имеет ни конечного, ни бесконечного предела</div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Возьмём \( x_n=n+(-1)^n,\ y_n=n \). Тогда:</p>
+						\[ x_n-y_n=(-1)^n \]
+						<p><b>Доказательство:</b> последовательность \( (-1)^n \) колеблется между \( -1 \) и \( 1 \) и не имеет предела, так как:</p>
+						\[ \liminf_{n\to\infty}(-1)^n=-1\ne1=\limsup_{n\to\infty}(-1)^n \]
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel5">
+			<h2>Задание 5. Построение последовательностей с заданным пределом произведения</h2>
+			<p class="dz-note">Придумайте такие последовательности \( x_n \) и \( y_n \), чтобы \( \lim_{n\to\infty}x_n=0 \) и \( \lim_{n\to\infty}y_n=\infty \), и при этом выполнялось указанное условие для \( x_ny_n \).</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b> \( \displaystyle\lim_{n\to\infty}x_ny_n=0 \)</div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Последовательности: \( x_n=\dfrac{1}{n^2},\ y_n=n \).</p>
+						\[ \lim_{n\to\infty}\frac{1}{n^2}\cdot n=\lim_{n\to\infty}\frac1n=0 \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b> \( \displaystyle\lim_{n\to\infty}x_ny_n=1 \)</div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Последовательности: \( x_n=\dfrac1n,\ y_n=n \).</p>
+						\[ \lim_{n\to\infty}\frac1n\cdot n=\lim_{n\to\infty}1=1 \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b> \( \displaystyle\lim_{n\to\infty}x_ny_n=\infty \)</div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Последовательности: \( x_n=\dfrac{1}{\sqrt n},\ y_n=n \).</p>
+						\[ \lim_{n\to\infty}\frac{1}{\sqrt n}\cdot n=\lim_{n\to\infty}\sqrt n=+\infty \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b> Последовательность \( x_ny_n \) не имеет ни конечного, ни бесконечного предела</div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Последовательности: \( x_n=\dfrac{(-1)^n}{n},\ y_n=n \).</p>
+						\[ x_ny_n=(-1)^n \]
+						<p><b>Доказательство:</b> последовательность \( (-1)^n \) не имеет предела, так как подпоследовательность для чётных \( n \) стремится к 1, а для нечётных \( n \) — к \( -1 \). Поскольку существуют подпоследовательности, сходящиеся к разным пределам, исходная последовательность расходится.</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel6">
+			<h2>Задание 6(*). Телескопическая сумма</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ \text{Докажите, что } \lim_{n\to\infty}\sum_{k=1}^{n}\frac{1}{k(k+1)}=1 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Используем метод разложения дроби на простейшие (метод телескопического суммирования). Заметим, что:</p>
+						\[ \frac{1}{k(k+1)}=\frac1k-\frac{1}{k+1} \]
+						<p>Запишем частичную сумму в разложенном виде:</p>
+						\[ S_n=\sum_{k=1}^{n}\frac{1}{k(k+1)}=\sum_{k=1}^{n}\left(\frac1k-\frac{1}{k+1}\right)=\left(1-\frac12\right)+\left(\frac12-\frac13\right)+\cdots+\left(\frac1n-\frac{1}{n+1}\right) \]
+						<p>Сумма является телескопической — большинство членов взаимно уничтожаются:</p>
+						\[ S_n=1-\frac{1}{n+1} \]
+						<p>Вычислим предел:</p>
+						\[ \lim_{n\to\infty}S_n=\lim_{n\to\infty}\left(1-\frac{1}{n+1}\right)=1-0=1 \]
+						<p>Таким образом, \( \displaystyle\lim_{n\to\infty}\sum_{k=1}^{n}\frac{1}{k(k+1)}=1.\ \blacksquare \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel7">
+			<h2>Задание 7(*). Телескопические суммы</h2>
+			<p class="dz-note">Найти указанные пределы.</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to\infty}\left(\frac{1}{1\cdot3}+\frac{1}{3\cdot5}+\cdots+\frac{1}{(2n-1)(2n+1)}\right) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Разложим общий член суммы на простейшие дроби:</p>
+						\[ \frac{1}{(2k-1)(2k+1)}=\frac12\left(\frac{1}{2k-1}-\frac{1}{2k+1}\right) \]
+						<p>Тогда сумма становится телескопической:</p>
+						\[ S_n=\frac12\left[\left(1-\frac13\right)+\left(\frac13-\frac15\right)+\cdots+\left(\frac{1}{2n-1}-\frac{1}{2n+1}\right)\right]=\frac12\left(1-\frac{1}{2n+1}\right) \]
+						<p>Предел суммы:</p>
+						\[ \lim_{n\to\infty}S_n=\frac12(1-0)=\frac12 \]
+						<p><b>Ответ:</b> \( \frac12 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to\infty}\frac{1}{\sqrt n}\left(\frac{1}{\sqrt1+\sqrt3}+\frac{1}{\sqrt3+\sqrt5}+\cdots+\frac{1}{\sqrt{2n-1}+\sqrt{2n+1}}\right) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Заметим, что:</p>
+						\[ \frac{1}{\sqrt{2k-1}+\sqrt{2k+1}}=\frac{\sqrt{2k+1}-\sqrt{2k-1}}{2} \]
+						<p><b>Доказательство:</b> \( \left(\sqrt{2k+1}-\sqrt{2k-1}\right)\left(\sqrt{2k+1}+\sqrt{2k-1}\right)=2 \), откуда и следует равенство.</p>
+						<p>Сумма преобразуется к виду:</p>
+						\[ S_n=\frac12\sum_{k=1}^{n}\left(\sqrt{2k+1}-\sqrt{2k-1}\right)=\frac12\left(\sqrt{2n+1}-1\right) \]
+						\[ \lim_{n\to\infty}\frac{S_n}{\sqrt n}=\frac12\lim_{n\to\infty}\frac{\sqrt{2n+1}-1}{\sqrt n}=\frac12\lim_{n\to\infty}\sqrt{2+\frac1n}=\frac{\sqrt2}{2} \]
+						<p><b>Ответ:</b> \( \frac{\sqrt2}{2} \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to\infty}\left(\frac{1}{1\cdot2\cdot3}+\frac{1}{2\cdot3\cdot4}+\cdots+\frac{1}{n(n+1)(n+2)}\right) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Разложим общий член суммы:</p>
+						\[ \frac{1}{k(k+1)(k+2)}=\frac12\left(\frac1k-\frac{2}{k+1}+\frac{1}{k+2}\right) \]
+						<p>Сумма становится телескопической:</p>
+						\[ S_n=\frac12\left[\left(\frac11-\frac22+\frac13\right)+\left(\frac12-\frac23+\frac14\right)+\cdots+\left(\frac1n-\frac{2}{n+1}+\frac{1}{n+2}\right)\right] \]
+						\[ =\frac12\left(\frac11-\frac22+\frac12-\frac{1}{n+1}+\frac{1}{n+2}\right)=\frac14-\frac{1}{2(n+1)}+\frac{1}{2(n+2)} \]
+						<p>Предел суммы:</p>
+						\[ \lim_{n\to\infty}S_n=\frac14-0+0=\frac14 \]
+						<p><b>Ответ:</b> \( \frac14 \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+</div>
+
+
+<nav class="ios-tabbar" aria-label="Основная навигация">
+  <div class="ios-tabbar-inner">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+  </div>
+</nav>
+</body>
+</html>

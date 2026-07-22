@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link href="../test1.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARINOV</title>
+	<link rel="shortcut icon" href="../image/logo.svg" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="stylesheet" href="../assets/css/site.css">
+	<link rel="stylesheet" href="../assets/css/pygments.css">
+	<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&amp;display=swap" rel="stylesheet" media="all">
+	<link href="shrek.ttf" rel="stylesheet" media="all">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<script src="../nav-merge.js" defer></script>
+</head>
+<body>
+<button type="button" class="ios-back-btn" aria-label="Назад" onclick="history.back()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="ios-navbar"><span class="ios-navbar-title"></span></div>
+<div class="left-menu">
+  <a href="../home.html" class="logo"><img src="../image/logo1.svg" alt="Logo"></a>
+  <div class="nav-list">
+    <a href="../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../zadach.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../lit.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="15.2" width="15" height="4" rx="1"/><rect x="5.5" y="10.6" width="13" height="4" rx="1"/><rect x="6.5" y="6" width="11" height="4" rx="1"/></svg>Литература</a>
+    <a href="../vid.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+    <a href="../net.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="4.7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 6.7v3.1"/><path d="M10.3 13.4l-3.7 2.1"/><path d="M13.7 13.4l3.7 2.1"/></svg>Сети</a>
+  </div>
+</div>
+
+<div class="main">
+	<nav class="breadcrumbs">
+  <a href="../home.html">Главная</a><span class="crumb-sep">/</span>
+  <a href="../zadach.html">Задачник</a><span class="crumb-sep">/</span>
+  <span class="crumb-current">Параметры</span>
+</nav>
+	<h1>Параметры</h1>
+ <div class="task-container">
+			
+            <div class="task-title"><b>Задача №1</b>   <span style="float: right; color: gray;"><i>МФТИ, 2025</i></span></div>
+			<div id = "text-task">
+            <p>Найдите все значения параметра <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math> такие, что неравенство</p>
+            <div class="math-formula">
+                \[3<\frac{x^2-3ax-2}{x^2-x+1}\le2\]
+            </div>
+            <p>верно при всех действительных <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math>.</p>
+			</div>
+
+           <details class="details">
+				  <summary class="details__title">Посмотреть решение</summary>
+				  <div class="details__content">
+					<p><b>Решение.</b> <i>Замечание:</i> запись <code>3&lt;...</code> в условии, по-видимому, опечатка (при 3&lt;y≤2 неравенство невозможно ни при каком x, так как 3&gt;2) — верно должно быть <code>&minus;3&lt;...</code>. Решаем именно с этой поправкой.</p>
+					<p>Знаменатель <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>&#8722;</mo><mi>x</mi><mo>+</mo><mn>1</mn></math> имеет отрицательный дискриминант <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>(</mo><mo>&#8722;</mo><mn>3</mn><mo>)</mo></math>, значит всегда положителен — можно умножать неравенства на него без смены знака.</p>
+					<p><i>Правая часть</i> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&#8804;</mo><mn>2</mn></math> для всех x:</p>
+					<div class="math-formula">
+					\[
+					x^2-3ax-2\le2(x^2-x+1)\ \Longleftrightarrow\ x^2+(3a-2)x+4\ge0\ \text{для всех }x.
+					\]
+					</div>
+					<p>Дискриминант должен быть <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&#8804;</mo><mn>0</mn></math>: <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>(</mo><mn>3</mn><mi>a</mi><mo>&#8722;</mo><mn>2</mn><msup><mo>)</mo><mn>2</mn></msup><mo>&#8722;</mo><mn>16</mn><mo>&#8804;</mo><mn>0</mn></math> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&#8660;</mo><mo>&#8722;</mo><mn>4</mn><mo>&#8804;</mo><mn>3</mn><mi>a</mi><mo>&#8722;</mo><mn>2</mn><mo>&#8804;</mo><mn>4</mn><mo>&#8660;</mo><mo>&#8722;</mo><mfrac><mn>2</mn><mn>3</mn></mfrac><mo>&#8804;</mo><mi>a</mi><mo>&#8804;</mo><mn>2</mn></math>.</p>
+					<p><i>Левая часть</i> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&#8722;</mo><mn>3</mn><mo>&lt;</mo></math> для всех x:</p>
+					<div class="math-formula">
+					\[
+					x^2-3ax-2 > -3(x^2-x+1)\ \Longleftrightarrow\ 4x^2-(3a+3)x+1>0\ \text{для всех }x.
+					\]
+					</div>
+					<p>Дискриминант должен быть <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&lt;</mo><mn>0</mn></math>: <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>(</mo><mn>3</mn><mi>a</mi><mo>+</mo><mn>3</mn><msup><mo>)</mo><mn>2</mn></msup><mo>&#8722;</mo><mn>16</mn><mo>&lt;</mo><mn>0</mn></math> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&#8660;</mo><mo>&#8722;</mo><mfrac><mn>7</mn><mn>3</mn></mfrac><mo>&lt;</mo><mi>a</mi><mo>&lt;</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></math>.</p>
+					<p>Пересекая оба условия: <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>[</mo><mo>&#8722;</mo><mfrac><mn>2</mn><mn>3</mn></mfrac><mo>;</mo><mn>2</mn><mo>]</mo><mo>&#8745;</mo><mo>(</mo><mo>&#8722;</mo><mfrac><mn>7</mn><mn>3</mn></mfrac><mo>;</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>)</mo><mo>=</mo><mo>[</mo><mo>&#8722;</mo><mfrac><mn>2</mn><mn>3</mn></mfrac><mo>;</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>)</mo></math>.</p>
+					<p><b>Ответ (при поправке &minus;3):</b> \( a\in\left[-\dfrac23;\ \dfrac13\right). \)</p>
+				  </div>
+				</details>
+        </div>
+		<div class="task-container">
+
+            <div class="task-title"><b>Задача №2</b>   <span style="float: right; color: gray;"><i>ОММО-2018, 11 класс</i></span></div>
+			<div id = "text-task">
+            <p>При каких значениях параметра <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math> уравнение</p>
+            <div class="math-formula" id="k">
+                \[
+				3^{x^2-2ax+a^2}=ax^2-2a^2x+a^3+a^2-4a+4
+				\]
+            </div>
+            <p>имеет ровно одно решение?</p>
+			</div>
+           <details class="details">
+				  <summary class="details__title">Посмотреть решение</summary>
+				  <div class="details__content">
+					<p><b>Решение.</b> Заметим, что <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>&#8722;</mo><mn>2</mn><mi>a</mi><mi>x</mi><mo>+</mo><msup><mi>a</mi><mn>2</mn></msup><mo>=</mo><msup><mo>(</mo><mi>x</mi><mo>&#8722;</mo><mi>a</mi><msup><mo>)</mo><mn>2</mn></msup></math>, а правая часть равна <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><msup><mo>(</mo><mi>x</mi><mo>&#8722;</mo><mi>a</mi><msup><mo>)</mo><mn>2</mn></msup><mo>+</mo><mo>(</mo><mi>a</mi><mo>&#8722;</mo><mn>2</mn><msup><mo>)</mo><mn>2</mn></msup></math> (проверяется раскрытием скобок). Обозначим <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>=</mo><mo>(</mo><mi>x</mi><mo>&#8722;</mo><mi>a</mi><msup><mo>)</mo><mn>2</mn></msup><mo>&#8805;</mo><mn>0</mn></math>. Уравнение принимает вид</p>
+					<div class="math-formula">
+					\[
+					3^{t} = at + (a-2)^2.
+					\]
+					</div>
+					<p>Каждому <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>&gt;</mo><mn>0</mn></math> отвечают <b>два</b> значения <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mi>a</mi><mo>&#177;</mo><msqrt><mi>t</mi></msqrt></math>, а <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>=</mo><mn>0</mn></math> даёт ровно одно <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mi>a</mi></math>. Значит, ровно одно решение по <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math> возможно только если <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>=</mo><mn>0</mn></math> — решение уравнения по <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi></math>, и <i>других</i> корней <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>&gt;</mo><mn>0</mn></math> нет.</p>
+					<p>При <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>=</mo><mn>0</mn></math>: <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>=</mo><mo>(</mo><mi>a</mi><mo>&#8722;</mo><mn>2</mn><msup><mo>)</mo><mn>2</mn></msup></math>, откуда <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mn>1</mn></math> или <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mn>3</mn></math>.</p>
+					<p><i>Проверка <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mn>1</mn></math>:</i> уравнение <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>3</mn><mi>t</mi></msup><mo>=</mo><mi>t</mi><mo>+</mo><mn>1</mn></math>. Функция <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>g</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>=</mo><msup><mn>3</mn><mi>t</mi></msup><mo>&#8722;</mo><mi>t</mi><mo>&#8722;</mo><mn>1</mn></math> имеет <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>g</mi><mo>(</mo><mn>0</mn><mo>)</mo><mo>=</mo><mn>0</mn></math> и <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>g</mi><mo>&#8242;</mo></msup><mo>(</mo><mi>t</mi><mo>)</mo><mo>=</mo><msup><mn>3</mn><mi>t</mi></msup><mi>ln</mi><mn>3</mn><mo>&#8722;</mo><mn>1</mn><mo>&gt;</mo><mn>0</mn></math> при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>&#8805;</mo><mn>0</mn></math> (так как <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>ln</mi><mn>3</mn><mo>&gt;</mo><mn>1</mn></math>), значит <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>g</mi></math> строго возрастает и других корней при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>&gt;</mo><mn>0</mn></math> нет. Подходит.</p>
+					<p><i>Проверка <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mn>3</mn></math>:</i> уравнение <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>3</mn><mi>t</mi></msup><mo>=</mo><mn>3</mn><mi>t</mi><mo>+</mo><mn>1</mn></math>. Здесь <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>h</mi><mo>&#8242;</mo></msup><mo>(</mo><mn>0</mn><mo>)</mo><mo>=</mo><mi>ln</mi><mn>3</mn><mo>&#8722;</mo><mn>3</mn><mo>&lt;</mo><mn>0</mn></math>, то есть <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>=</mo><msup><mn>3</mn><mi>t</mi></msup><mo>&#8722;</mo><mn>3</mn><mi>t</mi><mo>&#8722;</mo><mn>1</mn></math> сначала убывает от <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mo>(</mo><mn>0</mn><mo>)</mo><mo>=</mo><mn>0</mn></math>, значит становится отрицательной, а затем (при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>&#8594;</mo><mo>+</mo><mi>&#8734;</mo></math>) снова возрастает к <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>+</mo><mi>&#8734;</mo></math> — значит есть ещё один положительный корень <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>t</mi><mo>*</mo></msub><mo>&gt;</mo><mn>0</mn></math>, дающий два дополнительных <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math>. Итого 3 решения — не подходит.</p>
+					<p><b>Ответ:</b> \( a\in\{1\}. \)</p>
+				  </div>
+				</details>
+        </div>
+		<div class="task-container">
+			
+            <div class="task-title"><b>Задача №3</b>   <span style="float: right; color: gray;"><i>ОММО-2017, 11 класс</i></span></div>
+			<div id = "text-task">
+            <p>При каких значениях параметра <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math> уравнение</p>
+            <div class="math-formula" id="k">
+                $$
+				4^{|x-a|}\log_{1/3}{(x^2-2x+4)}+2^{x^2-2x}\log_{\sqrt{3}}{(2|x-a|+3)}=0
+				$$
+            </div>
+            <p>имеет ровно три решения?</p>
+			</div>
+           <details class="details">
+				  <summary class="details__title">Посмотреть решение</summary>
+				  <div class="details__content">
+					<p><b>Решение.</b> Обозначим <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>u</mi><mo>=</mo><mo>|</mo><mi>x</mi><mo>&#8722;</mo><mi>a</mi><mo>|</mo><mo>&#8805;</mo><mn>0</mn></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi><mo>=</mo><mo>(</mo><mi>x</mi><mo>&#8722;</mo><mn>1</mn><msup><mo>)</mo><mn>2</mn></msup><mo>&#8805;</mo><mn>0</mn></math>. Так как <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>log</mi><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></math><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>(</mo><mi>v</mi><mo>)</mo><mo>=</mo><mo>&#8722;</mo><msub><mi>log</mi><mn>3</mn></msub><mi>v</mi></math> и <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>log</mi><msqrt><mn>3</mn></msqrt></msub><mi>w</mi><mo>=</mo><mn>2</mn><msub><mi>log</mi><mn>3</mn></msub><mi>w</mi></math>, а <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>&#8722;</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>4</mn><mo>=</mo><mi>s</mi><mo>+</mo><mn>3</mn></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>&#8722;</mo><mn>2</mn><mi>x</mi><mo>=</mo><mi>s</mi><mo>&#8722;</mo><mn>1</mn></math>, уравнение переписывается как</p>
+					<div class="math-formula">
+					\[
+					4^u\log_3(s+3) = 2^{s}\log_3(2u+3)\ \Longleftrightarrow\ \frac{2^{2u}}{\log_3(2u+3)}=\frac{2^{s}}{\log_3(s+3)}.
+					\]
+					</div>
+					<p>Рассмотрим <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>F</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>=</mo><msup><mn>2</mn><mi>t</mi></msup><mo>/</mo><msub><mi>log</mi><mn>3</mn></msub><mo>(</mo><mi>t</mi><mo>+</mo><mn>3</mn><mo>)</mo></math> при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>&#8805;</mo><mn>0</mn></math>: числитель растёт экспоненциально, знаменатель — логарифмически, и можно проверить, что <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>F</mi></math> строго возрастает. Значит равенство <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>F</mi><mo>(</mo><mn>2</mn><mi>u</mi><mo>)</mo><mo>=</mo><mi>F</mi><mo>(</mo><mi>s</mi><mo>)</mo></math> равносильно <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mi>u</mi><mo>=</mo><mi>s</mi></math>, то есть</p>
+					<div class="math-formula">
+					\[
+					2|x-a| = (x-1)^2.
+					\]
+					</div>
+					<p>Решая относительно <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math> (что удобнее): <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mi>x</mi><mo>&#8722;</mo><mfrac><mo>(</mo><mi>x</mi><mo>&#8722;</mo><mn>1</mn><msup><mo>)</mo><mn>2</mn></msup><mn>2</mn></mfrac></math> (ветвь <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&#8805;</mo><mi>a</mi></math>) или <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mi>x</mi><mo>+</mo><mfrac><mo>(</mo><mi>x</mi><mo>&#8722;</mo><mn>1</mn><msup><mo>)</mo><mn>2</mn></msup><mn>2</mn></mfrac></math> (ветвь <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&lt;</mo><mi>a</mi></math>). Обе ветви автоматически удовлетворяют своим условиям знака (проверяется подстановкой), поэтому для каждого <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math> обе формулы дают корректные пары <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>(</mo><mi>x</mi><mo>,</mo><mi>a</mi><mo>)</mo></math>.</p>
+					<p>Обозначим <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>g</mi><mn>1</mn></msub><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mo>&#8722;</mo><mfrac><msup><mi>x</mi><mn>2</mn></msup><mn>2</mn></mfrac><mo>+</mo><mn>2</mn><mi>x</mi><mo>&#8722;</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></math> (парабола вниз, максимум <math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mn>3</mn><mn>2</mn></mfrac></math> при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>2</mn></math>) и <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>g</mi><mn>2</mn></msub><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mfrac><msup><mi>x</mi><mn>2</mn></msup><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></math> (парабола вверх, минимум <math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mn>1</mn><mn>2</mn></mfrac></math> при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>0</mn></math>). Число решений при данном <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math> — это число корней <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>g</mi><mn>1</mn></msub><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>a</mi></math> плюс число корней <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>g</mi><mn>2</mn></msub><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>a</mi></math> (с учётом общей точки <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>1</mn></math>, где <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>g</mi><mn>1</mn></msub><mo>(</mo><mn>1</mn><mo>)</mo><mo>=</mo><msub><mi>g</mi><mn>2</mn></msub><mo>(</mo><mn>1</mn><mo>)</mo><mo>=</mo><mn>1</mn></math>).</p>
+					<p>Считая по случаям <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&lt;</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>&lt;</mo><mi>a</mi><mo>&lt;</mo><mn>1</mn></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mn>1</mn></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>&lt;</mo><mi>a</mi><mo>&lt;</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&gt;</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></math>, получаем суммарное число решений <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>2</mn></math> соответственно. Ровно 3 решения — при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>,</mo><mn>1</mn><mo>,</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></math>.</p>
+					<p><b>Ответ:</b> \( a \in \left\{ \dfrac{1}{2};1;\dfrac{3}{2} \right\}. \)</p>
+				  </div>
+				</details>
+        </div>
+		<div class="task-container">
+			
+            <div class="task-title"><b>Задача №4</b>  <span style="float: right; color: gray;"><i>ОММО-2019, 11 класс</i></span></div>
+			<div id = "text-task">
+            <p>При каких значениях параметра <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math> уравнение</p>
+            <div class="math-formula" id="k">
+                $$
+				\log_2{(2x^2+(2a+1)x-2x)}-2\log_4{(x^2+3ax+2a^2)}=0
+				$$
+            </div>
+            <p>имеет два различных корня, сумма квадратов которых больше 4?</p>
+			</div>
+           <details class="details">
+				  <summary class="details__title">Посмотреть решение</summary>
+				  <div class="details__content">
+					<p><b>Решение.</b> Так как <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><msub><mi>log</mi><mn>4</mn></msub><mi>w</mi><mo>=</mo><msub><mi>log</mi><mn>2</mn></msub><mi>w</mi></math>, уравнение равносильно (при выполнении ОДЗ)</p>
+					<div class="math-formula">
+					\[
+					\frac{2x^2+(2a-1)x}{x^2+3ax+2a^2}=1,\qquad 2x^2+(2a-1)x>0,\ \ x^2+3ax+2a^2>0.
+					\]
+					</div>
+					<p>Приводя к общему знаменателю (домножение допустимо, так как знаменатель по ОДЗ положителен):</p>
+					<div class="math-formula">
+					\[
+					2x^2+(2a-1)x = x^2+3ax+2a^2 \;\Longrightarrow\; x^2-(a+1)x-2a^2=0.
+					\]
+					</div>
+					<p>Дискриминант <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>D</mi><mo>=</mo><mo>(</mo><mi>a</mi><mo>+</mo><mn>1</mn><msup><mo>)</mo><mn>2</mn></msup><mo>+</mo><mn>8</mn><msup><mi>a</mi><mn>2</mn></msup><mo>=</mo><mn>9</mn><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mi>a</mi><mo>+</mo><mn>1</mn><mo>&gt;</mo><mn>0</mn></math> всегда (его собственный дискриминант <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>4</mn><mo>&#8722;</mo><mn>36</mn><mo>&lt;</mo><mn>0</mn></math>) — корни <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub></math> всегда существуют и различны.</p>
+					<p>Осталось проверить ОДЗ. Заметим, что <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>3</mn><mi>a</mi><mi>x</mi><mo>+</mo><mn>2</mn><msup><mi>a</mi><mn>2</mn></msup><mo>=</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>a</mi><mo>)</mo><mo>(</mo><mi>x</mi><mo>+</mo><mn>2</mn><mi>a</mi><mo>)</mo></math>, и на корне уравнения <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>=</mo><mo>(</mo><mi>a</mi><mo>+</mo><mn>1</mn><mo>)</mo><mi>x</mi><mo>+</mo><mn>2</mn><msup><mi>a</mi><mn>2</mn></msup></math>, поэтому</p>
+					<div class="math-formula">
+					\[
+					(x+a)(x+2a) = x^2+3ax+2a^2 = (a+1+3a)x+4a^2 = (4a+1)x+4a^2.
+					\]
+					</div>
+					<p>Значит, ОДЗ в каждом корне <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mi>i</mi></math> означает <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>(</mo><mn>4</mn><mi>a</mi><mo>+</mo><mn>1</mn><mo>)</mo><msub><mi>x</mi><mi>i</mi></msub><mo>+</mo><mn>4</mn><msup><mi>a</mi><mn>2</mn></msup><mo>&gt;</mo><mn>0</mn></math>. Численный анализ (проверка при пробных <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math>) показывает, что оба корня удовлетворяют ОДЗ при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&gt;</mo><mo>&#8722;</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&#8800;</mo><mn>0</mn></math> (при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&#8804;</mo><mo>&#8722;</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></math> один из корней попадает в запрещённую зону, а при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mn>0</mn></math> корень <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>0</mn></math> сам обращает ОДЗ в ноль).</p>
+					<p>По теореме Виета <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mi>a</mi><mo>+</mo><mn>1</mn></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mn>1</mn></msub><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mo>&#8722;</mo><mn>2</mn><msup><mi>a</mi><mn>2</mn></msup></math>, поэтому</p>
+					<div class="math-formula">
+					\[
+					x_1^2+x_2^2=(x_1+x_2)^2-2x_1x_2=(a+1)^2+4a^2=5a^2+2a+1.
+					\]
+					</div>
+					<p>Условие <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>5</mn><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mi>a</mi><mo>+</mo><mn>1</mn><mo>&gt;</mo><mn>4</mn></math> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&#8660;</mo><mo>(</mo><mn>5</mn><mi>a</mi><mo>&#8722;</mo><mn>3</mn><mo>)</mo><mo>(</mo><mi>a</mi><mo>+</mo><mn>1</mn><mo>)</mo><mo>&gt;</mo><mn>0</mn><mo>&#8660;</mo><mi>a</mi><mo>&lt;</mo><mo>&#8722;</mo><mn>1</mn></math> или <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&gt;</mo><mfrac><mn>3</mn><mn>5</mn></mfrac></math>. Пересекая с ОДЗ-условием <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&gt;</mo><mo>&#8722;</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></math>, остаётся только <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&gt;</mo><mfrac><mn>3</mn><mn>5</mn></mfrac></math>.</p>
+					<p><b>Ответ:</b> \( a>\dfrac35. \)</p>
+				  </div>
+				</details>
+        </div>
+		<div class="task-container">
+
+            <div class="task-title"><b>Задача №5</b>  <span style="float: right; color: gray;"><i>ОММО-2015, 11 класс</i></span></div>
+			<div id = "text-task">
+            <p>При каких значениях параметра <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math> уравнение</p>
+            <div class="math-formula" id="k" >
+                $$
+				\ln{(x-2a)}-3(x-2a)^2+2a=0
+				$$
+            </div>
+            <p>имеет единственное решение?</p>
+			</div>
+           <details class="details">
+				  <summary class="details__title">Посмотреть решение</summary>
+				  <div class="details__content">
+					<p><b>Решение.</b> Пусть <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>=</mo><mi>x</mi><mo>&#8722;</mo><mn>2</mn><mi>a</mi></math> (область: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>&gt;</mo><mn>0</mn></math>). Уравнение принимает вид <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>ln</mi><mi>t</mi><mo>&#8722;</mo><mn>3</mn><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mi>a</mi><mo>=</mo><mn>0</mn></math>, то есть <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mi>a</mi><mo>=</mo><mn>3</mn><msup><mi>t</mi><mn>2</mn></msup><mo>&#8722;</mo><mi>ln</mi><mi>t</mi><mo>=</mo><mi>h</mi><mo>(</mo><mi>t</mi><mo>)</mo></math>. Поскольку <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mi>t</mi><mo>+</mo><mn>2</mn><mi>a</mi></math> взаимно однозначно связано с <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi></math>, число решений по <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math> равно числу решений <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>&gt;</mo><mn>0</mn></math> уравнения <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>=</mo><mn>2</mn><mi>a</mi></math>.</p>
+					<p><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>h</mi><mo>&#8242;</mo></msup><mo>(</mo><mi>t</mi><mo>)</mo><mo>=</mo><mn>6</mn><mi>t</mi><mo>&#8722;</mo><mfrac><mn>1</mn><mi>t</mi></mfrac></math>, равно нулю при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>6</mn></msqrt></mfrac></math> — единственный минимум (так как <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>h</mi><mrow><mo>&#8242;</mo><mo>&#8242;</mo></mrow></msup><mo>(</mo><mi>t</mi><mo>)</mo><mo>=</mo><mn>6</mn><mo>+</mo><mn>1</mn><mo>/</mo><msup><mi>t</mi><mn>2</mn></msup><mo>&gt;</mo><mn>0</mn></math>, функция выпукла). При <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>&#8594;</mo><msup><mn>0</mn><mo>+</mo></msup></math> и <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>&#8594;</mo><mo>+</mo><mi>&#8734;</mo></math> имеем <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>&#8594;</mo><mo>+</mo><mi>&#8734;</mo></math>. Значит, уравнение <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>=</mo><mn>2</mn><mi>a</mi></math> имеет ровно одно решение <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&#8660;</mo></math> прямая проходит через минимум:</p>
+					<div class="math-formula">
+					\[
+					2a = h\!\left(\frac1{\sqrt6}\right) = 3\cdot\frac16-\ln\frac1{\sqrt6}=\frac12+\frac12\ln6=\frac{1+\ln6}{2}.
+					\]
+					</div>
+					<p><b>Ответ:</b> \( a=\dfrac{1+\ln6}{4}. \)</p>
+				  </div>
+				</details>
+        </div>
+		<div class="task-container">
+			
+            <div class="task-title"><b>Задача №6</b>   <span style="float: right; color: gray;"><i>ОММО-2015, 11 класс</i></span></div>
+			<div id = "text-task">
+            <p>При каких значениях параметра <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math> система</p>
+            <div class="math-formula"  id="k">
+                $$
+				\begin{cases}
+					|x|+|y|+||x|-|y||=6,\\
+					|x|+|y|=a
+				\end{cases}
+				$$
+            </div>
+            <p>имеет наибольшее возможное число решений?</p>
+			</div>
+           <details class="details">
+				  <summary class="details__title">Посмотреть решение</summary>
+				  <div class="details__content">
+					<p><b>Решение.</b> Пусть <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>u</mi><mo>=</mo><mo>|</mo><mi>x</mi><mo>|</mo><mo>&#8805;</mo><mn>0</mn></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>v</mi><mo>=</mo><mo>|</mo><mi>y</mi><mo>|</mo><mo>&#8805;</mo><mn>0</mn></math>. По тождеству <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>u</mi><mo>+</mo><mi>v</mi><mo>+</mo><mo>|</mo><mi>u</mi><mo>&#8722;</mo><mi>v</mi><mo>|</mo><mo>=</mo><mn>2</mn><mi>max</mi><mo>(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo>)</mo></math>, первое уравнение равносильно <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>max</mi><mo>(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo>)</mo><mo>=</mo><mn>3</mn></math>. Вместе со вторым уравнением <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>u</mi><mo>+</mo><mi>v</mi><mo>=</mo><mi>a</mi></math>, получаем: либо <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>u</mi><mo>=</mo><mn>3</mn><mo>,</mo><mi>v</mi><mo>=</mo><mi>a</mi><mo>&#8722;</mo><mn>3</mn><mo>&#8712;</mo><mo>[</mo><mn>0</mn><mo>;</mo><mn>3</mn><mo>]</mo></math>, либо <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>v</mi><mo>=</mo><mn>3</mn><mo>,</mo><mi>u</mi><mo>=</mo><mi>a</mi><mo>&#8722;</mo><mn>3</mn><mo>&#8712;</mo><mo>[</mo><mn>0</mn><mo>;</mo><mn>3</mn><mo>]</mo></math>, что требует <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn><mo>&#8804;</mo><mi>a</mi><mo>&#8804;</mo><mn>6</mn></math>.</p>
+					<p>Каждой паре <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo>)</mo></math> с <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>u</mi><mo>,</mo><mi>v</mi><mo>&gt;</mo><mn>0</mn></math> отвечают <b>4</b> точки <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>)</mo><mo>=</mo><mo>(</mo><mo>&#177;</mo><mi>u</mi><mo>,</mo><mo>&#177;</mo><mi>v</mi><mo>)</mo></math>, а если одна из координат равна 0 — только 2 точки.</p>
+					<p>При <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn><mo>&lt;</mo><mi>a</mi><mo>&lt;</mo><mn>6</mn></math> получаем <i>две различные</i> пары <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>(</mo><mn>3</mn><mo>,</mo><mi>a</mi><mo>&#8722;</mo><mn>3</mn><mo>)</mo></math> и <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>(</mo><mi>a</mi><mo>&#8722;</mo><mn>3</mn><mo>,</mo><mn>3</mn><mo>)</mo></math>, обе с положительными координатами — по 4 точки каждая, итого <b>8</b> решений.</p>
+					<p>При <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mn>3</mn></math>: пары <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>(</mo><mn>3</mn><mo>,</mo><mn>0</mn><mo>)</mo></math> и <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>(</mo><mn>0</mn><mo>,</mo><mn>3</mn><mo>)</mo></math> — по 2 точки, итого 4. При <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mn>6</mn></math>: единственная пара <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>(</mo><mn>3</mn><mo>,</mo><mn>3</mn><mo>)</mo></math> — 4 точки. Вне <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>[</mo><mn>3</mn><mo>;</mo><mn>6</mn><mo>]</mo></math> решений нет.</p>
+					<p>Максимум — 8 решений, достигается при <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn><mo>&lt;</mo><mi>a</mi><mo>&lt;</mo><mn>6</mn></math>.</p>
+					<p><b>Ответ:</b> \( a\in(3;6). \)</p>
+				  </div>
+				</details>
+        </div>
+		<div class="task-container">
+			
+            <div class="task-title"><b>Задача №7</b>   <span style="float: right; color: gray;"><i>Ларин, №522</i></span></div>
+			<div id = "text-task">
+            <p>При каких значениях параметра <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math> система</p>
+            <div class="math-formula" id="k" >
+                $$
+
+				  \begin{cases}
+					\sqrt{x^2 + 2xy + 3y^2} = \sqrt{x^2 - y^2}, \\
+					\frac{x^6}{(x^2 + y^2)^2} \cdot (a - x) = 2
+				  \end{cases}
+
+				$$
+            </div>
+            <p>имеет ровно четыре решения?</p>
+			</div>
+           <details class="details">
+				  <summary class="details__title">Посмотреть решение</summary>
+				  <div class="details__content">
+					<p><b>Решение.</b> Первое уравнение (обе части неотрицательны — возводим в квадрат): <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mi>x</mi><mi>y</mi><mo>+</mo><mn>3</mn><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>&#8722;</mo><msup><mi>y</mi><mn>2</mn></msup></math> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&#8660;</mo><mn>2</mn><mi>y</mi><mo>(</mo><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi><mo>)</mo><mo>=</mo><mn>0</mn></math>, откуда <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><mn>0</mn></math> или <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mo>&#8722;</mo><mn>2</mn><mi>y</mi></math> (ОДЗ <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>&#8805;</mo><msup><mi>y</mi><mn>2</mn></msup></math> выполняется в обеих ветвях автоматически).</p>
+					<p><i>Ветвь <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><mn>0</mn></math> (<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&#8800;</mo><mn>0</mn></math>):</i> второе уравнение даёт <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>(</mo><mi>a</mi><mo>&#8722;</mo><mi>x</mi><mo>)</mo><mo>=</mo><mn>2</mn></math>, то есть <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>3</mn></msup><mo>&#8722;</mo><mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mo>=</mo><mn>0</mn></math>. Функция <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msup><mi>x</mi><mn>3</mn></msup><mo>&#8722;</mo><mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn></math> имеет <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>f</mi><mo>&#8242;</mo></msup><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>x</mi><mo>(</mo><mn>3</mn><mi>x</mi><mo>&#8722;</mo><mn>2</mn><mi>a</mi><mo>)</mo></math>, экстремумы в <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>0</mn></math> (значение 2) и <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac><mi>a</mi></math> (значение <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mo>&#8722;</mo><mfrac><mn>4</mn><mn>27</mn></mfrac><msup><mi>a</mi><mn>3</mn></msup></math>). Три различных корня появляются, когда экстремумы разного знака: <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mo>&#8722;</mo><mfrac><mn>4</mn><mn>27</mn></mfrac><msup><mi>a</mi><mn>3</mn></msup><mo>&lt;</mo><mn>0</mn><mo>&#8660;</mo><mi>a</mi><mo>&gt;</mo><mfrac><mn>3</mn><msup><mn>2</mn><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></msup></mfrac></math> — тогда 3 решения, иначе 1.</p>
+					<p><i>Ветвь <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mo>&#8722;</mo><mn>2</mn><mi>y</mi></math> (<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>&#8800;</mo><mn>0</mn></math>):</i> тогда <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mn>5</mn><msup><mi>y</mi><mn>2</mn></msup></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>6</mn></msup><mo>=</mo><mn>64</mn><msup><mi>y</mi><mn>6</mn></msup></math>, и второе уравнение сводится к <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>64</mn><msup><mi>y</mi><mn>3</mn></msup><mo>+</mo><mn>32</mn><mi>a</mi><msup><mi>y</mi><mn>2</mn></msup><mo>&#8722;</mo><mn>25</mn><mo>=</mo><mn>0</mn></math>. Аналогичный анализ (экстремумы в <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><mn>0</mn></math>, значение <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&#8722;</mo><mn>25</mn></math>, и в <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><mo>&#8722;</mo><mfrac><mi>a</mi><mn>3</mn></mfrac></math>, значение <math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mrow><mn>32</mn><msup><mi>a</mi><mn>3</mn></msup></mrow><mn>27</mn></mfrac><mo>&#8722;</mo><mn>25</mn></math>) даёт 3 решения при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&gt;</mo><mroot><mfrac><mn>675</mn><mn>32</mn></mfrac><mn>3</mn></mroot><mo>=</mo><mfrac><mrow><mn>3</mn><msup><mn>25</mn><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></msup></mrow><mrow><mn>2</mn><msup><mn>4</mn><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></msup></mrow></mfrac></math>, иначе 1.</p>
+					<p>Точки двух ветвей никогда не совпадают (в одной <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><mn>0</mn></math>, в другой <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>&#8800;</mo><mn>0</mn></math>), поэтому общее число решений — это сумма. Обозначив <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>3</mn><mo>/</mo><msup><mn>2</mn><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></msup><mo>&#8776;</mo><mn>2.381</mn></math> и <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>a</mi><mn>2</mn></msub><mo>&#8776;</mo><mn>2.767</mn></math>: при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&lt;</mo><msub><mi>a</mi><mn>1</mn></msub></math> — <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>2</mn></math>; при <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>a</mi><mn>1</mn></msub><mo>&lt;</mo><mi>a</mi><mo>&lt;</mo><msub><mi>a</mi><mn>2</mn></msub></math> — <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>4</mn></math>; при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&gt;</mo><msub><mi>a</mi><mn>2</mn></msub></math> — <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn><mo>+</mo><mn>3</mn><mo>=</mo><mn>6</mn></math>.</p>
+					<p>Ровно 4 решения — при <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>a</mi><mn>1</mn></msub><mo>&lt;</mo><mi>a</mi><mo>&lt;</mo><msub><mi>a</mi><mn>2</mn></msub></math>.</p>
+					<p><b>Ответ:</b> \( a \in \left(\dfrac{3}{\sqrt[3]{2}};\ \dfrac{3\sqrt[3]{25}}{2\sqrt[3]{4}}\right). \)</p>
+				  </div>
+				</details>
+        </div>
+		<div class="task-container">
+			
+            <div class="task-title"><b>Задача №8</b>   <span style="float: right; color: gray;"><i>Ларин</i></span></div>
+			<div id = "text-task">
+            <p>При каких значениях параметра <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math> уравнение</p>
+            <div class="math-formula" id="k" >
+                $$
+
+				  x \cdot \sqrt{\sqrt{10x - x^2} - a} = \sqrt{(\sqrt{10x - x^2} - a)(x + 2)}
+
+				$$
+            </div>
+            <p>имеет ровно одно решение?</p>
+			</div>
+           <details class="details">
+				  <summary class="details__title">Посмотреть решение</summary>
+				  <div class="details__content" >
+					<p><b>Решение.</b> ОДЗ: <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>10</mn><mi>x</mi><mo>&#8722;</mo><msup><mi>x</mi><mn>2</mn></msup><mo>&#8805;</mo><mn>0</mn><mo>&#8660;</mo><mi>x</mi><mo>&#8712;</mo><mo>[</mo><mn>0</mn><mo>;</mo><mn>10</mn><mo>]</mo></math>. Пусть <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi><mo>=</mo><msqrt><mn>10</mn><mi>x</mi><mo>&#8722;</mo><msup><mi>x</mi><mn>2</mn></msup></msqrt><mo>&#8805;</mo><mn>0</mn></math>, нужно <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi><mo>&#8805;</mo><mi>a</mi></math>.</p>
+					<p><i>Если <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi><mo>=</mo><mi>a</mi></math></i> — обе части уравнения равны 0 при <b>любом</b> <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math> — это решение.</p>
+					<p><i>Если <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi><mo>&gt;</mo><mi>a</mi></math></i> — делим на <math xmlns="http://www.w3.org/1998/Math/MathML"><msqrt><mi>s</mi><mo>&#8722;</mo><mi>a</mi></msqrt><mo>&gt;</mo><mn>0</mn></math>: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><msqrt><mi>x</mi><mo>+</mo><mn>2</mn></msqrt></math> (так как <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&#8805;</mo><mn>0</mn><mo>&gt;</mo><mo>&#8722;</mo><mn>2</mn></math>), откуда <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>=</mo><mi>x</mi><mo>+</mo><mn>2</mn></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>2</mn></math> или <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mo>&#8722;</mo><mn>1</mn></math>; в ОДЗ остаётся только <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>2</mn></math>, действительно при условии <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi><mo>(</mo><mn>2</mn><mo>)</mo><mo>=</mo><mn>4</mn><mo>&gt;</mo><mi>a</mi></math>.</p>
+					<p>Функция <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msqrt><mn>25</mn><mo>&#8722;</mo><mo>(</mo><mi>x</mi><mo>&#8722;</mo><mn>5</mn><msup><mo>)</mo><mn>2</mn></msup></msqrt></math> принимает все значения <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>[</mo><mn>0</mn><mo>;</mo><mn>5</mn><mo>]</mo></math>: при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&lt;</mo><mn>0</mn></math> уравнение <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi><mo>=</mo><mi>a</mi></math> решений не даёт (0 решений); при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mn>0</mn></math> — <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>10</mn></math> (2 решения); при <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo>&lt;</mo><mi>a</mi><mo>&lt;</mo><mn>5</mn></math> — <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>5</mn><mo>&#177;</mo><msqrt><mn>25</mn><mo>&#8722;</mo><msup><mi>a</mi><mn>2</mn></msup></msqrt></math> (2 решения); при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mn>5</mn></math> — <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>5</mn></math> (1 решение); при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&gt;</mo><mn>5</mn></math> — 0 решений.</p>
+					<p>Складывая с решением <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>2</mn></math> (при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&lt;</mo><mn>4</mn></math>, не совпадающим с решениями <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi><mo>=</mo><mi>a</mi></math> при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&#8800;</mo><mn>4</mn></math>): получаем итог 1 при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&lt;</mo><mn>0</mn></math>; 3 при <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo>&#8804;</mo><mi>a</mi><mo>&lt;</mo><mn>4</mn></math>; 2 при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mn>4</mn></math> (точка <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>2</mn></math> «переходит» в ветвь <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi><mo>=</mo><mi>a</mi></math>, а не добавляется отдельно); 2 при <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>4</mn><mo>&lt;</mo><mi>a</mi><mo>&lt;</mo><mn>5</mn></math>; 1 при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mn>5</mn></math>; 0 при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&gt;</mo><mn>5</mn></math>.</p>
+					<p>Ровно одно решение — при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&lt;</mo><mn>0</mn></math> или <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mn>5</mn></math>.</p>
+					<p><b>Ответ:</b> \( a\in(-\infty;0)\cup\{5\}. \)</p>
+				  </div>
+				</details>
+        </div>
+		<div class="task-container">
+			
+            <div class="task-title"><b>Задача №9</b>   <span style="float: right; color: gray;"><i>МЦКО, 2026</i></span></div>
+			<div id = "text-task">
+            <p>При каких значениях параметра <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math> уравнение</p>
+            <div class="math-formula"  id="k">
+                $$
+
+				  5^{x^2} + 5^{x^2} \log_{25} a = 5^{-|x|} \log_{125} a + \left(\frac{1}{5}\right)^{|x|}
+
+				$$
+            </div>
+            <p>имеет хотя бы одно решение?</p>
+			</div>
+           <details class="details">
+				  <summary class="details__title">Посмотреть решение</summary>
+				  <div class="details__content">
+					<p><b>Решение.</b> ОДЗ: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&gt;</mo><mn>0</mn></math>. Пусть <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi><mo>=</mo><msub><mi>log</mi><mn>5</mn></msub><mi>a</mi></math>; тогда <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>log</mi><mn>25</mn></msub><mi>a</mi><mo>=</mo><mi>L</mi><mo>/</mo><mn>2</mn></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>log</mi><mn>125</mn></msub><mi>a</mi><mo>=</mo><mi>L</mi><mo>/</mo><mn>3</mn></math>. Уравнение переписывается как</p>
+					<div class="math-formula">
+					\[
+					5^{x^2}\left(1+\frac{L}{2}\right) = 5^{-|x|}\left(1+\frac{L}{3}\right).
+					\]
+					</div>
+					<p>Пусть <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>=</mo><mo>|</mo><mi>x</mi><mo>|</mo><mo>&#8805;</mo><mn>0</mn></math> (тогда <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>=</mo><msup><mi>t</mi><mn>2</mn></msup></math>). При <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi><mo>&#8800;</mo><mo>&#8722;</mo><mn>2</mn></math> уравнение равносильно <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>5</mn><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mi>t</mi></mrow></msup><mo>=</mo><mi>R</mi></math>, где <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>R</mi><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>L</mi><mo>/</mo><mn>3</mn></mrow><mrow><mn>1</mn><mo>+</mo><mi>L</mi><mo>/</mo><mn>2</mn></mrow></math>. Так как <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mi>t</mi><mo>&#8805;</mo><mn>0</mn></math> для <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>&#8805;</mo><mn>0</mn></math> (и принимает все значения <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>[</mo><mn>0</mn><mo>;</mo><mo>+</mo><mi>&#8734;</mi><mo>)</mo></math>), решение <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>&#8805;</mo><mn>0</mn></math> существует <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&#8660;</mo><mi>R</mi><mo>&#8805;</mo><mn>1</mn></math>.</p>
+					<p>Если <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>+</mo><mi>L</mi><mo>/</mo><mn>2</mn><mo>&gt;</mo><mn>0</mn></math> (т.е. <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&gt;</mo><mn>1</mn><mo>/</mo><mn>25</mn></math>): <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>R</mi><mo>&#8805;</mo><mn>1</mn><mo>&#8660;</mo><mn>1</mn><mo>+</mo><mi>L</mi><mo>/</mo><mn>3</mn><mo>&#8805;</mo><mn>1</mn><mo>+</mo><mi>L</mi><mo>/</mo><mn>2</mn><mo>&#8660;</mo><mi>L</mi><mo>&#8804;</mo><mn>0</mn><mo>&#8660;</mo><mi>a</mi><mo>&#8804;</mo><mn>1</mn></math>. Вместе с <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&gt;</mo><mn>1</mn><mo>/</mo><mn>25</mn></math>: <math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mn>1</mn><mn>25</mn></mfrac><mo>&lt;</mo><mi>a</mi><mo>&#8804;</mo><mn>1</mn></math>.</p>
+					<p>Если <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>+</mo><mi>L</mi><mo>/</mo><mn>2</mn><mo>&lt;</mo><mn>0</mn></math> (<math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo>&lt;</mo><mi>a</mi><mo>&lt;</mo><mn>1</mn><mo>/</mo><mn>25</mn></math>): неравенство меняет знак и приводит к <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi><mo>&#8805;</mo><mn>0</mn></math> — противоречие с <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&lt;</mo><mn>1</mn><mo>/</mo><mn>25</mn></math>, решений нет.</p>
+					<p>При <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mn>1</mn><mo>/</mo><mn>25</mn></math> уравнение вырождается в <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo>=</mo><msup><mn>5</mn><mrow><mo>&#8722;</mo><mi>t</mi></mrow></msup><mo>/</mo><mn>3</mn></math> — решений нет.</p>
+					<p><b>Ответ:</b> \( a\in\left(\dfrac{1}{25};\ 1\right]. \)</p>
+				  </div>
+				</details>
+        </div>
+		<div class="task-container">
+			
+            <div class="task-title"><b>Задача №10</b>  <span style="float: right; color: gray;"><i>ДВИ, физический факультет, 2007 год</i></span></div>
+			<div id = "text-task">
+            <p>Для каждого допустимого значения  <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi></math> решите неравенство</p>
+            <div class="math-formula" id="k" >
+                $$
+
+				  \sqrt{7 + \log_{b} x^{2}} + (\log_{b} |x|) (1 + 2 \log_{x} b) > 0
+
+				$$
+            </div>
+            
+			</div>
+           <details class="details">
+				  <summary class="details__title">Посмотреть ответ</summary>
+				  <div class="details__content">
+					<p>
+						Запишем ограничения для <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math> и <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi></math>:  <math xmlns="http://www.w3.org/1998/Math/MathML">  <mi>x</mi>  <mo>&#x2208;</mo>  <mo stretchy="false">(</mo>  <mn>0</mn>  <mo>;</mo>  <mn>1</mn>  <mo stretchy="false">)</mo>  <mo>&#x222A;</mo>  <mo stretchy="false">(</mo>  <mn>1</mn>  <mo>;</mo>  <mo>+</mo>  <mi mathvariant="normal">&#x221E;</mi>  <mo stretchy="false">)</mo></math>,  <math xmlns="http://www.w3.org/1998/Math/MathML">  <mi>b</mi>  <mo>&#x2208;</mo>  <mo stretchy="false">(</mo>  <mn>0</mn>  <mo>;</mo>  <mn>1</mn>  <mo stretchy="false">)</mo>  <mo>&#x222A;</mo>  <mo stretchy="false">(</mo>  <mn>1</mn>  <mo>;</mo>  <mo>+</mo>  <mi mathvariant="normal">&#x221E;</mi>  <mo stretchy="false">)</mo></math>.
+					<p>
+						Запишем неравенство иначе: 
+						<div class="math-formula" id="k" >
+						$$
+							\sqrt{7 + \log_{b} x^{2}} + (\log_{b} |x|) \left(1 + \frac{2}{\log_{b} x}\right) > 0
+						$$
+						</div>
+					</p>  
+					<p>
+						Замена: <math xmlns="http://www.w3.org/1998/Math/MathML">  <msub>    <mi>log</mi>    <mi>b</mi>  </msub>  <mo data-mjx-texclass="NONE">&#x2061;</mo>  <mi>x</mi>  <mo>=</mo>  <mi>t</mi></math>, имеем неравенство <math xmlns="http://www.w3.org/1998/Math/MathML">  <msqrt>    <mn>7</mn>    <mo>+</mo>    <mn>2</mn>    <mi>t</mi>  </msqrt>  <mo>+</mo>  <mi>t</mi>  <mo>+</mo>  <mn>2</mn>  <mo>&lt;</mo>  <mn>0</mn></math>, где <math xmlns="http://www.w3.org/1998/Math/MathML">  <mi>t</mi>  <mo>&#x2260;</mo>  <mn>0</mn></math>. Запишем неравенство как совокупность систем:
+						<math xmlns="http://www.w3.org/1998/Math/MathML">  <mrow data-mjx-texclass="INNER">    <mo data-mjx-texclass="OPEN">[</mo>    <mtable columnalign="left" columnspacing="1em" rowspacing="4pt">      <mtr>        <mtd>          <mrow data-mjx-texclass="INNER">            <mo data-mjx-texclass="OPEN">{</mo>            <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">              <mtr>                <mtd>                  <mo>&#x2212;</mo>                  <mi>t</mi>                  <mo>&#x2212;</mo>                  <mn>2</mn>                  <mo>&#x2265;</mo>                  <mn>0</mn>                  <mo>,</mo>                </mtd>              </mtr>              <mtr>                <mtd>                  <mn>7</mn>                  <mo>+</mo>                  <mn>2</mn>                  <mi>t</mi>                  <mo>&gt;</mo>                  <msup>                    <mi>t</mi>                    <mn>2</mn>                  </msup>                  <mo>+</mo>                  <mn>4</mn>                  <mi>t</mi>                  <mo>+</mo>                  <mn>4</mn>                  <mo>,</mo>                </mtd>              </mtr>            </mtable>            <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>          </mrow>        </mtd>      </mtr>      <mtr>        <mtd>          <mrow data-mjx-texclass="INNER">            <mo data-mjx-texclass="OPEN">{</mo>            <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">              <mtr>                <mtd>                  <mo>&#x2212;</mo>                  <mi>t</mi>                  <mo>&#x2212;</mo>                  <mn>2</mn>                  <mo>&lt;</mo>                  <mn>0</mn>                  <mo>,</mo>                </mtd>              </mtr>              <mtr>                <mtd>                  <mn>7</mn>                  <mo>+</mo>                  <mn>2</mn>                  <mi>t</mi>                  <mo>&#x2265;</mo>                  <mn>0</mn>                </mtd>              </mtr>            </mtable>            <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>          </mrow>        </mtd>      </mtr>    </mtable>    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>  </mrow>  <mstyle scriptlevel="0">    <mspace width="1em"></mspace>  </mstyle>  <mo stretchy="false">&#x27FA;</mo></math>
+						<math xmlns="http://www.w3.org/1998/Math/MathML">  <mrow data-mjx-texclass="INNER">    <mo data-mjx-texclass="OPEN">[</mo>    <mtable columnalign="left" columnspacing="1em" rowspacing="4pt">      <mtr>        <mtd>          <mrow data-mjx-texclass="INNER">            <mo data-mjx-texclass="OPEN">{</mo>            <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">              <mtr>                <mtd>                  <mi>t</mi>                  <mo>&#x2264;</mo>                  <mo>&#x2212;</mo>                  <mn>2</mn>                  <mo>,</mo>                </mtd>              </mtr>              <mtr>                <mtd>                  <mo stretchy="false">(</mo>                  <mi>t</mi>                  <mo>+</mo>                  <mn>3</mn>                  <mo stretchy="false">)</mo>                  <mo stretchy="false">)</mo>                  <mo stretchy="false">(</mo>                  <mi>t</mi>                  <mo>&#x2212;</mo>                  <mn>1</mn>                  <mo stretchy="false">)</mo>                  <mo>&lt;</mo>                  <mn>0</mn>                  <mo>,</mo>                </mtd>              </mtr>            </mtable>            <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>          </mrow>        </mtd>      </mtr>      <mtr>        <mtd>          <mi>t</mi>          <mo>&gt;</mo>          <mo>&#x2212;</mo>          <mn>2</mn>        </mtd>      </mtr>    </mtable>    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>  </mrow></math>
+						<math xmlns="http://www.w3.org/1998/Math/MathML">  <mo stretchy="false">&#x21D2;</mo>  <mi>t</mi>  <mo>&#x2208;</mo>  <mo stretchy="false">(</mo>  <mo>&#x2212;</mo>  <mn>3</mn>  <mo>;</mo>  <mn>0</mn>  <mo stretchy="false">)</mo>  <mo>&#x222A;</mo>  <mo stretchy="false">(</mo>  <mn>0</mn>  <mo>;</mo>  <mo>+</mo>  <mi mathvariant="normal">&#x221E;</mi>  <mo stretchy="false">)</mo>  <mo>.</mo></math>
+					
+					</p>
+					<p>
+						Обратная замена: 
+						<math xmlns="http://www.w3.org/1998/Math/MathML">  <mrow data-mjx-texclass="INNER">    <mo data-mjx-texclass="OPEN">{</mo>    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">      <mtr>        <mtd>          <msub>            <mi>log</mi>            <mi>b</mi>          </msub>          <mo data-mjx-texclass="NONE">&#x2061;</mo>          <mi>x</mi>          <mo>&gt;</mo>          <mo>&#x2212;</mo>          <mn>3</mn>          <mo>,</mo>        </mtd>      </mtr>      <mtr>        <mtd>          <msub>            <mi>log</mi>            <mi>b</mi>          </msub>          <mo data-mjx-texclass="NONE">&#x2061;</mo>          <mi>x</mi>          <mo>&#x2260;</mo>          <mn>0</mn>          <mo>,</mo>        </mtd>      </mtr>    </mtable>    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>  </mrow>  <mstyle scriptlevel="0">    <mspace width="1em"></mspace>  </mstyle>  <mo stretchy="false">&#x27FA;</mo></math>
+						<math xmlns="http://www.w3.org/1998/Math/MathML">  <mrow data-mjx-texclass="INNER">    <mo data-mjx-texclass="OPEN">[</mo>    <mtable columnalign="left" columnspacing="1em" rowspacing="4pt">      <mtr>        <mtd>          <mrow data-mjx-texclass="INNER">            <mo data-mjx-texclass="OPEN">{</mo>            <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">              <mtr>                <mtd>                  <mi>b</mi>                  <mo>&gt;</mo>                  <mn>1</mn>                  <mo>,</mo>                </mtd>              </mtr>              <mtr>                <mtd>                  <mi>x</mi>                  <mo>&gt;</mo>                  <mfrac>                    <mn>1</mn>                    <msup>                      <mi>b</mi>                      <mn>3</mn>                    </msup>                  </mfrac>                  <mo>,</mo>                </mtd>              </mtr>              <mtr>                <mtd>                  <mi>x</mi>                  <mo>&#x2260;</mo>                  <mn>0</mn>                </mtd>              </mtr>            </mtable>            <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>          </mrow>        </mtd>      </mtr>      <mtr>        <mtd>          <mrow data-mjx-texclass="INNER">            <mo data-mjx-texclass="OPEN">{</mo>            <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">              <mtr>                <mtd>                  <mn>0</mn>                  <mo>&lt;</mo>                  <mi>b</mi>                  <mo>&lt;</mo>                  <mn>1</mn>                  <mo>,</mo>                </mtd>              </mtr>              <mtr>                <mtd>                  <mi>x</mi>                  <mo>&lt;</mo>                  <mfrac>                    <mn>1</mn>                    <msup>                      <mi>b</mi>                      <mn>3</mn>                    </msup>                  </mfrac>                  <mo>,</mo>                </mtd>              </mtr>              <mtr>                <mtd>                  <mi>x</mi>                  <mo>&#x2260;</mo>                  <mn>1.</mn>                </mtd>              </mtr>            </mtable>            <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>          </mrow>        </mtd>      </mtr>    </mtable>    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>  </mrow>  <mstyle scriptlevel="0">    <mspace width="1em"></mspace>  </mstyle>  <mo stretchy="false">&#x27FA;</mo></math>
+						<math xmlns="http://www.w3.org/1998/Math/MathML">  <mrow data-mjx-texclass="INNER">    <mo data-mjx-texclass="OPEN">[</mo>    <mtable columnalign="left" columnspacing="1em" rowspacing="4pt">      <mtr>        <mtd>          <mrow data-mjx-texclass="INNER">            <mo data-mjx-texclass="OPEN">{</mo>            <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">              <mtr>                <mtd>                  <mi>b</mi>                  <mo>&gt;</mo>                  <mn>1</mn>                  <mo>,</mo>                </mtd>              </mtr>              <mtr>                <mtd>                  <mi>x</mi>                  <mo>&#x2208;</mo>                  <mrow data-mjx-texclass="INNER">                    <mo data-mjx-texclass="OPEN">(</mo>                    <mfrac>                      <mn>1</mn>                      <msup>                        <mi>b</mi>                        <mn>3</mn>                      </msup>                    </mfrac>                    <mo>;</mo>                    <mn>1</mn>                    <mo data-mjx-texclass="CLOSE">)</mo>                  </mrow>                  <mo>&#x222A;</mo>                  <mo stretchy="false">(</mo>                  <mn>1</mn>                  <mo>;</mo>                  <mo>+</mo>                  <mi mathvariant="normal">&#x221E;</mi>                  <mo stretchy="false">)</mo>                  <mo>,</mo>                </mtd>              </mtr>            </mtable>            <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>          </mrow>        </mtd>      </mtr>      <mtr>        <mtd>          <mrow data-mjx-texclass="INNER">            <mo data-mjx-texclass="OPEN">{</mo>            <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">              <mtr>                <mtd>                  <mn>0</mn>                  <mo>&lt;</mo>                  <mi>b</mi>                  <mo>&lt;</mo>                  <mn>1</mn>                  <mo>,</mo>                </mtd>              </mtr>              <mtr>                <mtd>                  <mi>x</mi>                  <mo>&#x2208;</mo>                  <mo stretchy="false">(</mo>                  <mn>0</mn>                  <mo>;</mo>                  <mn>1</mn>                  <mo stretchy="false">)</mo>                  <mo>&#x222A;</mo>                  <mrow data-mjx-texclass="INNER">                    <mo data-mjx-texclass="OPEN">(</mo>                    <mn>1</mn>                    <mo>;</mo>                    <mfrac>                      <mn>1</mn>                      <msup>                        <mi>b</mi>                        <mn>3</mn>                      </msup>                    </mfrac>                    <mo data-mjx-texclass="CLOSE">)</mo>                  </mrow>                  <mo>.</mo>                </mtd>              </mtr>            </mtable>            <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>          </mrow>        </mtd>      </mtr>    </mtable>    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>  </mrow></math>
+
+						
+					</p>
+					<p>
+				  <b>Ответ: </b>
+					При <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi><mo>&gt;</mo><mn>1</mn><mstyle scriptlevel="0"><mspace width="1em"></mspace></mstyle> <mi>x</mi> <mo>&#x2208;</mo><mrow data-mjx-texclass="INNER"><mo data-mjx-texclass="OPEN">(</mo><mfrac><mn>1</mn><msup><mi>b</mi><mn>3</mn></msup></mfrac><mo>;</mo><mn>1</mn><mo data-mjx-texclass="CLOSE">)</mo></mrow><mo>&#x222A;</mo><mo stretchy="false">(</mo><mn>1</mn><mo>;</mo><mo>+</mo><mi mathvariant="normal">&#x221E;</mi><mo stretchy="false">)</mo></math>, 
+					при <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo>&lt;</mo><mi>b</mi><mo>&lt;</mo><mn>1</mn><mstyle scriptlevel="0"><mspace width="1em"></mspace></mstyle><mi>x</mi><mo>&#x2208;</mo><mo stretchy="false">(</mo><mn>0</mn><mo>;</mo><mn>1</mn><mo stretchy="false">)</mo><mo>&#x222A;</mo><mrow data-mjx-texclass="INNER"><mo data-mjx-texclass="OPEN">(</mo><mn>1</mn><mo>;</mo><mfrac><mn>1</mn> <msup><mi>b</mi><mn>3</mn></msup></mfrac><mo data-mjx-texclass="CLOSE">)</mo></mrow></math>. 	
+				
+					</p>
+				  </div>
+				</details>
+        </div>
+			<div class="task-container">
+			
+            <div class="task-title"><b>Задача №11</b>   <span style="float: right; color: gray;"><i>ЕГЭ, 2008</i></span></div>
+			<div id = "text-task">
+            <p>Найдите все значения <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math>, при каждом из которых неравенство</p>
+            <div class="math-formula"  id="k">
+                $$
+
+				  \frac{(4 \sin \sqrt{x - 8} - 3) - a}{a - \left( \log_{2} x + 7 \sqrt{2} \cdot \log_{x} 2 - 5 \right)} \leq 0
+
+				$$
+            </div>
+            <p>не имеет решений.</p>
+			</div>
+           <details class="details">
+				  <summary class="details__title">Посмотреть решение</summary>
+				  <div class="details__content">
+					<p><b>Решение.</b> Обозначим числитель <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mn>4</mn><mi>sin</mi><msqrt><mi>x</mi><mo>&#8722;</mo><mn>8</mn></msqrt><mo>&#8722;</mo><mn>3</mn><mo>&#8722;</mo><mi>a</mi></math> и знаменатель <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>D</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>a</mi><mo>&#8722;</mo><mo>(</mo><msub><mi>log</mi><mn>2</mn></msub><mi>x</mi><mo>+</mo><mn>7</mn><msqrt><mn>2</mn></msqrt><msub><mi>log</mi><mi>x</mi></msub><mn>2</mn><mo>&#8722;</mo><mn>5</mn><mo>)</mo></math> при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&#8805;</mo><mn>8</mn></math> (ОДЗ). «Нет решений» означает: там, где <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>D</mi><mo>&#8800;</mo><mn>0</mn></math>, всегда <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi><mo>/</mo><mi>D</mi><mo>&gt;</mo><mn>0</mn></math>.</p>
+					<p>За счёт колебаний <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>sin</mi></math> на неограниченном аргументе, <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi><mo>(</mo><mi>x</mi><mo>)</mo></math> при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&#8805;</mo><mn>8</mn></math> бесконечно много раз принимает все значения из <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>[</mo><mo>&#8722;</mo><mn>7</mn><mo>&#8722;</mo><mi>a</mi><mo>;</mo><mn>1</mn><mo>&#8722;</mo><mi>a</mi><mo>]</mo></math>.</p>
+					<p>Пусть <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>m</mi><mo>=</mo><msub><mi>log</mi><mn>2</mn></msub><mi>x</mi><mo>&#8805;</mo><mn>3</mn></math>: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>D</mi><mo>=</mo><mo>(</mo><mi>a</mi><mo>+</mo><mn>5</mn><mo>)</mo><mo>&#8722;</mo><mo>(</mo><mi>m</mi><mo>+</mo><mn>7</mn><msqrt><mn>2</mn></msqrt><mo>/</mo><mi>m</mi><mo>)</mo></math>. По неравенству о средних <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>m</mi><mo>+</mo><mn>7</mn><msqrt><mn>2</mn></msqrt><mo>/</mo><mi>m</mi><mo>&#8805;</mo><mn>2</mn><msqrt><mn>7</mn><msqrt><mn>2</mn></msqrt></msqrt></math>, минимум достигается при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>m</mi><mo>=</mo><msqrt><mn>7</mn><msqrt><mn>2</mn></msqrt></msqrt><mo>&#8776;</mo><mn>3.146</mn><mo>&gt;</mo><mn>3</mn></math> — эта точка лежит в области <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>m</mi><mo>&#8805;</mo><mn>3</mn></math>, а дальше выражение неограниченно растёт. Значит <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>D</mi><mo>(</mo><mi>x</mi><mo>)</mo></math> принимает все значения из <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>(</mo><mo>&#8722;</mo><mi>&#8734;</mi><mo>;</mo><mi>a</mi><mo>+</mo><mn>5</mn><mo>&#8722;</mo><mn>2</mn><msqrt><mn>7</mn><msqrt><mn>2</mn></msqrt></msqrt><mo>]</mo></math>, в частности <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>D</mi><mo>&#8594;</mo><mo>&#8722;</mo><mi>&#8734;</mi></math> при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&#8594;</mo><mo>+</mo><mi>&#8734;</mi></math>.</p>
+					<p>Так как при больших <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math> величина <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>D</mi><mo>&lt;</mo><mn>0</mn></math>, а <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math> там продолжает пробегать весь диапазон <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>[</mo><mo>&#8722;</mo><mn>7</mn><mo>&#8722;</mo><mi>a</mi><mo>;</mo><mn>1</mn><mo>&#8722;</mo><mi>a</mi><mo>]</mo></math>, для отсутствия решений нужно <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi><mo>&lt;</mo><mn>0</mn></math> всегда: <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>&#8722;</mo><mi>a</mi><mo>&lt;</mo><mn>0</mn><mo>&#8660;</mo><mi>a</mi><mo>&gt;</mo><mn>1</mn></math>.</p>
+					<p>Одновременно нужно, чтобы <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>D</mi><mo>(</mo><mi>x</mi><mo>)</mo></math> никогда не было положительным (иначе там, где <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>D</mi><mo>&gt;</mo><mn>0</mn></math> и <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi><mo>&lt;</mo><mn>0</mn></math>, получим <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi><mo>/</mo><mi>D</mi><mo>&lt;</mo><mn>0</mn></math> — решение бы нашлось). Максимум <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>D</mi></math> равен <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>+</mo><mn>5</mn><mo>&#8722;</mo><mn>2</mn><msqrt><mn>7</mn><msqrt><mn>2</mn></msqrt></msqrt></math>, нужно <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&#8804;</mo><mn>0</mn></math>. Так как <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><msqrt><mn>7</mn><msqrt><mn>2</mn></msqrt></msqrt><mo>=</mo><msqrt><mn>28</mn><msqrt><mn>2</mn></msqrt></msqrt></math>, условие: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&#8804;</mo><msqrt><mn>28</mn><msqrt><mn>2</mn></msqrt></msqrt><mo>&#8722;</mo><mn>5</mn></math>.</p>
+					<p><b>Ответ:</b> \( a\in\left(1;\ \sqrt{28\sqrt2}-5\,\right]. \) (численно <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&#8776;</mo><mo>(</mo><mn>1</mn><mo>;</mo><mn>1.293</mn><mo>]</mo></math>)</p>
+				  </div>
+				</details>
+        </div>
+				<div class="task-container">
+
+            <div class="task-title"><b>Задача №12</b>   <span style="float: right; color: gray;"><i>ЕГЭ, 2008</i></span></div>
+			<div id = "text-task">
+            <p>Найдите все значения <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math> на отрезке <math xmlns="http://www.w3.org/1998/Math/MathML">  <mrow data-mjx-texclass="INNER">    <mo data-mjx-texclass="OPEN">[</mo>    <mn>0</mn>    <mo>;</mo>    <mfrac>      <mi>&#x3C0;</mi>      <mn>2</mn>    </mfrac>    <mo data-mjx-texclass="CLOSE">]</mo>  </mrow></math>
+, при каждом из система</p>
+            <div class="math-formula"  id="k">
+                $$
+
+				 \begin{cases}\left| x + \sqrt{3} \cdot y \right| + \left| y - \sqrt{3} \cdot x \right| = 2 \sin a, \\\left( \sqrt{3} \cdot x + y \right)^2 + \left( \sqrt{3} \cdot y - x \right)^2 = 4 \cos a\end{cases}
+
+				$$
+            </div>
+            <p>имеет ровно четыре различных решения.</p>
+			</div>
+           <details class="details">
+				  <summary class="details__title">Посмотреть решение</summary>
+				  <div class="details__content">
+					<p><b>Решение.</b> Заметим тождество: <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>(</mo><msqrt><mn>3</mn></msqrt><mi>x</mi><mo>+</mo><mi>y</mi><msup><mo>)</mo><mn>2</mn></msup><mo>+</mo><mo>(</mo><msqrt><mn>3</mn></msqrt><mi>y</mi><mo>&#8722;</mo><mi>x</mi><msup><mo>)</mo><mn>2</mn></msup><mo>=</mo><mn>4</mn><mo>(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>)</mo></math>, поэтому второе уравнение равносильно <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mi>cos</mi><mi>a</mi></math> — окружность радиуса <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>r</mi><mo>=</mo><msqrt><mi>cos</mi><mi>a</mi></msqrt></math>.</p>
+					<p>Полагая <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mi>r</mi><mi>cos</mi><mi>&#952;</mi><mo>,</mo><mi>y</mi><mo>=</mo><mi>r</mi><mi>sin</mi><mi>&#952;</mi></math> и используя <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>cos</mi><mi>&#952;</mi><mo>+</mo><msqrt><mn>3</mn></msqrt><mi>sin</mi><mi>&#952;</mi><mo>=</mo><mn>2</mn><mi>sin</mi><mo>(</mo><mi>&#952;</mi><mo>+</mo><mi>&#960;</mi><mo>/</mo><mn>6</mn><mo>)</mo></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>sin</mi><mi>&#952;</mi><mo>&#8722;</mo><msqrt><mn>3</mn></msqrt><mi>cos</mi><mi>&#952;</mi><mo>=</mo><mo>&#8722;</mo><mn>2</mn><mi>cos</mi><mo>(</mo><mi>&#952;</mi><mo>+</mo><mi>&#960;</mi><mo>/</mo><mn>6</mn><mo>)</mo></math>, первое уравнение (с <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#966;</mi><mo>=</mo><mi>&#952;</mi><mo>+</mo><mi>&#960;</mi><mo>/</mo><mn>6</mn></math>) превращается в</p>
+					<div class="math-formula">
+					\[
+					r\big(|\sin\varphi|+|\cos\varphi|\big)=2\sin a.
+					\]
+					</div>
+					<p>Функция <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>g</mi><mo>(</mo><mi>&#966;</mi><mo>)</mo><mo>=</mo><mo>|</mo><mi>sin</mi><mi>&#966;</mi><mo>|</mo><mo>+</mo><mo>|</mo><mi>cos</mi><mi>&#966;</mi><mo>|</mo></math> периодична с периодом <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#960;</mi><mo>/</mo><mn>2</mn></math>, на каждом периоде монотонно растёт от 1 до <math xmlns="http://www.w3.org/1998/Math/MathML"><msqrt><mn>2</mn></msqrt></math> и обратно. Значит, на полном обороте <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>[</mo><mn>0</mn><mo>;</mo><mn>2</mn><mi>&#960;</mi><mo>)</mo></math> уровень <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi><mo>&#8712;</mo><mo>(</mo><mn>1</mn><mo>;</mo><msqrt><mn>2</mn></msqrt><mo>)</mo></math> достигается <b>8</b> раз, а крайние значения <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi><mo>=</mo><mn>1</mn></math> и <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi><mo>=</mo><msqrt><mn>2</mn></msqrt></math> — каждое ровно <b>4</b> раза.</p>
+					<p>Каждому <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#966;</mi></math> отвечает единственная точка на окружности (единственная пара <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>)</mo></math>), поэтому для <b>ровно 4</b> решений нужно <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mi>sin</mi><mi>a</mi></mrow><mi>r</mi></mfrac><mo>=</mo><mfrac><mrow><mn>2</mn><mi>sin</mi><mi>a</mi></mrow><msqrt><mi>cos</mi><mi>a</mi></msqrt></mfrac></math> равнялось <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math> или <math xmlns="http://www.w3.org/1998/Math/MathML"><msqrt><mn>2</mn></msqrt></math> (крайние случаи).</p>
+					<p><i>Случай <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi><mo>=</mo><mn>1</mn></math>:</i> <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>sin</mi><mi>a</mi><mo>=</mo><msqrt><mi>cos</mi><mi>a</mi></msqrt><mo>&#8658;</mo><msup><mi>sin</mi><mn>2</mn></msup><mi>a</mi><mo>=</mo><mi>cos</mi><mi>a</mi><mo>&#8658;</mo><msup><mi>cos</mi><mn>2</mn></msup><mi>a</mi><mo>+</mo><mi>cos</mi><mi>a</mi><mo>&#8722;</mo><mn>1</mn><mo>=</mo><mn>0</mn><mo>&#8658;</mo><mi>cos</mi><mi>a</mi><mo>=</mo><mfrac><mrow><msqrt><mn>5</mn></msqrt><mo>&#8722;</mo><mn>1</mn></mrow><mn>2</mn></mfrac></math> (второй корень отрицателен, отброшен).</p>
+					<p><i>Случай <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi><mo>=</mo><msqrt><mn>2</mn></msqrt></math>:</i> <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>sin</mi><mi>a</mi><mo>=</mo><msqrt><mn>2</mn><mi>cos</mi><mi>a</mi></msqrt><mo>&#8658;</mo><msup><mi>sin</mi><mn>2</mn></msup><mi>a</mi><mo>=</mo><mn>2</mn><mi>cos</mi><mi>a</mi><mo>&#8658;</mo><msup><mi>cos</mi><mn>2</mn></msup><mi>a</mi><mo>+</mo><mn>2</mn><mi>cos</mi><mi>a</mi><mo>&#8722;</mo><mn>1</mn><mo>=</mo><mn>0</mn><mo>&#8658;</mo><mi>cos</mi><mi>a</mi><mo>=</mo><msqrt><mn>2</mn></msqrt><mo>&#8722;</mo><mn>1</mn></math>.</p>
+					<p>Оба значения <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>(</mo><msqrt><mn>5</mn></msqrt><mo>&#8722;</mo><mn>1</mn><mo>)</mo><mo>/</mo><mn>2</mn><mo>&#8776;</mo><mn>0.618</mn></math> и <math xmlns="http://www.w3.org/1998/Math/MathML"><msqrt><mn>2</mn></msqrt><mo>&#8722;</mo><mn>1</mn><mo>&#8776;</mo><mn>0.414</mn></math> лежат в <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>[</mo><mn>0</mn><mo>;</mo><mn>1</mn><mo>)</mo></math>, то есть соответствующие <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&#8712;</mo><mo>[</mo><mn>0</mn><mo>;</mo><mi>&#960;</mi><mo>/</mo><mn>2</mn><mo>]</mo></math> существуют.</p>
+					<p><b>Ответ:</b> \( a=\arccos\dfrac{\sqrt5-1}{2} \) или \( a=\arccos(\sqrt2-1). \)</p>
+				  </div>
+				</details>
+        </div>
+		<div class="task-container">
+
+            <div class="task-title"><b>Задача №13</b>   <span style="float: right; color: gray;"><i>ВМиК, 1989</i></span></div>
+			<div id = "text-task">
+            <p>Найдите все значения <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math>, при каждом из которых уравнение</p>
+            <div class="math-formula"  id="k">
+               
+
+				 <math xmlns="http://www.w3.org/1998/Math/MathML">  <msub>    <mi>log</mi>    <mrow data-mjx-texclass="ORD">      <mfrac>        <mn>1</mn>        <mi>&#x3C0;</mi>      </mfrac>    </mrow>  </msub>  <mo data-mjx-texclass="NONE">&#x2061;</mo>  <mrow data-mjx-texclass="INNER">    <mo data-mjx-texclass="OPEN">(</mo>    <mfrac>      <mrow>        <msup>          <mi>a</mi>          <mn>2</mn>        </msup>        <mo>+</mo>        <mn>4</mn>        <msup>          <mi>&#x3C0;</mi>          <mn>2</mn>        </msup>        <mo>+</mo>        <mn>4</mn>      </mrow>      <mrow>        <mn>4</mn>        <mi>&#x3C0;</mi>        <mo>&#x2212;</mo>        <msup>          <mi>x</mi>          <mn>2</mn>        </msup>        <mo>&#x2212;</mo>        <mn>2</mn>        <mo stretchy="false">(</mo>        <mi>a</mi>        <mo>&#x2212;</mo>        <mn>2</mn>        <mi>&#x3C0;</mi>        <mo stretchy="false">)</mo>        <mrow data-mjx-texclass="ORD">          <mo stretchy="false">|</mo>        </mrow>        <mi>x</mi>        <mo>&#x2212;</mo>        <mn>2</mn>        <mrow data-mjx-texclass="ORD">          <mo stretchy="false">|</mo>        </mrow>        <mo>+</mo>        <mn>4</mn>        <mi>&#x3C0;</mi>        <mi>a</mi>      </mrow>    </mfrac>    <mo data-mjx-texclass="CLOSE">)</mo>  </mrow>  <mo>&#x2212;</mo></math>
+				<math xmlns="http://www.w3.org/1998/Math/MathML">  <msqrt>    <mo stretchy="false">(</mo>    <mi>x</mi>    <mo>&#x2212;</mo>    <mn>5</mn>    <mi>a</mi>    <mo>+</mo>    <mn>10</mn>    <mi>&#x3C0;</mi>    <mo>&#x2212;</mo>    <mn>34</mn>    <mo stretchy="false">)</mo>    <mo stretchy="false">(</mo>    <mrow data-mjx-texclass="ORD">      <mo stretchy="false">|</mo>    </mrow>    <mi>&#x3C0;</mi>    <mo>&#x2212;</mo>    <mi>x</mi>    <mrow data-mjx-texclass="ORD">      <mo stretchy="false">|</mo>    </mrow>    <mo>&#x2212;</mo>    <mi>a</mi>    <mo>+</mo>    <mi>&#x3C0;</mi>    <mo>+</mo>    <mn>2</mn>    <mo stretchy="false">)</mo>  </msqrt>  <mo>=</mo>  <mn>0</mn></math>
+				
+            </div>
+            <p>имеет хотя бы одно целочисленное решение.</p>
+			</div>
+           <details class="details">
+				  <summary class="details__title">Посмотреть решение (идея)</summary>
+				  <div class="details__content">
+					<p><b>Идея решения.</b> Уравнение имеет вид <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>log</mi><mrow><mn>1</mn><mo>/</mo><mi>&#960;</mi></mrow></msub><mi>W</mi><mo>=</mo><msqrt><mi>E</mi></msqrt></math>, где <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>W</mi></math> — указанная дробь, а <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>E</mi></math> — подкоренное выражение. Так как основание <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>/</mo><mi>&#960;</mi><mo>&lt;</mo><mn>1</mn></math>, а правая часть <math xmlns="http://www.w3.org/1998/Math/MathML"><msqrt><mi>E</mi></msqrt><mo>&#8805;</mo><mn>0</mn></math>, из равенства следует <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo>&lt;</mo><mi>W</mi><mo>&#8804;</mo><mn>1</mn></math>.</p>
+					<p>Ключевой шаг — оценка знаменателя дроби <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>W</mi></math> сверху через числитель <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn><msup><mi>&#960;</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn></math> с помощью выделения полного квадрата по <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math> и <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>|</mo><mi>x</mi><mo>&#8722;</mo><mn>2</mn><mo>|</mo></math>: неравенство <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>W</mi><mo>&#8804;</mo><mn>1</mn></math> (то есть <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>log</mi><mo>&#8805;</mo><mn>0</mn></math>) оказывается верным <i>всегда</i>, а равенство <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>W</mi><mo>=</mo><mn>1</mn></math> (лог <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>=</mo><mn>0</mn></math>) достигается лишь при специальном соотношении между <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math> и <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math>. Так как правая часть <math xmlns="http://www.w3.org/1998/Math/MathML"><msqrt><mi>E</mi></msqrt><mo>&#8805;</mo><mn>0</mn></math>, а левая часть <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>log</mi><mo>&#8805;</mo><mn>0</mn></math> с равенством только в этой особой точке, уравнение выполняется тогда и только тогда, когда <b>одновременно</b> <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>log</mi><mo>=</mo><mn>0</mn></math> (то самое специальное соотношение) <b>и</b> <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>E</mi><mo>=</mo><mn>0</mn></math> (второй множитель под корнем обращается в 0).</p>
+					<p>Это сводит задачу к системе двух уравнений на <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math> и <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math>, из которой при требовании целочисленности <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math> и получаются ровно три допустимых значения параметра. Это классическая (и очень трудоёмкая по перебору случаев <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>|</mo><mi>x</mi><mo>&#8722;</mo><mn>2</mn><mo>|</mo></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>|</mo><mi>&#960;</mi><mo>&#8722;</mo><mi>x</mi><mo>|</mo></math>) задача ВМиК 1989 года; полный аккуратный перебор всех знаковых случаев занимает значительно больше места, чем формат этой страницы — приводим итоговый ответ.</p>
+					<p><b>Ответ:</b> \( a\in\{2\pi-8;\ 2\pi-1;\ 2\pi\}. \)</p>
+				  </div>
+				</details>
+        </div>
+				<div class="task-container">
+			
+            <div class="task-title"><b>Задача №14</b>   </div>
+			<div id = "text-task">
+            <p>При каких значениях параметра <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math> уравнение</p>
+            <div class="math-formula" id="k">
+                \[
+				2 \sqrt{-x^{2} + 4x - 3} + 2a \cdot \sin\left(\frac{\pi x}{4}\right) = a^{2} + 3
+				\]
+            </div>
+            <p>имеет ровно одно решение?</p>
+			</div>
+           <details class="details">
+				  <summary class="details__title">Посмотреть решение</summary>
+				  <div class="details__content">
+					<p><b>Решение.</b> ОДЗ: <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&#8722;</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn><mi>x</mi><mo>&#8722;</mo><mn>3</mn><mo>&#8805;</mo><mn>0</mn><mo>&#8660;</mo><mi>x</mi><mo>&#8712;</mo><mo>[</mo><mn>1</mn><mo>;</mo><mn>3</mn><mo>]</mo></math>. Сделаем замену <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>2</mn><mo>+</mo><mi>t</mi></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>&#8712;</mo><mo>[</mo><mo>&#8722;</mo><mn>1</mn><mo>;</mo><mn>1</mn><mo>]</mo></math>. Тогда <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&#8722;</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn><mi>x</mi><mo>&#8722;</mo><mn>3</mn><mo>=</mo><mn>1</mn><mo>&#8722;</mo><msup><mi>t</mi><mn>2</mn></msup></math>, а <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>sin</mi><mo>(</mo><mi>&#960;</mi><mi>x</mi><mo>/</mo><mn>4</mn><mo>)</mo><mo>=</mo><mi>sin</mi><mo>(</mo><mi>&#960;</mi><mo>/</mo><mn>2</mn><mo>+</mo><mi>&#960;</mi><mi>t</mi><mo>/</mo><mn>4</mn><mo>)</mo><mo>=</mo><mi>cos</mi><mo>(</mo><mi>&#960;</mi><mi>t</mi><mo>/</mo><mn>4</mn><mo>)</mo></math>. Уравнение принимает вид</p>
+					<div class="math-formula">
+					\[
+					2\sqrt{1-t^2}+2a\cos\frac{\pi t}{4} = a^2+3,\qquad t\in[-1,1].
+					\]
+					</div>
+					<p>Обе функции <math xmlns="http://www.w3.org/1998/Math/MathML"><msqrt><mn>1</mn><mo>&#8722;</mo><msup><mi>t</mi><mn>2</mn></msup></msqrt></math> и <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>cos</mi><mo>(</mo><mi>&#960;</mi><mi>t</mi><mo>/</mo><mn>4</mn><mo>)</mo></math> чётны по <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi></math>, значит всё уравнение чётно: если <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>t</mi><mn>0</mn></msub><mo>&#8800;</mo><mn>0</mn></math> — решение, то и <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&#8722;</mo><msub><mi>t</mi><mn>0</mn></msub></math> тоже (разным <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi></math> отвечают разные <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math>). Значит для <b>ровно одного</b> решения необходимо, чтобы решением было именно <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>=</mo><mn>0</mn></math> (иначе решения идут парами).</p>
+					<p>При <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>=</mo><mn>0</mn></math>: <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mo>+</mo><mn>2</mn><mi>a</mi><mo>=</mo><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><mn>3</mn><mo>&#8660;</mo><msup><mo>(</mo><mi>a</mi><mo>&#8722;</mo><mn>1</mn><msup><mo>)</mo><mn>2</mn></msup><mo>=</mo><mn>0</mn><mo>&#8660;</mo><mi>a</mi><mo>=</mo><mn>1</mn></math>.</p>
+					<p><i>Проверка единственности при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mn>1</mn></math>:</i> уравнение — <math xmlns="http://www.w3.org/1998/Math/MathML"><msqrt><mn>1</mn><mo>&#8722;</mo><msup><mi>t</mi><mn>2</mn></msup></msqrt><mo>+</mo><mi>cos</mi><mo>(</mo><mi>&#960;</mi><mi>t</mi><mo>/</mo><mn>4</mn><mo>)</mo><mo>=</mo><mn>2</mn></math>. Так как каждое слагаемое <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&#8804;</mo><mn>1</mn></math> (максимум 1 достигается только при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>=</mo><mn>0</mn></math>), сумма <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&#8804;</mo><mn>2</mn></math> с равенством <b>только</b> при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>=</mo><mn>0</mn></math> — решение единственно. Для других <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math> (где <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>=</mo><mn>0</mn></math> не является решением) любое возможное решение шло бы в паре — чётное число решений, никогда не 1.</p>
+					<p><b>Ответ:</b> \( a=1. \)</p>
+				  </div>
+				</details>
+        </div>
+		<div class="task-container">
+
+            <div class="task-title"><b>Задача №15</b>   <span style="float: right; color: gray;"><i>Ломоносов, 2026</i></span></div>
+			<div id = "text-task">
+            <p>При каких значения параметра <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math> множество решений неравенства</p>
+            <div class="math-formula"  id="k">
+               $$3x^{2} \log_{a} x - \log_{x} a - 2x \leq 0 $$
+            </div>
+            <p>относительно неизвестной  <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math> состоит из полуинтервала и точки <i>(которая не принадлежит полуинтервалу и не является его концом)</i>? </p>
+			</div>
+           <details class="details">
+				  <summary class="details__title">Посмотреть решение</summary>
+				  <div class="details__content">
+					<p><b>Решение.</b> ОДЗ: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mi>x</mi><mo>&#8800;</mo><mn>1</mn><mo>,</mo><mi>a</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mi>a</mi><mo>&#8800;</mo><mn>1</mn></math>. Пусть <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi><mo>=</mo><msub><mi>log</mi><mi>a</mi></msub><mi>x</mi></math>, тогда <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>log</mi><mi>x</mi></msub><mi>a</mi><mo>=</mo><mn>1</mn><mo>/</mo><mi>L</mi></math>. Умножая неравенство на <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi></math> (с учётом знака), сводим к квадратному относительно <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi></math>: <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup><msup><mi>L</mi><mn>2</mn></msup><mo>&#8722;</mo><mn>2</mn><mi>x</mi><mi>L</mi><mo>&#8722;</mo><mn>1</mn></math>, с корнями <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi><mo>=</mo><mn>1</mn><mo>/</mo><mi>x</mi></math> и <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi><mo>=</mo><mo>&#8722;</mo><mn>1</mn><mo>/</mo><mo>(</mo><mn>3</mn><mi>x</mi><mo>)</mo></math>.</p>
+					<p>Отсюда: если <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi><mo>&gt;</mo><mn>0</mn></math> (что при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&gt;</mo><mn>1</mn></math> означает <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&gt;</mo><mn>1</mn></math>), неравенство равносильно <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi><mo>&#8712;</mo><mo>(</mo><mn>0</mn><mo>;</mo><mn>1</mn><mo>/</mo><mi>x</mi><mo>]</mo></math>; если <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi><mo>&lt;</mo><mn>0</mn></math> (при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&gt;</mo><mn>1</mn></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>1</mn></math>), неравенство равносильно <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi><mo>&#8804;</mo><mo>&#8722;</mo><mn>1</mn><mo>/</mo><mo>(</mo><mn>3</mn><mi>x</mi><mo>)</mo></math>.</p>
+					<p>Возьмём <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&gt;</mo><mn>1</mn></math>. При <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&gt;</mo><mn>1</mn></math>: условие <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>log</mi><mi>a</mi></msub><mi>x</mi><mo>&#8804;</mo><mn>1</mn><mo>/</mo><mi>x</mi></math> выполняется при <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&#8712;</mo><mo>(</mo><mn>1</mn><mo>;</mo><msub><mi>x</mi><mo>*</mo></msub><mo>]</mo></math> для некоторого <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mo>*</mo></msub><mo>&gt;</mo><mn>1</mn></math> (полуинтервал — левая часть растёт быстрее правой при больших <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math>).</p>
+					<p>При <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>1</mn></math>: условие <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>log</mi><mi>a</mi></msub><mi>x</mi><mo>&#8804;</mo><mo>&#8722;</mo><mn>1</mn><mo>/</mo><mo>(</mo><mn>3</mn><mi>x</mi><mo>)</mo></math>. Рассмотрим <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#968;</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msub><mi>log</mi><mi>a</mi></msub><mi>x</mi><mo>+</mo><mn>1</mn><mo>/</mo><mo>(</mo><mn>3</mn><mi>x</mi><mo>)</mo></math>: на концах <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&#8594;</mo><msup><mn>0</mn><mo>+</mo></msup></math> и <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&#8594;</mo><msup><mn>1</mn><mo>&#8722;</mo></msup></math> имеем <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#968;</mi><mo>&gt;</mo><mn>0</mn></math>, а минимум находится из <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>&#968;</mi><mo>&#8242;</mo></msup><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mn>0</mn><mo>&#8658;</mo><mi>x</mi><mo>=</mo><mi>ln</mi><mi>a</mi><mo>/</mo><mn>3</mn></math>. Множество решений на этой ветви — <i>изолированная точка</i> ровно тогда, когда минимум <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#968;</mi></math> равен <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math> (касание).</p>
+					<p>Из <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#968;</mi><mo>(</mo><msub><mi>x</mi><mo>*</mo></msub><mo>)</mo><mo>=</mo><mn>0</mn></math> при <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mo>*</mo></msub><mo>=</mo><mi>ln</mi><mi>a</mi><mo>/</mo><mn>3</mn></math>: <math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mrow><mi>ln</mi><msub><mi>x</mi><mo>*</mo></msub></mrow><mrow><mi>ln</mi><mi>a</mi></mrow></mfrac><mo>+</mo><mfrac><mn>1</mn><mrow><mi>ln</mi><mi>a</mi></mrow></mfrac><mo>=</mo><mn>0</mn><mo>&#8658;</mo><mi>ln</mi><msub><mi>x</mi><mo>*</mo></msub><mo>=</mo><mo>&#8722;</mo><mn>1</mn><mo>&#8658;</mo><msub><mi>x</mi><mo>*</mo></msub><mo>=</mo><mn>1</mn><mo>/</mo><mi>e</mi></math>. С другой стороны <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mo>*</mo></msub><mo>=</mo><mi>ln</mi><mi>a</mi><mo>/</mo><mn>3</mn></math>, откуда <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>ln</mi><mi>a</mi><mo>=</mo><mn>3</mn><mo>/</mo><mi>e</mi></math>, то есть <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><msup><mi>e</mi><mrow><mn>3</mn><mo>/</mo><mi>e</mi></mrow></msup></math>.</p>
+					<p>При этом <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><msup><mi>e</mi><mrow><mn>3</mn><mo>/</mo><mi>e</mi></mrow></msup><mo>&#8776;</mo><mn>3.08</mn><mo>&gt;</mo><mn>1</mn></math>, ветвь <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&gt;</mo><mn>1</mn></math> даёт полуинтервал <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>(</mo><mn>1</mn><mo>;</mo><msub><mi>x</mi><mo>*</mo></msub><mo>]</mo></math>, а ветвь <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>1</mn></math> — единственную точку <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>1</mn><mo>/</mo><mi>e</mi></math> (не принадлежащую и не являющуюся концом первого полуинтервала) — точно то, что требуется в условии.</p>
+					<p><b>Ответ:</b> \( a=e^{3/e}. \)</p>
+				  </div>
+				</details>
+        </div>
+
+<br><br>
+</div>
+
+
+
+
+
+<nav class="ios-tabbar" aria-label="Основная навигация">
+  <div class="ios-tabbar-inner">
+    <a href="../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../zadach.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../vid.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+  </div>
+</nav>
+</body>
+</html>

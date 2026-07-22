@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link href="../../test1.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARINOV</title>
+	<link rel="shortcut icon" href="../../image/logo.svg" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="stylesheet" href="../assets/css/site.css">
+	<link rel="stylesheet" href="../assets/css/pygments.css">
+	<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&amp;display=swap" rel="stylesheet" media="all">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<script src="../../nav-merge.js" defer></script>
+	<style>
+		.dz-note {
+			color: gray;
+			font-size: 14px;
+			margin-bottom: 8px;
+		}
+
+		.tabs {
+			margin-top: 15px;
+		}
+
+		.tab-input {
+			display: none;
+		}
+
+		.tab-bar {
+			margin-bottom: 20px;
+		}
+
+		.tab-label {
+			display: inline-block;
+			padding: 10px 18px;
+			margin-right: 8px;
+			margin-bottom: 10px;
+			background-color: #EEF0F4;
+			border: 1px solid #E1E4EC;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: 15px;
+			transition: 0.2s;
+			user-select: none;
+		}
+
+		.tab-label:hover {
+			background-color: #E2E5F7;
+		}
+
+		.tab-input:checked + .tab-label {
+			background-color: #5B62F5;
+			color: white;
+			font-weight: 600;
+		}
+
+		.tab-panel {
+			display: none;
+		}
+
+		#tab1:checked ~ .tab-panels #panel1,
+		#tab2:checked ~ .tab-panels #panel2,
+		#tab3:checked ~ .tab-panels #panel3,
+		#tab4:checked ~ .tab-panels #panel4,
+		#tab5:checked ~ .tab-panels #panel5,
+		#tab6:checked ~ .tab-panels #panel6,
+		#tab7:checked ~ .tab-panels #panel7,
+		#tab8:checked ~ .tab-panels #panel8,
+		#tab9:checked ~ .tab-panels #panel9,
+		#tab10:checked ~ .tab-panels #panel10,
+		#tab11:checked ~ .tab-panels #panel11,
+		#tab12:checked ~ .tab-panels #panel12 {
+			display: block;
+		}
+
+		@media only screen and (max-device-width: 530px) {
+			.tab-label {
+				padding: 9px 14px;
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+<body>
+<button type="button" class="ios-back-btn" aria-label="Назад" onclick="history.back()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="ios-navbar"><span class="ios-navbar-title"></span></div>
+<div class="left-menu">
+  <a href="../../home.html" class="logo"><img src="../../image/logo1.svg" alt="Logo"></a>
+  <div class="nav-list">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../lit.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="15.2" width="15" height="4" rx="1"/><rect x="5.5" y="10.6" width="13" height="4" rx="1"/><rect x="6.5" y="6" width="11" height="4" rx="1"/></svg>Литература</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+    <a href="../../net.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="4.7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 6.7v3.1"/><path d="M10.3 13.4l-3.7 2.1"/><path d="M13.7 13.4l3.7 2.1"/></svg>Сети</a>
+  </div>
+</div>
+
+<div class="main">
+
+<nav class="breadcrumbs">
+  <a href="../../home.html">Главная</a><span class="crumb-sep">/</span>
+  <a href="../../vid.html">Видеоуроки</a><span class="crumb-sep">/</span>
+  <a href="../../matan.html">Курс по матану для 1-го семестра</a><span class="crumb-sep">/</span>
+  <span class="crumb-current">Домашнее задание №11</span>
+</nav>
+<h1>Домашнее задание к вебинару №11</h1>
+
+<div class="tabs">
+	<input type="radio" name="dz-tab" id="tab1" class="tab-input" checked>
+	<input type="radio" name="dz-tab" id="tab2" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab3" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab4" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab5" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab6" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab7" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab8" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab9" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab10" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab11" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab12" class="tab-input">
+
+	<div class="tab-bar">
+		<label for="tab1" class="tab-label">Задание 1</label>
+		<label for="tab2" class="tab-label">Задание 2</label>
+		<label for="tab3" class="tab-label">Задание 3</label>
+		<label for="tab4" class="tab-label">Задание 4</label>
+		<label for="tab5" class="tab-label">Задание 5</label>
+		<label for="tab6" class="tab-label">Задание 6</label>
+		<label for="tab7" class="tab-label">Задание 7</label>
+		<label for="tab8" class="tab-label">Задание 8</label>
+		<label for="tab9" class="tab-label">Задание 9</label>
+		<label for="tab10" class="tab-label">Задание 10</label>
+		<label for="tab11" class="tab-label">Задание 11</label>
+		<label for="tab12" class="tab-label">Задание 12</label>
+	</div>
+
+	<div class="tab-panels">
+
+		<div class="tab-panel" id="panel1">
+			<h2>Задание 1. Производная сложной функции</h2>
+			<p class="dz-note">Вычислить производную сложной функции.</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=(3x-7)^{10} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Функция степенная, применяем правило дифференцирования степенной функции с учётом производной внутренней функции.</p>
+						\[ y'=10(3x-7)^9\cdot(3x-7)'=10(3x-7)^9\cdot3=30(3x-7)^9 \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=\frac{1}{99}(1-x)^{-99}-\frac{1}{49}(1-x)^{-98}+\frac{1}{97}(1-x)^{-97} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Дифференцируем каждое слагаемое отдельно:</p>
+						\[ y'=\frac{1}{99}(-99)(1-x)^{-100}(-1)-\frac{1}{49}(-98)(1-x)^{-99}(-1)+\frac{1}{97}(-97)(1-x)^{-98}(-1) \]
+						<p>Упрощаем:</p>
+						\[ y'=(1-x)^{-100}-2(1-x)^{-99}+(1-x)^{-98} \]
+						<p>Выносим общий множитель \( (1-x)^{-100} \):</p>
+						\[ y'=(1-x)^{-100}\left(1-2(1-x)+(1-x)^2\right) \]
+						<p>Раскрываем скобки: \( 1-2+2x+1-2x+x^2=x^2 \). Окончательно:</p>
+						\[ y'=x^2(1-x)^{-100} \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=(a+bx)^{\alpha} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Обобщённая степенная функция:</p>
+						\[ y'=\alpha(a+bx)^{\alpha-1}\cdot(a+bx)'=\alpha(a+bx)^{\alpha-1}\cdot b=b\alpha(a+bx)^{\alpha-1} \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=\left(\sqrt{x}+\frac{1}{\sqrt{x}}\right)^{12} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Упростим выражение: \( \sqrt{x}+\dfrac{1}{\sqrt{x}}=\dfrac{x+1}{\sqrt{x}} \), тогда \( y=\left(\dfrac{x+1}{\sqrt{x}}\right)^{12}=(x+1)^{12}x^{-6} \).</p>
+						<p>Дифференцируем как произведение:</p>
+						\[ y'=12(x+1)^{11}\cdot x^{-6}+(x+1)^{12}\cdot(-6)x^{-7}=6x^{-7}(x+1)^{11}\big(2x-(x+1)\big)=6x^{-7}(x+1)^{11}(x-1) \]
+						<p>Или, возвращаясь к исходной записи:</p>
+						\[ y'=\frac{6(x-1)}{x\sqrt{x}}\cdot\left(\sqrt{x}+\frac{1}{\sqrt{x}}\right)^{11} \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=\sqrt{2x^2+\sqrt{x^2+1}} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ y'=\frac{1}{2\sqrt{2x^2+\sqrt{x^2+1}}}\cdot\left(2x^2+\sqrt{x^2+1}\right)' \]
+						<p>Находим производную внутреннего выражения:</p>
+						\[ \left(2x^2+\sqrt{x^2+1}\right)'=4x+\frac{1}{2\sqrt{x^2+1}}\cdot2x=4x+\frac{x}{\sqrt{x^2+1}} \]
+						<p>Таким образом:</p>
+						\[ y'=\frac{1}{2\sqrt{2x^2+\sqrt{x^2+1}}}\left(4x+\frac{x}{\sqrt{x^2+1}}\right)=\frac{1+4\sqrt{x^2+1}}{2\sqrt{2x^2+\sqrt{x^2+1}}}\cdot\frac{x}{\sqrt{x^2+1}} \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 6</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=\sqrt[13]{9+7\sqrt[5]{2x}} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Запишем в виде степени: \( y=\left(9+7(2x)^{1/5}\right)^{1/13} \).</p>
+						\[ y'=\frac{1}{13}\left(9+7(2x)^{1/5}\right)^{-12/13}\cdot\left(7\cdot\frac{1}{5}(2x)^{-4/5}\cdot2\right) \]
+						<p>Упрощаем:</p>
+						\[ y'=\frac{14}{65}\cdot\frac{1}{(2x)^{4/5}\left(9+7(2x)^{1/5}\right)^{12/13}} \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 7</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=\sqrt[3]{\frac{1-x^3}{1+x^3}} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Запишем в виде степени: \( y=\left(\dfrac{1-x^3}{1+x^3}\right)^{1/3} \).</p>
+						\[ y'=\frac{1}{3}\left(\frac{1-x^3}{1+x^3}\right)^{-2/3}\cdot\left(\frac{1-x^3}{1+x^3}\right)' \]
+						<p>Производная дроби:</p>
+						\[ \left(\frac{1-x^3}{1+x^3}\right)'=\frac{(-3x^2)(1+x^3)-(1-x^3)(3x^2)}{(1+x^3)^2}=\frac{-6x^2}{(1+x^3)^2} \]
+						<p>Таким образом:</p>
+						\[ y'=\frac{1}{3}\left(\frac{1-x^3}{1+x^3}\right)^{-2/3}\cdot\frac{-6x^2}{(1+x^3)^2}=-\frac{2x^2}{(1+x^3)^2}\left(\frac{1+x^3}{1-x^3}\right)^{2/3} \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 8</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=\cos\left(\frac{1}{x}\right) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ y'=-\sin\left(\frac{1}{x}\right)\cdot\left(\frac{1}{x}\right)'=-\sin\left(\frac{1}{x}\right)\cdot\left(-\frac{1}{x^2}\right)=\frac{1}{x^2}\sin\left(\frac{1}{x}\right) \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 9</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=\cot x^2-\frac{1}{3}\tan^3 2x \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Первое слагаемое: \( (\cot x^2)'=-\dfrac{1}{\sin^2x^2}\cdot2x=-\dfrac{2x}{\sin^2x^2} \).</p>
+						<p>Второе слагаемое: \( \left(\dfrac{1}{3}\tan^3 2x\right)'=\tan^2 2x\cdot\dfrac{1}{\cos^2 2x}\cdot2=\dfrac{2\sin^2 2x}{\cos^4 2x} \).</p>
+						\[ y'=-\frac{2x}{\sin^2 x^2}-\frac{2\sin^2 2x}{\cos^4 2x} \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 10</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=e^{-\frac{x^2}{2}} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ y'=e^{-\frac{x^2}{2}}\cdot\left(-\frac{x^2}{2}\right)'=e^{-\frac{x^2}{2}}\cdot(-x)=-xe^{-\frac{x^2}{2}} \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 11</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=2^{\sin 2x} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ y'=2^{\sin 2x}\cdot\ln2\cdot(\sin2x)'=2^{\sin2x}\cdot\ln2\cdot\cos2x\cdot2=2\ln2\cdot\cos2x\cdot2^{\sin2x} \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 12</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=\ln\ln\frac{x}{2} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ y'=\frac{1}{\ln\frac{x}{2}}\cdot\left(\ln\frac{x}{2}\right)' \]
+						<p>Производная внутреннего логарифма: \( \left(\ln\dfrac{x}{2}\right)'=\dfrac{1}{x/2}\cdot\dfrac12=\dfrac1x \). Подставляем:</p>
+						\[ y'=\frac{1}{x\ln\frac{x}{2}} \]
+						<p>Учитывая область определения (\( \ln\frac{x}{2}>0 \) и \( \frac{x}{2}>0 \), откуда \( x>2 \)):</p>
+						<p><b>Ответ:</b> \( y'=\dfrac{1}{x\ln(x/2)},\ x>2 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 13</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=\log_2^{3}(2x+3)^2 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Заметим, что \( \log_2^3(2x+3)^2=\left(\log_2(2x+3)^2\right)^3=\big(2\log_2(2x+3)\big)^3=8\big(\log_2(2x+3)\big)^3 \).</p>
+						<p>Тогда \( y=8(\log_2(2x+3))^3 \), и</p>
+						\[ y'=8\cdot3(\log_2(2x+3))^2\cdot\frac{1}{(2x+3)\ln2}\cdot2=\frac{48(\log_2(2x+3))^2}{(2x+3)\ln2} \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 14</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=\cos\frac{1}{\log_2 x} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ y'=-\sin\left(\frac{1}{\log_2 x}\right)\cdot\left(\frac{1}{\log_2 x}\right)' \]
+						<p>Производная внутренней функции: \( \left(\dfrac{1}{\log_2 x}\right)'=-\dfrac{1}{(\log_2 x)^2}\cdot\dfrac{1}{x\ln2} \). Таким образом:</p>
+						\[ y'=\frac{1}{x\ln2(\log_2x)^2}\sin\left(\frac{1}{\log_2x}\right) \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 15</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=\operatorname{arcctg}2^x \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ y'=-\frac{1}{1+(2^x)^2}\cdot(2^x)'=-\frac{1}{1+2^{2x}}\cdot2^x\ln2=-\frac{2^x\ln2}{1+2^{2x}} \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 16</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=10^{\frac{x}{\log_3 x}} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Проще дифференцировать через логарифмирование. Прологарифмируем: \( \ln y=\dfrac{x}{\log_3x}\ln10 \). Так как \( \log_3 x=\dfrac{\ln x}{\ln3} \), то</p>
+						\[ \ln y=x\ln3\ln10\cdot\frac{1}{\ln x} \]
+						<p>Дифференцируем неявно:</p>
+						\[ \frac{y'}{y}=\ln3\ln10\left(\frac{1}{\ln x}-\frac{1}{(\ln x)^2}\right)=\ln3\ln10\cdot\frac{\ln x-1}{(\ln x)^2} \]
+						<p>Умножаем на \( y \):</p>
+						\[ y'=10^{\frac{x}{\log_3x}}\cdot\ln3\ln10\cdot\frac{\ln x-1}{(\ln x)^2} \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 17</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=\sqrt{\cos x} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ y'=\frac{1}{2\sqrt{\cos x}}\cdot(-\sin x)=-\frac{\sin x}{2\sqrt{\cos x}} \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 18</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=\operatorname{arctg}(\tan x) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Заметим, что при \( x\in(-\pi/2,\pi/2) \) выполняется \( \operatorname{arctg}(\tan x)=x \). Поэтому:</p>
+						\[ y'=1 \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 19</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=\sin\cos^2x\cdot\cos\sin^2x \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Обозначим \( u=\sin(\cos^2x) \), \( v=\cos(\sin^2x) \), тогда \( y=uv \), \( y'=u'v+uv' \).</p>
+						\[ u'=\cos(\cos^2x)\cdot2\cos x\cdot(-\sin x)=-2\cos(\cos^2x)\cos x\sin x \]
+						\[ v'=-\sin(\sin^2x)\cdot2\sin x\cos x=-2\sin(\sin^2x)\sin x\cos x \]
+						<p>Подставляем:</p>
+						\[ y'=-2\sin x\cos x\left[\cos(\cos^2x)\cos(\sin^2x)+\sin(\cos^2x)\sin(\sin^2x)\right] \]
+						<p>Выражение в скобках — это \( \cos(\cos^2x-\sin^2x)=\cos(\cos2x) \). Поэтому:</p>
+						\[ y'=-2\sin x\cos x\cos(\cos2x)=-\sin2x\cos(\cos2x) \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 20</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=\cos(2\arccos x) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Используем тождество \( \cos2\theta=2\cos^2\theta-1 \): \( y=2[\cos(\arccos x)]^2-1=2x^2-1 \).</p>
+						\[ y'=4x,\quad |x|<1 \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 21</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=\cos(3\arccos x) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Используем тождество \( \cos3\theta=4\cos^3\theta-3\cos\theta \): \( y=4[\cos(\arccos x)]^3-3[\cos(\arccos x)]=4x^3-3x \).</p>
+						\[ y'=12x^2-3,\quad |x|<1 \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 22</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=3^{\cos^2 x} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ y'=3^{\cos^2x}\ln3\cdot(\cos^2x)'=3^{\cos^2x}\ln3\cdot2\cos x\cdot(-\sin x)=-3^{\cos^2x}\ln3\cdot\sin2x \]
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel2">
+			<h2>Задание 2. Производная показательно-степенной функции</h2>
+			<p class="dz-note">Вычислить производную от функции в степени (метод логарифмического дифференцирования).</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=x^{e^x} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Логарифмируем: \( \ln y=e^x\ln x \). Дифференцируем обе части по \( x \):</p>
+						\[ \frac{y'}{y}=e^x\ln x+e^x\cdot\frac1x=e^x\left(\ln x+\frac1x\right) \]
+						<p>Умножаем на \( y \):</p>
+						\[ y'=x^{e^x}\cdot e^x\left(\ln x+\frac{1}{x}\right) \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=2^{x^x} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Логарифмируем: \( \ln y=x^x\ln2 \). Найдём сначала \( (x^x)' \): полагая \( u=x^x \), \( \ln u=x\ln x \), получаем \( u'=x^x(\ln x+1) \).</p>
+						<p>Тогда:</p>
+						\[ \frac{y'}{y}=x^x(\ln x+1)\ln2 \]
+						<p>Умножаем на \( y \):</p>
+						\[ y'=2^{x^x}\cdot x^x(\ln x+1)\ln2 \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=x^{x^x} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Логарифмируем: \( \ln y=x^x\ln x \). Используя \( (x^x)'=x^x(\ln x+1) \) и \( (\ln x)'=\dfrac1x \):</p>
+						\[ \frac{y'}{y}=x^x(\ln x+1)\ln x+x^x\cdot\frac1x=x^x\left(\ln^2x+\ln x+\frac1x\right) \]
+						<p>Умножаем на \( y=x^{x^x} \):</p>
+						\[ y'=x^{x^x+x}\left(\ln^2x+\ln x+\frac{1}{x}\right) \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=\big(\arcsin(\sin^2x)\big)^{\operatorname{arctg}x} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Логарифмируем: \( \ln y=\operatorname{arctg}x\cdot\ln\!\big(\arcsin(\sin^2x)\big) \). Дифференцируем:</p>
+						\[ \frac{y'}{y}=(\operatorname{arctg}x)'\ln\big(\arcsin(\sin^2x)\big)+\operatorname{arctg}x\cdot\big[\ln(\arcsin(\sin^2x))\big]' \]
+						<p>Находим составляющие: \( (\operatorname{arctg}x)'=\dfrac{1}{1+x^2} \), а также</p>
+						\[ \big(\arcsin(\sin^2x)\big)'=\frac{1}{\sqrt{1-\sin^4x}}\cdot2\sin x\cos x=\frac{\sin2x}{\sqrt{1-\sin^4x}} \]
+						<p>Подставляем и умножаем на \( y \):</p>
+						\[ y'=\big(\arcsin(\sin^2x)\big)^{\operatorname{arctg}x}\left(\frac{\ln\big(\arcsin(\sin^2x)\big)}{1+x^2}+\frac{\operatorname{arctg}x\cdot\sin2x}{\arcsin(\sin^2x)\cdot\sqrt{1-\sin^4x}}\right) \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5</b></div>
+				<div id="text-task"><div class="math-formula">\[ y=(\cos x)^{e^x} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Логарифмируем: \( \ln y=e^x\ln(\cos x) \). Дифференцируем:</p>
+						\[ \frac{y'}{y}=e^x\ln(\cos x)+e^x\cdot\frac{1}{\cos x}\cdot(-\sin x)=e^x\big(\ln(\cos x)-\tan x\big) \]
+						<p>Умножаем на \( y \):</p>
+						\[ y'=(\cos x)^{e^x}\cdot e^x\big(\ln(\cos x)-\tan x\big) \]
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel3">
+			<h2>Задание 3. Теорема Ролля</h2>
+			<p class="dz-note">Теорема Ролля: если 1) \( f(x) \) определена и непрерывна на \( [a;b] \); 2) \( f(x) \) имеет конечную производную \( f'(x) \) внутри \( [a;b] \); 3) \( f(a)=f(b) \) — то существует \( c\in[a;b] \) такое, что \( f'(c)=0 \).</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Проверить теорему Ролля для \( f(x)=(x-1)(x-2)(x-3) \) на отрезках \( [1;2] \) и \( [2;3] \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>\( f(x) \) определена и непрерывна на обоих сегментах. Раскрываем скобки: \( f(x)=x^3-6x^2+11x-6 \), тогда \( f'(x)=3x^2-12x+11 \) — конечна и определена всюду. Кроме того \( f(1)=f(2)=f(3)=0 \).</p>
+						<p>Все условия теоремы Ролля выполняются. Найдём, где производная равна нулю:</p>
+						\[ 3x^2-12x+11=0 \quad\Rightarrow\quad x=\frac{6\pm\sqrt3}{3} \]
+						<p>Проверяем принадлежность отрезкам:</p>
+						\[ f'\!\left(\frac{6-\sqrt3}{3}\right)=0,\ \ \frac{6-\sqrt3}{3}\in[1;2] \qquad f'\!\left(\frac{6+\sqrt3}{3}\right)=0,\ \ \frac{6+\sqrt3}{3}\in[2;3] \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">Проверить теорему Ролля для \( f(x)=x(x^2-1) \) на отрезках \( [-1;1] \) и \( [0;1] \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>\( f(x)=x^3-x \) определена и непрерывна всюду, \( f'(x)=3x^2-1 \) конечна и определена всюду.</p>
+						<p><b>На отрезке \( [-1;1] \):</b> \( f(-1)=-1+1=0 \), \( f(1)=1-1=0 \), значит \( f(-1)=f(1) \) — условия теоремы выполняются.</p>
+						\[ 3x^2-1=0 \quad\Rightarrow\quad x^2=\frac13 \quad\Rightarrow\quad x=\pm\frac{1}{\sqrt3} \]
+						<p>Оба корня \( x=-\dfrac{1}{\sqrt3} \) и \( x=\dfrac{1}{\sqrt3} \) принадлежат \( [-1;1] \).</p>
+						<p><b>На отрезке \( [0;1] \):</b> \( f(0)=0 \), \( f(1)=0 \), значит \( f(0)=f(1) \) — условия теоремы выполняются.</p>
+						<p>Корень \( x=\dfrac{1}{\sqrt3}\in[0;1] \) (второй корень \( -\dfrac{1}{\sqrt3} \) отрезку не принадлежит, но по теореме достаточно одного).</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel4">
+			<h2>Задание 4. Мнимое противоречие с теоремой Ролля</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Функция \( f(x)=1-\sqrt[3]{x^2} \) обращается в нуль при \( x_1=-1 \) и \( x_2=1 \), но \( f'(x)\ne0 \) при \( -1\le x\le1 \). Объяснить кажущееся противоречие с теоремой Ролля.</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Для этой функции не выполняется второе условие теоремы Ролля (конечность производной внутри отрезка). Покажем это:</p>
+						\[ f'(x)=\left(1-\sqrt[3]{x^2}\right)'=-\frac{2}{3\sqrt[3]{x}} \]
+						<p>В точке \( x=0 \) производная бесконечна (не существует конечного значения), поэтому условие теоремы не соблюдается, и теорема Ролля здесь неприменима — противоречия на самом деле нет.</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel5">
+			<h2>Задание 5. Теорема Лагранжа</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Верна ли формула конечных приращений (теорема Лагранжа) для функции \( f(x)=\dfrac{1}{x} \) на сегменте \( [a,b] \), если \( ab<0 \)?</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Теорема Лагранжа: если 1) \( f(x) \) определена и непрерывна на \( [a;b] \); 2) \( f(x) \) имеет конечную производную \( f'(x) \) внутри \( [a;b] \) — то \( f(b)-f(a)=(b-a)f'(c) \), где \( a\lt c\lt b \).</p>
+						<p>Из условия \( ab<0 \) следует, что \( a \) и \( b \) разных знаков, значит \( 0\in[a;b] \).</p>
+						\[ f'(x)=\left(\frac1x\right)'=-\frac{1}{x^2} \]
+						<p>\( f'(x) \) не конечна (и сама \( f(x) \) не определена) в точке \( x=0 \), поэтому условия теоремы Лагранжа не соблюдаются.</p>
+						<p><b>Ответ:</b> нет, не верна.</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel6">
+			<h2>Задание 6. Теорема Коши</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Объяснить, почему не верна формула Коши для функций \( f(x)=x^2 \) и \( g(x)=|x| \) на сегменте \( [-1,1] \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Теорема Коши: если 1) \( f(x) \) и \( g(x) \) определены и непрерывны на \( [a;b] \); 2) \( f(x) \) и \( g(x) \) имеют конечные производные внутри \( [a;b] \); 3) \( (f'(x))^2+(g'(x))^2\ne0 \) при \( a\lt x\lt b \); 4) \( g(a)\ne g(b) \) — то \( \dfrac{f(b)-f(a)}{g(b)-g(a)}=\dfrac{f'(c)}{g'(c)} \).</p>
+						<p>Функция \( g(x)=|x| \) не дифференцируема в точке \( x=0\in(-1,1) \) — не имеет там конечной производной. Следовательно, второе условие теоремы Коши не выполняется, и формула Коши для этой пары функций неприменима.</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel7">
+			<h2>Задание 7. Горизонтальные касательные</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">На промежутках \( (-1;1) \) и \( (1;2) \) найти точки, в которых график функции \( f(x)=(x^2-1)(e-2) \) горизонтален</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>График горизонтален там, где производная равна нулю.</p>
+						\[ f'(x)=\big((x^2-1)(e-2)\big)'=(e-2)\cdot2x \]
+						\[ (e-2)\cdot2x=0 \quad\Rightarrow\quad x=0 \]
+						<p>Так как \( e-2\ne0 \), это единственное решение. Проверяем принадлежность промежуткам: \( x=0\in(-1;1) \), но \( x=0\notin(1;2) \).</p>
+						<p><b>Ответ:</b> график горизонтален только на \( (-1;1) \), в точке \( (0;\,2-e) \); на \( (1;2) \) горизонтальных касательных нет.</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel8">
+			<h2>Задание 8. Теорема Лагранжа: точка ξ</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">На интервале \( (0;1) \) найти точку \( \xi \), в которой касательная к графику \( y=x^3 \) параллельна хорде, соединяющей точки \( (0;0) \) и \( (1;1) \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Применяем теорему Лагранжа к \( f(x)=x^3 \) на \( [0;1] \): функция непрерывна на \( [0;1] \), \( f'(x)=3x^2 \) конечна и определена на \( (0;1) \), значит существует \( \xi\in(0;1) \), такое что:</p>
+						\[ f(1)-f(0)=f'(\xi)(1-0) \quad\Rightarrow\quad 1-0=3\xi^2 \quad\Rightarrow\quad \xi^2=\frac13 \quad\Rightarrow\quad \xi=\frac{1}{\sqrt3} \]
+						<p>Проверка: угловой коэффициент касательной \( f'(\xi)=3\xi^2=1 \) совпадает с угловым коэффициентом хорды \( k=\dfrac{1-0}{1-0}=1 \).</p>
+						<p><b>Ответ:</b> \( \xi=\dfrac{1}{\sqrt3}\in(0;1) \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel9">
+			<h2>Задание 9. Корень производной между корнями многочлена</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Доказать, что между двумя действительными корнями многочлена с действительными коэффициентами имеется корень его производной</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Пусть \( P(x) \) — многочлен с действительными коэффициентами, имеющий два действительных корня \( x_1\lt x_2 \), то есть \( P(x_1)=P(x_2)=0 \).</p>
+						<p>Рассмотрим \( P(x) \) на отрезке \( [x_1;x_2] \). Многочлен: 1) непрерывен на всей числовой прямой; 2) дифференцируем всюду; 3) \( P(x_1)=P(x_2)=0 \).</p>
+						<p>Таким образом, для \( P(x) \) на \( [x_1;x_2] \) выполняются все условия теоремы Ролля, значит существует \( c\in(x_1;x_2) \), такое что \( P'(c)=0 \).</p>
+						<p>Это и означает, что между корнями \( x_1 \) и \( x_2 \) многочлена \( P(x) \) существует корень \( c \) его производной \( P'(x) \). Что и требовалось доказать.</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel10">
+			<h2>Задание 10. Обобщение теоремы Ролля</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Доказать, что если функция \( f \) дифференцируема \( n \) раз, на отрезке \( [a;b] \) обращается в нуль в \( n+1 \) точках, то существует \( \xi\in(a;b) \), такое что \( f^{(n)}(\xi)=0 \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Пусть \( x_0,x_1,\dots,x_n \) — различные точки на \( [a;b] \), такие что \( f(x_0)=f(x_1)=\cdots=f(x_n)=0 \).</p>
+						<p>Применяем теорему Ролля последовательно:</p>
+						<p>1) На каждом из \( n \) интервалов \( (x_0,x_1),(x_1,x_2),\dots,(x_{n-1},x_n) \) существует хотя бы одна точка, где \( f'(x) \) обращается в нуль. Обозначим их \( \xi_1^{(1)},\dots,\xi_n^{(1)} \) — итого \( n \) точек.</p>
+						<p>2) Рассматриваем \( f'(x) \): она обращается в нуль в этих \( n \) точках. На каждом из \( n-1 \) интервалов между ними по теореме Ролля существует точка, где \( f''(x)=0 \). Получаем \( n-1 \) точек.</p>
+						<p>3) Продолжая процесс, на \( k \)-м шаге функция \( f^{(k)}(x) \) обращается в нуль в \( n+1-k \) точках.</p>
+						<p>4) На \( n \)-м шаге функция \( f^{(n)}(x) \) обращается в нуль хотя бы в одной точке \( \xi\in(a;b) \).</p>
+						<p>Таким образом, существует \( \xi\in(a;b) \), такое что \( f^{(n)}(\xi)=0 \). Что и требовалось доказать.</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel11">
+			<h2>Задание 11. Неограниченность производной</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Доказать, что если \( f(x) \) дифференцируема, но не ограничена на конечном интервале \( (a,b) \), то её производная \( f'(x) \) также не ограничена на \( (a,b) \). Обратная теорема не верна (построить пример)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p><b>Прямое утверждение (от противного).</b> Предположим, что \( f'(x) \) ограничена на \( (a,b) \), то есть существует \( M>0 \), такое что \( |f'(x)|\le M \) для всех \( x\in(a,b) \).</p>
+						<p>Возьмём произвольную точку \( x_0\in(a,b) \). По теореме Лагранжа для любого \( x\in(a,b) \) существует \( \xi \) между \( x_0 \) и \( x \), такое что:</p>
+						\[ f(x)-f(x_0)=f'(\xi)(x-x_0) \]
+						<p>Тогда:</p>
+						\[ |f(x)|=|f(x_0)+f'(\xi)(x-x_0)|\le|f(x_0)|+|f'(\xi)|\,|x-x_0|\le|f(x_0)|+M(b-a) \]
+						<p>Получили, что \( f(x) \) ограничена на \( (a,b) \) — противоречие с условием. Значит, предположение неверно, и \( f'(x) \) не ограничена на \( (a,b) \). Что и требовалось доказать.</p>
+						<p><b>Обратная теорема неверна — контрпример.</b> Рассмотрим \( f(x)=\sqrt[3]{x} \) на \( (-1,1) \).</p>
+						\[ f'(x)=\frac{1}{3\sqrt[3]{x^2}} \]
+						<p>При \( x\to0 \) производная \( f'(x)\to\infty \), то есть \( f'(x) \) не ограничена на \( (-1,1) \). Однако сама функция \( f(x)=\sqrt[3]{x} \) ограничена: \( |\sqrt[3]{x}|\le1 \) для всех \( x\in(-1,1) \).</p>
+						<p>Таким образом, производная не ограничена, а функция ограничена — обратное утверждение неверно.</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel12">
+			<h2>Задание 12. Многочлены Лежандра</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Доказать, что все корни многочленов Лежандра \[ P_n(x)=\frac{1}{2^nn!}\frac{d^n(x^2-1)^n}{dx^n}\quad(n=1,2,\dots) \] действительные, простые и лежат на интервале \( (-1;1) \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Рассмотрим многочлен \( Q_{2n}(x)=(x^2-1)^n \). Он имеет степень \( 2n \), а его корнями являются \( x=-1 \) и \( x=1 \), каждый кратности \( n \).</p>
+						<p>Если \( n>1 \), то производная \( Q_{2n}' \) также имеет \( x=\pm1 \) своими корнями, но уже кратности \( n-1 \). По теореме Ролля у \( Q_{2n}' \) существует ещё хотя бы один корень \( x_3 \) между \( -1 \) и \( 1 \). Так как сумма кратностей корней многочлена равна его степени, а степень \( Q_{2n}' \) равна \( 2n-1 \), кратность корня \( x_3 \) равна \( 1 \), и других корней у \( Q_{2n}' \), кроме \( \pm1 \) и \( x_3 \), нет.</p>
+						<p>Продолжая этот процесс по индукции, получаем, что производная \( Q_{2n}^{(n-1)}(x) \) имеет \( n+1 \) простых корней \( x_1,\dots,x_{n+1} \). Занумеруем их по возрастанию: \( -1=x_1\lt x_2<\cdots\lt x_n\lt x_{n+1}=1 \).</p>
+						<p>По теореме Ролля на каждом отрезке \( [x_i;x_{i+1}] \) (\( i=1,\dots,n \)) лежит хотя бы один корень производной \( \left(Q_{2n}^{(n-1)}(x)\right)'=Q_{2n}^{(n)}(x)=2^nn!\,P_n(x) \), то есть корень многочлена Лежандра \( P_n(x) \).</p>
+						<p>Таким образом, многочлен Лежандра \( P_n(x) \) имеет на интервале \( (-1;1) \) не менее \( n \) различных корней. Поскольку степень \( P_n(x) \) равна \( n \), все эти корни простые, и других корней (действительных или комплексных) у \( P_n(x) \) нет. Что и требовалось доказать.</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+</div>
+
+
+<nav class="ios-tabbar" aria-label="Основная навигация">
+  <div class="ios-tabbar-inner">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+  </div>
+</nav>
+</body>
+</html>

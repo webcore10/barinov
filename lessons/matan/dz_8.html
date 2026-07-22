@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link href="../../test1.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARINOV</title>
+	<link rel="shortcut icon" href="../../image/logo.svg" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="stylesheet" href="../assets/css/site.css">
+	<link rel="stylesheet" href="../assets/css/pygments.css">
+	<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&amp;display=swap" rel="stylesheet" media="all">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<script src="../../nav-merge.js" defer></script>
+	<style>
+		.dz-note {
+			color: gray;
+			font-size: 14px;
+			margin-bottom: 8px;
+		}
+
+		.tabs {
+			margin-top: 15px;
+		}
+
+		.tab-input {
+			display: none;
+		}
+
+		.tab-bar {
+			margin-bottom: 20px;
+		}
+
+		.tab-label {
+			display: inline-block;
+			padding: 10px 18px;
+			margin-right: 8px;
+			margin-bottom: 10px;
+			background-color: #EEF0F4;
+			border: 1px solid #E1E4EC;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: 15px;
+			transition: 0.2s;
+			user-select: none;
+		}
+
+		.tab-label:hover {
+			background-color: #E2E5F7;
+		}
+
+		.tab-input:checked + .tab-label {
+			background-color: #5B62F5;
+			color: white;
+			font-weight: 600;
+		}
+
+		.tab-panel {
+			display: none;
+		}
+
+		#tab1:checked ~ .tab-panels #panel1,
+		#tab2:checked ~ .tab-panels #panel2,
+		#tab3:checked ~ .tab-panels #panel3,
+		#tab4:checked ~ .tab-panels #panel4,
+		#tab5:checked ~ .tab-panels #panel5,
+		#tab6:checked ~ .tab-panels #panel6,
+		#tab7:checked ~ .tab-panels #panel7,
+		#tab8:checked ~ .tab-panels #panel8,
+		#tab9:checked ~ .tab-panels #panel9,
+		#tab10:checked ~ .tab-panels #panel10,
+		#tab11:checked ~ .tab-panels #panel11,
+		#tab12:checked ~ .tab-panels #panel12,
+		#tab13:checked ~ .tab-panels #panel13,
+		#tab14:checked ~ .tab-panels #panel14,
+		#tab15:checked ~ .tab-panels #panel15,
+		#tab16:checked ~ .tab-panels #panel16,
+		#tab17:checked ~ .tab-panels #panel17,
+		#tab18:checked ~ .tab-panels #panel18,
+		#tab19:checked ~ .tab-panels #panel19,
+		#tab20:checked ~ .tab-panels #panel20 {
+			display: block;
+		}
+
+		@media only screen and (max-device-width: 530px) {
+			.tab-label {
+				padding: 9px 14px;
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+<body>
+<button type="button" class="ios-back-btn" aria-label="Назад" onclick="history.back()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="ios-navbar"><span class="ios-navbar-title"></span></div>
+<div class="left-menu">
+  <a href="../../home.html" class="logo"><img src="../../image/logo1.svg" alt="Logo"></a>
+  <div class="nav-list">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../lit.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="15.2" width="15" height="4" rx="1"/><rect x="5.5" y="10.6" width="13" height="4" rx="1"/><rect x="6.5" y="6" width="11" height="4" rx="1"/></svg>Литература</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+    <a href="../../net.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="4.7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 6.7v3.1"/><path d="M10.3 13.4l-3.7 2.1"/><path d="M13.7 13.4l3.7 2.1"/></svg>Сети</a>
+  </div>
+</div>
+
+<div class="main">
+
+<nav class="breadcrumbs">
+  <a href="../../home.html">Главная</a><span class="crumb-sep">/</span>
+  <a href="../../vid.html">Видеоуроки</a><span class="crumb-sep">/</span>
+  <a href="../../matan.html">Курс по матану для 1-го семестра</a><span class="crumb-sep">/</span>
+  <span class="crumb-current">Домашнее задание №8</span>
+</nav>
+<h1>Домашнее задание к вебинару №8</h1>
+
+<div class="tabs">
+	<input type="radio" name="dz-tab" id="tab1" class="tab-input" checked>
+	<input type="radio" name="dz-tab" id="tab2" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab3" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab4" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab5" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab6" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab7" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab8" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab9" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab10" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab11" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab12" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab13" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab14" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab15" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab16" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab17" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab18" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab19" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab20" class="tab-input">
+
+	<div class="tab-bar">
+		<label for="tab1" class="tab-label">Задание 1</label>
+		<label for="tab2" class="tab-label">Задание 2</label>
+		<label for="tab3" class="tab-label">Задание 3</label>
+		<label for="tab4" class="tab-label">Задание 4</label>
+		<label for="tab5" class="tab-label">Задание 5</label>
+		<label for="tab6" class="tab-label">Задание 6</label>
+		<label for="tab7" class="tab-label">Задание 7</label>
+		<label for="tab8" class="tab-label">Задание 8</label>
+		<label for="tab9" class="tab-label">Задание 9</label>
+		<label for="tab10" class="tab-label">Задание 10</label>
+		<label for="tab11" class="tab-label">Задание 11*</label>
+		<label for="tab12" class="tab-label">Задание 12**</label>
+		<label for="tab13" class="tab-label">Задание 13</label>
+		<label for="tab14" class="tab-label">Задание 14</label>
+		<label for="tab15" class="tab-label">Задание 15*</label>
+		<label for="tab16" class="tab-label">Задание 16**</label>
+		<label for="tab17" class="tab-label">Задание 17**</label>
+		<label for="tab18" class="tab-label">Задание 18*</label>
+		<label for="tab19" class="tab-label">Задание 19</label>
+		<label for="tab20" class="tab-label">Задание 20*</label>
+	</div>
+
+	<div class="tab-panels">
+
+		<div class="tab-panel" id="panel1">
+			<h2>Задание 1. Предел дробно-линейной функции при разных \( x\to a \)</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите предел функции при \( x\to a=\{+\infty,\ -\infty,\ 0,\ 3^{+},\ 3^{-}\} \) и укажите вид неопределённости: \[ \lim_{x\to a}\frac{2x+1}{4x-12} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{x\to+\infty}\frac{2x+1}{4x-12}=\left[\frac{\infty}{\infty}\right]=\lim_{x\to+\infty}\frac{x\left(2+\frac1x\right)}{x\left(4-\frac{12}{x}\right)}=\lim_{x\to+\infty}\frac{2+\frac1x}{4-\frac{12}{x}}=\frac24=\frac12 \]
+						\[ \lim_{x\to-\infty}\frac{2x+1}{4x-12}=\left[\frac{\infty}{\infty}\right]=\lim_{x\to-\infty}\frac{x\left(2+\frac1x\right)}{x\left(4-\frac{12}{x}\right)}=\lim_{x\to-\infty}\frac{2+\frac1x}{4-\frac{12}{x}}=\frac24=\frac12 \]
+						\[ \lim_{x\to0}\frac{2x+1}{4x-12}=\frac{1}{-12}=-\frac{1}{12} \]
+						\[ \lim_{x\to3^{+}}\frac{2x+1}{4x-12}=+\infty \]
+						\[ \lim_{x\to3^{-}}\frac{2x+1}{4x-12}=-\infty \]
+						<p>При \( x\to0 \) и \( x\to3^{\pm} \) особой неопределённости нет — знаменатель отделён от нуля (либо стремится к нулю с определённым знаком), поэтому предел вычисляется прямой подстановкой. При \( x\to\pm\infty \) — неопределённость вида \( \left[\dfrac{\infty}{\infty}\right] \).</p>
+						<p><b>Ответ:</b> \( \dfrac12,\ \dfrac12,\ -\dfrac{1}{12},\ +\infty,\ -\infty \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel2">
+			<h2>Задание 2. Предел отношения многочленов при \( x\to\infty \)</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите предел функции и укажите вид неопределённости: \[ \lim_{x\to\infty}\frac{5x^5-7x^4+21x^2+4}{4x^5+x^3-10x^2+1} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{x\to\infty}\frac{5x^5-7x^4+21x^2+4}{4x^5+x^3-10x^2+1}=\left[\frac{\infty}{\infty}\right]=\lim_{x\to\infty}\frac{x^5\left(5-\frac7x+\frac{21}{x^3}+\frac{4}{x^5}\right)}{x^5\left(4+\frac{1}{x^2}-\frac{10}{x^3}+\frac{1}{x^5}\right)} \]
+						\[ =\lim_{x\to\infty}\frac{5-\frac7x+\frac{21}{x^3}+\frac{4}{x^5}}{4+\frac{1}{x^2}-\frac{10}{x^3}+\frac{1}{x^5}}=\frac54 \]
+						<p><b>Ответ:</b> \( \dfrac54 \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel3">
+			<h2>Задание 3. Неопределённость \( \left[\frac00\right] \): разложение на множители</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите предел функции и укажите вид неопределённости: \[ \lim_{x\to1}\frac{x^3-x}{x^2-2x+1} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{x\to1}\frac{x^3-x}{x^2-2x+1}=\left[\frac00\right]=\lim_{x\to1}\frac{x(x-1)(x+1)}{(x-1)^2}=\lim_{x\to1}\frac{x^2+x}{x-1}=\infty \]
+						<p><b>Ответ:</b> \( \infty \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel4">
+			<h2>Задание 4. Неопределённость \( \left[\frac00\right] \): разложение многочленов на множители</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите предел функции и укажите вид неопределённости: \[ \lim_{x\to-2}\frac{2x^2-x-10}{x^4-x^3-24} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{x\to-2}\frac{2x^2-x-10}{x^4-x^3-24}=\left[\frac00\right]=\lim_{x\to-2}\frac{(x+2)(2x-5)}{(x+2)(x^3-3x^2+6x-12)}=\lim_{x\to-2}\frac{2x-5}{x^3-3x^2+6x-12} \]
+						\[ =\frac{-4-5}{-8-12-12-12}=\frac{9}{44} \]
+						<p><b>Ответ:</b> \( \dfrac{9}{44} \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel5">
+			<h2>Задание 5. Неопределённость \( \left[\frac00\right] \): разложение многочленов на множители</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите предел функции и укажите вид неопределённости: \[ \lim_{x\to-1}\frac{x^3+2x+3}{x^2-1} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{x\to-1}\frac{x^3+2x+3}{x^2-1}=\left[\frac00\right]=\lim_{x\to-1}\frac{(x+1)(x^2-x+3)}{(x-1)(x+1)}=\lim_{x\to-1}\frac{x^2-x+3}{x-1} \]
+						\[ =\frac{1+1+3}{-1-1}=-\frac52 \]
+						<p><b>Ответ:</b> \( -\dfrac52 \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel6">
+			<h2>Задание 6. Неопределённость \( \left[\frac00\right] \): кратные корни числителя и знаменателя</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите предел функции и укажите вид неопределённости: \[ \lim_{x\to-3}\frac{x^4+4x^3-2x^2-12x+9}{x^3+4x^2+3x} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{x\to-3}\frac{x^4+4x^3-2x^2-12x+9}{x^3+4x^2+3x}=\left[\frac00\right]=\lim_{x\to-3}\frac{(x-1)^2(x+3)^2}{x(x+1)(x+3)} \]
+						\[ =\lim_{x\to-3}\frac{(x-1)^2(x+3)}{x(x+1)}=0 \]
+						<p><b>Ответ:</b> 0</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel7">
+			<h2>Задание 7. Неопределённость \( [\infty-\infty] \): домножение на сопряжённое</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите предел функции и укажите вид неопределённости: \[ \lim_{x\to+\infty}\left(x-\sqrt{x^2-1}\right) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{x\to+\infty}\left(x-\sqrt{x^2-1}\right)=[\infty-\infty]=\lim_{x\to+\infty}\frac{x^2-(x^2-1)}{x+\sqrt{x^2-1}}=\lim_{x\to+\infty}\frac{1}{x+\sqrt{x^2-1}}=0 \]
+						<p><b>Ответ:</b> 0</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel8">
+			<h2>Задание 8. Неопределённость \( \left[\frac00\right] \): разложение на множители</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите предел функции и укажите вид неопределённости: \[ \lim_{x\to1}\frac{x^2+4x-5}{x^2-1} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{x\to1}\frac{x^2+4x-5}{x^2-1}=\left[\frac00\right]=\lim_{x\to1}\frac{(x-1)(x+5)}{(x-1)(x+1)}=\lim_{x\to1}\frac{x+5}{x+1}=3 \]
+						<p><b>Ответ:</b> 3</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel9">
+			<h2>Задание 9. Неопределённость \( \left[\frac00\right] \): разложение на множители</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите предел функции и укажите вид неопределённости: \[ \lim_{x\to-2}\frac{x^3+3x^2+2x}{x^2-x-6} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{x\to-2}\frac{x^3+3x^2+2x}{x^2-x-6}=\left[\frac00\right]=\lim_{x\to-2}\frac{x(x+1)(x+2)}{(x-3)(x+2)}=\lim_{x\to-2}\frac{x(x+1)}{x-3}=-\frac25 \]
+						<p><b>Ответ:</b> \( -\dfrac25 \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel10">
+			<h2>Задание 10. Неопределённость \( \left[\frac00\right] \): разложение на множители</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите предел функции и укажите вид неопределённости: \[ \lim_{x\to7}\frac{2x^2-11x-21}{x^2-9x+14} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{x\to7}\frac{2x^2-11x-21}{x^2-9x+14}=\left[\frac00\right]=\lim_{x\to7}\frac{(x-7)(2x+3)}{(x-2)(x-7)}=\lim_{x\to7}\frac{2x+3}{x-2}=\frac{14+3}{7-2}=\frac{17}{5} \]
+						<p><b>Ответ:</b> \( \dfrac{17}{5} \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel11">
+			<h2>Задание 11*. Предел с высокой степенью через сумму геометрической прогрессии</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите предел функции и укажите вид неопределённости: \[ \lim_{x\to1}\frac{x^{101}-101x+100}{x^2-2x+1} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{x\to1}\frac{x^{101}-101x+100}{x^2-2x+1}=\left[\frac00\right]=\lim_{x\to1}\frac{x^{101}-101(x-1)-1}{(x-1)^2} \]
+						<p>Представим числитель через сумму \( x^{101}-1=(x-1)\sum_{i=0}^{100}x^i \):</p>
+						\[ =\lim_{x\to1}\frac{(x-1)\sum_{i=0}^{100}x^i-101(x-1)}{(x-1)^2}=\lim_{x\to1}\frac{\sum_{i=0}^{100}(x^i-1)}{x-1} \]
+						<p>Каждое слагаемое снова раскладываем: \( x^i-1=(x-1)\sum_{j=0}^{i-1}x^j \), поэтому</p>
+						\[ =\lim_{x\to1}\frac{(x-1)\sum_{i=0}^{100}\sum_{j=0}^{i-1}x^j}{x-1}=\lim_{x\to1}\sum_{i=0}^{100}\sum_{j=0}^{i-1}x^j=\sum_{i=0}^{100}i=\frac{100\cdot101}{2}=5050 \]
+						<p><b>Ответ:</b> 5050</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel12">
+			<h2>Задание 12**. Предел в общем виде \( \dfrac{x^n-1}{x^k-1} \)</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите предел функции и укажите вид неопределённости: \[ \lim_{x\to1}\frac{x^n-1}{x^k-1},\quad n,k\in\mathbb{N} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{x\to1}\frac{x^n-1}{x^k-1}=\left[\frac00\right]=\lim_{x\to1}\frac{(x-1)\sum_{i=0}^{n-1}x^i}{(x-1)\sum_{i=0}^{k-1}x^i}=\lim_{x\to1}\frac{\sum_{i=0}^{n-1}x^i}{\sum_{i=0}^{k-1}x^i}=\frac{\sum_{i=0}^{n-1}1}{\sum_{i=0}^{k-1}1}=\frac{n}{k} \]
+						<p><b>Ответ:</b> \( \dfrac{n}{k} \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel13">
+			<h2>Задание 13. Неопределённость \( [\infty-\infty] \): приведение к общему знаменателю</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите предел функции и укажите вид неопределённости: \[ \lim_{x\to1}\left(\frac{3}{1-x^3}+\frac{1}{x-1}\right) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{x\to1}\left(\frac{3}{1-x^3}+\frac{1}{x-1}\right)=[\infty-\infty]=\lim_{x\to1}\left(\frac{3}{(1-x)(1+x+x^2)}+\frac{1}{x-1}\right) \]
+						\[ =\lim_{x\to1}\frac{-3+1+x+x^2}{(x-1)(1+x+x^2)}=\lim_{x\to1}\frac{x^2+x-2}{(x-1)(x^2+x+1)}=\lim_{x\to1}\frac{(x-1)(x+2)}{(x-1)(x^2+x+1)} \]
+						\[ =\lim_{x\to1}\frac{x+2}{x^2+x+1}=\frac{1+2}{1+1+1}=1 \]
+						<p><b>Ответ:</b> 1</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel14">
+			<h2>Задание 14. Неопределённость \( [\infty-\infty] \): приведение к общему знаменателю</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите предел функции и укажите вид неопределённости: \[ \lim_{x\to2}\left(\frac{2}{2x-x^2}+\frac{1}{x^2-3x+2}\right) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{x\to2}\left(\frac{2}{2x-x^2}+\frac{1}{x^2-3x+2}\right)=[\infty-\infty]=\lim_{x\to2}\left(\frac{2}{x(2-x)}+\frac{1}{(x-1)(x-2)}\right) \]
+						\[ =\lim_{x\to2}\frac{-2x-2+x}{x(x-1)(x-2)}=-\lim_{x\to2}\frac{x-2}{x(x-1)(x-2)}=-\lim_{x\to2}\frac{1}{x(x-1)}=-\frac12 \]
+						<p><b>Ответ:</b> \( -\dfrac12 \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel15">
+			<h2>Задание 15*. Неопределённость \( [\infty-\infty] \): приведение к общему знаменателю</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите предел функции и укажите вид неопределённости: \[ \lim_{x\to1}\left(\frac{x^3+3}{x^2-1}-\frac{x^3+1}{x^2-x}\right) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{x\to1}\left(\frac{x^3+3}{x^2-1}-\frac{x^3+1}{x^2-x}\right)=[\infty-\infty]=\lim_{x\to1}\left(\frac{x^3+3}{(x-1)(x+1)}-\frac{x^3+1}{x(x-1)}\right) \]
+						\[ =\lim_{x\to1}\frac{x^4+3x-x^4-x^3-x-1}{x(x-1)(x+1)}=\lim_{x\to1}\frac{-x^3+2x-1}{x(x-1)(x+1)}=\lim_{x\to1}\frac{-(x-1)(x^2+x-1)}{x(x-1)(x+1)} \]
+						\[ =-\lim_{x\to1}\frac{x^2+x-1}{x(x+1)}=-\frac{1+1-1}{1+1}=-\frac12 \]
+						<p><b>Ответ:</b> \( -\dfrac12 \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel16">
+			<h2>Задание 16**. Предел в общем виде \( \dfrac{n}{1-x^n}-\dfrac{k}{1-x^k} \)</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите предел функции и укажите вид неопределённости: \[ \lim_{x\to1}\left(\frac{n}{1-x^n}-\frac{k}{1-x^k}\right),\quad n,k\in\mathbb{N} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{x\to1}\left(\frac{n}{1-x^n}-\frac{k}{1-x^k}\right)=[\infty-\infty]=\lim_{x\to1}\left(\frac{n}{(1-x)\sum_{i=0}^{n-1}x^i}-\frac{k}{(1-x)\sum_{i=0}^{k-1}x^i}\right) \]
+						\[ =\lim_{x\to1}\frac{1}{1-x}\left(\frac{n}{S_n}-\frac{k}{S_k}\right),\qquad \text{где } S_m=\sum_{i=0}^{m-1}x^i \]
+						<p>Заметим, что \( S_m(x)-m=\sum_{i=0}^{m-1}(x^i-1)=(x-1)\sum_{i=0}^{m-1}\sum_{j=0}^{i-1}x^j=(x-1)T_m \), то есть \( S_m=m+(x-1)T_m \). Тогда</p>
+						\[ \frac{n}{S_n}-1=\frac{n-S_n}{S_n}=-\frac{(x-1)T_n}{S_n} \]
+						<p>аналогично для \( k \), значит</p>
+						\[ \frac{n}{S_n}-\frac{k}{S_k}=(1-x)\left(\frac{T_n}{S_n}-\frac{T_k}{S_k}\right) \]
+						<p>поэтому</p>
+						\[ \frac{1}{1-x}\left(\frac{n}{S_n}-\frac{k}{S_k}\right)=\frac{T_n}{S_n}-\frac{T_k}{S_k} \]
+						\[ \lim_{x\to1}\left(\frac{T_n}{S_n}-\frac{T_k}{S_k}\right)=\frac{\sum_{i=0}^{n-1}i}{\sum_{i=0}^{n-1}1}-\frac{\sum_{i=0}^{k-1}i}{\sum_{i=0}^{k-1}1}=\frac{\frac{n(n-1)}{2}}{n}-\frac{\frac{k(k-1)}{2}}{k}=\frac{n-1}{2}-\frac{k-1}{2}=\frac{n-k}{2} \]
+						<p><b>Ответ:</b> \( \dfrac{n-k}{2} \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel17">
+			<h2>Задание 17**. Предел в общем виде: биномиальный коэффициент</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите предел функции и укажите вид неопределённости: \[ \lim_{x\to1}\frac{(x^n-1)(x^{n-1}-1)\cdots(x^{n-k+1}-1)}{(x-1)(x^2-1)\cdots(x^k-1)},\quad n,k\in\mathbb{N} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Введём обозначение \( S_m=\sum_{i=0}^{m-1}x^i \). Тогда \( x^m-1=(x-1)S_m \), и</p>
+						\[ \lim_{x\to1}\frac{(x^n-1)(x^{n-1}-1)\cdots(x^{n-k+1}-1)}{(x-1)(x^2-1)\cdots(x^k-1)}=\left[\frac00\right] \]
+						\[ =\lim_{x\to1}\frac{(x-1)S_n(x-1)S_{n-1}\cdots(x-1)S_{n-k+1}}{(x-1)S_1(x-1)S_2\cdots(x-1)S_k}=\lim_{x\to1}\frac{(x-1)^k\,S_nS_{n-1}\cdots S_{n-k+1}}{(x-1)^k\,S_1S_2\cdots S_k} \]
+						\[ =\lim_{x\to1}\frac{S_nS_{n-1}\cdots S_{n-k+1}}{S_1S_2\cdots S_k}=\frac{n(n-1)\cdots(n-k+1)}{1\cdot2\cdots k}=\frac{n!}{k!(n-k)!}=C_n^k \]
+						<p><b>Ответ:</b> \( C_n^k \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel18">
+			<h2>Задание 18*. Неопределённость \( \left[\frac00\right] \): домножение на неполный квадрат</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите предел функции и укажите вид неопределённости: \[ \lim_{x\to0}\frac{x}{\sqrt[3]{1+x}-1} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{x\to0}\frac{x}{\sqrt[3]{1+x}-1}=\left[\frac00\right] \]
+						<p>Домножим числитель и знаменатель на неполный квадрат суммы, чтобы получить разность кубов в знаменателе:</p>
+						\[ =\lim_{x\to0}\frac{x\left(\sqrt[3]{(1+x)^2}+\sqrt[3]{1+x}+1\right)}{1+x-1}=\lim_{x\to0}\frac{x\left(\sqrt[3]{(1+x)^2}+\sqrt[3]{1+x}+1\right)}{x} \]
+						\[ =\lim_{x\to0}\left(\sqrt[3]{(1+x)^2}+\sqrt[3]{1+x}+1\right)=1+1+1=3 \]
+						<p><b>Ответ:</b> 3</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel19">
+			<h2>Задание 19. Неопределённость \( \left[\frac00\right] \): домножение на сопряжённое</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите предел функции и укажите вид неопределённости: \[ \lim_{x\to3}\frac{\sqrt{x^2-2x+6}-\sqrt{x^2+2x-6}}{x^2-4x+3} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{x\to3}\frac{\sqrt{x^2-2x+6}-\sqrt{x^2+2x-6}}{x^2-4x+3}=\left[\frac00\right] \]
+						<p>Домножим числитель и знаменатель на сопряжённое числителя:</p>
+						\[ =\lim_{x\to3}\frac{x^2-2x+6-(x^2+2x-6)}{(x-1)(x-3)\left(\sqrt{x^2-2x+6}+\sqrt{x^2+2x-6}\right)}=\lim_{x\to3}\frac{-4(x-3)}{(x-1)(x-3)\left(\sqrt{x^2-2x+6}+\sqrt{x^2+2x-6}\right)} \]
+						\[ =-4\lim_{x\to3}\frac{1}{(x-1)\left(\sqrt{x^2-2x+6}+\sqrt{x^2+2x-6}\right)}=-\frac{4}{3(2+2)}=-\frac{4}{12}=-\frac13 \]
+						<p><b>Ответ:</b> \( -\dfrac13 \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel20">
+			<h2>Задание 20*. Неопределённость \( \left[\frac00\right] \): двойное домножение на сопряжённые</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">Вычислите предел функции и укажите вид неопределённости: \[ \lim_{x\to0}\frac{\sqrt[3]{x+8}-2}{\sqrt{1+2x}-1} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						\[ \lim_{x\to0}\frac{\sqrt[3]{x+8}-2}{\sqrt{1+2x}-1}=\left[\frac00\right] \]
+						<p>Домножим числитель и знаменатель на сопряжённое знаменателя:</p>
+						\[ =\lim_{x\to0}\frac{\left(\sqrt[3]{x+8}-2\right)\left(\sqrt{1+2x}+1\right)}{1+2x-1} \]
+						<p>Домножим ещё и на неполный квадрат суммы, чтобы получить разность кубов в числителе:</p>
+						\[ =\lim_{x\to0}\frac{(x+8-8)\left(\sqrt{1+2x}+1\right)}{2x\left(\sqrt[3]{(x+8)^2}+\sqrt[3]{x+8}+4\right)}=\frac12\lim_{x\to0}\frac{\sqrt{1+2x}+1}{\sqrt[3]{(x+8)^2}+\sqrt[3]{x+8}+4} \]
+						\[ =\frac{2}{2\cdot(4+2+4)}=\frac{1}{12} \]
+						<p><b>Ответ:</b> \( \dfrac{1}{12} \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+</div>
+
+
+<nav class="ios-tabbar" aria-label="Основная навигация">
+  <div class="ios-tabbar-inner">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+  </div>
+</nav>
+</body>
+</html>

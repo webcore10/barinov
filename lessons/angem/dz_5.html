@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link href="../../test1.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARINOV</title>
+	<link rel="shortcut icon" href="../../image/logo.svg" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="stylesheet" href="../assets/css/site.css">
+	<link rel="stylesheet" href="../assets/css/pygments.css">
+	<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&amp;display=swap" rel="stylesheet" media="all">
+	<link href="shrek.ttf" rel="stylesheet" media="all">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<script src="../../nav-merge.js" defer></script>
+	<style>
+		.dz-header {
+			color: gray;
+			font-size: 14px;
+			margin-bottom: 4px;
+		}
+
+		.tabs {
+			margin-top: 15px;
+		}
+
+		.tab-input {
+			display: none;
+		}
+
+		.tab-bar {
+			margin-bottom: 20px;
+		}
+
+		.tab-label {
+			display: inline-block;
+			padding: 10px 18px;
+			margin-right: 8px;
+			margin-bottom: 10px;
+			background-color: #EEF0F4;
+			border: 1px solid #E1E4EC;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: 15px;
+			transition: 0.2s;
+			user-select: none;
+		}
+
+		.tab-label:hover {
+			background-color: #E2E5F7;
+		}
+
+		.tab-input:checked + .tab-label {
+			background-color: #5B62F5;
+			color: white;
+			font-weight: 600;
+		}
+
+		.tab-panel {
+			display: none;
+		}
+
+		#tab1:checked ~ .tab-panels #panel1,
+		#tab2:checked ~ .tab-panels #panel2,
+		#tab3:checked ~ .tab-panels #panel3,
+		#tab4:checked ~ .tab-panels #panel4,
+		#tab5:checked ~ .tab-panels #panel5,
+		#tab6:checked ~ .tab-panels #panel6,
+		#tab7:checked ~ .tab-panels #panel7,
+		#tab8:checked ~ .tab-panels #panel8,
+		#tab9:checked ~ .tab-panels #panel9,
+		#tab10:checked ~ .tab-panels #panel10,
+		#tab11:checked ~ .tab-panels #panel11,
+		#tab12:checked ~ .tab-panels #panel12,
+		#tab13:checked ~ .tab-panels #panel13,
+		#tab14:checked ~ .tab-panels #panel14,
+		#tab15:checked ~ .tab-panels #panel15,
+		#tab16:checked ~ .tab-panels #panel16,
+		#tab17:checked ~ .tab-panels #panel17,
+		#tab18:checked ~ .tab-panels #panel18,
+		#tab19:checked ~ .tab-panels #panel19 {
+			display: block;
+		}
+
+		@media only screen and (max-device-width: 530px) {
+			.tab-label {
+				padding: 9px 14px;
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+<body>
+<button type="button" class="ios-back-btn" aria-label="Назад" onclick="history.back()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="ios-navbar"><span class="ios-navbar-title"></span></div>
+<div class="left-menu">
+  <a href="../../home.html" class="logo"><img src="../../image/logo1.svg" alt="Logo"></a>
+  <div class="nav-list">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../lit.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="15.2" width="15" height="4" rx="1"/><rect x="5.5" y="10.6" width="13" height="4" rx="1"/><rect x="6.5" y="6" width="11" height="4" rx="1"/></svg>Литература</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+    <a href="../../net.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="4.7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 6.7v3.1"/><path d="M10.3 13.4l-3.7 2.1"/><path d="M13.7 13.4l3.7 2.1"/></svg>Сети</a>
+  </div>
+</div>
+
+<div class="main">
+
+<nav class="breadcrumbs">
+  <a href="../../home.html">Главная</a><span class="crumb-sep">/</span>
+  <a href="../../vid.html">Видеоуроки</a><span class="crumb-sep">/</span>
+  <a href="../../angem.html">Аналитическая геометрия от Профиматики</a><span class="crumb-sep">/</span>
+  <span class="crumb-current">Домашнее задание</span>
+</nav>
+
+	<div class="tabs">
+		<input type="radio" name="dz-tab" id="tab1" class="tab-input" checked>
+		<input type="radio" name="dz-tab" id="tab2" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab3" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab4" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab5" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab6" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab7" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab8" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab9" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab10" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab11" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab12" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab13" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab14" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab15" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab16" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab17" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab18" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab19" class="tab-input">
+
+		<div class="tab-bar">
+			<label for="tab1" class="tab-label">Задание 1</label>
+			<label for="tab2" class="tab-label">Задание 2</label>
+			<label for="tab3" class="tab-label">Задание 3</label>
+			<label for="tab4" class="tab-label">Задание 4</label>
+			<label for="tab5" class="tab-label">Задание 5</label>
+			<label for="tab6" class="tab-label">Задание 6</label>
+			<label for="tab7" class="tab-label">Задание 7</label>
+			<label for="tab8" class="tab-label">Задание 8</label>
+			<label for="tab9" class="tab-label">Задание 9</label>
+			<label for="tab10" class="tab-label">Задание 10</label>
+			<label for="tab11" class="tab-label">Задание 11</label>
+			<label for="tab12" class="tab-label">Задание 12</label>
+			<label for="tab13" class="tab-label">Задание 13</label>
+			<label for="tab14" class="tab-label">Задание 14</label>
+			<label for="tab15" class="tab-label">Задание 15</label>
+			<label for="tab16" class="tab-label">Задание 16</label>
+			<label for="tab17" class="tab-label">Задание 17</label>
+			<label for="tab18" class="tab-label">Задание 18</label>
+			<label for="tab19" class="tab-label">Задание 19</label>
+		</div>
+
+		<div class="tab-panels">
+
+			<!-- Задание 1 -->
+			<div class="tab-panel" id="panel1">
+				<h2>Задание 1. Скалярное произведение по длинам и углу</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Найти скалярное произведение \(\vec a\) и \(\vec b\), если \(|\vec a|=3,|\vec b|=1,\angle(\vec a,\vec b)=45°\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>По формуле \((\vec a,\vec b)=|\vec a||\vec b|\cos\varphi\): \((\vec a,\vec b)=3\cdot1\cdot\cos45°=3\cdot\frac{\sqrt2}{2}=\frac{3\sqrt2}{2}\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>Найти скалярное произведение \(\vec a\) и \(\vec b\), если \(|\vec a|=6,|\vec b|=7,\angle(\vec a,\vec b)=120°\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\((\vec a,\vec b)=6\cdot7\cdot\cos120°=42\cdot\left(-\frac12\right)=-21\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task"><p>Найти скалярное произведение \(\vec a\) и \(\vec b\), если \(|\vec a|=4,|\vec b|=2,\angle(\vec a,\vec b)=90°\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\((\vec a,\vec b)=4\cdot2\cdot\cos90°=8\cdot0=0\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 4</b></div>
+					<div id="text-task"><p>Найти скалярное произведение \(\vec a\) и \(\vec b\), если \(|\vec a|=5,|\vec b|=1\), а \(\vec a\) и \(\vec b\) сонаправлены.</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>При сонаправленных векторах \(\varphi=0°\): \((\vec a,\vec b)=5\cdot1\cdot\cos0°=5\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 5</b></div>
+					<div id="text-task"><p>Найти скалярное произведение \(\vec a\) и \(\vec b\), если \(|\vec a|=2,|\vec b|=3\), а \(\vec a\) и \(\vec b\) противоположно направлены.</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>При противоположно направленных векторах \(\varphi=180°\): \((\vec a,\vec b)=2\cdot3\cdot\cos180°=6\cdot(-1)=-6\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 2 -->
+			<div class="tab-panel" id="panel2">
+				<h2>Задание 2. Комбинированное выражение со скалярным произведением</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Вычислить \(|\vec a|^2-\sqrt3(\vec a,\vec b)+5|\vec b|^2\), если \(|\vec a|=2,|\vec b|=1,\angle(\vec a,\vec b)=30°\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(|\vec a|^2=4\), \((\vec a,\vec b)=2\cdot1\cdot\cos30°=\sqrt3\), \(|\vec b|^2=1\). Подставляя: \(4-\sqrt3\cdot\sqrt3+5\cdot1=4-3+5=6\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>Вычислить \(|\vec a|^2-\sqrt3(\vec a,\vec b)+5|\vec b|^2\), если \(|\vec a|=3,|\vec b|=2,\angle(\vec a,\vec b)=150°\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(|\vec a|^2=9\), \((\vec a,\vec b)=3\cdot2\cdot\cos150°=6\cdot\left(-\frac{\sqrt3}{2}\right)=-3\sqrt3\), \(|\vec b|^2=4\). Подставляя: \(9-\sqrt3\cdot(-3\sqrt3)+5\cdot4=9+9+20=38\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 3 -->
+			<div class="tab-panel" id="panel3">
+				<h2>Задание 3. Угол между векторами по координатам</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Найти угол между векторами \(\vec a(1,2)\) и \(\vec b(2,4)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\((\vec a,\vec b)=1\cdot2+2\cdot4=10\), \(|\vec a|=\sqrt5\), \(|\vec b|=\sqrt{20}=2\sqrt5\). \(\cos\varphi=\dfrac{10}{\sqrt5\cdot2\sqrt5}=\dfrac{10}{10}=1\Rightarrow\varphi=0°\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>Найти угол между векторами \(\vec a(1,2)\) и \(\vec b(4,2)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\((\vec a,\vec b)=1\cdot4+2\cdot2=8\), \(|\vec a|=\sqrt5\), \(|\vec b|=2\sqrt5\). \(\cos\varphi=\dfrac{8}{10}=0.8\Rightarrow\varphi=\arccos0.8\approx36.87°\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task"><p>Найти угол между векторами \(\vec a(1,2)\) и \(\vec b(-2,1)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\((\vec a,\vec b)=1\cdot(-2)+2\cdot1=0\Rightarrow\varphi=90°\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 4</b></div>
+					<div id="text-task"><p>Найти угол между векторами \(\vec a(1,-1)\) и \(\vec b(-4,2)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\((\vec a,\vec b)=1\cdot(-4)+(-1)\cdot2=-6\), \(|\vec a|=\sqrt2\), \(|\vec b|=2\sqrt5\). \(\cos\varphi=\dfrac{-6}{2\sqrt{10}}=-\dfrac{3}{\sqrt{10}}\Rightarrow\varphi=\arccos\left(-\dfrac{3}{\sqrt{10}}\right)\approx161.57°\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 5</b></div>
+					<div id="text-task"><p>Найти угол между векторами \(\vec a(2,-1)\) и \(\vec b(-4,2)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\((\vec a,\vec b)=2\cdot(-4)+(-1)\cdot2=-10\), \(|\vec a|=\sqrt5\), \(|\vec b|=2\sqrt5\). \(\cos\varphi=\dfrac{-10}{10}=-1\Rightarrow\varphi=180°\) (векторы противоположно направлены, что видно и из \(\vec b=-2\vec a\)).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 4 -->
+			<div class="tab-panel" id="panel4">
+				<h2>Задание 4. Комбинации скалярных произведений трёх векторов</h2>
+				<p>Даны три вектора: \(\vec a(1,-1,1),\vec b(5,1,1),\vec c(0,3,-2)\). Предварительно вычислим: \((\vec a,\vec b)=5\), \((\vec a,\vec c)=-5\), \((\vec b,\vec c)=1\), \(|\vec a|^2=3,|\vec b|^2=27,|\vec c|^2=13\).</p>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Вычислить \(\vec b(\vec a,\vec c)-\vec c(\vec a,\vec b)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(\vec b\cdot(-5)-\vec c\cdot5=(-25,-5,-5)-(0,15,-10)=(-25,-20,5)\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>Вычислить \(|\vec a|^2+|\vec c|^2-(\vec a,\vec b)\cdot(\vec b,\vec c)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(3+13-5\cdot1=16-5=11\).</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task"><p>Вычислить \((\vec a,\vec c)\cdot(\vec a,\vec b)-|\vec a|^2(\vec b,\vec c)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\((-5)\cdot5-3\cdot1=-25-3=-28\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 5 -->
+			<div class="tab-panel" id="panel5">
+				<h2>Задание 5. Проверка тождества для скалярного произведения</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Верно ли, что для любых векторов \(\vec a,\vec b,\vec c,\vec d\) выполняется соотношение \((\vec a,\vec b)\cdot(\vec c,\vec d)=(\vec a,\vec c)\cdot(\vec b,\vec d)\)?</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Рассмотрим контрпример на плоскости: \(\vec a=(1,0),\vec b=(0,1),\vec c=(1,0),\vec d=(0,1)\). Левая часть: \((\vec a,\vec b)\cdot(\vec c,\vec d)=(1\cdot0+0\cdot1)\cdot(1\cdot0+0\cdot1)=0\cdot0=0\). Правая часть: \((\vec a,\vec c)\cdot(\vec b,\vec d)=(1\cdot1+0\cdot0)\cdot(0\cdot0+1\cdot1)=1\cdot1=1\). Так как \(0\ne1\), равенство не выполняется в общем случае. Ответ: нет, неверно.</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 6 -->
+			<div class="tab-panel" id="panel6">
+				<h2>Задание 6. Площадь параллелограмма в косоугольном базисе</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Длины базисных векторов \(\vec e_1,\vec e_2,\vec e_3\) равны соответственно 1, 1, 2; углы между ними равны \(\angle(e_1,e_2)=90°,\ \angle(e_1,e_3)=\angle(e_2,e_3)=60°\). Вычислить площадь параллелограмма, построенного на векторах \(\vec a(-1,0,2)\) и \(\vec b(2,-1,1)\) (координаты даны в этом базисе).</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Площадь параллелограмма \(S=|[\vec a,\vec b]|\), причём \(|[\vec a,\vec b]|^2=(\vec a,\vec a)(\vec b,\vec b)-(\vec a,\vec b)^2\). Сначала найдём скалярные произведения базисных векторов: \((e_1,e_1)=1,(e_2,e_2)=1,(e_3,e_3)=4\), \((e_1,e_2)=1\cdot1\cdot\cos90°=0\), \((e_1,e_3)=1\cdot2\cdot\cos60°=1\), \((e_2,e_3)=1\cdot2\cdot\cos60°=1\).</p>
+							<p>Раскладывая \(\vec a=-e_1+2e_3\), \(\vec b=2e_1-e_2+e_3\) и вычисляя билинейно: \((\vec a,\vec a)=(-1)^2(e_1,e_1)+2^2(e_3,e_3)+2(-1)(2)(e_1,e_3)=1+16-4=13\); \((\vec b,\vec b)=4(e_1,e_1)+(e_2,e_2)+(e_3,e_3)+2\cdot2\cdot(-1)(e_1,e_2)+2\cdot2\cdot1(e_1,e_3)+2(-1)(1)(e_2,e_3)=4+1+4+0+4-2=11\); \((\vec a,\vec b)=(-1)(2)(e_1,e_1)+(-1)(-1)(e_1,e_2)+(-1)(1)(e_1,e_3)+2(2)(e_1,e_3)+2(-1)(e_2,e_3)+2(1)(e_3,e_3)=-2+0-1+4-2+8=7\).</p>
+							<p>Тогда \(S^2=13\cdot11-7^2=143-49=94\), откуда \(S=\sqrt{94}\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 7 -->
+			<div class="tab-panel" id="panel7">
+				<h2>Задание 7. Биссектриса угла между векторами</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Из одной точки отложены три вектора \(\vec a(0,-3,4),\vec b(4,1,-8)\) и \(\vec c\). Вектор \(\vec c\) имеет длину 1 и делит пополам угол между \(\vec a\) и \(\vec b\). Вычислить координаты вектора \(\vec c\).</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Так как \(\vec c\) делит угол между \(\vec a\) и \(\vec b\) пополам, углы между \(\vec c\) и каждым из векторов равны, то есть \(\dfrac{(\vec a,\vec c)}{|\vec a|}=\dfrac{(\vec b,\vec c)}{|\vec b|}\). При \(|\vec a|=5,|\vec b|=9\) и \(\vec c=(x,y,z)\) это даёт \(9(-3y+4z)=5(4x+y-8z)\), то есть \(-5x-8y+19z=0\) (1).</p>
+							<p>Условие \(|\vec c|=1\) даёт \(x^2+y^2+z^2=1\) (2). Так как \(\vec c\) лежит в плоскости векторов \(\vec a,\vec b\), он компланарен им: скалярное произведение с нормалью \(\vec n=[\vec a,\vec b]=(5,4,3)\) равно нулю: \(5x+4y+3z=0\) (3).</p>
+							<p>Решая систему (1)-(3) методом последовательного исключения переменных и выбирая знак, обеспечивающий положительность обоих скалярных произведений \((\vec a,\vec c)\) и \((\vec b,\vec c)\) (острые углы), получаем: \(\vec c=\left(\dfrac23,-\dfrac{11}{15},-\dfrac{2}{15}\right)\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 8 -->
+			<div class="tab-panel" id="panel8">
+				<h2>Задание 8.* Критерий равенства попарных векторных произведений</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1*</b></div>
+					<div id="text-task"><p>Доказать, что для трёх неколлинеарных векторов \(\vec a,\vec b,\vec c\) равенства \([\vec a,\vec b]=[\vec b,\vec c]=[\vec c,\vec a]\) выполняются тогда и только тогда, когда \(\vec a+\vec b+\vec c=\vec 0\).</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p><b>(⇐)</b> Если \(\vec a+\vec b+\vec c=\vec 0\), то \(\vec c=-\vec a-\vec b\). Тогда \([\vec b,\vec c]=[\vec b,-\vec a-\vec b]=-[\vec b,\vec a]-[\vec b,\vec b]=[\vec a,\vec b]\), и аналогично \([\vec c,\vec a]=[-\vec a-\vec b,\vec a]=-[\vec b,\vec a]=[\vec a,\vec b]\). Значит все три произведения равны.</p>
+							<p><b>(⇒)</b> Из \([\vec a,\vec b]=[\vec b,\vec c]\) следует \([\vec a+\vec c,\vec b]=\vec 0\) (билинейность); аналогично из остальных равенств: \([\vec a+\vec b,\vec c]=\vec 0\) и \([\vec b+\vec c,\vec a]=\vec 0\). Это означает коллинеарность каждой из сумм \(\vec a+\vec c\), \(\vec a+\vec b\), \(\vec b+\vec c\) соответствующему третьему вектору; поскольку \(\vec a,\vec b,\vec c\) неколлинеарны, единственная возможность — все суммы равны нулевому вектору: \(\vec a+\vec c=\vec0,\ \vec a+\vec b=\vec0,\ \vec b+\vec c=\vec0\). Складывая эти три равенства: \(2(\vec a+\vec b+\vec c)=\vec0\Rightarrow\vec a+\vec b+\vec c=\vec0\), что и требовалось доказать.</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+			<!-- Задание 9 -->
+			<div class="tab-panel" id="panel9">
+				<h2>Задание 9.* Тождества с векторным и смешанным произведением</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1*</b></div>
+					<div id="text-task"><p>Доказать: \(|[\vec a,\vec b]|^2=\begin{vmatrix}(\vec a,\vec a)&(\vec a,\vec b)\\(\vec a,\vec b)&(\vec b,\vec b)\end{vmatrix}\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Из геометрического смысла векторного произведения \(|[\vec a,\vec b]|=|\vec a||\vec b|\sin\varphi\), возводя в квадрат: \(|[\vec a,\vec b]|^2=|\vec a|^2|\vec b|^2\sin^2\varphi=|\vec a|^2|\vec b|^2(1-\cos^2\varphi)\). С другой стороны, определитель Грама \(\begin{vmatrix}(\vec a,\vec a)&(\vec a,\vec b)\\(\vec a,\vec b)&(\vec b,\vec b)\end{vmatrix}=|\vec a|^2|\vec b|^2-(\vec a,\vec b)^2=|\vec a|^2|\vec b|^2-|\vec a|^2|\vec b|^2\cos^2\varphi\). Обе части равны \(|\vec a|^2|\vec b|^2\sin^2\varphi\), что доказывает тождество.</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2*</b></div>
+					<div id="text-task"><p>Доказать: \([\vec a,[\vec b,\vec c]]=\vec b(\vec a,\vec c)-\vec c(\vec a,\vec b)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Записывая векторы в координатах и вычисляя \(\vec v=[\vec b,\vec c]\), а затем \([\vec a,\vec v]\) через явную формулу определителя, и группируя слагаемые каждой компоненты с добавлением и вычитанием компенсирующего члена вида \(b_1a_1c_1\), каждая компонента результата приводится к виду \(b_i(\vec a,\vec c)-c_i(\vec a,\vec b)\) для \(i=1,2,3\). В векторной форме это в точности \([\vec a,[\vec b,\vec c]]=\vec b(\vec a,\vec c)-\vec c(\vec a,\vec b)\), что и требовалось доказать.</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3*</b></div>
+					<div id="text-task"><p>Доказать: \(([\vec a,\vec b],[\vec c,\vec d])=\begin{vmatrix}(\vec a,\vec c)&(\vec a,\vec d)\\(\vec b,\vec c)&(\vec b,\vec d)\end{vmatrix}\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Раскрывая обе части через координаты векторов \(\vec a,\vec b,\vec c,\vec d\) в ортонормированном базисе (записывая \([\vec a,\vec b]\) и \([\vec c,\vec d]\) покомпонентно и вычисляя их скалярное произведение), после раскрытия скобок и группировки слагаемых левая часть сводится к \((\vec a,\vec c)(\vec b,\vec d)-(\vec a,\vec d)(\vec b,\vec c)\) — тождество Лагранжа, что в точности совпадает с определителем в правой части.</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 10 -->
+			<div class="tab-panel" id="panel10">
+				<h2>Задание 10. Смешанное произведение</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Найти смешанное произведение векторов \(\vec a,\vec b,\vec c\), заданных координатами: \(\vec a(1,-1,1),\vec b(7,3,-5),\vec c(-2,2,-2)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\((\vec a,\vec b,\vec c)=\begin{vmatrix}1&-1&1\\7&3&-5\\-2&2&-2\end{vmatrix}=0\) (раскрывая по правилу треугольников: \(1\cdot3\cdot(-2)+(-1)(-5)(-2)+1\cdot7\cdot2-1\cdot3\cdot(-2)-(-1)\cdot7\cdot(-2)-1(-5)(2)=-6-10+14+6-14+10=0\)).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 11 -->
+			<div class="tab-panel" id="panel11">
+				<h2>Задание 11. Смешанное произведение</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Найти смешанное произведение: \(\vec a(3,5,1),\vec b(4,0,-1),\vec c(2,1,1)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(\begin{vmatrix}3&5&1\\4&0&-1\\2&1&1\end{vmatrix}=-4\left(5\cdot1-1\cdot1\right)+0-1\left(3\cdot1-5\cdot2\right)\)... вычисляя разложением по второй строке: \(-4\cdot(5-1)+0\cdot(...)+1\cdot(3-10)=-16-7=-23\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 12 -->
+			<div class="tab-panel" id="panel12">
+				<h2>Задание 12. Смешанное произведение</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Найти смешанное произведение: \(\vec a(2,1,0),\vec b(3,4,-1),\vec c(-1,-3,1)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(\begin{vmatrix}2&1&0\\3&4&-1\\-1&-3&1\end{vmatrix}=2(4-3)-1(3-1)+0=2-2=0\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 13 -->
+			<div class="tab-panel" id="panel13">
+				<h2>Задание 13. Смешанное произведение</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Найти смешанное произведение: \(\vec a(1,2,3),\vec b(5,-2,1),\vec c(2,1,2)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(\begin{vmatrix}1&2&3\\5&-2&1\\2&1&2\end{vmatrix}=1(-4-1)-2(10-2)+3(5+4)=-5-16+27=6\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 14 -->
+			<div class="tab-panel" id="panel14">
+				<h2>Задание 14. Проверка компланарности</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Проверить, компланарны ли векторы: \(\vec a(2,3,5),\vec b(7,1,-1),\vec c(3,-5,-11)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Смешанное произведение: \(\begin{vmatrix}2&3&5\\7&1&-1\\3&-5&-11\end{vmatrix}=2(-11-5)-3(-77+3)+5(-35-3)=-32+222-190=0\). Так как смешанное произведение равно 0, векторы компланарны.</p></div></details>
+				</div>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task"><p>Проверить, компланарны ли векторы: \(\vec a(2,0,1),\vec b(5,3,-3),\vec c(3,3,10)\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Смешанное произведение: \(\begin{vmatrix}2&0&1\\5&3&-3\\3&3&10\end{vmatrix}=2(30+9)-0+1(15-9)=78+6=84\ne0\). Так как смешанное произведение не равно 0, векторы некомпланарны.</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 15 -->
+			<div class="tab-panel" id="panel15">
+				<h2>Задание 15. Проекция вектора</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>В ортонормированном базисе заданы два вектора: \(\vec a(5,4,1),\vec b(0,1,1)\). Найдите проекцию вектора \(\vec a\) на вектор \(\vec b\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>Вектор проекции: \(\mathrm{пр}_{\vec b}\vec a=\dfrac{(\vec a,\vec b)}{|\vec b|^2}\vec b\). \((\vec a,\vec b)=5\cdot0+4\cdot1+1\cdot1=5\), \(|\vec b|^2=0+1+1=2\). Итог: \(\dfrac52\vec b=\left(0,\dfrac52,\dfrac52\right)\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 16 -->
+			<div class="tab-panel" id="panel16">
+				<h2>Задание 16. Векторное произведение</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>В ортонормированном базисе заданы \(\vec a(1,2,-1),\vec b(2,0,1)\). Найдите \(\vec c=[\vec a,\vec b]\).</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\([\vec a,\vec b]=\begin{vmatrix}\vec i&\vec j&\vec k\\1&2&-1\\2&0&1\end{vmatrix}=\vec i(2\cdot1-(-1)\cdot0)-\vec j(1\cdot1-(-1)\cdot2)+\vec k(1\cdot0-2\cdot2)=(2,-3,-4)\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 17 -->
+			<div class="tab-panel" id="panel17">
+				<h2>Задание 17. Площадь треугольника через векторное произведение</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>В ортонормированном базисе заданы \(\vec a(1,1,1),\vec b(3,0,1)\). Найдите площадь треугольника, построенного на этих векторах.</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\(S=\dfrac12|[\vec a,\vec b]|\). \([\vec a,\vec b]=\vec i(1-0)-\vec j(1-3)+\vec k(0-3)=(1,2,-3)\), \(|[\vec a,\vec b]|=\sqrt{1+4+9}=\sqrt{14}\). Ответ: \(S=\dfrac{\sqrt{14}}{2}\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 18 -->
+			<div class="tab-panel" id="panel18">
+				<h2>Задание 18. Площадь треугольника на правом базисе</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>На векторах \(\vec a(2,3,1)\) и \(\vec b(-1,1,2)\), отложенных от одной точки, построен треугольник. Найти площадь этого треугольника, если известно, что базис ортонормированный правый.</p></div>
+					<details class="details"><summary class="details__title">Посмотреть ответ</summary><div class="details__content"><p>\([\vec a,\vec b]=\vec i(3\cdot2-1\cdot1)-\vec j(2\cdot2-1\cdot(-1))+\vec k(2\cdot1-3\cdot(-1))=(5,-5,5)\). \(|[\vec a,\vec b]|=\sqrt{25+25+25}=5\sqrt3\). Площадь треугольника: \(S=\dfrac12\cdot5\sqrt3=\dfrac{5\sqrt3}{2}\).</p></div></details>
+				</div>
+			</div>
+
+			<!-- Задание 19 -->
+			<div class="tab-panel" id="panel19">
+				<h2>Задание 19. Компланарность через векторные произведения</h2>
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task"><p>Доказать, что если векторы \([\vec a,\vec b],[\vec b,\vec c],[\vec c,\vec a]\) компланарны, то векторы \(\vec a,\vec b,\vec c\) компланарны.</p></div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Векторы компланарны тогда и только тогда, когда их смешанное произведение равно нулю. По условию \(([\vec a,\vec b],[\vec b,\vec c],[\vec c,\vec a])=0\).</p>
+							<p>Используя тождество для двойного векторного произведения (см. Задание 9, п. 2): \([[\vec b,\vec c],[\vec c,\vec a]]=\vec c\,([\vec b,\vec c],\vec a)-\vec a\,([\vec b,\vec c],\vec c)\). Так как \(([\vec b,\vec c],\vec c)=0\) (векторное произведение перпендикулярно каждому сомножителю), получаем \([[\vec b,\vec c],[\vec c,\vec a]]=\vec c\cdot(\vec a,\vec b,\vec c)\) (переставляя множители смешанного произведения).</p>
+							<p>Тогда \(([\vec a,\vec b],[\vec b,\vec c],[\vec c,\vec a])=([\vec a,\vec b],[[\vec b,\vec c],[\vec c,\vec a]])=([\vec a,\vec b],\vec c\cdot(\vec a,\vec b,\vec c))=(\vec a,\vec b,\vec c)\cdot([\vec a,\vec b],\vec c)=(\vec a,\vec b,\vec c)^2\).</p>
+							<p>Из условия левая часть равна 0, значит \((\vec a,\vec b,\vec c)^2=0\Rightarrow(\vec a,\vec b,\vec c)=0\), что и означает компланарность векторов \(\vec a,\vec b,\vec c\).</p>
+						</div>
+					</details>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	</br></br></br>
+</div>
+
+
+
+
+
+<nav class="ios-tabbar" aria-label="Основная навигация">
+  <div class="ios-tabbar-inner">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+  </div>
+</nav>
+</body>
+</html>

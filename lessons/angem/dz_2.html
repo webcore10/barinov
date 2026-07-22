@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link href="../../test1.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARINOV</title>
+	<link rel="shortcut icon" href="../../image/logo.svg" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="stylesheet" href="../assets/css/site.css">
+	<link rel="stylesheet" href="../assets/css/pygments.css">
+	<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&amp;display=swap" rel="stylesheet" media="all">
+	<link href="shrek.ttf" rel="stylesheet" media="all">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<script src="../../nav-merge.js" defer></script>
+	<style>
+		.dz-header {
+			color: gray;
+			font-size: 14px;
+			margin-bottom: 4px;
+		}
+
+		.tabs {
+			margin-top: 15px;
+		}
+
+		.tab-input {
+			display: none;
+		}
+
+		.tab-bar {
+			margin-bottom: 20px;
+		}
+
+		.tab-label {
+			display: inline-block;
+			padding: 10px 18px;
+			margin-right: 8px;
+			margin-bottom: 10px;
+			background-color: #EEF0F4;
+			border: 1px solid #E1E4EC;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: 15px;
+			transition: 0.2s;
+			user-select: none;
+		}
+
+		.tab-label:hover {
+			background-color: #E2E5F7;
+		}
+
+		.tab-input:checked + .tab-label {
+			background-color: #5B62F5;
+			color: white;
+			font-weight: 600;
+		}
+
+		.tab-panel {
+			display: none;
+		}
+
+		#tab1:checked ~ .tab-panels #panel1,
+		#tab2:checked ~ .tab-panels #panel2,
+		#tab3:checked ~ .tab-panels #panel3,
+		#tab4:checked ~ .tab-panels #panel4,
+		#tab5:checked ~ .tab-panels #panel5,
+		#tab6:checked ~ .tab-panels #panel6,
+		#tab7:checked ~ .tab-panels #panel7 {
+			display: block;
+		}
+
+		@media only screen and (max-device-width: 530px) {
+			.tab-label {
+				padding: 9px 14px;
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+<body>
+<button type="button" class="ios-back-btn" aria-label="Назад" onclick="history.back()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="ios-navbar"><span class="ios-navbar-title"></span></div>
+<div class="left-menu">
+  <a href="../../home.html" class="logo"><img src="../../image/logo1.svg" alt="Logo"></a>
+  <div class="nav-list">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../lit.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="15.2" width="15" height="4" rx="1"/><rect x="5.5" y="10.6" width="13" height="4" rx="1"/><rect x="6.5" y="6" width="11" height="4" rx="1"/></svg>Литература</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+    <a href="../../net.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="4.7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 6.7v3.1"/><path d="M10.3 13.4l-3.7 2.1"/><path d="M13.7 13.4l3.7 2.1"/></svg>Сети</a>
+  </div>
+</div>
+
+<div class="main">
+
+<nav class="breadcrumbs">
+  <a href="../../home.html">Главная</a><span class="crumb-sep">/</span>
+  <a href="../../vid.html">Видеоуроки</a><span class="crumb-sep">/</span>
+  <a href="../../angem.html">Аналитическая геометрия от Профиматики</a><span class="crumb-sep">/</span>
+  <span class="crumb-current">Домашнее задание</span>
+</nav>
+
+	<div class="tabs">
+		<input type="radio" name="dz-tab" id="tab1" class="tab-input" checked>
+		<input type="radio" name="dz-tab" id="tab2" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab3" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab4" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab5" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab6" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab7" class="tab-input">
+
+		<div class="tab-bar">
+			<label for="tab1" class="tab-label">Задание 1</label>
+			<label for="tab2" class="tab-label">Задание 2</label>
+			<label for="tab3" class="tab-label">Задание 3</label>
+			<label for="tab4" class="tab-label">Задание 4</label>
+			<label for="tab5" class="tab-label">Задание 5</label>
+			<label for="tab6" class="tab-label">Задание 6</label>
+			<label for="tab7" class="tab-label">Задание 7</label>
+		</div>
+
+		<div class="tab-panels">
+
+			<!-- Задание 1. Вычисление определителей -->
+			<div class="tab-panel" id="panel1">
+				<h2>Задание 1. Вычисление определителей</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Вычислите определитель матрицы \(A\):</p>
+						<div class="math-formula" id="k">
+							\[
+							A=\begin{pmatrix} 9 & -3 \\ 2 & -3 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Для определителя матрицы второго порядка используем формулу \(\det(A)=a_{11}a_{22}-a_{12}a_{21}\):</p>
+							<p>
+								\[
+								\det(A)=9\cdot(-3)-(-3)\cdot2=-27+6=-21.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task">
+						<p>Вычислите определитель матрицы \(A\):</p>
+						<div class="math-formula" id="k">
+							\[
+							A=\begin{pmatrix} 9 & 0 & 5 \\ 7 & 8 & -4 \\ 0 & 0 & 8 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Раскрываем определитель по правилу треугольников. Поскольку в матрице много нулей, большинство слагаемых обращаются в ноль, и остаётся только произведение элементов главной диагонали:</p>
+							<p>
+								\[
+								\det(A)=9\cdot8\cdot8+0\cdot(-4)\cdot0+5\cdot7\cdot0-5\cdot8\cdot0-9\cdot(-4)\cdot0-0\cdot7\cdot8=9\cdot8\cdot8=576.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task">
+						<p>Вычислите определитель матрицы \(A\):</p>
+						<div class="math-formula" id="k">
+							\[
+							A=\begin{pmatrix} -4 & 8 & 4 \\ -8 & -4 & -1 \\ -2 & 3 & -7 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>По правилу треугольников:</p>
+							<p>
+								\[
+								\det(A)=(-4)(-4)(-7)+8(-1)(-2)+4(-8)(3)-4(-4)(-2)-(-4)(-1)(3)-8(-8)(-7)
+								\]
+							</p>
+							<p>Вычисляя каждое слагаемое: \((-112)+16+(-96)-32-12-448\). Складывая, получаем:</p>
+							<p>
+								\[
+								\det(A)=-684.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 4</b></div>
+					<div id="text-task">
+						<p>Вычислите определитель:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{vmatrix} -7 & 0 & 0 & 0 \\ 1 & 0 & 6 & 0 \\ -1 & -3 & -3 & 0 \\ -3 & -7 & -3 & 2 \end{vmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>В первой строке всего один ненулевой элемент, поэтому удобно разложить определитель по первой строке:</p>
+							<p>
+								\[
+								\Delta=(-7)\cdot\begin{vmatrix} 0 & 6 & 0 \\ -3 & -3 & 0 \\ -7 & -3 & 2 \end{vmatrix}
+								\]
+							</p>
+							<p>Полученный определитель третьего порядка удобно разложить по третьему столбцу, где также только один ненулевой элемент:</p>
+							<p>
+								\[
+								\Delta=(-7)\cdot2\cdot\begin{vmatrix} 0 & 6 \\ -3 & -3 \end{vmatrix}=(-7)\cdot2\cdot\bigl(0-(-18)\bigr)=(-14)\cdot18=-252.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 5</b></div>
+					<div id="text-task">
+						<p>Вычислите определитель матрицы \(A\):</p>
+						<div class="math-formula" id="k">
+							\[
+							A=\begin{pmatrix} 0 & 0 & -7 & 1 \\ -1 & 1 & 0 & 0 \\ 0 & 0 & -8 & 6 \\ -7 & 8 & 0 & 0 \end{pmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Разложим определитель по второй строке, в которой всего два ненулевых элемента:</p>
+							<p>
+								\[
+								\det(A)=-(-1)\cdot\begin{vmatrix} 0 & -7 & 1 \\ 0 & -8 & 6 \\ 8 & 0 & 0 \end{vmatrix}+1\cdot\begin{vmatrix} 0 & -7 & 1 \\ 0 & -8 & 6 \\ -7 & 0 & 0 \end{vmatrix}
+								\]
+							</p>
+							<p>Раскладывая каждый из миноров третьего порядка по последней строке, получаем: первый минор равен \((-7)\cdot6\cdot8-8\cdot(-8)\cdot1=-336+64=-272\), второй минор равен \((-7)(-7)\cdot6-(-7)(-8)\cdot1=294-56=238\). Тогда:</p>
+							<p>
+								\[
+								\det(A)=-272+238=-34.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 6</b></div>
+					<div id="text-task">
+						<p>Вычислите определитель:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{vmatrix} -1 & 2 & 0 \\ 3 & 1 & 4 \\ 2 & -3 & 5 \end{vmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>По правилу треугольников:</p>
+							<p>
+								\[
+								\Delta=(-1)\cdot1\cdot5+2\cdot4\cdot2+0\cdot3\cdot(-3)-0\cdot1\cdot2-(-1)\cdot4\cdot(-3)-2\cdot3\cdot5=-5+16+0-0-12-30=-31.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 7*</b></div>
+					<div id="text-task">
+						<p>Вычислите определитель:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{vmatrix} a^2+1 & ab & ac \\ ab & b^2+1 & bc \\ ac & bc & c^2+1 \end{vmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Раскрываем определитель по правилу треугольников:</p>
+							<p>
+								\[
+								\Delta=(a^2+1)(b^2+1)(c^2+1)+ab\cdot bc\cdot ac+ac\cdot ab\cdot bc-ac\cdot(b^2+1)\cdot ac-(a^2+1)\cdot bc\cdot bc-(c^2+1)\cdot ab\cdot ab
+								\]
+							</p>
+							<p>Все три слагаемых, содержащих множитель \(a^2b^2c^2\), при раскрытии скобок в первом слагаемом и в отрицательных слагаемых взаимно уничтожаются, и после приведения подобных остаётся:</p>
+							<p>
+								\[
+								\Delta=a^2+b^2+c^2+1.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 2. Уравнения с определителями -->
+			<div class="tab-panel" id="panel2">
+				<h2>Задание 2. Уравнения с определителями</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Решить уравнение:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{vmatrix} \sin8x & \sin5x \\ \cos8x & \cos5x \end{vmatrix}=0
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Раскрывая определитель второго порядка и используя формулу синуса разности:</p>
+							<p>
+								\[
+								\sin8x\cos5x-\cos8x\sin5x=0 \quad\Rightarrow\quad \sin(8x-5x)=0 \quad\Rightarrow\quad \sin3x=0.
+								\]
+							</p>
+							<p>Отсюда \(3x=\pi k\), где \(k\in\mathbb{Z}\), и окончательно:</p>
+							<p>
+								\[
+								x=\frac{\pi k}{3}, \quad k\in\mathbb{Z}.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task">
+						<p>Решить уравнение:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{vmatrix} 3 & x & -4 \\ 2 & -1 & 3 \\ x+10 & 1 & 1 \end{vmatrix}=0
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Раскрывая определитель по правилу треугольников:</p>
+							<p>
+								\[
+								3(-1)(1)+2(1)(-4)+(x+10)(x)(3)-(x+10)(-1)(-4)-3(3)(1)-2(x)(1)=0
+								\]
+							</p>
+							<p>Упрощая левую часть:</p>
+							<p>
+								\[
+								-3-8+3x^2+30x-4x-40-9-2x=0 \quad\Rightarrow\quad 3x^2+24x-60=0 \quad\Rightarrow\quad x^2+8x-20=0.
+								\]
+							</p>
+							<p>Решая квадратное уравнение, получаем корни:</p>
+							<p>
+								\[
+								x=2 \quad\text{или}\quad x=-10.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task">
+						<p>Решить уравнение:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{vmatrix} 2 & -1 & 2 \\ 3 & 5 & 3 \\ 1 & 6 & x+5 \end{vmatrix}=0
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Раскрывая определитель по правилу треугольников:</p>
+							<p>
+								\[
+								2\cdot5\cdot(x+5)+3\cdot6\cdot2+1\cdot(-1)\cdot3-1\cdot5\cdot2-2\cdot6\cdot3-3\cdot(-1)\cdot(x+5)=0
+								\]
+							</p>
+							<p>Упрощая левую часть:</p>
+							<p>
+								\[
+								10x+50+36-3-10-36+3x+15=0 \quad\Rightarrow\quad 13x+52=0.
+								\]
+							</p>
+							<p>Отсюда:</p>
+							<p>
+								\[
+								x=-4.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 3. Неравенства с определителями -->
+			<div class="tab-panel" id="panel3">
+				<h2>Задание 3. Неравенства с определителями</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Решить неравенство:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{vmatrix} 3 & -2 & 1 \\ 1 & x & -2 \\ -1 & 2 & -1 \end{vmatrix} \lt 1
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Раскрывая определитель по правилу треугольников, получаем неравенство:</p>
+							<p>
+								\[
+								3\cdot x\cdot(-1)+1\cdot2\cdot1+(-1)(-2)(-2)-(-1)\cdot x\cdot1-2\cdot3\cdot(-2)-1\cdot(-1)(-2) \lt 1
+								\]
+							</p>
+							<p>Упрощая левую часть:</p>
+							<p>
+								\[
+								-3x+2-4+x+12-2 \lt 1 \quad\Rightarrow\quad -2x+8 \lt 1 \quad\Rightarrow\quad -2x \lt -7.
+								\]
+							</p>
+							<p>Деля обе части на \(-2\) (знак неравенства при этом меняется на противоположный), получаем ответ:</p>
+							<p>
+								\[
+								x \gt \frac{7}{2}.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task">
+						<p>Решить неравенство:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{vmatrix} 2 & x+2 & -1 \\ 1 & 1 & -2 \\ 5 & -3 & x \end{vmatrix} \gt 0
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Раскрывая определитель по правилу треугольников:</p>
+							<p>
+								\[
+								2\cdot1\cdot x+1\cdot(-3)(-1)+5(x+2)(-2)-5\cdot1\cdot(-1)-2\cdot(-3)(-2)-1\cdot x(x+2) \gt 0
+								\]
+							</p>
+							<p>Упрощая левую часть:</p>
+							<p>
+								\[
+								2x+3-10x-20+5-12-x^2-2x \gt 0 \quad\Rightarrow\quad -x^2-10x-24 \gt 0.
+								\]
+							</p>
+							<p>Умножая обе части на \(-1\) (знак неравенства меняется на противоположный):</p>
+							<p>
+								\[
+								x^2+10x+24 \lt 0 \quad\Rightarrow\quad (x+4)(x+6) \lt 0.
+								\]
+							</p>
+							<p>Решая методом интервалов, получаем ответ:</p>
+							<p>
+								\[
+								x \in (-6;-4).
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 4. Разложение определителя по элементам строки -->
+			<div class="tab-panel" id="panel4">
+				<h2>Задание 4. Разложение определителя по элементам строки</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Вычислить определитель третьего порядка, разложив его по элементам \(i\)-ой строки, \(i=2\):</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{vmatrix} 1 & -2 & 3 \\ 2 & 6 & -5 \\ 2 & 8 & 4 \end{vmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Разложение по второй строке даёт (знаки миноров чередуются по правилу \((-1)^{i+j}\)):</p>
+							<p>
+								\[
+								\Delta=(-1)\cdot2\cdot\begin{vmatrix} -2 & 3 \\ 8 & 4 \end{vmatrix}+6\cdot\begin{vmatrix} 1 & 3 \\ 2 & 4 \end{vmatrix}+(-1)\cdot(-5)\cdot\begin{vmatrix} 1 & -2 \\ 2 & 8 \end{vmatrix}
+								\]
+							</p>
+							<p>Вычисляя миноры второго порядка и подставляя:</p>
+							<p>
+								\[
+								\Delta=-2(-8-24)+6(4-6)+5(8+4)=-2\cdot(-32)+6\cdot(-2)+5\cdot12=64-12+60=112.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task">
+						<p>Вычислить определитель третьего порядка, разложив его по элементам \(i\)-ой строки, \(i=3\):</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{vmatrix} 1 & 4 & 5 \\ 2 & 3 & 1 \\ 7 & 5 & 2 \end{vmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Разложение по третьей строке:</p>
+							<p>
+								\[
+								\Delta=7\cdot\begin{vmatrix} 4 & 5 \\ 3 & 1 \end{vmatrix}-5\cdot\begin{vmatrix} 1 & 5 \\ 2 & 1 \end{vmatrix}+2\cdot\begin{vmatrix} 1 & 4 \\ 2 & 3 \end{vmatrix}
+								\]
+							</p>
+							<p>Вычисляя миноры и подставляя:</p>
+							<p>
+								\[
+								\Delta=7(4-15)-5(1-10)+2(3-8)=7\cdot(-11)-5\cdot(-9)+2\cdot(-5)=-77+45-10=-42.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task">
+						<p>Вычислить определитель третьего порядка, разложив его по элементам \(i\)-ой строки, \(i=1\):</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{vmatrix} -1 & 2 & 4 \\ 1 & 5 & 7 \\ -8 & 3 & 6 \end{vmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Разложение по первой строке:</p>
+							<p>
+								\[
+								\Delta=(-1)\cdot\begin{vmatrix} 5 & 7 \\ 3 & 6 \end{vmatrix}-2\cdot\begin{vmatrix} 1 & 7 \\ -8 & 6 \end{vmatrix}+4\cdot\begin{vmatrix} 1 & 5 \\ -8 & 3 \end{vmatrix}
+								\]
+							</p>
+							<p>Вычисляя миноры и подставляя:</p>
+							<p>
+								\[
+								\Delta=-(30-21)-2(6+56)+4(3+40)=-9-124+172=39.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 5. Метод Крамера -->
+			<div class="tab-panel" id="panel5">
+				<h2>Задание 5. Метод Крамера</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Решить следующую СЛАУ методом Крамера:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{cases} 2x+4y+z=4 \\ 3x+6y+2z=4 \\ 4x-y-3z=1 \end{cases}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Вычислим главный определитель системы, составленный из коэффициентов при неизвестных:</p>
+							<p>
+								\[
+								\Delta=\begin{vmatrix} 2 & 4 & 1 \\ 3 & 6 & 2 \\ 4 & -1 & -3 \end{vmatrix}=9.
+								\]
+							</p>
+							<p>Так как \(\Delta\neq0\), система имеет единственное решение. Заменяя поочерёдно каждый столбец коэффициентов столбцом свободных членов, находим вспомогательные определители:</p>
+							<p>
+								\[
+								\Delta_x=\begin{vmatrix} 4 & 4 & 1 \\ 4 & 6 & 2 \\ 1 & -1 & -3 \end{vmatrix}=-18, \quad
+								\Delta_y=\begin{vmatrix} 2 & 4 & 1 \\ 3 & 4 & 2 \\ 4 & 1 & -3 \end{vmatrix}=27, \quad
+								\Delta_z=\begin{vmatrix} 2 & 4 & 4 \\ 3 & 6 & 4 \\ 4 & -1 & 1 \end{vmatrix}=-36.
+								\]
+							</p>
+							<p>По формулам Крамера \(x=\dfrac{\Delta_x}{\Delta}\), \(y=\dfrac{\Delta_y}{\Delta}\), \(z=\dfrac{\Delta_z}{\Delta}\), получаем ответ:</p>
+							<p>
+								\[
+								x=\frac{-18}{9}=-2, \quad y=\frac{27}{9}=3, \quad z=\frac{-36}{9}=-4.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task">
+						<p>Решить следующую СЛАУ методом Крамера:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{cases} x-2y+4z=-12 \\ 2x+2z=-2 \\ 4x-2y-z=9 \end{cases}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Главный определитель системы:</p>
+							<p>
+								\[
+								\Delta=\begin{vmatrix} 1 & -2 & 4 \\ 2 & 0 & 2 \\ 4 & -2 & -1 \end{vmatrix}=-32.
+								\]
+							</p>
+							<p>Заменяя столбцы коэффициентов столбцом свободных членов:</p>
+							<p>
+								\[
+								\Delta_x=-64, \quad \Delta_y=-32, \quad \Delta_z=96.
+								\]
+							</p>
+							<p>По формулам Крамера получаем ответ:</p>
+							<p>
+								\[
+								x=\frac{-64}{-32}=2, \quad y=\frac{-32}{-32}=1, \quad z=\frac{96}{-32}=-3.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task">
+						<p>Решить следующую СЛАУ методом Крамера:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{cases} 2x-y+z=3 \\ -x+3y+2z=-2 \\ 4x-2y-z=9 \end{cases}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Главный определитель системы:</p>
+							<p>
+								\[
+								\Delta=\begin{vmatrix} 2 & -1 & 1 \\ -1 & 3 & 2 \\ 4 & -2 & -1 \end{vmatrix}=15.
+								\]
+							</p>
+							<p>Заменяя столбцы коэффициентов столбцом свободных членов:</p>
+							<p>
+								\[
+								\Delta_x=-36, \quad \Delta_y=-12, \quad \Delta_z=15.
+								\]
+							</p>
+							<p>По формулам Крамера получаем ответ:</p>
+							<p>
+								\[
+								x=\frac{-36}{15}=-2{,}4, \quad y=\frac{-12}{15}=-0{,}8, \quad z=\frac{15}{15}=1.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 4</b></div>
+					<div id="text-task">
+						<p>Решить следующую СЛАУ методом Крамера:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{cases} x+2y+3z=6 \\ 4x+y+4z=9 \\ 3x+5y+2z=10 \end{cases}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Главный определитель системы:</p>
+							<p>
+								\[
+								\Delta=\begin{vmatrix} 1 & 2 & 3 \\ 4 & 1 & 4 \\ 3 & 5 & 2 \end{vmatrix}=41.
+								\]
+							</p>
+							<p>Заменяя столбцы коэффициентов столбцом свободных членов, получаем \(\Delta_x=41\), \(\Delta_y=41\), \(\Delta_z=41\) — все три вспомогательных определителя равны главному. По формулам Крамера:</p>
+							<p>
+								\[
+								x=\frac{41}{41}=1, \quad y=\frac{41}{41}=1, \quad z=\frac{41}{41}=1.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 5</b></div>
+					<div id="text-task">
+						<p>Решить следующую СЛАУ методом Крамера:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{cases} x+2y+3z=6 \\ 2x+3y-z=4 \\ 3x+y-4z=0 \end{cases}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Главный определитель системы:</p>
+							<p>
+								\[
+								\Delta=\begin{vmatrix} 1 & 2 & 3 \\ 2 & 3 & -1 \\ 3 & 1 & -4 \end{vmatrix}=-22.
+								\]
+							</p>
+							<p>Заменяя столбцы коэффициентов столбцом свободных членов, получаем \(\Delta_x=-22\), \(\Delta_y=-22\), \(\Delta_z=-22\). По формулам Крамера:</p>
+							<p>
+								\[
+								x=\frac{-22}{-22}=1, \quad y=\frac{-22}{-22}=1, \quad z=\frac{-22}{-22}=1.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 6*</b></div>
+					<div id="text-task">
+						<p>Решить следующую СЛАУ методом Крамера:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{cases} 3x_1+5x_2-3x_3+2x_4=2 \\ 4x_1-2x_2+5x_3+3x_4=12 \\ 7x_1+8x_2-x_3+5x_4=9 \\ 6x_1+4x_2+5x_3+3x_4=8 \end{cases}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Для системы четвёртого порядка главный определитель:</p>
+							<p>
+								\[
+								\Delta=\begin{vmatrix} 3 & 5 & -3 & 2 \\ 4 & -2 & 5 & 3 \\ 7 & 8 & -1 & 5 \\ 6 & 4 & 5 & 3 \end{vmatrix}
+								\]
+							</p>
+							<p>удобно разложить по первому столбцу через миноры третьего порядка. Вычисляя эти миноры, получаем: первый минор (при элементе \(3\)) равен \(168\), второй (при элементе \(4\), со знаком минус) равен \(-40\), третий (при элементе \(7\)) равен \(-114\), четвёртый (при элементе \(6\), со знаком минус) равен \(-38\). Тогда:</p>
+							<p>
+								\[
+								\Delta=3\cdot168-4\cdot(-40)+7\cdot(-114)-6\cdot(-38)=504+160-798+228=94.
+								\]
+							</p>
+							<p>Аналогично, заменяя поочерёдно каждый столбец коэффициентов столбцом свободных членов и раскладывая полученные определители, находим:</p>
+							<p>
+								\[
+								\Delta_{x_1}=94, \quad \Delta_{x_2}=-94, \quad \Delta_{x_3}=0, \quad \Delta_{x_4}=188.
+								\]
+							</p>
+							<p>По формулам Крамера получаем ответ:</p>
+							<p>
+								\[
+								x_1=\frac{94}{94}=1, \quad x_2=\frac{-94}{94}=-1, \quad x_3=\frac{0}{94}=0, \quad x_4=\frac{188}{94}=2.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 6. Метод Гаусса -->
+			<div class="tab-panel" id="panel6">
+				<h2>Задание 6. Метод Гаусса</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Решить следующую СЛАУ методом Гаусса:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{cases} -2x_1+5x_2=-43 \\ 3x_1-7x_2=61 \end{cases}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Составим расширенную матрицу системы:</p>
+							<p>
+								\[
+								\begin{pmatrix} -2 & 5 & | & -43 \\ 3 & -7 & | & 61 \end{pmatrix}
+								\]
+							</p>
+							<p>Домножим первую строку на \(3\), вторую строку на \(2\) и сложим их — это элементарное преобразование не меняет решений системы. Получаем новую вторую строку \((0,\ 1,\ |,\ -7)\), то есть \(x_2=-7\). Подставляя найденное значение в первое уравнение:</p>
+							<p>
+								\[
+								-2x_1+5\cdot(-7)=-43 \quad\Rightarrow\quad -2x_1=-8 \quad\Rightarrow\quad x_1=4.
+								\]
+							</p>
+							<p>Ответ: \(x_1=4,\ x_2=-7\).</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task">
+						<p>Решить следующую СЛАУ методом Гаусса:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{cases} 5y-4z=-4 \\ 4x-5z=16 \\ -12x+25y-z=-84 \end{cases}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Переставим переменные в порядке \(x,\ y,\ z\) и запишем расширенную матрицу системы, после чего с помощью элементарных преобразований строк (домножение строки на число и прибавление одной строки к другой) приведём её к треугольному виду. На последнем шаге получаем уравнение с одной неизвестной:</p>
+							<p>
+								\[
+								4z=-16 \quad\Rightarrow\quad z=-4.
+								\]
+							</p>
+							<p>Подставляя найденное \(z\) в уравнение второй строки:</p>
+							<p>
+								\[
+								5y-4\cdot(-4)=-4 \quad\Rightarrow\quad 5y=-20 \quad\Rightarrow\quad y=-4.
+								\]
+							</p>
+							<p>Далее, подставляя \(z=-4\) в уравнение первой строки:</p>
+							<p>
+								\[
+								4x-5\cdot(-4)=16 \quad\Rightarrow\quad 4x=-4 \quad\Rightarrow\quad x=-1.
+								\]
+							</p>
+							<p>Ответ: \(x=-1,\ y=-4,\ z=-4\).</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task">
+						<p>Решить следующую СЛАУ методом Гаусса:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{cases} 4x-y-2z=-23 \\ 9x-5y-3z=-54 \\ 5x+y-4z=-28 \end{cases}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Приводя расширенную матрицу системы к треугольному виду последовательными элементарными преобразованиями строк (исключая \(x\), а затем \(y\) из нижних уравнений), получаем на последнем шаге:</p>
+							<p>
+								\[
+								-108z=-432 \quad\Rightarrow\quad z=4.
+								\]
+							</p>
+							<p>Подставляя \(z=4\) в уравнение, оставшееся после первого шага исключения, находим \(y=3\), а затем, подставляя \(y=3\) и \(z=4\) в первое уравнение системы, находим \(x=-3\).</p>
+							<p>Ответ: \(x=-3,\ y=3,\ z=4\).</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 4*</b></div>
+					<div id="text-task">
+						<p>Решить следующую СЛАУ методом Гаусса:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{cases} -y+3t=-5 \\ 3x-y-4z+3t=-1 \\ x+2z-3t=17 \\ 5x-y-3z=18 \end{cases}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Переставим переменные в порядке \(x,\ y,\ z,\ t\) и приведём расширенную матрицу системы к треугольному виду с помощью элементарных преобразований строк. На последнем шаге получаем:</p>
+							<p>
+								\[
+								3t=-9 \quad\Rightarrow\quad t=-3.
+								\]
+							</p>
+							<p>Подставляя \(t=-3\) в предпоследнее уравнение:</p>
+							<p>
+								\[
+								-30z+30\cdot(-3)=-150 \quad\Rightarrow\quad -30z=-60 \quad\Rightarrow\quad z=2.
+								\]
+							</p>
+							<p>Подставляя \(z=2\) и \(t=-3\) в следующее уравнение:</p>
+							<p>
+								\[
+								-y-10\cdot2+12\cdot(-3)=-52 \quad\Rightarrow\quad -y-56=-52 \quad\Rightarrow\quad y=-4.
+								\]
+							</p>
+							<p>Наконец, подставляя \(z=2\) и \(t=-3\) в первое (по новому порядку переменных) уравнение:</p>
+							<p>
+								\[
+								x+2\cdot2-3\cdot(-3)=17 \quad\Rightarrow\quad x+13=17 \quad\Rightarrow\quad x=4.
+								\]
+							</p>
+							<p>Ответ: \(x=4,\ y=-4,\ z=2,\ t=-3\).</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 5*</b></div>
+					<div id="text-task">
+						<p>Решить следующую СЛАУ методом Гаусса:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{cases} 2x_1+3x_2-3x_3-x_4=-31 \\ -4x_1-8x_2+x_3+3x_4=66 \\ 3x_1+2x_2-2x_3-2x_4=-24 \\ 3x_1-5x_2-3x_3-2x_4=24 \end{cases}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Приводя расширенную матрицу системы к треугольному виду, а затем, продолжая элементарные преобразования строк снизу вверх, к единичному виду на месте коэффициентов (метод Гаусса—Жордана), получаем диагональную систему вида \(x_i=b_i\), из которой сразу считывается ответ:</p>
+							<p>
+								\[
+								x_1=-6, \quad x_2=-7, \quad x_3=1, \quad x_4=-5.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 7. Определители n-го порядка -->
+			<div class="tab-panel" id="panel7">
+				<h2>Задание 7. Определители n-го порядка</h2>
+
+				<p>Во всех пунктах этого задания используются три элементарных свойства определителя: 1) при перестановке двух строк (или двух столбцов) местами определитель меняет знак; 2) при умножении всех элементов одной строки (или столбца) на число \(m\) определитель умножается на \(m\); 3) если к элементам одной строки (столбца) прибавить соответствующие элементы другой строки (столбца), умноженные на произвольное число, определитель не изменится.</p>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Посчитайте следующий определитель:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{vmatrix} a_{11} & 0 & 0 & ... & 0 \\ a_{21} & a_{22} & 0 & ... & 0 \\ ... & ... & ... & ... & ... \\ a_{n1} & a_{n2} & a_{n3} & ... & a_{nn} \end{vmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Матрица нижнетреугольная: все элементы выше главной диагонали равны нулю. Разлагая определитель последовательно по первой строке (в ней только один ненулевой элемент \(a_{11}\)), затем по первой строке полученного минора (в ней ненулевой элемент \(a_{22}\)) и так далее, на каждом шаге определитель \(n\)-го порядка сводится к определителю \((n-1)\)-го порядка, умноженному на очередной диагональный элемент. В итоге получаем, что определитель треугольной матрицы равен произведению элементов главной диагонали:</p>
+							<p>
+								\[
+								\Delta=a_{11}a_{22}\ldots a_{nn}.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task">
+						<p>Посчитайте следующий определитель:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{vmatrix} 0 & a_2 & 0 & ... & 0 \\ 0 & 0 & a_3 & ... & 0 \\ ... & ... & ... & ... & ... \\ 0 & 0 & 0 & ... & a_n \\ a_1 & 0 & 0 & ... & 0 \end{vmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Переставим столбцы так, чтобы диагональ стала главной: переместим первый столбец в конец, сдвинув все остальные столбцы на одну позицию влево. Это можно осуществить как \(n-1\) последовательных перестановок соседних столбцов. После этого матрица приводится к диагональному виду \(\mathrm{diag}(a_2,a_3,\ldots,a_n,a_1)\), определитель которого равен \(a_1a_2\ldots a_n\). Поскольку каждая перестановка двух столбцов меняет знак определителя, а перестановок было \(n-1\), итоговый определитель равен:</p>
+							<p>
+								\[
+								\Delta=(-1)^{n-1}a_1a_2\ldots a_n.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task">
+						<p>Посчитайте следующий определитель:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{vmatrix} 0 & 1 & 1 & ... & 1 & 1 \\ 1 & 0 & 1 & ... & 1 & 1 \\ 1 & 1 & 0 & ... & 1 & 1 \\ ... & ... & ... & ... & ... & ... \\ 1 & 1 & 1 & ... & 0 & 1 \\ 1 & 1 & 1 & ... & 1 & 0 \end{vmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Вычтем из каждой из первых \(n-1\) строк последнюю строку. Поскольку последняя строка состоит из единиц, кроме нуля на диагонали, после вычитания в каждой из первых \(n-1\) строк на месте бывшего диагонального нуля появляется \(-1\), на месте бывшей последней единицы (в последнем столбце) появляется \(1-0=1\), а на остальных местах — нули. Матрица приобретает вид: \(-1\) на диагонали первых \(n-1\) строк, единицы в последнем столбце этих строк, нули в остальных местах этих строк, и последняя строка без изменений. Теперь прибавим к последней строке каждую из первых \(n-1\) (уже преобразованных) строк — это не меняет определитель. Последняя строка становится: нули на первых \(n-1\) местах (так как \(1+(-1)=0\) на каждом из них при последовательном суммировании) и \(1+(n-1)\cdot1=n\) в последнем столбце... более аккуратно: последняя строка приобретает вид \((0,0,\ldots,0,\ n-1)\). Получившаяся матрица треугольная: \(-1\) на диагонали первых \(n-1\) строк и \(n-1\) в правом нижнем углу. Определитель треугольной матрицы равен произведению диагональных элементов:</p>
+							<p>
+								\[
+								\Delta=(-1)^{n-1}(n-1).
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 4</b></div>
+					<div id="text-task">
+						<p>Посчитайте следующий определитель:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{vmatrix} x & a & a & ... & a & a \\ a & x & a & ... & a & a \\ a & a & x & ... & a & a \\ ... & ... & ... & ... & ... & ... \\ a & a & a & ... & x & a \\ a & a & a & ... & a & x \end{vmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Вычтем из каждой из первых \(n-1\) строк последнюю строку. На диагональных местах этих строк получаем \(x-a\), на месте, соответствующем последней строке (в столбце с номером \(n\)), получаем \(a-x\), а на остальных местах — нули. Затем прибавим к последнему столбцу каждый из первых \(n-1\) столбцов: элемент в последней позиции последнего столбца превращается из \(a-x\) в \(a-x+(n-1)(x-a)\cdot0\)... удобнее сразу прибавить все первые \(n-1\) столбцов к последнему в исходной (до первого шага) матрице: тогда последний столбец становится \(x+(n-1)a\) во всех строках. Комбинируя оба преобразования, получаем треугольную матрицу с \(x-a\) на диагонали первых \(n-1\) позиций и \(x+(n-1)a\) в последней позиции. Определитель треугольной матрицы:</p>
+							<p>
+								\[
+								\Delta=(x-a)^{n-1}\bigl(x+(n-1)a\bigr).
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 5</b></div>
+					<div id="text-task">
+						<p>Посчитайте следующий определитель:</p>
+						<div class="math-formula" id="k">
+							\[
+							\begin{vmatrix} x & y & 0 & 0 & ... & 0 & 0 \\ 0 & x & y & 0 & ... & 0 & 0 \\ 0 & 0 & x & y & ... & 0 & 0 \\ ... & ... & ... & ... & ... & ... & ... \\ 0 & 0 & 0 & 0 & ... & y & 0 \\ 0 & 0 & 0 & 0 & ... & x & y \\ y & 0 & 0 & 0 & ... & 0 & x \end{vmatrix}
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Разложим определитель по последней строке, в которой всего два ненулевых элемента: \(y\) в первом столбце и \(x\) в последнем. Слагаемое, отвечающее элементу \(y\) в позиции \((n,1)\), берётся со знаком \((-1)^{n+1}\), а его минор — это верхнетреугольная матрица размера \((n-1)\times(n-1)\) с \(y\) на диагонали (первый столбец и последняя строка исходной матрицы вычеркнуты), поэтому этот минор равен \(y^{n-1}\). Слагаемое, отвечающее элементу \(x\) в позиции \((n,n)\), берётся со знаком \((-1)^{2n}=1\), а его минор — нижнетреугольная матрица \((n-1)\times(n-1)\) с \(x\) на диагонали, равный \(x^{n-1}\). Складывая оба слагаемых, получаем:</p>
+							<p>
+								\[
+								\Delta=(-1)^{n+1}y\cdot y^{n-1}+x\cdot x^{n-1}=(-1)^{n+1}y^n+x^n.
+								\]
+							</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	</br></br></br>
+</div>
+
+
+
+
+<nav class="ios-tabbar" aria-label="Основная навигация">
+  <div class="ios-tabbar-inner">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+  </div>
+</nav>
+</body>
+</html>

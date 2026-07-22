@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link href="../../test1.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARINOV</title>
+	<link rel="shortcut icon" href="../../image/logo.svg" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="stylesheet" href="../assets/css/site.css">
+	<link rel="stylesheet" href="../assets/css/pygments.css">
+	<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&amp;display=swap" rel="stylesheet" media="all">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<script src="../../nav-merge.js" defer></script>
+	<style>
+		.dz-note {
+			color: gray;
+			font-size: 14px;
+			margin-bottom: 8px;
+		}
+
+		.tabs {
+			margin-top: 15px;
+		}
+
+		.tab-input {
+			display: none;
+		}
+
+		.tab-bar {
+			margin-bottom: 20px;
+		}
+
+		.tab-label {
+			display: inline-block;
+			padding: 10px 18px;
+			margin-right: 8px;
+			margin-bottom: 10px;
+			background-color: #EEF0F4;
+			border: 1px solid #E1E4EC;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: 15px;
+			transition: 0.2s;
+			user-select: none;
+		}
+
+		.tab-label:hover {
+			background-color: #E2E5F7;
+		}
+
+		.tab-input:checked + .tab-label {
+			background-color: #5B62F5;
+			color: white;
+			font-weight: 600;
+		}
+
+		.tab-panel {
+			display: none;
+		}
+
+		#tab1:checked ~ .tab-panels #panel1,
+		#tab2:checked ~ .tab-panels #panel2,
+		#tab3:checked ~ .tab-panels #panel3,
+		#tab4:checked ~ .tab-panels #panel4,
+		#tab5:checked ~ .tab-panels #panel5,
+		#tab6:checked ~ .tab-panels #panel6,
+		#tab7:checked ~ .tab-panels #panel7 {
+			display: block;
+		}
+
+		@media only screen and (max-device-width: 530px) {
+			.tab-label {
+				padding: 9px 14px;
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+<body>
+<button type="button" class="ios-back-btn" aria-label="Назад" onclick="history.back()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="ios-navbar"><span class="ios-navbar-title"></span></div>
+<div class="left-menu">
+  <a href="../../home.html" class="logo"><img src="../../image/logo1.svg" alt="Logo"></a>
+  <div class="nav-list">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../lit.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="15.2" width="15" height="4" rx="1"/><rect x="5.5" y="10.6" width="13" height="4" rx="1"/><rect x="6.5" y="6" width="11" height="4" rx="1"/></svg>Литература</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+    <a href="../../net.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="4.7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 6.7v3.1"/><path d="M10.3 13.4l-3.7 2.1"/><path d="M13.7 13.4l3.7 2.1"/></svg>Сети</a>
+  </div>
+</div>
+
+<div class="main">
+
+<nav class="breadcrumbs">
+  <a href="../../home.html">Главная</a><span class="crumb-sep">/</span>
+  <a href="../../vid.html">Видеоуроки</a><span class="crumb-sep">/</span>
+  <a href="../../matan.html">Курс по матану для 1-го семестра</a><span class="crumb-sep">/</span>
+  <span class="crumb-current">Домашнее задание №5</span>
+</nav>
+<h1>Домашнее задание к вебинару №5</h1>
+
+<div class="tabs">
+	<input type="radio" name="dz-tab" id="tab1" class="tab-input" checked>
+	<input type="radio" name="dz-tab" id="tab2" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab3" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab4" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab5" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab6" class="tab-input">
+	<input type="radio" name="dz-tab" id="tab7" class="tab-input">
+
+	<div class="tab-bar">
+		<label for="tab1" class="tab-label">Задание 1</label>
+		<label for="tab2" class="tab-label">Задание 2</label>
+		<label for="tab3" class="tab-label">Задание 3</label>
+		<label for="tab4" class="tab-label">Задание 4</label>
+		<label for="tab5" class="tab-label">Задание 5</label>
+		<label for="tab6" class="tab-label">Задание 6</label>
+		<label for="tab7" class="tab-label">Задание 7</label>
+	</div>
+
+	<div class="tab-panels">
+
+		<div class="tab-panel" id="panel1">
+			<h2>Задание 1. Точные грани последовательности (sup и inf)</h2>
+
+			<div class="task-container">
+				<div id="text-task"><div class="math-formula">Найдите \( \sup x_n \) и \( \inf x_n \), где \( x_n=\dfrac{n}{n+1} \)</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Проверим монотонность:</p>
+						\[ \frac{x_{n+1}}{x_n}=\frac{\dfrac{n+1}{n+2}}{\dfrac{n}{n+1}}=\frac{(n+1)^2}{n(n+2)}>1 \]
+						<p>Значит, последовательность монотонно возрастает, а значит \( \inf x_n=x_1=\dfrac12 \)</p>
+						<p>Очевидно, что \( \displaystyle\lim_{n\to\infty}\frac{n}{n+1}=1 \)</p>
+						<p>Но так как последовательность монотонно возрастает, то по теореме Вейерштрасса она ограничена сверху. Поэтому</p>
+						\[ \sup x_n=\lim_{n\to\infty}x_n=1 \]
+						<p><b>Ответ:</b> \( \sup x_n=1,\ \inf x_n=\dfrac12 \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel2">
+			<h2>Задание 2. Предельный переход в нестрогом неравенстве</h2>
+
+			<div class="task-container">
+				<div id="text-task"><div class="math-formula">Пусть \( \displaystyle\lim_{n\to\infty}x_n=a,\ \lim_{n\to\infty}y_n=b,\ a\le b \). Верно ли, что тогда \( x_n\le y_n \), начиная с некоторого номера?</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Положим \( x_n=\dfrac1n,\ y_n=0 \). Тогда</p>
+						\[ \lim_{n\to\infty}x_n=\lim_{n\to\infty}y_n=0 \]
+						<p>Но при этом для любого \( n \) верно \( \dfrac1n>0 \), что противоречит условию задачи.</p>
+						<p><b>Ответ:</b> Нет</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel3">
+			<h2>Задание 3. Предельный переход в строгом неравенстве</h2>
+
+			<div class="task-container">
+				<div id="text-task"><div class="math-formula">Пусть \( \displaystyle\lim_{n\to\infty}x_n=a,\ \lim_{n\to\infty}y_n=b,\ x_n\lt y_n \), начиная с некоторого номера. Верно ли, что тогда \( a\lt b \)?</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Положим \( x_n=\dfrac{1}{n+1},\ y_n=\dfrac1n \). Очевидно, что для любого \( n \) верно \( \dfrac{1}{n+1}<\dfrac1n \). Но при этом</p>
+						\[ \lim_{n\to\infty}x_n=\lim_{n\to\infty}y_n=0 \]
+						<p>Что противоречит условию задачи.</p>
+						<p><b>Ответ:</b> Нет</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel4">
+			<h2>Задание 4. Пределы по теореме о двух милиционерах</h2>
+			<p class="dz-note">Найдите пределы, используя теорему о двух милиционерах и арифметические свойства предела</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1*</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to\infty}\sqrt[n]{n} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Заметим, что во-первых, \( \sqrt[n]{n}\ge1 \) при всех \( n \), а во-вторых, воспользуемся тождеством \( n=\big((\sqrt[n]{n}-1)+1\big)^n \) и биномом Ньютона:</p>
+						\[ n=\sum_{k=0}^{n}C_n^k(\sqrt[n]{n}-1)^{n-k}\ge C_n^{n-2}(\sqrt[n]{n}-1)^2=\frac{n(n-1)}{2}(\sqrt[n]{n}-1)^2 \]
+						<p>(здесь мы оставили только одно неотрицательное слагаемое суммы; \( C_n^{n-2}=\dfrac{n(n-1)}{2} \))</p>
+						<p>Деля обе части на \( \dfrac{n(n-1)}{2} \):</p>
+						\[ \frac{2}{n-1}\ge(\sqrt[n]{n}-1)^2 \quad\Longrightarrow\quad \sqrt{\frac{2}{n-1}}\ge\sqrt[n]{n}-1 \quad\Longrightarrow\quad \sqrt[n]{n}\le\sqrt{\frac{2}{n-1}}+1 \]
+						<p>Итого, мы построили две последовательности, для которых выполнено</p>
+						\[ 1\le\sqrt[n]{n}\le\sqrt{\frac{2}{n-1}}+1 \]
+						<p>Так как \( \displaystyle\lim_{n\to\infty}1=\lim_{n\to\infty}\left(\sqrt{\frac{2}{n-1}}+1\right)=1 \), то по теореме о двух милиционерах</p>
+						\[ \lim_{n\to\infty}\sqrt[n]{n}=1 \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2*</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to\infty}\sqrt[n^2]{n!} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Заметим, что</p>
+						\[ \sqrt[n^2]{n!}=\sqrt[n^2]{1\cdot2\cdot3\cdots n}\le\sqrt[n^2]{n\cdot n\cdots n}=\sqrt[n^2]{n^n}=n^{\frac{n}{n^2}}=n^{\frac1n}=\sqrt[n]{n}\to1 \]
+						<p>(по пункту 1)</p>
+						<p>А также \( \sqrt[n^2]{n!}\ge1\to1 \). Значит, по теореме о двух милиционерах</p>
+						\[ \lim_{n\to\infty}\sqrt[n^2]{n!}=1 \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to\infty}\sqrt[n]{3^n+1} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Заметим, что \( 3^n+1\lt n\cdot3^n \) при всех \( n>1 \). Тогда</p>
+						\[ \sqrt[n]{3^n+1}<\sqrt[n]{n\cdot3^n} \]
+						<p>Согласно пункту 1, \( \displaystyle\lim_{n\to\infty}\sqrt[n]{n\cdot3^n}=3\lim_{n\to\infty}\sqrt[n]{n}=3\cdot1=3 \)</p>
+						<p>Очевидно, что \( \sqrt[n]{3^n+1}>\sqrt[n]{3^n}=3 \) при всех \( n \). Итого, мы имеем две последовательности, для которых выполнено</p>
+						\[ 3\le\sqrt[n]{3^n+1}\le\sqrt[n]{n\cdot3^n} \]
+						<p>И \( \displaystyle\lim_{n\to\infty}3=\lim_{n\to\infty}\sqrt[n]{n\cdot3^n}=3 \). Поэтому</p>
+						\[ \lim_{n\to\infty}\sqrt[n]{3^n+1}=3 \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to\infty}\sqrt2\sqrt[4]{2}\sqrt[8]{2}\cdots\sqrt[2^n]{2} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Заметим, что</p>
+						\[ \sqrt2\sqrt[4]{2}\sqrt[8]{2}\cdots\sqrt[2^n]{2}=2^{\frac12+\frac14+\frac18+\cdots+\frac{1}{2^n}} \]
+						<p>Сумма в показателе — геометрическая прогрессия с \( b_1=\dfrac12,\ q=\dfrac12 \):</p>
+						\[ \frac12+\frac14+\cdots+\frac{1}{2^n}=\frac{\frac12\left(1-\frac{1}{2^n}\right)}{1-\frac12}=1-\frac{1}{2^n} \]
+						<p>Поэтому</p>
+						\[ \sqrt2\sqrt[4]{2}\sqrt[8]{2}\cdots\sqrt[2^n]{2}=2^{1-\frac{1}{2^n}}=\frac{2}{2^{\frac{1}{2^n}}}=\frac{2}{\sqrt[2^n]{2}} \]
+						<p>Найдём предел \( \sqrt[2^n]{2} \). Заметим, что \( 2^n\ge n \), значит \( \dfrac{1}{2^n}\le\dfrac1n \), а значит</p>
+						\[ 2^{\frac{1}{2^n}}\le2^{\frac1n} \quad\Longrightarrow\quad \sqrt[2^n]{2}\le\sqrt[n]{2} \]
+						<p>Очевидно, что \( \sqrt[2^n]{2}\ge1 \) при всех \( n \). Итого мы имеем две последовательности, для которых выполнено</p>
+						\[ 1\le\sqrt[2^n]{2}\le\sqrt[n]{2} \]
+						<p>И \( \displaystyle\lim_{n\to\infty}1=\lim_{n\to\infty}\sqrt[n]{2}=1 \). Поэтому по теореме о двух милиционерах</p>
+						\[ \lim_{n\to\infty}\sqrt[2^n]{2}=1 \]
+						<p>По арифметике пределов</p>
+						\[ \lim_{n\to\infty}\frac{2}{\sqrt[2^n]{2}}=\frac{2}{\displaystyle\lim_{n\to\infty}\sqrt[2^n]{2}}=\frac21=2 \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to\infty}\left(\sqrt{4+n^2}-\sqrt{n^2+1}\right) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Домножим на сопряжённое:</p>
+						\[ \sqrt{4+n^2}-\sqrt{n^2+1}=\frac{4+n^2-n^2-1}{\sqrt{4+n^2}+\sqrt{n^2+1}}=\frac{3}{\sqrt{4+n^2}+\sqrt{n^2+1}} \]
+						<p>Заметим, что</p>
+						\[ \frac{3}{\sqrt{4+n^2}+\sqrt{n^2+1}}>0\to0 \]
+						<p>А также</p>
+						\[ \frac{3}{\sqrt{4+n^2}+\sqrt{n^2+1}}\le\frac{3}{\sqrt{n^2}+\sqrt{n^2}}=\frac{3}{2n}\to0 \]
+						<p>Значит, по теореме о двух милиционерах</p>
+						\[ \lim_{n\to\infty}\left(\sqrt{4+n^2}-\sqrt{n^2+1}\right)=0 \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 6</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to\infty}\left(\sqrt{4+2n+n^2}-\sqrt{n^2-n+1}\right) \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Домножим на сопряжённое:</p>
+						\[ \sqrt{4+2n+n^2}-\sqrt{n^2-n+1}=\frac{4+2n+n^2-n^2+n-1}{\sqrt{4+2n+n^2}+\sqrt{n^2-n+1}}=\frac{3n+3}{\sqrt{4+2n+n^2}+\sqrt{n^2-n+1}} \]
+						<p>Заметим, что</p>
+						\[ \frac{3n+3}{\sqrt{4+2n+n^2}+\sqrt{n^2-n+1}}\ge\frac{3n+3}{\sqrt{n^2+4n+4}+\sqrt{n^2}}=\frac{3n+3}{n+2+n}=\frac{3n+3}{2n+2}=\frac32\to\frac32 \]
+						<p>А также</p>
+						\[ \frac{3n+3}{\sqrt{4+2n+n^2}+\sqrt{n^2-n+1}}\le\frac{3n+3}{\sqrt{n^2+2n+1}+\sqrt{n^2-2n+1}}=\frac{3n+3}{n+1+n-1}=\frac{3n+3}{2n}=\frac32+\frac{3}{2n}\to\frac32 \]
+						<p>Значит, по теореме о двух милиционерах</p>
+						\[ \lim_{n\to\infty}\left(\sqrt{4+2n+n^2}-\sqrt{n^2-n+1}\right)=\frac32 \]
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 7</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to\infty}\sqrt[n]{\frac{7+5^n+3^n}{3+2^n}} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Заметим, что</p>
+						\[ \sqrt[n]{\frac{7+5^n+3^n}{3+2^n}}\ge\sqrt[n]{\frac{5^n}{n\cdot2^n}}=\frac52\cdot\frac{1}{\sqrt[n]{n}}\to\frac52 \]
+						<p>А также</p>
+						\[ \sqrt[n]{\frac{7+5^n+3^n}{3+2^n}}\le\sqrt[n]{\frac{n\cdot5^n}{2^n}}=\frac52\sqrt[n]{n}\to\frac52 \]
+						<p>(начиная с \( n=2 \)). Значит, по теореме о двух милиционерах</p>
+						\[ \lim_{n\to\infty}\sqrt[n]{\frac{7+5^n+3^n}{3+2^n}}=\frac52 \]
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel5">
+			<h2>Задание 5. Пределы n!/n^n и aⁿ/n! по теореме Вейерштрасса</h2>
+			<p class="dz-note">Пользуясь теоремой Вейерштрасса, докажите указанные пределы.</p>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to\infty}\frac{n!}{n^n}=0 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Обозначим \( x_n=\dfrac{n!}{n^n} \) и проверим монотонность:</p>
+						\[ \frac{x_{n+1}}{x_n}=\frac{\dfrac{(n+1)!}{(n+1)^{n+1}}}{\dfrac{n!}{n^n}}=\frac{n!(n+1)\cdot n^n}{n!(n+1)^{n+1}}=\frac{n^n}{(n+1)^n}=\frac{1}{\left(1+\dfrac1n\right)^n}<1 \]
+						<p>То есть последовательность монотонно убывает. Очевидно, что она ограничена снизу нулём, значит по теореме Вейерштрасса она сходится. Пусть \( \displaystyle\lim_{n\to\infty}x_n=C \), тогда \( \displaystyle\lim_{n\to\infty}x_{n+1}=C \) тоже:</p>
+						\[ x_{n+1}=\frac{1}{\left(1+\dfrac1n\right)^n}x_n \quad\Longrightarrow\quad C=C\cdot\lim_{n\to\infty}\frac{1}{\left(1+\dfrac1n\right)^n}=C\cdot\frac1e \quad\Longrightarrow\quad C=0 \]
+						<p><b>Ответ:</b> \( \displaystyle\lim_{n\to\infty}\frac{n!}{n^n}=0 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2*</b></div>
+				<div id="text-task"><div class="math-formula">\[ \lim_{n\to\infty}\frac{a^n}{n!}=0,\quad a>0 \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Обозначим \( x_n=\dfrac{a^n}{n!} \) и проверим монотонность:</p>
+						\[ \frac{x_{n+1}}{x_n}=\frac{\dfrac{a^{n+1}}{(n+1)!}}{\dfrac{a^n}{n!}}=\frac{a}{n+1} \]
+						<p>Так как \( a \) — фиксированное число, то найдётся номер \( n \), начиная с которого \( \dfrac{a}{n+1}<1 \), поэтому последовательность монотонно убывает, начиная с некоторого номера.</p>
+						<p>Очевидно, что последовательность ограничена снизу нулём, значит по теореме Вейерштрасса она сходится. Пусть \( \displaystyle\lim_{n\to\infty}x_n=C \), тогда \( \displaystyle\lim_{n\to\infty}x_{n+1}=C \):</p>
+						\[ x_{n+1}=\frac{a}{n+1}x_n \quad\Longrightarrow\quad C=C\cdot\lim_{n\to\infty}\frac{a}{n+1}=C\cdot0 \quad\Longrightarrow\quad C=0 \]
+						<p><b>Ответ:</b> \( \displaystyle\lim_{n\to\infty}\frac{a^n}{n!}=0 \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel6">
+			<h2>Задание 6. Исследование рекуррентных последовательностей на сходимость</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_1=4,\quad x_{n+1}=\sqrt{6+x_n} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Посчитаем первые несколько членов последовательности:</p>
+						\[ x_2=\sqrt{6+4}=\sqrt{10}\approx3{,}16228,\quad x_3=\sqrt{6+\sqrt{10}}\approx3{,}02693,\quad x_4=\sqrt{6+\sqrt{6+\sqrt{10}}}\approx3{,}00448 \]
+						<p>Видно, что члены последовательности скапливаются возле 3, причём справа. Проверим на монотонность. Допустим, что \( \dfrac{x_{n+1}}{x_n}<1 \) (последовательность убывающая). Тогда</p>
+						\[ \frac{\sqrt{6+x_n}}{x_n}<1 \;\Longrightarrow\; \sqrt{6+x_n}\lt x_n \;\Longrightarrow\; 6+x_n\lt x_n^2 \;\Longrightarrow\; (x_n-3)(x_n+2)>0 \]
+						<p>Очевидно, что все члены последовательности \( x_n>0 \). Можно показать (по индукции), что все члены последовательности больше 3, значит выражение \( (x_n-3)(x_n+2)>0 \) выполняется при всех \( n \). Следовательно, последовательность убывает и ограничена снизу — по теореме Вейерштрасса она сходится (к 3).</p>
+						<p><b>Вывод:</b> последовательность сходится.</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2*</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_1=-3,\quad x_{n+1}=1+\frac{6}{x_n} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Посчитаем первые члены: \( x_1=-3,\ x_2=-1,\ x_3=-5,\ x_4=-\tfrac15,\ x_5=-29,\ x_6=\tfrac{23}{29}, \) далее все члены положительны. Видно, что последовательность стремится к 3 немонотонно: чётные члены приближаются к 3 снизу, нечётные — сверху.</p>
+						<p>Рассмотрим \( y_n=x_{2n} \) и \( z_n=x_{2n-1} \). Тогда</p>
+						\[ y_{n+1}=1+\frac{6}{x_{2n+1}}=1+\frac{6}{1+\frac{6}{x_{2n}}}=\frac{7x_{2n}+6}{x_{2n}+6}=\frac{7y_n+6}{y_n+6},\qquad z_{n+1}=\frac{7z_n+6}{z_n+6} \]
+						<p>По индукции доказывается, что \( y_n<3 \) и \( z_n>3 \) при всех \( n \) (база \( y_3=\tfrac{23}{29}<3 \); шаг: \( y_{k+1}=7-\dfrac{36}{y_k+6}<7-\dfrac{36}{3+6}=3 \)).</p>
+						<p>Проверка монотонности даёт \( \dfrac{y_{n+1}}{y_n}=\dfrac{7y_n+6}{y_n(y_n+6)}>1 \) (так как \( y_n<3 \)), то есть \( (y_n) \) возрастает; аналогично \( (z_n) \) убывает. Обе ограничены числом 3, поэтому по теореме Вейерштрасса имеют пределы \( C_1,\ C_2 \), удовлетворяющие \( C=\dfrac{7C+6}{C+6} \Rightarrow C=3 \). Значит \( C_1=C_2=3 \).</p>
+						<p>Так как \( y_n\le x_n\le z_n \) (в соответствующем смысле для подпоследовательностей) и оба предела равны 3, то</p>
+						\[ \lim_{n\to\infty}x_n=3 \]
+						<p><b>Вывод:</b> последовательность сходится (к 3).</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3*</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_1=-\frac{7}{13},\quad x_{n+1}=\frac{1+x_n}{2x_n} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Посчитаем первые члены: \( x_1=-\tfrac{7}{13},\ x_2=-\tfrac37,\ x_3=-\tfrac23,\ x_4=-\tfrac14,\ x_5=-\tfrac32,\ x_6=\tfrac16 \), далее все члены положительны. Последовательность стремится к 1 немонотонно: чётные члены приближаются к 1 снизу, нечётные — сверху.</p>
+						<p>Рассмотрим \( y_n=x_{2n},\ z_n=x_{2n-1} \). Тогда</p>
+						\[ y_{n+1}=\frac{1+3y_n}{2+2y_n},\qquad z_{n+1}=\frac{1+3z_n}{2+2z_n} \]
+						<p>По индукции: \( y_n<1 \) и \( z_n>1 \) при всех \( n \) (база \( y_3=\tfrac16<1 \); шаг: \( y_{k+1}=\tfrac32-\dfrac{2}{2+2y_k}<\tfrac32-\tfrac34=\tfrac34<1 \)).</p>
+						<p>Проверка монотонности: \( \dfrac{y_{n+1}}{y_n}=\dfrac{1+3y_n}{y_n(2+2y_n)}>1 \), значит \( (y_n) \) возрастает; аналогично \( (z_n) \) убывает. Обе ограничены единицей, поэтому по теореме Вейерштрасса сходятся к пределам \( C_1,C_2 \), удовлетворяющим \( C=\dfrac{1+3C}{2+2C}\Rightarrow C=1 \). Значит \( C_1=C_2=1 \), и так как \( y_n\le x_n\le z_n \),</p>
+						\[ \lim_{n\to\infty}x_n=1 \]
+						<p><b>Вывод:</b> последовательность сходится (к 1).</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="tab-panel" id="panel7">
+			<h2>Задание 7. Пределы рекуррентных последовательностей</h2>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 1</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_1=1,\quad x_{n+1}=\sqrt[3]{6+x_n} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Посчитаем первые члены: \( x_2=\sqrt[3]{7}\approx1{,}913,\ x_3=\sqrt[3]{6+\sqrt[3]{7}}\approx1{,}993 \). Члены скапливаются возле 2 слева.</p>
+						<p>Проверим монотонность. Допустим \( \dfrac{x_{n+1}}{x_n}>1 \) (возрастает). Тогда</p>
+						\[ \sqrt[3]{6+x_n}>x_n \;\Longrightarrow\; 6+x_n>x_n^3 \;\Longrightarrow\; (x_n-2)(x_n^2+2x_n+3)<0 \]
+						<p>Так как \( x_n>0 \) и по индукции все члены меньше 2, неравенство выполняется всегда, значит последовательность возрастает и ограничена сверху числом 2 — по теореме Вейерштрасса сходится. Пусть \( \displaystyle\lim_{n\to\infty}x_n=C \):</p>
+						\[ C=\sqrt[3]{6+C} \;\Longrightarrow\; C=2 \]
+						<p><b>Ответ:</b> \( \displaystyle\lim_{n\to\infty}x_n=2 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 2</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_1=\sqrt2,\quad x_{n+1}=\sqrt{2+x_n} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Посчитаем первые члены: \( x_1=\sqrt2\approx1{,}414,\ x_2=\sqrt{2+\sqrt2}\approx1{,}848,\ x_3\approx1{,}962 \). Члены скапливаются возле 2 слева.</p>
+						<p>Проверим монотонность. Допустим \( \dfrac{x_{n+1}}{x_n}>1 \). Тогда</p>
+						\[ \sqrt{2+x_n}>x_n \;\Longrightarrow\; 2+x_n>x_n^2 \;\Longrightarrow\; (x_n-2)(x_n+1)<0 \]
+						<p>Так как \( x_n>0 \) и по индукции все члены меньше 2, неравенство выполняется всегда — последовательность возрастает и ограничена сверху числом 2, значит сходится по теореме Вейерштрасса. Пусть \( \displaystyle\lim_{n\to\infty}x_n=C \):</p>
+						\[ C=\sqrt{2+C} \;\Longrightarrow\; C=2 \]
+						<p><b>Ответ:</b> \( \displaystyle\lim_{n\to\infty}x_n=2 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 3**</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_1=-\frac12,\quad x_{n+1}=\frac{x_n^2(x_n-3)}{4} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Рассмотрим разность соседних членов:</p>
+						\[ x_{n+1}-x_n=\frac{x_n^2(x_n-3)}{4}-x_n=\frac{x_n}{4}\left(x_n^2-3x_n-4\right)=\frac{x_n}{4}(x_n-4)(x_n+1) \]
+						<p>Если \( x_n\in(-1,0) \), то \( x_{n+1}>x_n \), то есть последовательность возрастает; при этом если \( x_n<0 \), то и \( x_{n+1}<0 \), значит последовательность ограничена сверху нулём. Так как \( x_1=-\tfrac12<0 \), по теореме Вейерштрасса последовательность сходится к некоторому \( C\in\left(-\tfrac12,0\right] \). Тогда</p>
+						\[ C=\frac{C^2(C-3)}{4} \;\Longrightarrow\; C(C-4)(C+1)=0 \]
+						<p>Корни 4 и −1 лежат вне промежутка, значит \( C=0 \).</p>
+						<p><b>Ответ:</b> \( \displaystyle\lim_{n\to\infty}x_n=0 \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 4**</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_1=a,\quad x_2=b,\quad x_{n+1}=\frac{x_n+x_{n-1}}{2} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Рассмотрим \( y_n=x_{n+1}-x_n \). Тогда \( y_1=b-a \), и</p>
+						\[ y_{n+1}=x_{n+2}-x_{n+1}=-\frac{x_{n+1}-x_n}{2}=-\frac{y_n}{2} \]
+						<p>Это геометрическая прогрессия со знаменателем \( -\tfrac12 \), поэтому \( y_n=(-1)^{n-1}\dfrac{b-a}{2^{n-1}} \). Значит</p>
+						\[ x_n=a+y_1+y_2+\cdots+y_{n-1}=a+\frac{(b-a)\left(1-\left(-\frac12\right)^{n-1}\right)}{1+\frac12} \]
+						<p>Переходя к пределу:</p>
+						\[ \lim_{n\to\infty}x_n=a+\frac{2(b-a)}{3}=\frac{a+2b}{3} \]
+						<p><b>Ответ:</b> \( \displaystyle\lim_{n\to\infty}x_n=\frac{a+2b}{3} \)</p>
+					</div>
+				</details>
+			</div>
+
+			<div class="task-container">
+				<div class="task-title"><b>Задача 5**</b></div>
+				<div id="text-task"><div class="math-formula">\[ x_1=0,\quad x_2=1,\quad x_{n+1}=\frac{x_n+nx_{n-1}}{n+1} \]</div></div>
+				<details class="details">
+					<summary class="details__title">Посмотреть решение</summary>
+					<div class="details__content">
+						<p>Пользуемся тем фактом, что \( \displaystyle\sum_{n=1}^{+\infty}\frac{(-1)^{n+1}}{n}=\ln2 \). Рассмотрим \( y_n=x_n-x_{n-1} \). Тогда \( y_1=1 \), и</p>
+						\[ y_{n+1}=x_{n+1}-x_n=-\frac{n}{n+1}(x_n-x_{n-1})=-\frac{n}{n+1}y_n \]
+						<p>Отсюда получается</p>
+						\[ y_n=\frac{(-1)^{n+1}}{n} \]
+						<p>Следовательно</p>
+						\[ x_n=y_1+y_2+\cdots+y_n=1-\frac12+\frac13-\cdots+\frac{(-1)^{n+1}}{n}=\sum_{k=1}^{n}\frac{(-1)^{k+1}}{k} \]
+						<p>Переходя к пределу и используя данный факт:</p>
+						\[ \lim_{n\to\infty}x_n=\lim_{n\to\infty}\sum_{k=1}^{n}\frac{(-1)^{k+1}}{k}=\ln2 \]
+						<p><b>Ответ:</b> \( \displaystyle\lim_{n\to\infty}x_n=\ln2 \)</p>
+					</div>
+				</details>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+</div>
+
+
+<nav class="ios-tabbar" aria-label="Основная навигация">
+  <div class="ios-tabbar-inner">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+  </div>
+</nav>
+</body>
+</html>

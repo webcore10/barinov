@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link href="../../test1.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARINOV</title>
+	<link rel="shortcut icon" href="../../image/logo.svg" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="stylesheet" href="../assets/css/site.css">
+	<link rel="stylesheet" href="../assets/css/pygments.css">
+	<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="stylesheet" href="/lib/w3schools30.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&amp;display=swap" rel="stylesheet" media="all">
+	<link href="shrek.ttf" rel="stylesheet" media="all">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<script src="../../nav-merge.js" defer></script>
+	<style>
+		.dz-header {
+			color: gray;
+			font-size: 14px;
+			margin-bottom: 4px;
+		}
+
+		.tabs {
+			margin-top: 15px;
+		}
+
+		.tab-input {
+			display: none;
+		}
+
+		.tab-bar {
+			margin-bottom: 20px;
+		}
+
+		.tab-label {
+			display: inline-block;
+			padding: 10px 18px;
+			margin-right: 8px;
+			margin-bottom: 10px;
+			background-color: #EEF0F4;
+			border: 1px solid #E1E4EC;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: 15px;
+			transition: 0.2s;
+			user-select: none;
+		}
+
+		.tab-label:hover {
+			background-color: #E2E5F7;
+		}
+
+		.tab-input:checked + .tab-label {
+			background-color: #5B62F5;
+			color: white;
+			font-weight: 600;
+		}
+
+		.tab-panel {
+			display: none;
+		}
+
+		#tab1:checked ~ .tab-panels #panel1,
+		#tab2:checked ~ .tab-panels #panel2,
+		#tab3:checked ~ .tab-panels #panel3 {
+			display: block;
+		}
+
+		@media only screen and (max-device-width: 530px) {
+			.tab-label {
+				padding: 9px 14px;
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+<body>
+<button type="button" class="ios-back-btn" aria-label="Назад" onclick="history.back()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="ios-navbar"><span class="ios-navbar-title"></span></div>
+<div class="left-menu">
+  <a href="../../home.html" class="logo"><img src="../../image/logo1.svg" alt="Logo"></a>
+  <div class="nav-list">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../lit.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="15.2" width="15" height="4" rx="1"/><rect x="5.5" y="10.6" width="13" height="4" rx="1"/><rect x="6.5" y="6" width="11" height="4" rx="1"/></svg>Литература</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+    <a href="../../net.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="4.7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M12 6.7v3.1"/><path d="M10.3 13.4l-3.7 2.1"/><path d="M13.7 13.4l3.7 2.1"/></svg>Сети</a>
+  </div>
+</div>
+
+<div class="main">
+
+<nav class="breadcrumbs">
+  <a href="../../home.html">Главная</a><span class="crumb-sep">/</span>
+  <a href="../../vid.html">Видеоуроки</a><span class="crumb-sep">/</span>
+  <a href="../../angem.html">Аналитическая геометрия от Профиматики</a><span class="crumb-sep">/</span>
+  <span class="crumb-current">Домашнее задание</span>
+</nav>
+
+	<div class="tabs">
+		<input type="radio" name="dz-tab" id="tab1" class="tab-input" checked>
+		<input type="radio" name="dz-tab" id="tab2" class="tab-input">
+		<input type="radio" name="dz-tab" id="tab3" class="tab-input">
+
+		<div class="tab-bar">
+			<label for="tab1" class="tab-label">Задание 1</label>
+			<label for="tab2" class="tab-label">Задание 2</label>
+			<label for="tab3" class="tab-label">Задание 3</label>
+		</div>
+
+		<div class="tab-panels">
+
+			<!-- Задание 1. Кривые без поворота осей -->
+			<div class="tab-panel" id="panel1">
+				<h2>Задание 1. Приведение к каноническому виду параллельным переносом осей</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Определить тип кривой второго порядка, составить её каноническое уравнение и найти каноническую систему координат:</p>
+						<div class="math-formula" id="k">
+							\[
+							9x^2 - 16y^2 - 6x + 8y - 144 = 0
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Так как в уравнении отсутствует член с \(xy\), кривая приводится к каноническому виду параллельным переносом осей (без поворота). Найдём координаты центра, приравняв к нулю частные производные по \(x\) и \(y\), то есть коэффициенты при линейных членах после выделения полных квадратов:</p>
+							<p>\[ 18x - 6 = 0, \qquad -32y + 8 = 0 \]</p>
+							<p>откуда \(x_0 = \frac{1}{3}\), \(y_0 = \frac{1}{4}\) — центр кривой в точке \(\left(\frac{1}{3}, \frac{1}{4}\right)\).</p>
+							<p>Сделаем сдвиг \(x = x' + \frac{1}{3}\), \(y = y' + \frac{1}{4}\). Подставляя в исходное уравнение и приводя подобные, линейные члены сокращаются, и уравнение принимает вид:</p>
+							<p>\[ 9(x')^2 - 16(y')^2 - 144 = 0 \]</p>
+							<p>Разделим на 144 и обозначим \(X = \frac{x'}{12}\), \(Y = \frac{y'}{12}\) (то есть введём масштаб так, чтобы коэффициенты стали единицами):</p>
+							<p>\[ \frac{X^2}{16} - \frac{Y^2}{9} = 1 \]</p>
+							<p>Это каноническое уравнение гиперболы с полуосями \(a=4\), \(b=3\) (в единицах переменных \(X,Y\)); в переменных \(x',y'\) каноническое уравнение имеет вид \(\frac{(x')^2}{16} - \frac{(y')^2}{9} = 1\).</p>
+							<p><b>Тип кривой:</b> гипербола. <b>Каноническая система координат:</b> начало — в точке \(\left(\frac{1}{3}, \frac{1}{4}\right)\) старой системы, базисные векторы совпадают со старыми: \(E_1=(1,0)\), \(E_2=(0,1)\) (поворота осей не было, только параллельный перенос).</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task">
+						<p>Определить тип кривой второго порядка, составить её каноническое уравнение и найти каноническую систему координат:</p>
+						<div class="math-formula" id="k">
+							\[
+							9x^2 + 4y^2 + 6x - 4y - 2 = 0
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Член с \(xy\) отсутствует, поэтому достаточно параллельного переноса. Из условий обращения в нуль линейных членов после выделения полных квадратов находим центр:</p>
+							<p>\[ 18x + 6 = 0, \qquad 8y - 4 = 0 \ \Rightarrow \ x_0 = -\frac{1}{3}, \ y_0 = \frac{1}{2} \]</p>
+							<p>Сдвиг \(x = x' - \frac{1}{3}\), \(y = y' + \frac{1}{2}\) даёт после подстановки и приведения подобных:</p>
+							<p>\[ 9(x')^2 + 4(y')^2 - 4 = 0 \]</p>
+							<p>Разделим на 4 и обозначим \(X = \frac{x'}{2}\), \(Y = \frac{y'}{2}\):</p>
+							<p>\[ 9X^2 + 4Y^2 = 1 \]</p>
+							<p>Это каноническое уравнение эллипса.</p>
+							<p><b>Тип кривой:</b> эллипс. <b>Каноническая система координат:</b> центр канонической системы — точка \(\left(-\frac{1}{3}, \frac{1}{2}\right)\) старой системы, базисные векторы \(E_1=(1,0)\), \(E_2=(0,1)\) (без поворота).</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task">
+						<p>Определить тип кривой второго порядка, составить её каноническое уравнение и найти каноническую систему координат:</p>
+						<div class="math-formula" id="k">
+							\[
+							12x^2 - 12x - 32y - 29 = 0
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Здесь член с \(y^2\) отсутствует — это признак параболы. Выделим полный квадрат по \(x\):</p>
+							<p>\[ 12\left(x^2 - x\right) - 32y - 29 = 0 \ \Rightarrow \ 12\left(x - \frac{1}{2}\right)^2 - 3 - 32y - 29 = 0 \]</p>
+							<p>\[ 12\left(x - \frac{1}{2}\right)^2 - 32y - 32 = 0 \]</p>
+							<p>Выразим \(y\):</p>
+							<p>\[ y = \frac{3}{8}\left(x - \frac{1}{2}\right)^2 - 1 \]</p>
+							<p>Введём новые координаты \(X = x - \frac{1}{2}\), \(Y = y + 1\) (перенос вершины в начало координат):</p>
+							<p>\[ Y = \frac{3}{8}X^2 \]</p>
+							<p>Это уравнение параболы с осью, параллельной оси \(Oy\).</p>
+							<p><b>Тип кривой:</b> парабола. <b>Каноническая система координат:</b> вершина — в точке \(\left(\frac{1}{2}, -1\right)\) старой системы, базисные векторы \(E_1=(1,0)\), \(E_2=(0,1)\) (без поворота).</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 2. Кривые с центром в начале координат, требующие поворота -->
+			<div class="tab-panel" id="panel2">
+				<h2>Задание 2. Приведение к каноническому виду поворотом осей (центр в начале координат)</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Определить тип кривой второго порядка, составить её каноническое уравнение и найти каноническую систему координат:</p>
+						<div class="math-formula" id="k">
+							\[
+							2x^2 + 6xy + 10y^2 - 121 = 0
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Здесь \(A=2\), \(2B=6\), \(C=10\) (коэффициент при \(xy\) равен \(2B\)), линейных членов нет — центр кривой совпадает с началом координат, поворотом уничтожаем член с \(xy\). Угол поворота \(\varphi\) находим из условия:</p>
+							<p>\[ \tan 2\varphi = \frac{2B}{A-C} = \frac{6}{2-10} = -\frac{3}{4} \]</p>
+							<p>Отсюда, восстанавливая \(\cos\varphi\) и \(\sin\varphi\) из соотношений двойного угла, получаем \(\cos\varphi = \frac{3}{\sqrt{10}}\), \(\sin\varphi = \frac{1}{\sqrt{10}}\). Формулы поворота:</p>
+							<p>\[ x = \frac{3}{\sqrt{10}}X - \frac{1}{\sqrt{10}}Y, \qquad y = \frac{1}{\sqrt{10}}X + \frac{3}{\sqrt{10}}Y \]</p>
+							<p>Подставляя эти выражения в исходное уравнение и приводя подобные, член с \(XY\) обращается в ноль (как и было задумано), а коэффициент при \(X^2\) получается равным \(\frac{23}{5}\), при \(Y^2\) — равным \(\frac{37}{5}\). Уравнение принимает вид:</p>
+							<p>\[ \frac{23}{5}X^2 + \frac{37}{5}Y^2 - 121 = 0 \]</p>
+							<p>Домножим на 5:</p>
+							<p>\[ 23X^2 + 37Y^2 - 605 = 0 \ \Leftrightarrow \ \frac{X^2}{605/23} + \frac{Y^2}{605/37} = 1 \]</p>
+							<p>Это каноническое уравнение эллипса.</p>
+							<p><b>Тип кривой:</b> эллипс. <b>Каноническая система координат:</b> центр \((0,0)\) (совпадает со старым началом), базисные векторы в старой системе координат: \(E_1\left(\frac{3}{\sqrt{10}}, \frac{1}{\sqrt{10}}\right)\), \(E_2\left(-\frac{1}{\sqrt{10}}, \frac{3}{\sqrt{10}}\right)\).</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task">
+						<p>Определить тип кривой второго порядка, составить её каноническое уравнение и найти каноническую систему координат:</p>
+						<div class="math-formula" id="k">
+							\[
+							2x^2 - 2\sqrt{3}xy + 9 = 0
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Здесь \(A=2\), \(2B=-2\sqrt3\), \(C=0\). Угол поворота:</p>
+							<p>\[ \tan 2\varphi = \frac{2(-\sqrt3)}{2-0} = -\sqrt3 \ \Rightarrow \ 2\varphi = -\frac{\pi}{3} \ \Rightarrow \ \varphi = -\frac{\pi}{6} \]</p>
+							<p>Тогда \(\cos\varphi = \frac{\sqrt3}{2}\), \(\sin\varphi = -\frac{1}{2}\). Формулы поворота:</p>
+							<p>\[ x = \frac{\sqrt3}{2}X + \frac{1}{2}Y, \qquad y = -\frac{1}{2}X + \frac{\sqrt3}{2}Y \]</p>
+							<p>Подставляя в исходное уравнение и приводя подобные, член с \(XY\) исчезает, а уравнение принимает вид:</p>
+							<p>\[ 3X^2 - Y^2 + 9 = 0 \]</p>
+							<p>Перенесём свободный член и разделим на 9:</p>
+							<p>\[ \frac{Y^2}{9} - \frac{X^2}{3} = 1 \]</p>
+							<p>Это каноническое уравнение гиперболы (с действительной осью вдоль оси \(Y\)).</p>
+							<p><b>Тип кривой:</b> гипербола. <b>Каноническая система координат:</b> центр \((0,0)\), базисные векторы \(E_1\left(\frac{\sqrt3}{2}, -\frac{1}{2}\right)\), \(E_2\left(\frac{1}{2}, \frac{\sqrt3}{2}\right)\).</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task">
+						<p>Определить тип кривой второго порядка, составить её каноническое уравнение и найти каноническую систему координат:</p>
+						<div class="math-formula" id="k">
+							\[
+							x^2 - 2xy + y^2 + 2x + 2y = 0
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Здесь \(A=1\), \(2B=-2\), \(C=1\), то есть \(A=C\) — это вырожденный случай для формулы \(\tan2\varphi\), угол поворота находится из условия \(A=C\):</p>
+							<p>\[ \tan 2\varphi = \frac{2(-1)}{1-1} \ \Rightarrow \ 2\varphi = \frac{\pi}{2} \ \Rightarrow \ \varphi = \frac{\pi}{4} \]</p>
+							<p>(при \(A=C\) знаменатель обращается в ноль, что соответствует углу поворота \(2\varphi=\frac{\pi}{2}\)). Тогда \(\cos\varphi = \sin\varphi = \frac{\sqrt2}{2}\). Формулы поворота:</p>
+							<p>\[ x = \frac{\sqrt2}{2}X - \frac{\sqrt2}{2}Y, \qquad y = \frac{\sqrt2}{2}X + \frac{\sqrt2}{2}Y \]</p>
+							<p>Подставляя в исходное уравнение: квадратичная часть \(x^2-2xy+y^2 = (x-y)^2\), а \(x - y = -\sqrt2\,Y\), поэтому квадратичная часть даёт \(2Y^2\) — коэффициент при \(X^2\) обнуляется, как и должно быть при правильно выбранном угле. Линейная часть \(2x+2y = 2\sqrt2\,X\). Уравнение принимает вид:</p>
+							<p>\[ 2Y^2 + 2\sqrt2\,X = 0 \ \Leftrightarrow \ Y^2 = -\sqrt2\,X \]</p>
+							<p>Это каноническое уравнение параболы.</p>
+							<p><b>Тип кривой:</b> парабола. <b>Каноническая система координат:</b> вершина \((0,0)\) (совпадает со старым началом, так как в исходном уравнении не было слагаемого без переменных), базисные векторы \(E_1\left(\frac{\sqrt2}{2}, \frac{\sqrt2}{2}\right)\), \(E_2\left(-\frac{\sqrt2}{2}, \frac{\sqrt2}{2}\right)\).</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+			<!-- Задание 3. Общий случай: перенос + поворот -->
+			<div class="tab-panel" id="panel3">
+				<h2>Задание 3. Приведение к каноническому виду: параллельный перенос и поворот осей</h2>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 1</b></div>
+					<div id="text-task">
+						<p>Определить тип кривой второго порядка, составить её каноническое уравнение и найти каноническую систему координат:</p>
+						<div class="math-formula" id="k">
+							\[
+							2x^2 - 4xy + 5y^2 + 8x - 2y + 9 = 0
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Здесь \(A=2\), \(2B=-4\), \(C=5\), есть и линейные, и смешанный члены, значит нужен и перенос центра, и поворот. Найдём центр из системы, приравнивая к нулю частные производные:</p>
+							<p>\[ 4x - 4y + 8 = 0, \qquad -4x + 10y - 2 = 0 \]</p>
+							<p>Решая систему, получаем \(x_0 = -3\), \(y_0 = -1\).</p>
+							<p>Сдвиг \(x = x' - 3\), \(y = y' - 1\) уничтожает линейные члены, и уравнение принимает вид:</p>
+							<p>\[ 2(x')^2 - 4x'y' + 5(y')^2 - 4 = 0 \]</p>
+							<p>(свободный член вычисляется подстановкой центра в исходное уравнение). Теперь поворотом уничтожаем член с \(x'y'\). Угол поворота:</p>
+							<p>\[ \tan 2\varphi = \frac{2(-2)}{2-5} = \frac{4}{3} \ \Rightarrow \ \cos\varphi = \frac{2}{\sqrt5}, \ \sin\varphi = \frac{1}{\sqrt5} \]</p>
+							<p>Подставляя формулы поворота \(x' = \frac{2}{\sqrt5}X - \frac{1}{\sqrt5}Y\), \(y' = \frac{1}{\sqrt5}X + \frac{2}{\sqrt5}Y\) и приводя подобные, получаем:</p>
+							<p>\[ X^2 + 6Y^2 - 4 = 0 \ \Leftrightarrow \ \frac{X^2}{4} + \frac{Y^2}{2/3} = 1 \]</p>
+							<p>Это каноническое уравнение эллипса.</p>
+							<p><b>Тип кривой:</b> эллипс. <b>Каноническая система координат:</b> центр \((-3,-1)\) в старой системе, базисные векторы \(E_1\left(\frac{2}{\sqrt5}, \frac{1}{\sqrt5}\right)\), \(E_2\left(-\frac{1}{\sqrt5}, \frac{2}{\sqrt5}\right)\).</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 2</b></div>
+					<div id="text-task">
+						<p>Определить тип кривой второго порядка, составить её каноническое уравнение и найти каноническую систему координат:</p>
+						<div class="math-formula" id="k">
+							\[
+							4xy - 3y^2 - 4x + 10y - 6 = 0
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Здесь \(A=0\), \(2B=4\), \(C=-3\). Найдём центр из системы уравнений (приравнивая частные производные к нулю):</p>
+							<p>\[ 4y - 4 = 0, \qquad 4x - 6y + 10 = 0 \]</p>
+							<p>Из первого уравнения \(y_0=1\), тогда из второго \(4x_0 - 6 + 10 = 0 \Rightarrow x_0=-1\). Центр — точка \((-1,1)\).</p>
+							<p>Сдвиг \(x = x' - 1\), \(y = y' + 1\) уничтожает линейные члены и даёт:</p>
+							<p>\[ 4x'y' - 3(y')^2 - 1 = 0 \]</p>
+							<p>Поворот тем же углом, что и в предыдущей задаче (совпадение коэффициентов даёт тот же \(\tan2\varphi\)):</p>
+							<p>\[ \tan 2\varphi = \frac{2\cdot2}{0-(-3)} = \frac{4}{3} \ \Rightarrow \ \cos\varphi = \frac{2}{\sqrt5}, \ \sin\varphi = \frac{1}{\sqrt5} \]</p>
+							<p>Подставляя формулы поворота \(x' = \frac{2}{\sqrt5}X - \frac{1}{\sqrt5}Y\), \(y' = \frac{1}{\sqrt5}X + \frac{2}{\sqrt5}Y\) и приводя подобные, получаем:</p>
+							<p>\[ X^2 - 4Y^2 - 1 = 0 \ \Leftrightarrow \ \frac{X^2}{1} - \frac{Y^2}{1/4} = 1 \]</p>
+							<p>Это каноническое уравнение гиперболы.</p>
+							<p><b>Тип кривой:</b> гипербола. <b>Каноническая система координат:</b> центр \((-1,1)\) в старой системе, базисные векторы \(E_1\left(\frac{2}{\sqrt5}, \frac{1}{\sqrt5}\right)\), \(E_2\left(-\frac{1}{\sqrt5}, \frac{2}{\sqrt5}\right)\).</p>
+						</div>
+					</details>
+				</div>
+
+				<div class="task-container">
+					<div class="task-title"><b>Задача 3</b></div>
+					<div id="text-task">
+						<p>Определить тип кривой второго порядка, составить её каноническое уравнение и найти каноническую систему координат:</p>
+						<div class="math-formula" id="k">
+							\[
+							9x^2 - 24xy + 16y^2 - 8x + 19y + 4 = 0
+							\]
+						</div>
+					</div>
+					<details class="details">
+						<summary class="details__title">Посмотреть ответ</summary>
+						<div class="details__content">
+							<p>Здесь \(A=9\), \(2B=-24\), \(C=16\), и \(AC - B^2 = 9\cdot16 - 12^2 = 144-144=0\) — значит, кривая не имеет центра (это парабола), система для центра несовместна. Поэтому сначала выполняем только поворот, устраняющий член с \(xy\), а перенос сделаем позже. Угол поворота:</p>
+							<p>\[ \tan 2\varphi = \frac{2(-12)}{9-16} = \frac{24}{7} \ \Rightarrow \ \cos\varphi = \frac{4}{5}, \ \sin\varphi = \frac{3}{5} \]</p>
+							<p>Формулы поворота:</p>
+							<p>\[ x = \frac{4}{5}X - \frac{3}{5}Y, \qquad y = \frac{3}{5}X + \frac{4}{5}Y \]</p>
+							<p>Подставляя в исходное уравнение и приводя подобные, коэффициент при \(X^2\) обнуляется (как и должно быть для параболы при правильно выбранном угле), коэффициент при \(Y^2\) получается равным 25, а линейные члены преобразуются в члены с \(X\) и \(Y\). После подстановки уравнение принимает вид:</p>
+							<p>\[ 25Y^2 + 5X + 20Y + 4 = 0 \]</p>
+							<p>Выделим полный квадрат по \(Y\):</p>
+							<p>\[ 25\left(Y^2 + \frac{4}{5}Y\right) + 5X + 4 = 0 \ \Rightarrow \ 25\left(Y+\frac{2}{5}\right)^2 - 4 + 5X + 4 = 0 \]</p>
+							<p>\[ 25\left(Y+\frac{2}{5}\right)^2 + 5X = 0 \ \Leftrightarrow \ \left(Y+\frac{2}{5}\right)^2 = -\frac{1}{5}X \]</p>
+							<p>Это каноническое уравнение параболы (после переноса начала вдоль повёрнутых осей в точку \(X=0\), \(Y=-\frac{2}{5}\) в повёрнутой системе).</p>
+							<p>Найдём координаты вершины в исходной системе. В повёрнутых координатах вершина имеет \(X=0\), \(Y=-\frac{2}{5}\); переводя обратно по формулам поворота:</p>
+							<p>\[ x = \frac{4}{5}\cdot0 - \frac{3}{5}\cdot\left(-\frac{2}{5}\right) = \frac{6}{25}, \qquad y = \frac{3}{5}\cdot0 + \frac{4}{5}\cdot\left(-\frac{2}{5}\right) = -\frac{8}{25}\]</p>
+							<p><b>Тип кривой:</b> парабола. <b>Каноническая система координат:</b> вершина — точка \(\left(\frac{6}{25}, -\frac{8}{25}\right)\) старой системы, базисные векторы \(E_1\left(\frac{4}{5}, \frac{3}{5}\right)\), \(E_2\left(-\frac{3}{5}, \frac{4}{5}\right)\).</p>
+						</div>
+					</details>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	</br></br></br>
+</div>
+
+<nav class="ios-tabbar" aria-label="Основная навигация">
+  <div class="ios-tabbar-inner">
+    <a href="../../home.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10.2V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.8"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>Главная</a>
+    <a href="../../uch.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3c-1.7-1.2-4-1.8-6.2-1.8-.7 0-1.3.6-1.3 1.3v11.6c0 .6.5 1 1.1.9 2-.3 4.1.1 5.7 1.2a1.2 1.2 0 0 0 1.4 0c1.6-1.1 3.7-1.5 5.7-1.2.6.1 1.1-.3 1.1-.9V5.8c0-.7-.6-1.3-1.3-1.3-2.2 0-4.5.6-6.2 1.8Z"/><path d="M12 6.3v13.4"/></svg>Учебник</a>
+    <a href="../../zadach.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4"/><path d="M8 10.3l1.3 1.3L12 9"/><path d="M13.6 10.3h3"/><path d="M8 15.3h8"/></svg>Задачник</a>
+    <a href="../../vid.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.6l6 3.4-6 3.4V8.6Z" fill="currentColor" stroke="none"/></svg>Видеоуроки</a>
+  </div>
+</nav>
+</body>
+</html>
